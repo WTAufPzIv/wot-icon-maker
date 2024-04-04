@@ -1,0 +1,24 @@
+#app {
+  min-width: 780px;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#app::-webkit-scrollbar {
+  width: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+img {
+  -webkit-user-drag: none; 
+}
+*{
+  -webkit-user-drag: none; 
+}
