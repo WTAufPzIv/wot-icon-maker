@@ -2,6 +2,8 @@ import * as Vue from 'vue';
 import { createWebHashHistory, createRouter, Router } from 'vue-router';
 import homeComponent from '../pages/home/index.vue';
 import editorComponent from '../pages/editor/index.vue';
+import setupComponent from '../pages/home/setup/index.vue';
+import overviewComponent from '../pages/home/overview/index.vue';
 
 // vite直接使用动态path无法解析，https://github.com/vitejs/vite/discussions/2746
 // const dashboardModules =
@@ -28,7 +30,7 @@ const router: IRouter = createRouter({
                     meta: {
                         title: '总览',
                     },
-                    component: () => import(/* webpackChunkName:"overview" */ '../pages/home/overview/index.vue'),
+                    component: overviewComponent,
                 },
                 // {
                 //     name: 'icon.preview',
@@ -44,7 +46,7 @@ const router: IRouter = createRouter({
                     meta: {
                         title: '设置',
                     },
-                    component: () => import(/* webpackChunkName:"overview" */ '../pages/home/setup/index.vue'),
+                    component: setupComponent,
                 },
             ]
         },

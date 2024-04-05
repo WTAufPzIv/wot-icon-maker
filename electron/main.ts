@@ -1,6 +1,8 @@
 import path from 'path'
-import { BrowserWindow, app } from 'electron'
+import { BrowserWindow, app, session } from 'electron'
 import ipc from './ipc'
+
+const vueDevToolsPath = path.resolve(__dirname, '../extension/vue-devtools')
 
 let win: BrowserWindow
 
@@ -25,7 +27,10 @@ const createWindow = () => {
 
 // app.whenReady().then(createWindow)
 
-app.whenReady().then(() => {
+app.whenReady().then(async () => {
+    // if (process.env.NODE_ENV === 'development') {
+    //     await session.defaultSession.loadExtension(vueDevToolsPath)
+    // }
     createWindow();
 });
 

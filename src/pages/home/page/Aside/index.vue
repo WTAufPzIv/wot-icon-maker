@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="aside-wrapper">
     <router-link to="/">
       <div :class="['nav', route.name === 'icon.overview' ? 'active': '']">
         <HomeOutlined />
@@ -30,13 +30,16 @@ function handleOpenEditor() {
 }
 </script>
 
-<style scoped>
-.wrapper {
+<style scoped lang="less">
+.aside-wrapper {
   width: 150px;
   background-color: rgb(27,27,27);
   height: calc(100vh - 80px);
+  a {
+    text-decoration: none;
+  }
   .active {
-    background-color: rgba(255,255,255,0.1);
+    background-color: #f25322b9;
   }
   .nav {
     width: 100%;
@@ -48,16 +51,17 @@ function handleOpenEditor() {
     span {
       display: block;
       font-size: 40px;
-      color: aliceblue;
+      color: #fffbed;
     }
     p {
-      color: aliceblue;
+      color: #fffbed;
       font-size: 18px;
       margin-top: 12px;
+      text-decoration: none;
     }
   }
   .nav:hover {
-    background-color: rgba(255,255,255,0.1);;
+    background-color: #f25322a9;
   }
 }
 </style>

@@ -1,4 +1,26 @@
-import { ipcMain, BrowserWindow } from 'electron'
+import { ipcMain, BrowserWindow, dialog, app, shell } from 'electron'
+import { IipcMessage } from '../const/type';
+import { readAndParseXML } from './utils';
+import path from 'path'
+const fs = require('fs');
+
+const STORE_PATH = path.join(app.getPath('userData'), 'store.json');
+
+function createSuccessIpcMessage(payload): IipcMessage {
+  return {
+    status: 1,
+    payload,
+    message: '',
+  }
+}
+
+function createFailIpcMessage(message: string): IipcMessage {
+  return {
+    status: 0,
+    payload: null,
+    message,
+  }
+}
 
 function createModalWindow(mainWindow: BrowserWindow) {
   let modal = new BrowserWindow({
@@ -41,6 +63,93 @@ export default (mainWindow: BrowserWindow) => {
         break;
       case 'open-editor':
         createModalWindow(mainWindow)
+    }
+  });
+  // 弹窗调用监听
+  ipcMain.on('dialog', (event, command, args) => {
+    switch (command) {
+      case 'open-directory-dialog':
+        dialog.showOpenDialog(mainWindow, {
+          properties: ['openDirectory']
+        }).then(result => {
+          if (!result.canceled && result.filePaths.length > 0) {
+            // 发送所选文件夹的路径回渲染进程
+            event.sender.send('selected-directory', createSuccessIpcMessage(result.filePaths[0]));
+          }
+          event.sender.send('selected-directory', createSuccessIpcMessage(''));
+        }).catch(err => {
+          event.sender.send('selected-directory', createFailIpcMessage(err));
+        });
+        break;
+      case 'show-error-dialog':
+        const { title, message } = args;
+        dialog.showErrorBox(title, message);
+        break;
+    }
+  })
+  // 文件读取监听
+  ipcMain.on('file', async (event, command, args) => {
+    switch (command) {
+      case 'read-version-xml':
+        try {
+          const { path: wotpath } = args;
+          const filePath = path.join(wotpath, 'version.xml');
+          const xmlObject = await readAndParseXML(filePath);
+          event.sender.send('send-version-xml', createSuccessIpcMessage(JSON.stringify(xmlObject)));
+          return;
+        } catch (error) {
+          console.error('读取或解析XML文件时出错:', error);
+          event.sender.send('send-version-xml', createFailIpcMessage('读取或解析XML文件时出错'));
+          return null; // 或者根据需要返回错误信息
+        }
+      case 'get-file-list':
+        try {
+          const { path: wotpath } = args;
+          const files = fs.readdirSync(wotpath);
+          event.sender.send('send-file-list', createSuccessIpcMessage(files));
+          return
+        } catch (error) {
+          console.error('读取文件列表时出错:', error);
+          event.sender.send('send-file-list', createFailIpcMessage('读取文件列表时出错'));
+          return
+        }
+      case 'open-folder':
+        const { path: wotpath } = args;
+        shell.openPath(wotpath)
+          .then(() => {
+            console.log('Folder opened successfully');
+          })
+          .catch(err => {
+            console.error('Error opening folder:', err);
+          });
+        }
+  });
+  // vuex持久化存储
+  ipcMain.on('vuex', async (event, command, args) => {
+    switch (command) {
+      case 'vuex-write':
+        const { state } = args;
+        console.log(STORE_PATH)
+        fs.writeFile(STORE_PATH, state, (err) => {
+          if (err) {
+            event.reply('vuex-error', err);
+          }
+        });
+        break;
+      case 'vuex-read':
+        fs.readFile(STORE_PATH, (err, data) => {
+          if (err) {
+            // 如果文件不存在，则初始化为空对象或默认状态
+            if (err.code === 'ENOENT') {
+              event.sender.send('vuex-initial-stat', createFailIpcMessage('文件不存在'));
+            } else {
+              // 其他错误类型，返回错误信息
+              event.sender.send('vuex-initial-stat', createFailIpcMessage(JSON.stringify(err)));
+            }
+            return;
+          }
+          event.sender.send('vuex-initial-stat', createSuccessIpcMessage(data.toString()));
+        });
     }
   });
 }

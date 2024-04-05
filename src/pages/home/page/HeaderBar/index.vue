@@ -54,7 +54,7 @@ function handleClose() {
         height: 40px;
       }
       p {
-        color: aliceblue;
+        color: #fffbed;
         line-height: 80px;
         font-size: 30px;
         margin: -4px 0 0 20px;
@@ -74,7 +74,7 @@ function handleClose() {
         width: 80px;
         display: block;
         height: 40px;
-        color: aliceblue;
+        color: #fffbed;
         line-height: 40px;
         -webkit-app-region: no-drag;
       }

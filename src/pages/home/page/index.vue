@@ -5,11 +5,9 @@
         <header-bar></header-bar>
         <div class="main-wrapper">
             <a-side></a-side>
-            <!-- <slot name="body"> -->
-                <div class="wrapper">
-                    <slot></slot>
-                </div>
-            <!-- </slot> -->
+            <div class="main-container">
+                <slot></slot>
+            </div>
         </div>
     </div>
 </template>
@@ -30,8 +28,13 @@ import ASide from './Aside/index.vue';
     display: flex;
     flex-direction: row;
 }
-.wrapper {
+.main-container {
+    flex-grow: 1;
     height: calc(100vh - 80px);
+    background-color: rgb(41,41,41);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 .wrapper::-webkit-scrollbar {
     width: 0;
