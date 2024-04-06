@@ -1,19 +1,19 @@
-import { PATH_vehicle_list, WOT_EXTRACT_PATH } from "../const/path";
+import { PATH_vehicle_list, VEHICLES_PATH, WOT_EXTRACT_PATH } from "../const/path";
+import { bXmlReader } from "./bxml";
+const BinaryXML = require('binary-xml');
 
 const xml2js = require('xml2js')
 const fs = require('fs');
-const AdmZip = require('adm-zip');
 const StreamZip = require('node-stream-zip');
-const path = require('path')
 
 // 读取并解析XML文件的函数
-export function readAndParseXML(filePath: string) {
+export function readAndParseXML(filePath: string, Binary: boolean = false) {
     return new Promise((resolve, reject) => {
         fs.readFile(filePath, (err: any, data: any) => {
             if (err) {
                 reject(err);
                 return;
-            }
+            }         
             xml2js.parseString(data, (err: any, result: any) => {
                 if (err) {
                     reject(err);
@@ -50,5 +50,24 @@ export async function extractWotFile(basePath: string) {
     const pkgPath = PATH_vehicle_list.split('|')[0];
     const pkgEntryPath = PATH_vehicle_list.split('|')[1];
     const zip = new StreamZip.async({ file: basePath + pkgPath });
-    await zip.extract(pkgEntryPath, WOT_EXTRACT_PATH);
+    await zip.extract(pkgEntryPath, WOT_EXTRACT_PATH + VEHICLES_PATH);
+}
+
+// 读取数据
+export async function parserWotFile() {
+    return new Promise((res, rej) => {
+        fs.open(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/china/components/guns.xml`, 'r', async (err: any, fd: number) => {
+            if (err) {
+                rej('parserWotFile Error');
+                return;
+            }
+            await bXmlReader(fd);
+            fs.close(fd, (err: any) => {
+                if (err) {
+                    rej('parserWotFile Error');
+                }
+            });
+            res(1)
+        });
+    })
 }

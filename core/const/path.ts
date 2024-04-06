@@ -9,3 +9,5 @@ export const PATH_vehicle_list = '/res/packages/scripts.pkg|scripts/item_defs/ve
 // 程序app data相关路径
 export const STORE_PATH = path.join(app.getPath('userData'), 'store.json');
 export const WOT_EXTRACT_PATH = path.join(app.getPath('userData'), 'extract');
+export const VEHICLES_PATH = '/vehicles';
+export const MO_PATH = '/mo';

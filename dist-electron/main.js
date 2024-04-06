@@ -1,15 +1,76 @@
 "use strict";
 const electron = require("electron");
-const path$2 = require("path");
+const path$3 = require("path");
 const PATH_vehicle_list = "/res/packages/scripts.pkg|scripts/item_defs/vehicles/";
-const STORE_PATH = path$2.join(electron.app.getPath("userData"), "store.json");
-const WOT_EXTRACT_PATH = path$2.join(electron.app.getPath("userData"), "extract");
+const STORE_PATH = path$3.join(electron.app.getPath("userData"), "store.json");
+const WOT_EXTRACT_PATH = path$3.join(electron.app.getPath("userData"), "extract");
+const VEHICLES_PATH = "/vehicles";
+const fs$2 = require("fs");
+const path$2 = require("path");
+async function ReadUInt32(fd) {
+  return new Promise((res, rej) => {
+    const buffer = Buffer.alloc(4);
+    fs$2.read(fd, buffer, 0, 4, 0, (err, bytesRead, buffer2) => {
+      if (err) {
+        rej("ReadUInt32 Error");
+      }
+      const value = buffer2.readUInt32LE(0);
+      res(value);
+    });
+  });
+}
+function readNextByte(fd) {
+  return new Promise((res, rej) => {
+    const strings = [];
+    let bytes = Buffer.alloc(128);
+    let length = 0;
+    let cursor = 5;
+    const readNext = async (fd2) => {
+      fs$2.read(fd2, bytes, length, 1, cursor, (err, bytesRead) => {
+        cursor++;
+        if (err) {
+          rej("ReadByte Error");
+        }
+        if (bytes[length] === 0) {
+          const str = bytes.slice(0, length).toString();
+          strings.push(str);
+          if (length === 0) {
+            res(strings);
+          } else {
+            length = 0;
+            readNext(fd2);
+          }
+        } else {
+          length++;
+          if (length >= bytes.length) {
+            const newBytes = Buffer.alloc(bytes.length * 2);
+            bytes.copy(newBytes);
+            bytes = newBytes;
+          }
+          readNext(fd2);
+        }
+      });
+    };
+    readNext(fd);
+  });
+}
+function bXmlReader(fd) {
+  return new Promise(async (res, rej) => {
+    const fileTypeCheck = await ReadUInt32(fd);
+    if (fileTypeCheck !== 1654738501) {
+      rej("This file does not look like a valid binary-xml file");
+    }
+    const strs = await readNextByte(fd);
+    const txtPath = path$2.join(electron.app.getPath("userData"), "1.txt");
+    fs$2.writeFileSync(txtPath, strs.toString());
+    res(1);
+  });
+}
+require("binary-xml");
 const xml2js = require("xml2js");
 const fs$1 = require("fs");
-require("adm-zip");
 const StreamZip = require("node-stream-zip");
-require("path");
-function readAndParseXML(filePath) {
+function readAndParseXML(filePath, Binary = false) {
   return new Promise((resolve, reject) => {
     fs$1.readFile(filePath, (err, data) => {
       if (err) {
@@ -46,7 +107,24 @@ async function extractWotFile(basePath) {
   const pkgPath = PATH_vehicle_list.split("|")[0];
   const pkgEntryPath = PATH_vehicle_list.split("|")[1];
   const zip = new StreamZip.async({ file: basePath + pkgPath });
-  await zip.extract(pkgEntryPath, WOT_EXTRACT_PATH);
+  await zip.extract(pkgEntryPath, WOT_EXTRACT_PATH + VEHICLES_PATH);
+}
+async function parserWotFile() {
+  return new Promise((res, rej) => {
+    fs$1.open(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/china/components/guns.xml`, "r", async (err, fd) => {
+      if (err) {
+        rej("parserWotFile Error");
+        return;
+      }
+      await bXmlReader(fd);
+      fs$1.close(fd, (err2) => {
+        if (err2) {
+          rej("parserWotFile Error");
+        }
+      });
+      res(1);
+    });
+  });
 }
 const path$1 = require("path");
 const fs = require("fs");
@@ -165,6 +243,7 @@ const ipc = (mainWindow) => {
         const { basePath } = args;
         try {
           await extractWotFile(basePath);
+          await parserWotFile();
           event.sender.send("reload-wot-data-done", createSuccessIpcMessage("读取完成"));
         } catch {
           event.sender.send("reload-wot-data-done", createFailIpcMessage("读取客户端数据失败"));
