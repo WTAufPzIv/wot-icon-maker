@@ -22,8 +22,16 @@ export default defineConfig({
   resolve: {
     alias: {
       "@core": path.resolve(__dirname, './core'),
-      "@electron": path.resolve(__dirname, './electron'),
       "@src": path.resolve(__dirname, './src'),
+    }
+  },
+  build: {
+    rollupOptions: {
+      external: [
+        '@core/utils/ipc',
+        '@core/utils/files',
+        '@core/const/path',
+      ]
     }
   },
   server: {

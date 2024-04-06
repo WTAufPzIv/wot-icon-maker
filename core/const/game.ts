@@ -5,3 +5,7 @@ export const GameName = {
     EU: '坦克世界欧服',
     NA: '坦克世界美服'
 }
+
+export const countries = [
+    "ussr", "germany", "usa", "france", "china", "uk", "japan", "czech", "sweden", "poland", "italy"
+]

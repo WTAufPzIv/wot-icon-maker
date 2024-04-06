@@ -22,8 +22,6 @@
     "paths": {
       "@core": ["./core"],
       "@core/*": ["./core/*"],
-      "@electron": ["./electron"],
-      "@electron/*": ["./electron/*"],
       "@src": ["./src"],
       "@src/*": ["./src/*"],
     }

@@ -54,3 +54,8 @@ export async function parseGameInstallation(path: string) {
         gameName: (GameName as any)[name]
     }
 }
+
+export async function handleReloadGameData(path: string) {
+    const res = await ipcMessageTool('file', 'reload-wot-data', { basePath: path }, 'reload-wot-data-done');
+    return res.status;
+}

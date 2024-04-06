@@ -1,6 +1,6 @@
 <template>
   <div class="overview-wrapper">
-    <p class="current-path">当前目录：{{ gameState.current }}</p>
+    <p class="current-path">当前目录：{{ gameState.current || '未选择（请进入设置选择游戏目录）' }}</p>
     <div class="tab">
       <div
         :class="['tab-item', selectedTab === 'data' ? 'active' : '']"
@@ -21,7 +21,6 @@ import { useStore } from 'vuex';
 
 const Store = useStore();
 const gameState = Store.state[StoreModule.GAME]
-console.log(111)
 const selectedTab = toRef('data')
 </script>
 

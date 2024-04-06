@@ -1,5 +1,5 @@
 import { GameMutation } from '@core/const/store';
-import { addGamePathByDialog, isWotFolder, parseGameInstallation, showErrorByDialog } from '@core/utils/game';
+import { addGamePathByDialog, handleReloadGameData, isWotFolder, parseGameInstallation, showErrorByDialog } from '@core/utils/game';
 import { Module, MutationTree, ActionTree } from 'vuex';
 import { IRootState } from '../type';
 
@@ -11,12 +11,14 @@ export interface IgameInstallations {
 
 export interface IGameState {
     gameInstallations: IgameInstallations[],
-    current: string
+    current: string,
+    gameLoading: boolean;
 }
 
 export const state: IGameState = {
     gameInstallations: [],
     current: '',
+    gameLoading: false,
 };
 
 export const mutations: MutationTree<IGameState> = {
@@ -26,12 +28,18 @@ export const mutations: MutationTree<IGameState> = {
     [GameMutation.SET_CURRENT_GAME_PATH](state: IGameState, payload: any) {
         state.current = payload;
     },
+    [GameMutation.SET_GAME_LOADING](state: IGameState, payload: any) {
+        state.gameLoading = payload;
+    },
 };
 
 const actions: ActionTree<IGameState, IRootState> = {
-    initGameState({ commit }, payload) {
+    initGameState({ commit, dispatch }, payload) {
         commit(GameMutation.SET_CURRENT_GAME_PATH, payload.current || '')
         commit(GameMutation.SET_GAME_INSTALLATIONS, payload.gameInstallations || [])
+        if (payload.current && payload.gameInstallations.length > 0) {
+            dispatch(`reloadGameData`);
+        }
     },
     async addGameInstallation({ commit, state }) {
         const res = await addGamePathByDialog();
@@ -74,9 +82,25 @@ const actions: ActionTree<IGameState, IRootState> = {
             }
         }
     },
-    changeCurrent({ commit }, path) {
+    async reloadGameData({ commit, state }) {
+        commit(GameMutation.SET_GAME_LOADING, true);
+        const res = await handleReloadGameData(state.current);
+        commit(GameMutation.SET_GAME_LOADING, false);
+        setTimeout(() => {
+            if (res) {
+                alert('游戏数据载入成功')
+            } else {
+                alert('游戏数据载入失败，请检查游戏目录设置是否正确，以及游戏客户端完整性')
+                commit(GameMutation.SET_CURRENT_GAME_PATH, '');
+            }
+        }, 100)
+    },
+    changeCurrent({ commit, state, dispatch }, path) {
         commit(GameMutation.SET_CURRENT_GAME_PATH, path)
-    }
+        if (state.current && state.gameInstallations.length > 0) {
+            dispatch(`reloadGameData`);
+        }
+    },
 }
 
 const gameModule: Module<IGameState, IRootState> = {

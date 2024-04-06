@@ -14,10 +14,6 @@ const store = createStore({
             if (localres.status) {
                 // 读取成功才进行state载入
                 const localState = JSON.parse(localres.payload);
-                // const newState = reactive({ ...localState });
-                // store.replaceState(newState);
-                // store.commit('SET_ALL', localState)
-                console.log(localState[StoreModule.GAME])
                 store.dispatch(`${StoreModule.GAME}/initGameState`, localState[StoreModule.GAME])
             }
 

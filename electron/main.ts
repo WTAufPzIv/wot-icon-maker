@@ -1,5 +1,6 @@
 import { BrowserWindow, app } from 'electron'
-import ipc from '@core/utils/ipc';
+// import ipc from '@core/utils/ipc';
+import ipc from '../core/utils/ipc';
 const path = require('path')
 
 let win: BrowserWindow

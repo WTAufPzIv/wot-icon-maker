@@ -1,11 +1,9 @@
-import { ipcMain, BrowserWindow, dialog, app, shell } from 'electron'
+import { ipcMain, BrowserWindow, dialog, shell } from 'electron'
 import { IipcMessage } from '../const/type';
-import { readAndParseXML } from './files';
+import { extractWotFile, readAndParseXML } from './files';
+import { STORE_PATH } from '../const/path'
 const path = require('path')
 const fs = require('fs');
-
-const STORE_PATH = path.join(app.getPath('userData'), 'store.json');
-const WOT_EXTRACT_PATH = path.join(app.getPath('userData'), 'extract');
 
 function createSuccessIpcMessage(payload: any): IipcMessage {
   return {
@@ -124,9 +122,15 @@ export default (mainWindow: BrowserWindow) => {
             console.error('Error opening folder:', err);
           });
           break;
-        case 'extract-wot':
+        case 'reload-wot-data':
           const { basePath } = args;
-          
+          try {
+            await extractWotFile(basePath);
+            event.sender.send('reload-wot-data-done', createSuccessIpcMessage('读取完成'));
+          } catch {
+            event.sender.send('reload-wot-data-done', createFailIpcMessage('读取客户端数据失败'));
+          }
+          break;
       }
   });
   // vuex持久化存储监听
