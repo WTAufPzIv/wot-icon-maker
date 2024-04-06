@@ -48,8 +48,8 @@
 </template>
 
 <script setup lang="ts">
-import { StoreModule } from '@/const/store';
-import { ipcMessageTool } from '@/utils/game';
+import { StoreModule } from '@core/const/store';
+import { ipcMessageTool } from '@core/utils/game';
 import { toRef } from 'vue';
 import { useStore } from 'vuex';
 import { CheckOutlined } from '@ant-design/icons-vue'

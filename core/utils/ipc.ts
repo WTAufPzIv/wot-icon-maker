@@ -1,12 +1,13 @@
 import { ipcMain, BrowserWindow, dialog, app, shell } from 'electron'
 import { IipcMessage } from '../const/type';
-import { readAndParseXML } from './utils';
-import path from 'path'
+import { readAndParseXML } from './files';
+const path = require('path')
 const fs = require('fs');
 
 const STORE_PATH = path.join(app.getPath('userData'), 'store.json');
+const WOT_EXTRACT_PATH = path.join(app.getPath('userData'), 'extract');
 
-function createSuccessIpcMessage(payload): IipcMessage {
+function createSuccessIpcMessage(payload: any): IipcMessage {
   return {
     status: 1,
     payload,
@@ -122,22 +123,25 @@ export default (mainWindow: BrowserWindow) => {
           .catch(err => {
             console.error('Error opening folder:', err);
           });
-        }
+          break;
+        case 'extract-wot':
+          const { basePath } = args;
+          
+      }
   });
-  // vuex持久化存储
+  // vuex持久化存储监听
   ipcMain.on('vuex', async (event, command, args) => {
     switch (command) {
       case 'vuex-write':
         const { state } = args;
-        console.log(STORE_PATH)
-        fs.writeFile(STORE_PATH, state, (err) => {
+        fs.writeFile(STORE_PATH, state, (err: any) => {
           if (err) {
             event.reply('vuex-error', err);
           }
         });
         break;
       case 'vuex-read':
-        fs.readFile(STORE_PATH, (err, data) => {
+        fs.readFile(STORE_PATH, (err: any, data: any) => {
           if (err) {
             // 如果文件不存在，则初始化为空对象或默认状态
             if (err.code === 'ENOENT') {

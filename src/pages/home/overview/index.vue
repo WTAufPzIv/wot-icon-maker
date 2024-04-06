@@ -15,7 +15,7 @@
 </template>
 
 <script setup lang="ts">
-import { StoreModule } from '@/const/store';
+import { StoreModule } from '@core/const/store';
 import { toRef } from 'vue';
 import { useStore } from 'vuex';
 

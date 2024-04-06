@@ -1,8 +1,6 @@
-import path from 'path'
-import { BrowserWindow, app, session } from 'electron'
-import ipc from './ipc'
-
-const vueDevToolsPath = path.resolve(__dirname, '../extension/vue-devtools')
+import { BrowserWindow, app } from 'electron'
+import ipc from '@core/utils/ipc';
+const path = require('path')
 
 let win: BrowserWindow
 

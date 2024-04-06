@@ -1,5 +1,5 @@
-import { GameName } from '@/const/game';
-import { IipcMessage } from '../../const/type'
+import { GameName } from '../const/game';
+import { IipcMessage } from '../const/type'
 
 export function ipcMessageTool(namespace: string, command: string, payload: any = {}, listener: string = ''): Promise<IipcMessage> {
     if (listener) {

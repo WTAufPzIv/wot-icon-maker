@@ -1,5 +1,5 @@
-import { StoreModule } from '@/const/store';
-import { ipcMessageTool } from '@/utils/game';
+import { StoreModule } from '@core/const/store';
+import { ipcMessageTool } from '@core/utils/game';
 import { createStore } from 'vuex';
 import Game from './modules/game';
 

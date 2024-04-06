@@ -1,5 +1,5 @@
-import { GameMutation } from '@/const/store';
-import { addGamePathByDialog, isWotFolder, parseGameInstallation, showErrorByDialog } from '@/utils/game';
+import { GameMutation } from '@core/const/store';
+import { addGamePathByDialog, isWotFolder, parseGameInstallation, showErrorByDialog } from '@core/utils/game';
 import { Module, MutationTree, ActionTree } from 'vuex';
 import { IRootState } from '../type';
 

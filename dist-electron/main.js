@@ -6143,7 +6143,6 @@ const ipc = (mainWindow) => {
     switch (command) {
       case "vuex-write":
         const { state } = args;
-        console.log(STORE_PATH);
         fs.writeFile(STORE_PATH, state, (err) => {
           if (err) {
             event.reply("vuex-error", err);

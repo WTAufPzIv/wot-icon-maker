@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="left">
-      <img src="@/assets/wotlogo.png" alt="">
+      <img src="@src/assets/wotlogo.png" alt="">
       <p>巨响图标制作工具</p>
     </div>
     <div class="right">

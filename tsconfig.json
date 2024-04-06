@@ -20,10 +20,14 @@
     "noFallthroughCasesInSwitch": true,
 
     "paths": {
-      "@": ["./src"],
-      "@/*": ["./src/*"],
+      "@core": ["./core"],
+      "@core/*": ["./core/*"],
+      "@electron": ["./electron"],
+      "@electron/*": ["./electron/*"],
+      "@src": ["./src"],
+      "@src/*": ["./src/*"],
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "core/**/*.ts", "electron/**/*.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

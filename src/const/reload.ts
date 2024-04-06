@@ -1,1 +1,0 @@
-export const gamePath = "F:/Games/World_of_Tanks_ASIA";
