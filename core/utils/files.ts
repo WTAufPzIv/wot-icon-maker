@@ -1,6 +1,6 @@
-import { PATH_vehicle_list, VEHICLES_PATH, WOT_EXTRACT_PATH } from "../const/path";
+import { countries } from "../const/game";
+import { PathSourceVehicle, VEHICLES_PATH, WOT_EXTRACT_PATH } from "../const/path";
 import { bXmlReader } from "./bxml";
-const BinaryXML = require('binary-xml');
 
 const xml2js = require('xml2js')
 const fs = require('fs');
@@ -46,28 +46,111 @@ export function sleep(ms: number) {
 // 解压缩坦克世界客户端文件并保存至app data中
 export async function extractWotFile(basePath: string) {
     await deleteTargetFolder(WOT_EXTRACT_PATH)
-    await sleep(2000);
-    const pkgPath = PATH_vehicle_list.split('|')[0];
-    const pkgEntryPath = PATH_vehicle_list.split('|')[1];
+    // await sleep(100);
+    const pkgPath = PathSourceVehicle.split('|')[0];
+    const pkgEntryPath = PathSourceVehicle.split('|')[1];
     const zip = new StreamZip.async({ file: basePath + pkgPath });
     await zip.extract(pkgEntryPath, WOT_EXTRACT_PATH + VEHICLES_PATH);
 }
 
-// 读取数据
-export async function parserWotFile() {
+function loadTanks(country: string): Promise<any> {
     return new Promise((res, rej) => {
-        fs.open(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/china/components/guns.xml`, 'r', async (err: any, fd: number) => {
+        fs.open(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/list.xml`, 'r', async (err: any, fd: number) => {
             if (err) {
                 rej('parserWotFile Error');
                 return;
             }
-            await bXmlReader(fd);
+            const tanks = await bXmlReader(fd);
             fs.close(fd, (err: any) => {
                 if (err) {
                     rej('parserWotFile Error');
                 }
             });
-            res(1)
+            res(tanks);
         });
+    })
+}
+function loadEngines(country: string): Promise<any> {
+    return new Promise((res, rej) => {
+        fs.open(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/components/engines.xml`, 'r', async (err: any, fd: number) => {
+            if (err) {
+                rej('parserWotFile Error');
+                return;
+            }
+            const engines = await bXmlReader(fd);
+            fs.close(fd, (err: any) => {
+                if (err) {
+                    rej('parserWotFile Error');
+                }
+            });
+            res(engines);
+        });
+    })
+}
+function loadGuns(country: string): Promise<any> {
+    return new Promise((res, rej) => {
+        fs.open(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/components/guns.xml`, 'r', async (err: any, fd: number) => {
+            if (err) {
+                rej('parserWotFile Error');
+                return;
+            }
+            const guns = await bXmlReader(fd);
+            fs.close(fd, (err: any) => {
+                if (err) {
+                    rej('parserWotFile Error');
+                }
+            });
+            res(guns);
+        });
+    })
+}
+function loadShells(country: string): Promise<any> {
+    return new Promise((res, rej) => {
+        fs.open(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/components/shells.xml`, 'r', async (err: any, fd: number) => {
+            if (err) {
+                rej('parserWotFile Error');
+                return;
+            }
+            const shells = await bXmlReader(fd);
+            fs.close(fd, (err: any) => {
+                if (err) {
+                    rej('parserWotFile Error');
+                }
+            });
+            res(shells);
+        });
+    })
+}
+function loadRadios(country: string): Promise<any> {
+    return new Promise((res, rej) => {
+        fs.open(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/components/radios.xml`, 'r', async (err: any, fd: number) => {
+            if (err) {
+                rej('parserWotFile Error');
+                return;
+            }
+            const radios = await bXmlReader(fd);
+            fs.close(fd, (err: any) => {
+                if (err) {
+                    rej('parserWotFile Error');
+                }
+            });
+            res(radios);
+        });
+    })
+}
+// 读取数据
+export async function parserWotFile() {
+    return new Promise(async(res, rej) => {
+        const Countries: any = {}
+        for (const item of countries) {
+            Countries[item] = {
+                tanks: await loadTanks(item),
+                engines: await loadEngines(item),
+                guns: await loadGuns(item),
+                radios: await loadRadios(item),
+                shells: await loadShells(item),
+            }
+        }
+        res(JSON.stringify(Countries));
     })
 }

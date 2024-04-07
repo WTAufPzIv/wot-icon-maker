@@ -13,12 +13,14 @@ export interface IGameState {
     gameInstallations: IgameInstallations[],
     current: string,
     gameLoading: boolean;
+    countries: any,
 }
 
 export const state: IGameState = {
     gameInstallations: [],
     current: '',
     gameLoading: false,
+    countries: {},
 };
 
 export const mutations: MutationTree<IGameState> = {
@@ -30,6 +32,9 @@ export const mutations: MutationTree<IGameState> = {
     },
     [GameMutation.SET_GAME_LOADING](state: IGameState, payload: any) {
         state.gameLoading = payload;
+    },
+    [GameMutation.SET_COUNTRIES](state: IGameState, payload: any) {
+        state.countries = payload;
     },
 };
 
@@ -87,8 +92,10 @@ const actions: ActionTree<IGameState, IRootState> = {
         const res = await handleReloadGameData(state.current);
         commit(GameMutation.SET_GAME_LOADING, false);
         setTimeout(() => {
-            if (res) {
+            if (res.status) {
                 alert('游戏数据载入成功')
+                // commit(GameMutation.SET_COUNTRIES, res.payload)
+                commit(GameMutation.SET_COUNTRIES, JSON.parse(res.payload))
             } else {
                 alert('游戏数据载入失败，请检查游戏目录设置是否正确，以及游戏客户端完整性')
                 commit(GameMutation.SET_CURRENT_GAME_PATH, '');

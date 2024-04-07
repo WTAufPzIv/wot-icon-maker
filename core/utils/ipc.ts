@@ -126,8 +126,8 @@ export default (mainWindow: BrowserWindow) => {
           const { basePath } = args;
           try {
             await extractWotFile(basePath);
-            await parserWotFile();
-            event.sender.send('reload-wot-data-done', createSuccessIpcMessage('读取完成'));
+            const wotData = await parserWotFile();
+            event.sender.send('reload-wot-data-done', createSuccessIpcMessage(wotData));
           } catch {
             event.sender.send('reload-wot-data-done', createFailIpcMessage('读取客户端数据失败'));
           }
