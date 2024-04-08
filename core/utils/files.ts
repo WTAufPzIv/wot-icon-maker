@@ -6,6 +6,8 @@ const xml2js = require('xml2js')
 const fs = require('fs');
 const StreamZip = require('node-stream-zip');
 
+let bxmlPromise: any = [];
+
 // 读取并解析XML文件的函数
 export function readAndParseXML(filePath: string, Binary: boolean = false) {
     return new Promise((resolve, reject) => {
@@ -53,22 +55,57 @@ export async function extractWotFile(basePath: string) {
     await zip.extract(pkgEntryPath, WOT_EXTRACT_PATH + VEHICLES_PATH);
 }
 
-function loadTanks(country: string): Promise<any> {
+function fsOpen(path: string): Promise<number> {
     return new Promise((res, rej) => {
-        fs.open(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/list.xml`, 'r', async (err: any, fd: number) => {
+        fs.open(path, 'r', async (err: any, fd: number) => {
             if (err) {
                 rej('parserWotFile Error');
                 return;
             }
-            const tanks = await bXmlReader(fd);
-            fs.close(fd, (err: any) => {
-                if (err) {
-                    rej('parserWotFile Error');
-                }
-            });
-            res(tanks);
+            res(fd);
         });
     })
+}
+function fsClose(fd: number): Promise<string> {
+    return new Promise((res, rej) => {
+        fs.close(fd, async (err: any, fd: number) => {
+            if (err) {
+                rej('parserWotFile Error');
+                return;
+            }
+            res('1');
+        });
+    })
+}
+
+async function loadTankList(country: string): Promise<any> {
+    try {
+        const fd = await fsOpen(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/list.xml`);
+        const tankList = await bXmlReader(fd) as any;
+        return tankList;
+    } catch (err) {
+        throw new Error('parserWotFile Error' + err);
+    }
+}
+async function loadTankItem(country: string, tankName: string, pre: any): Promise<Promise<any>> {
+    try {
+        const fd = await fsOpen(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/${tankName}.xml`);
+        bxmlPromise.push(bXmlReader(fd))
+        return 0
+    } catch (err) {
+        throw new Error('parserWotFile Error');
+    }
+}
+
+async function loadAllTanks(country: string): Promise<any> {
+    const promises = [];
+    const tanklist = await loadTankList(country);
+    for (const [key, value] of (Object.entries(tanklist) as any)) {
+        if (key === 'xmlns:xmlref' || !key) continue;
+        promises.push(loadTankItem(country, key, value));
+    }
+    const t = Promise.all(promises);
+    return t;
 }
 function loadEngines(country: string): Promise<any> {
     return new Promise((res, rej) => {
@@ -77,13 +114,14 @@ function loadEngines(country: string): Promise<any> {
                 rej('parserWotFile Error');
                 return;
             }
-            const engines = await bXmlReader(fd);
-            fs.close(fd, (err: any) => {
-                if (err) {
-                    rej('parserWotFile Error');
-                }
-            });
-            res(engines);
+            // const engines = await bXmlRe
+            bxmlPromise.push(bXmlReader(fd))
+            // fs.close(fd, (err: any) => {
+            //     if (err) {
+            //         rej('parserWotFile Error');
+            //     }
+            // });
+            res(0);
         });
     })
 }
@@ -94,13 +132,13 @@ function loadGuns(country: string): Promise<any> {
                 rej('parserWotFile Error');
                 return;
             }
-            const guns = await bXmlReader(fd);
-            fs.close(fd, (err: any) => {
-                if (err) {
-                    rej('parserWotFile Error');
-                }
-            });
-            res(guns);
+            bxmlPromise.push(bXmlReader(fd))
+            // fs.close(fd, (err: any) => {
+            //     if (err) {
+            //         rej('parserWotFile Error');
+            //     }
+            // });
+            res(0);
         });
     })
 }
@@ -111,13 +149,13 @@ function loadShells(country: string): Promise<any> {
                 rej('parserWotFile Error');
                 return;
             }
-            const shells = await bXmlReader(fd);
-            fs.close(fd, (err: any) => {
-                if (err) {
-                    rej('parserWotFile Error');
-                }
-            });
-            res(shells);
+            bxmlPromise.push(bXmlReader(fd))
+            // fs.close(fd, (err: any) => {
+            //     if (err) {
+            //         rej('parserWotFile Error');
+            //     }
+            // });
+            res(0);
         });
     })
 }
@@ -128,29 +166,28 @@ function loadRadios(country: string): Promise<any> {
                 rej('parserWotFile Error');
                 return;
             }
-            const radios = await bXmlReader(fd);
-            fs.close(fd, (err: any) => {
-                if (err) {
-                    rej('parserWotFile Error');
-                }
-            });
-            res(radios);
+            bxmlPromise.push(bXmlReader(fd))
+            // fs.close(fd, (err: any) => {
+            //     if (err) {
+            //         rej('parserWotFile Error');
+            //     }
+            // });
+            res(0);
         });
     })
 }
 // 读取数据
 export async function parserWotFile() {
-    return new Promise(async(res, rej) => {
-        const Countries: any = {}
-        for (const item of countries) {
-            Countries[item] = {
-                tanks: await loadTanks(item),
-                engines: await loadEngines(item),
-                guns: await loadGuns(item),
-                radios: await loadRadios(item),
-                shells: await loadShells(item),
-            }
-        }
-        res(JSON.stringify(Countries));
-    })
+    const promises = [];
+    for (const item of countries) {
+        promises.push(loadAllTanks(item))
+        // promises.push(loadEngines(item))
+        // promises.push(loadGuns(item))
+        // promises.push(loadRadios(item))
+        // promises.push(loadShells(item))
+    }
+    const Countries: any = await Promise.all(promises);
+    const CountriesVlaue: any = await Promise.all(bxmlPromise);
+    // res(JSON.stringify(Countries));
+    return JSON.stringify({});
 }

@@ -14,15 +14,13 @@ const countries = [
   "italy"
 ];
 const path$2 = require("path");
-const PathSourceVehicle = "/res/packages/scripts.pkg|scripts/item_defs/vehicles/";
 const STORE_PATH = path$2.join(electron.app.getPath("userData"), "store.json");
 const WOT_EXTRACT_PATH = path$2.join(electron.app.getPath("userData"), "extract");
 const VEHICLES_PATH = "/vehicles";
 const fs$2 = require("fs");
-require("path");
 async function ReadBytes(fd, length = 1, needBuffer = false) {
   return new Promise((res, rej) => {
-    const buffer = Buffer.alloc(length);
+    const buffer = Buffer.allocUnsafe(length);
     fs$2.read(fd, buffer, 0, length, null, (err, bytesRead, buffer2) => {
       if (err) {
         rej("ReadByte Error" + err);
@@ -38,7 +36,7 @@ async function ReadBytes(fd, length = 1, needBuffer = false) {
 }
 async function ReadUInt32(fd) {
   return new Promise((res, rej) => {
-    const buffer = Buffer.alloc(4);
+    const buffer = Buffer.allocUnsafe(4);
     fs$2.read(fd, buffer, 0, 4, null, (err, bytesRead, buffer2) => {
       if (err) {
         rej("ReadUInt32 Error" + err);
@@ -50,7 +48,7 @@ async function ReadUInt32(fd) {
 }
 function ReadSingle(fd) {
   return new Promise((res, rej) => {
-    const buffer = Buffer.alloc(4);
+    const buffer = Buffer.allocUnsafe(4);
     fs$2.read(fd, buffer, 0, 4, null, (err, bytesRead, buffer2) => {
       if (err) {
         rej("ReadSingle Error" + err);
@@ -62,7 +60,7 @@ function ReadSingle(fd) {
 }
 function ReadInt8(fd) {
   return new Promise((res, rej) => {
-    const buffer = Buffer.alloc(1);
+    const buffer = Buffer.allocUnsafe(1);
     fs$2.read(fd, buffer, 0, 1, null, (err, bytesRead, buffer2) => {
       if (err) {
         rej("ReadInt8 Error" + err);
@@ -74,7 +72,7 @@ function ReadInt8(fd) {
 }
 function ReadInt16(fd) {
   return new Promise((res, rej) => {
-    const buffer = Buffer.alloc(2);
+    const buffer = Buffer.allocUnsafe(2);
     fs$2.read(fd, buffer, 0, 2, null, (err, bytesRead, buffer2) => {
       if (err) {
         rej("ReadInt16 Error" + err);
@@ -86,7 +84,7 @@ function ReadInt16(fd) {
 }
 function ReadInt32(fd) {
   return new Promise((res, rej) => {
-    const buffer = Buffer.alloc(4);
+    const buffer = Buffer.allocUnsafe(4);
     fs$2.read(fd, buffer, 0, 4, null, (err, bytesRead, buffer2) => {
       if (err) {
         rej(`ReadInt32 Error: ${err}`);
@@ -99,7 +97,7 @@ function ReadInt32(fd) {
 function readNextByte(fd) {
   return new Promise((res, rej) => {
     const strings = [];
-    let bytes = Buffer.alloc(128);
+    let bytes = Buffer.allocUnsafe(128);
     let length = 0;
     const readNext = async (fd2) => {
       fs$2.read(fd2, bytes, length, 1, null, (err) => {
@@ -118,7 +116,7 @@ function readNextByte(fd) {
         } else {
           length++;
           if (length >= bytes.length) {
-            const newBytes = Buffer.alloc(bytes.length * 2);
+            const newBytes = Buffer.allocUnsafe(bytes.length * 2);
             bytes.copy(newBytes);
             bytes = newBytes;
           }
@@ -130,39 +128,37 @@ function readNextByte(fd) {
   });
 }
 async function readDict(fd, strings) {
-  return new Promise(async (res) => {
-    const childCount = await ReadInt16(fd);
-    let endAndType = await ReadInt32(fd);
-    const ownValueEnd = endAndType & 268435455;
-    const ownLength = ownValueEnd;
-    const ownValueType = endAndType >> 28;
-    let ppp = ownValueEnd;
-    if (ownValueType === 0) {
-      throw new Error("readDict Error: 字典值错误，不应该为字典");
-    }
-    const childrenList = [];
-    for (const item of new Array(childCount)) {
-      const index = await ReadInt16(fd);
-      const name = strings[index];
-      endAndType = await ReadInt32(fd);
-      const end = endAndType & 268435455;
-      const length = end - ppp;
-      ppp = end;
-      childrenList.push({
-        name,
-        length,
-        type: endAndType >> 28
-      });
-    }
-    const result = {};
-    if (ownLength > 0 || ownValueType !== 1) {
-      result[""] = await readData(fd, strings, ownValueType, ownLength);
-    }
-    for (const child of childrenList) {
-      result[child.name] = await readData(fd, strings, child.type, child.length);
-    }
-    res(result);
-  });
+  const childCount = await ReadInt16(fd);
+  let endAndType = await ReadInt32(fd);
+  const ownValueEnd = endAndType & 268435455;
+  const ownLength = ownValueEnd;
+  const ownValueType = endAndType >> 28;
+  let ppp = ownValueEnd;
+  if (ownValueType === 0) {
+    throw new Error("readDict Error: 字典值错误，不应该为字典");
+  }
+  const childrenList = [];
+  for (const item of new Array(childCount)) {
+    const index = await ReadInt16(fd);
+    const name = strings[index];
+    endAndType = await ReadInt32(fd);
+    const end = endAndType & 268435455;
+    const length = end - ppp;
+    ppp = end;
+    childrenList.push({
+      name,
+      length,
+      type: endAndType >> 28
+    });
+  }
+  const result = {};
+  if (ownLength > 0 || ownValueType !== 1) {
+    result[""] = await readData(fd, strings, ownValueType, ownLength);
+  }
+  for (const child of childrenList) {
+    result[child.name] = await readData(fd, strings, child.type, child.length);
+  }
+  return result;
 }
 async function readData(fd, strings, type, length) {
   switch (type) {
@@ -208,21 +204,32 @@ async function readData(fd, strings, type, length) {
       throw new Error("readData Error: Unknown type. error type: " + type);
   }
 }
-function bXmlReader(fd) {
-  return new Promise(async (res, rej) => {
-    const fileTypeCheck = await ReadUInt32(fd);
-    if (fileTypeCheck !== 1654738501) {
-      rej("This file does not look like a valid binary-xml file");
-    }
-    await ReadBytes(fd, 1);
-    const strs = await readNextByte(fd);
-    const raw = await readDict(fd, strs);
-    res(raw);
+function fsClose(fd) {
+  return new Promise((res, rej) => {
+    fs$2.close(fd, async (err, fd2) => {
+      if (err) {
+        rej("parserWotFile Error");
+        return;
+      }
+      res("1");
+    });
   });
+}
+async function bXmlReader(fd) {
+  const fileTypeCheck = await ReadUInt32(fd);
+  if (fileTypeCheck !== 1654738501) {
+    throw new Error("This file does not look like a valid binary-xml file");
+  }
+  await ReadBytes(fd, 1);
+  const strs = await readNextByte(fd);
+  const raw = await readDict(fd, strs);
+  await fsClose(fd);
+  return raw;
 }
 const xml2js = require("xml2js");
 const fs$1 = require("fs");
-const StreamZip = require("node-stream-zip");
+require("node-stream-zip");
+let bxmlPromise = [];
 function readAndParseXML(filePath, Binary = false) {
   return new Promise((resolve, reject) => {
     fs$1.readFile(filePath, (err, data) => {
@@ -240,123 +247,54 @@ function readAndParseXML(filePath, Binary = false) {
     });
   });
 }
-function deleteTargetFolder(folderPath) {
-  return new Promise((res) => {
-    fs$1.rm(folderPath, { recursive: true, force: true }, (err) => {
-      if (err) {
-        console.error("deleteTargetFolder fail", err);
-        res(0);
-      }
-      res(1);
-    });
-  });
-}
-async function extractWotFile(basePath) {
-  await deleteTargetFolder(WOT_EXTRACT_PATH);
-  const pkgPath = PathSourceVehicle.split("|")[0];
-  const pkgEntryPath = PathSourceVehicle.split("|")[1];
-  const zip = new StreamZip.async({ file: basePath + pkgPath });
-  await zip.extract(pkgEntryPath, WOT_EXTRACT_PATH + VEHICLES_PATH);
-}
-function loadTanks(country) {
+function fsOpen(path2) {
   return new Promise((res, rej) => {
-    fs$1.open(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/list.xml`, "r", async (err, fd) => {
+    fs$1.open(path2, "r", async (err, fd) => {
       if (err) {
         rej("parserWotFile Error");
         return;
       }
-      const tanks = await bXmlReader(fd);
-      fs$1.close(fd, (err2) => {
-        if (err2) {
-          rej("parserWotFile Error");
-        }
-      });
-      res(tanks);
+      res(fd);
     });
   });
 }
-function loadEngines(country) {
-  return new Promise((res, rej) => {
-    fs$1.open(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/components/engines.xml`, "r", async (err, fd) => {
-      if (err) {
-        rej("parserWotFile Error");
-        return;
-      }
-      const engines = await bXmlReader(fd);
-      fs$1.close(fd, (err2) => {
-        if (err2) {
-          rej("parserWotFile Error");
-        }
-      });
-      res(engines);
-    });
-  });
+async function loadTankList(country) {
+  try {
+    const fd = await fsOpen(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/list.xml`);
+    const tankList = await bXmlReader(fd);
+    return tankList;
+  } catch (err) {
+    throw new Error("parserWotFile Error" + err);
+  }
 }
-function loadGuns(country) {
-  return new Promise((res, rej) => {
-    fs$1.open(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/components/guns.xml`, "r", async (err, fd) => {
-      if (err) {
-        rej("parserWotFile Error");
-        return;
-      }
-      const guns = await bXmlReader(fd);
-      fs$1.close(fd, (err2) => {
-        if (err2) {
-          rej("parserWotFile Error");
-        }
-      });
-      res(guns);
-    });
-  });
+async function loadTankItem(country, tankName, pre) {
+  try {
+    const fd = await fsOpen(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/${tankName}.xml`);
+    bxmlPromise.push(bXmlReader(fd));
+    return 0;
+  } catch (err) {
+    throw new Error("parserWotFile Error");
+  }
 }
-function loadShells(country) {
-  return new Promise((res, rej) => {
-    fs$1.open(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/components/shells.xml`, "r", async (err, fd) => {
-      if (err) {
-        rej("parserWotFile Error");
-        return;
-      }
-      const shells = await bXmlReader(fd);
-      fs$1.close(fd, (err2) => {
-        if (err2) {
-          rej("parserWotFile Error");
-        }
-      });
-      res(shells);
-    });
-  });
-}
-function loadRadios(country) {
-  return new Promise((res, rej) => {
-    fs$1.open(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/components/radios.xml`, "r", async (err, fd) => {
-      if (err) {
-        rej("parserWotFile Error");
-        return;
-      }
-      const radios = await bXmlReader(fd);
-      fs$1.close(fd, (err2) => {
-        if (err2) {
-          rej("parserWotFile Error");
-        }
-      });
-      res(radios);
-    });
-  });
+async function loadAllTanks(country) {
+  const promises = [];
+  const tanklist = await loadTankList(country);
+  for (const [key, value] of Object.entries(tanklist)) {
+    if (key === "xmlns:xmlref" || !key)
+      continue;
+    promises.push(loadTankItem(country, key));
+  }
+  const t = Promise.all(promises);
+  return t;
 }
 async function parserWotFile() {
-  return new Promise(async (res, rej) => {
-    const Countries = {};
-    for (const item of countries) {
-      Countries[item] = {
-        tanks: await loadTanks(item),
-        engines: await loadEngines(item),
-        guns: await loadGuns(item),
-        radios: await loadRadios(item),
-        shells: await loadShells(item)
-      };
-    }
-    res(JSON.stringify(Countries));
-  });
+  const promises = [];
+  for (const item of countries) {
+    promises.push(loadAllTanks(item));
+  }
+  await Promise.all(promises);
+  await Promise.all(bxmlPromise);
+  return JSON.stringify({});
 }
 const path$1 = require("path");
 const fs = require("fs");
@@ -472,9 +410,7 @@ const ipc = (mainWindow) => {
         });
         break;
       case "reload-wot-data":
-        const { basePath } = args;
         try {
-          await extractWotFile(basePath);
           const wotData = await parserWotFile();
           event.sender.send("reload-wot-data-done", createSuccessIpcMessage(wotData));
         } catch {

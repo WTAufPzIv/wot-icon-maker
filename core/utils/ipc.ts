@@ -125,7 +125,7 @@ export default (mainWindow: BrowserWindow) => {
         case 'reload-wot-data':
           const { basePath } = args;
           try {
-            await extractWotFile(basePath);
+            // await extractWotFile(basePath);
             const wotData = await parserWotFile();
             event.sender.send('reload-wot-data-done', createSuccessIpcMessage(wotData));
           } catch {
