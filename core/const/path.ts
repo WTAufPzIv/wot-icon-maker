@@ -15,6 +15,7 @@ export const PatShellss = 'vehicles/${country}/shells.xml';
 
 // 程序app data相关路径
 export const STORE_PATH = path.join(app.getPath('userData'), 'store.json');
+export const TANK_PATH = path.join(app.getPath('userData'), 'tank.json');
 export const WOT_EXTRACT_PATH = path.join(app.getPath('userData'), 'extract');
 export const VEHICLES_PATH = '/vehicles';
 export const MO_PATH = '/mo';

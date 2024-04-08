@@ -13,9 +13,11 @@ const countries = [
   "poland",
   "italy"
 ];
-const path$2 = require("path");
-const STORE_PATH = path$2.join(electron.app.getPath("userData"), "store.json");
-const WOT_EXTRACT_PATH = path$2.join(electron.app.getPath("userData"), "extract");
+const path$3 = require("path");
+const PathSourceVehicle = "/res/packages/scripts.pkg|scripts/item_defs/vehicles/";
+const STORE_PATH = path$3.join(electron.app.getPath("userData"), "store.json");
+const TANK_PATH = path$3.join(electron.app.getPath("userData"), "tank.json");
+const WOT_EXTRACT_PATH = path$3.join(electron.app.getPath("userData"), "extract");
 const VEHICLES_PATH = "/vehicles";
 const fs$2 = require("fs");
 async function ReadBytes(fd, length = 1, needBuffer = false) {
@@ -226,10 +228,10 @@ async function bXmlReader(fd) {
   await fsClose(fd);
   return raw;
 }
+const path$2 = require("path");
 const xml2js = require("xml2js");
 const fs$1 = require("fs");
-require("node-stream-zip");
-let bxmlPromise = [];
+const StreamZip = require("node-stream-zip");
 function readAndParseXML(filePath, Binary = false) {
   return new Promise((resolve, reject) => {
     fs$1.readFile(filePath, (err, data) => {
@@ -246,6 +248,24 @@ function readAndParseXML(filePath, Binary = false) {
       });
     });
   });
+}
+function deleteTargetFolder(folderPath) {
+  return new Promise((res) => {
+    fs$1.rm(folderPath, { recursive: true, force: true }, (err) => {
+      if (err) {
+        console.error("deleteTargetFolder fail", err);
+        res(0);
+      }
+      res(1);
+    });
+  });
+}
+async function extractWotFile(basePath) {
+  await deleteTargetFolder(WOT_EXTRACT_PATH);
+  const pkgPath = PathSourceVehicle.split("|")[0];
+  const pkgEntryPath = PathSourceVehicle.split("|")[1];
+  const zip = new StreamZip.async({ file: basePath + pkgPath });
+  await zip.extract(pkgEntryPath, WOT_EXTRACT_PATH + VEHICLES_PATH);
 }
 function fsOpen(path2) {
   return new Promise((res, rej) => {
@@ -270,13 +290,12 @@ async function loadTankList(country) {
 async function loadTankItem(country, tankName, pre) {
   try {
     const fd = await fsOpen(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/${tankName}.xml`);
-    bxmlPromise.push(bXmlReader(fd));
-    return 0;
+    return await bXmlReader(fd);
   } catch (err) {
     throw new Error("parserWotFile Error");
   }
 }
-async function loadAllTanks(country) {
+async function loadAllTanks(country, trans) {
   const promises = [];
   const tanklist = await loadTankList(country);
   for (const [key, value] of Object.entries(tanklist)) {
@@ -284,17 +303,39 @@ async function loadAllTanks(country) {
       continue;
     promises.push(loadTankItem(country, key));
   }
-  const t = Promise.all(promises);
-  return t;
+  const tankMainInfos = await Promise.all(promises);
+  const tankFullList = {};
+  Object.entries(tanklist).forEach(([key, value], index) => {
+    tankFullList[key] = {
+      ...value,
+      ...tankMainInfos[index]
+    };
+    const name = tankFullList[key].shortUserString || tankFullList[key].userString;
+    if (name) {
+      const realName = name.split(":")[1];
+      trans[realName];
+      tankFullList[key].namefortrans = trans[realName];
+    }
+  });
+  return {
+    [country]: tankFullList
+  };
 }
 async function parserWotFile() {
   const promises = [];
+  const wg = fs$1.readFileSync(path$2.join(__dirname, "../trans/wg.json"), "utf8");
+  const wgObj = JSON.parse(wg);
   for (const item of countries) {
-    promises.push(loadAllTanks(item));
+    promises.push(loadAllTanks(item, wgObj));
   }
-  await Promise.all(promises);
-  const CountriesVlaue = await Promise.all(bxmlPromise);
-  return JSON.stringify(CountriesVlaue);
+  const CountriesRawData = await Promise.all(promises);
+  const Countries = {};
+  CountriesRawData.forEach((item) => {
+    Object.entries(item).forEach(([key, value]) => {
+      Countries[key] = value;
+    });
+  });
+  return JSON.stringify(Countries);
 }
 const path$1 = require("path");
 const fs = require("fs");
@@ -410,10 +451,13 @@ const ipc = (mainWindow) => {
         });
         break;
       case "reload-wot-data":
+        const { basePath, gameName } = args;
         try {
+          await extractWotFile(basePath);
           const wotData = await parserWotFile();
           event.sender.send("reload-wot-data-done", createSuccessIpcMessage(wotData));
-        } catch {
+        } catch (err) {
+          console.log(err);
           event.sender.send("reload-wot-data-done", createFailIpcMessage("读取客户端数据失败"));
         }
         break;
@@ -429,6 +473,14 @@ const ipc = (mainWindow) => {
           }
         });
         break;
+      case "tank-write":
+        const { tank } = args;
+        fs.writeFile(TANK_PATH, tank, (err) => {
+          if (err) {
+            event.reply("tank-error", err);
+          }
+        });
+        break;
       case "vuex-read":
         fs.readFile(STORE_PATH, (err, data) => {
           if (err) {
@@ -440,6 +492,19 @@ const ipc = (mainWindow) => {
             return;
           }
           event.sender.send("vuex-initial-stat", createSuccessIpcMessage(data.toString()));
+        });
+        break;
+      case "tank-read":
+        fs.readFile(TANK_PATH, (err, data) => {
+          if (err) {
+            if (err.code === "ENOENT") {
+              event.sender.send("tank-initial-stat", createFailIpcMessage("文件不存在"));
+            } else {
+              event.sender.send("tank-initial-stat", createFailIpcMessage(JSON.stringify(err)));
+            }
+            return;
+          }
+          event.sender.send("tank-initial-stat", createSuccessIpcMessage(data.toString()));
         });
     }
   });

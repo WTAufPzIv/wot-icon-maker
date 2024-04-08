@@ -2,19 +2,30 @@ import { StoreModule } from '@core/const/store';
 import { ipcMessageTool } from '@core/utils/game';
 import { createStore } from 'vuex';
 import Game from './modules/game';
+import Tank from './modules/tank';
+import Trans from './modules/trans';
 
 const store = createStore({
     modules: {
         [StoreModule.GAME]: Game,
+        [StoreModule.TANK]: Tank,
+        [StoreModule.TRANS]: Trans,
     },
     plugins: [
         async (store) => {
             //   应用启动时，从主进程读取状态
-            const localres = await ipcMessageTool('vuex', 'vuex-read', {}, 'vuex-initial-stat')
-            if (localres.status) {
+            (window as any).countries = {};
+            const localTank = await ipcMessageTool('vuex', 'tank-read', {}, 'tank-initial-stat')
+            if (localTank.status) {
                 // 读取成功才进行state载入
-                const localState = JSON.parse(localres.payload);
-                store.dispatch(`${StoreModule.GAME}/initGameState`, localState[StoreModule.GAME])
+                const localState = JSON.parse(localTank.payload);
+                (window as any).countries = localState;
+            }
+            const localStore = await ipcMessageTool('vuex', 'vuex-read', {}, 'vuex-initial-stat')
+            if (localStore.status) {
+                // 读取成功才进行state载入
+                const localState = JSON.parse(localStore.payload);
+                store.dispatch(`${StoreModule.GAME}/initGameState`, localState[StoreModule.GAME]);
             }
 
              // 当状态变化时，发送状态到主进程进行存储

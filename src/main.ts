@@ -15,3 +15,5 @@ app
     .use(store)
     .use(Antd)
     .mount('#app');
+
+(window as any).$store = store;

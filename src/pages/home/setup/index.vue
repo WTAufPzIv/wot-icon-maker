@@ -21,7 +21,7 @@
           <th class="select-cl"><p>当前</p></th>
           <th class="btn-cl"><p>操作</p></th>
         </tr>
-        <tr v-for="item in gameState.gameInstallations">
+        <tr v-for="item in (Object.values(gameState.gameInstallations) as any)">
           <td>{{ item.gameName }}</td>
           <td>{{ item.gameVersion }}</td>
           <td>
@@ -160,13 +160,13 @@ async function handleChangeCurrent(item: any) {
     margin-top: 50px;
     color: #b8b8a2;
     .name-cl {
-      width: 100px;
+      width: 120px;
     }
     .version-cl {
       width: 100px;
     }
     .btn-cl {
-      width: 50px;
+      width: 60px;
     }
     .select-cl {
       width: 50px;
@@ -183,7 +183,7 @@ async function handleChangeCurrent(item: any) {
       }
     }
     td {
-      padding: 15px 18px 15px 18px;
+      padding: 15px 0;
       border: 1px solid #43423c;
       text-align: center;
       .btn {

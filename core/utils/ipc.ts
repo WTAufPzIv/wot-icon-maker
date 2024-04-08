@@ -1,7 +1,7 @@
 import { ipcMain, BrowserWindow, dialog, shell } from 'electron'
 import { IipcMessage } from '../const/type';
 import { extractWotFile, parserWotFile, readAndParseXML } from './files';
-import { STORE_PATH } from '../const/path'
+import { STORE_PATH, TANK_PATH } from '../const/path'
 const path = require('path')
 const fs = require('fs');
 
@@ -123,12 +123,13 @@ export default (mainWindow: BrowserWindow) => {
           });
           break;
         case 'reload-wot-data':
-          const { basePath } = args;
+          const { basePath, gameName } = args;
           try {
-            // await extractWotFile(basePath);
+            await extractWotFile(basePath);
             const wotData = await parserWotFile();
             event.sender.send('reload-wot-data-done', createSuccessIpcMessage(wotData));
-          } catch {
+          } catch(err) {
+            console.log(err)
             event.sender.send('reload-wot-data-done', createFailIpcMessage('读取客户端数据失败'));
           }
           break;
@@ -145,6 +146,14 @@ export default (mainWindow: BrowserWindow) => {
           }
         });
         break;
+      case 'tank-write':
+          const { tank } = args;
+          fs.writeFile(TANK_PATH, tank, (err: any) => {
+            if (err) {
+              event.reply('tank-error', err);
+            }
+          });
+          break;
       case 'vuex-read':
         fs.readFile(STORE_PATH, (err: any, data: any) => {
           if (err) {
@@ -158,6 +167,21 @@ export default (mainWindow: BrowserWindow) => {
             return;
           }
           event.sender.send('vuex-initial-stat', createSuccessIpcMessage(data.toString()));
+        });
+        break;
+      case 'tank-read':
+        fs.readFile(TANK_PATH, (err: any, data: any) => {
+          if (err) {
+            // 如果文件不存在，则初始化为空对象或默认状态
+            if (err.code === 'ENOENT') {
+              event.sender.send('tank-initial-stat', createFailIpcMessage('文件不存在'));
+            } else {
+              // 其他错误类型，返回错误信息
+              event.sender.send('tank-initial-stat', createFailIpcMessage(JSON.stringify(err)));
+            }
+            return;
+          }
+          event.sender.send('tank-initial-stat', createSuccessIpcMessage(data.toString()));
         });
     }
   });

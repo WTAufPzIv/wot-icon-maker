@@ -1,12 +1,15 @@
 import { countries } from "../const/game";
 import { PathSourceVehicle, VEHICLES_PATH, WOT_EXTRACT_PATH } from "../const/path";
 import { bXmlReader } from "./bxml";
+const path = require('path')
 
 const xml2js = require('xml2js')
 const fs = require('fs');
 const StreamZip = require('node-stream-zip');
 
 let bxmlPromise: any = [];
+
+const readedTrans: any = {}
 
 // 读取并解析XML文件的函数
 export function readAndParseXML(filePath: string, Binary: boolean = false) {
@@ -66,17 +69,6 @@ function fsOpen(path: string): Promise<number> {
         });
     })
 }
-function fsClose(fd: number): Promise<string> {
-    return new Promise((res, rej) => {
-        fs.close(fd, async (err: any, fd: number) => {
-            if (err) {
-                rej('parserWotFile Error');
-                return;
-            }
-            res('1');
-        });
-    })
-}
 
 async function loadTankList(country: string): Promise<any> {
     try {
@@ -90,40 +82,44 @@ async function loadTankList(country: string): Promise<any> {
 async function loadTankItem(country: string, tankName: string, pre: any): Promise<Promise<any>> {
     try {
         const fd = await fsOpen(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/${tankName}.xml`);
-        bxmlPromise.push(bXmlReader(fd))
-        return 0
+        return await bXmlReader(fd)
     } catch (err) {
         throw new Error('parserWotFile Error');
     }
 }
 
-async function loadAllTanks(country: string): Promise<any> {
+async function loadAllTanks(country: string, trans: any): Promise<any> {
     const promises = [];
     const tanklist = await loadTankList(country);
     for (const [key, value] of (Object.entries(tanklist) as any)) {
         if (key === 'xmlns:xmlref' || !key) continue;
         promises.push(loadTankItem(country, key, value));
     }
-    const t = Promise.all(promises);
-    return t;
-}
-function loadEngines(country: string): Promise<any> {
-    return new Promise((res, rej) => {
-        fs.open(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/components/engines.xml`, 'r', async (err: any, fd: number) => {
-            if (err) {
-                rej('parserWotFile Error');
-                return;
-            }
-            // const engines = await bXmlRe
-            bxmlPromise.push(bXmlReader(fd))
-            // fs.close(fd, (err: any) => {
-            //     if (err) {
-            //         rej('parserWotFile Error');
-            //     }
-            // });
-            res(0);
-        });
+    const tankMainInfos = await Promise.all(promises);
+    const tankFullList: any = {}
+    Object.entries(tanklist).forEach(([ key, value ]: any, index) => {
+        tankFullList[key] = {
+            ...value,
+            ...tankMainInfos[index],
+        }
+        const name = tankFullList[key].shortUserString || tankFullList[key].userString
+        if (name) {
+            const realName = name.split(':')[1];
+            readedTrans[realName] = trans[realName];
+            tankFullList[key].namefortrans = trans[realName];
+        }
     })
+    return {
+        [country]: tankFullList
+    };
+}
+async function loadEngines(country: string): Promise<any> {
+    try {
+        const fd = await fsOpen(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/components/engines.xml`);
+        return await bXmlReader(fd)
+    } catch (err) {
+        throw new Error('parserWotFile Error');
+    }
 }
 function loadGuns(country: string): Promise<any> {
     return new Promise((res, rej) => {
@@ -179,15 +175,47 @@ function loadRadios(country: string): Promise<any> {
 // 读取数据
 export async function parserWotFile() {
     const promises = [];
+    const wg = fs.readFileSync(path.join(__dirname, '../trans/wg.json'), 'utf8');
+    // const lesta = fs.readFileSync(path.join(__dirname, '../trans/lesta.json'), 'utf8');
+    const wgObj = JSON.parse(wg);
     for (const item of countries) {
-        promises.push(loadAllTanks(item))
+        promises.push(loadAllTanks(item, wgObj))
         // promises.push(loadEngines(item))
         // promises.push(loadGuns(item))
         // promises.push(loadRadios(item))
         // promises.push(loadShells(item))
     }
-    const Countries: any = await Promise.all(promises);
-    const CountriesVlaue: any = await Promise.all(bxmlPromise);
-    // res(JSON.stringify(Countries));
-    return JSON.stringify(CountriesVlaue);
+    const CountriesRawData: any = await Promise.all(promises);
+    const Countries: any = {}
+    CountriesRawData.forEach((item: any) => {
+        Object.entries(item).forEach(([key, value]) => {
+            Countries[key] = value
+        })
+    })
+    return JSON.stringify(Countries);
 }
+
+// 为数据注入翻译
+// export function injectTrans(Countries: any, gameName: string) {
+//     // Read JSON file
+//     const wg = fs.readFileSync(path.join(__dirname, '../trans/wg.json'), 'utf8');
+//     const lesta = fs.readFileSync(path.join(__dirname, '../trans/lesta.json'), 'utf8');
+//     const wgObj = JSON.parse(wg);
+
+//     const payload: any = {}
+//     const countries = JSON.parse(JSON.stringify(Countries))
+//     Object.entries(countries).forEach(([country, tanks]: any) => {
+//         // console.log(country)
+//         Object.keys(tanks).forEach((tankName: any) => {
+//             const tankData = countries[]
+//             const name = tankData.shortUserString || tankData.userString
+//             if (name) {
+//                 const realName = name.split('!')[1];
+//                 payload[realName] = wgObj[realName];
+//                 countries[country][tankName].namefortrans = wgObj[realName];
+//             }
+//         })
+//     })
+//     fs.writeFile(path.join(__dirname, '../trans/new-wg.json'), JSON.stringify(payload))
+//     return Countries;
+// }
