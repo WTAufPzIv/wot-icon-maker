@@ -17,82 +17,40 @@ const path$2 = require("path");
 const STORE_PATH = path$2.join(electron.app.getPath("userData"), "store.json");
 const WOT_EXTRACT_PATH = path$2.join(electron.app.getPath("userData"), "extract");
 const VEHICLES_PATH = "/vehicles";
-const fs$2 = require("fs");
+require("fs");
 async function ReadBytes(fd, length = 1, needBuffer = false) {
-  return new Promise((res, rej) => {
-    const buffer = Buffer.allocUnsafe(length);
-    fs$2.read(fd, buffer, 0, length, null, (err, bytesRead, buffer2) => {
-      if (err) {
-        rej("ReadByte Error" + err);
-      }
-      if (needBuffer) {
-        res(buffer2);
-      } else {
-        const str = buffer2.slice(0, length).toString();
-        res(str);
-      }
-    });
-  });
+  const buffer = Buffer.allocUnsafe(length);
+  await fd.read(buffer, 0, length, null);
+  if (needBuffer) {
+    return buffer;
+  } else {
+    return buffer.slice(0, length).toString();
+  }
 }
 async function ReadUInt32(fd) {
-  return new Promise((res, rej) => {
-    const buffer = Buffer.allocUnsafe(4);
-    fs$2.read(fd, buffer, 0, 4, null, (err, bytesRead, buffer2) => {
-      if (err) {
-        rej("ReadUInt32 Error" + err);
-      }
-      const value = buffer2.readUInt32LE(0);
-      res(value);
-    });
-  });
+  const buffer = Buffer.allocUnsafe(4);
+  await fd.read(buffer, 0, 4, null);
+  return buffer.readUInt32LE(0);
 }
-function ReadSingle(fd) {
-  return new Promise((res, rej) => {
-    const buffer = Buffer.allocUnsafe(4);
-    fs$2.read(fd, buffer, 0, 4, null, (err, bytesRead, buffer2) => {
-      if (err) {
-        rej("ReadSingle Error" + err);
-      }
-      const value = buffer2.readFloatLE(0);
-      res(value);
-    });
-  });
+async function ReadSingle(fd) {
+  const buffer = Buffer.allocUnsafe(4);
+  await fd.read(buffer, 0, 4, null);
+  return buffer.readFloatLE(0);
 }
-function ReadInt8(fd) {
-  return new Promise((res, rej) => {
-    const buffer = Buffer.allocUnsafe(1);
-    fs$2.read(fd, buffer, 0, 1, null, (err, bytesRead, buffer2) => {
-      if (err) {
-        rej("ReadInt8 Error" + err);
-      }
-      const value = buffer2.readInt8(0);
-      res(value);
-    });
-  });
+async function ReadInt8(fd) {
+  const buffer = Buffer.allocUnsafe(1);
+  await fd.read(buffer, 0, 1, null);
+  return buffer.readInt8(0);
 }
-function ReadInt16(fd) {
-  return new Promise((res, rej) => {
-    const buffer = Buffer.allocUnsafe(2);
-    fs$2.read(fd, buffer, 0, 2, null, (err, bytesRead, buffer2) => {
-      if (err) {
-        rej("ReadInt16 Error" + err);
-      }
-      const value = buffer2.readInt16LE(0);
-      res(value);
-    });
-  });
+async function ReadInt16(fd) {
+  const buffer = Buffer.allocUnsafe(2);
+  await fd.read(buffer, 0, 2, null);
+  return buffer.readInt16LE(0);
 }
-function ReadInt32(fd) {
-  return new Promise((res, rej) => {
-    const buffer = Buffer.allocUnsafe(4);
-    fs$2.read(fd, buffer, 0, 4, null, (err, bytesRead, buffer2) => {
-      if (err) {
-        rej(`ReadInt32 Error: ${err}`);
-      }
-      const value = buffer2.readInt32LE(0);
-      res(value);
-    });
-  });
+async function ReadInt32(fd) {
+  const buffer = Buffer.allocUnsafe(4);
+  await fd.read(buffer, 0, 4, null);
+  return buffer.readInt32LE(0);
 }
 function readNextByte(fd) {
   return new Promise((res, rej) => {
@@ -100,29 +58,25 @@ function readNextByte(fd) {
     let bytes = Buffer.allocUnsafe(128);
     let length = 0;
     const readNext = async (fd2) => {
-      fs$2.read(fd2, bytes, length, 1, null, (err) => {
-        if (err) {
-          rej("readNextByte Error");
-        }
-        if (bytes[length] === 0) {
-          const str = bytes.slice(0, length).toString();
-          strings.push(str);
-          if (length === 0) {
-            res(strings);
-          } else {
-            length = 0;
-            readNext(fd2);
-          }
+      await fd2.read(bytes, length, 1, null);
+      if (bytes[length] === 0) {
+        const str = bytes.slice(0, length).toString();
+        strings.push(str);
+        if (length === 0) {
+          res(strings);
         } else {
-          length++;
-          if (length >= bytes.length) {
-            const newBytes = Buffer.allocUnsafe(bytes.length * 2);
-            bytes.copy(newBytes);
-            bytes = newBytes;
-          }
+          length = 0;
           readNext(fd2);
         }
-      });
+      } else {
+        length++;
+        if (length >= bytes.length) {
+          const newBytes = Buffer.allocUnsafe(bytes.length * 2);
+          bytes.copy(newBytes);
+          bytes = newBytes;
+        }
+        readNext(fd2);
+      }
     };
     readNext(fd);
   });
@@ -204,17 +158,6 @@ async function readData(fd, strings, type, length) {
       throw new Error("readData Error: Unknown type. error type: " + type);
   }
 }
-function fsClose(fd) {
-  return new Promise((res, rej) => {
-    fs$2.close(fd, async (err, fd2) => {
-      if (err) {
-        rej("parserWotFile Error");
-        return;
-      }
-      res("1");
-    });
-  });
-}
 async function bXmlReader(fd) {
   const fileTypeCheck = await ReadUInt32(fd);
   if (fileTypeCheck !== 1654738501) {
@@ -223,11 +166,12 @@ async function bXmlReader(fd) {
   await ReadBytes(fd, 1);
   const strs = await readNextByte(fd);
   const raw = await readDict(fd, strs);
-  await fsClose(fd);
+  await fd.close();
   return raw;
 }
 const xml2js = require("xml2js");
 const fs$1 = require("fs");
+const fsPromise = require("fs/promises");
 require("node-stream-zip");
 let bxmlPromise = [];
 function readAndParseXML(filePath, Binary = false) {
@@ -247,20 +191,9 @@ function readAndParseXML(filePath, Binary = false) {
     });
   });
 }
-function fsOpen(path2) {
-  return new Promise((res, rej) => {
-    fs$1.open(path2, "r", async (err, fd) => {
-      if (err) {
-        rej("parserWotFile Error");
-        return;
-      }
-      res(fd);
-    });
-  });
-}
 async function loadTankList(country) {
   try {
-    const fd = await fsOpen(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/list.xml`);
+    const fd = await fsPromise.open(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/list.xml`, "r");
     const tankList = await bXmlReader(fd);
     return tankList;
   } catch (err) {
@@ -269,7 +202,7 @@ async function loadTankList(country) {
 }
 async function loadTankItem(country, tankName, pre) {
   try {
-    const fd = await fsOpen(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/${tankName}.xml`);
+    const fd = await fsPromise.open(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/${tankName}.xml`, "r");
     bxmlPromise.push(bXmlReader(fd));
     return 0;
   } catch (err) {
@@ -293,8 +226,8 @@ async function parserWotFile() {
     promises.push(loadAllTanks(item));
   }
   await Promise.all(promises);
-  await Promise.all(bxmlPromise);
-  return JSON.stringify({});
+  const CountriesVlaue = await Promise.all(bxmlPromise);
+  return JSON.stringify(CountriesVlaue);
 }
 const path$1 = require("path");
 const fs = require("fs");

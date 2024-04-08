@@ -4,6 +4,7 @@ import { bXmlReader } from "./bxml";
 
 const xml2js = require('xml2js')
 const fs = require('fs');
+const fsPromise = require('fs/promises')
 const StreamZip = require('node-stream-zip');
 
 let bxmlPromise: any = [];
@@ -80,7 +81,7 @@ function fsClose(fd: number): Promise<string> {
 
 async function loadTankList(country: string): Promise<any> {
     try {
-        const fd = await fsOpen(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/list.xml`);
+        const fd = await fsPromise.open(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/list.xml`, 'r');
         const tankList = await bXmlReader(fd) as any;
         return tankList;
     } catch (err) {
@@ -89,7 +90,7 @@ async function loadTankList(country: string): Promise<any> {
 }
 async function loadTankItem(country: string, tankName: string, pre: any): Promise<Promise<any>> {
     try {
-        const fd = await fsOpen(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/${tankName}.xml`);
+        const fd = await fsPromise.open(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/${tankName}.xml`, 'r');
         bxmlPromise.push(bXmlReader(fd))
         return 0
     } catch (err) {
@@ -189,5 +190,5 @@ export async function parserWotFile() {
     const Countries: any = await Promise.all(promises);
     const CountriesVlaue: any = await Promise.all(bxmlPromise);
     // res(JSON.stringify(Countries));
-    return JSON.stringify({});
+    return JSON.stringify(CountriesVlaue);
 }
