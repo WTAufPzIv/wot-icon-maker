@@ -189,5 +189,5 @@ export async function parserWotFile() {
     const Countries: any = await Promise.all(promises);
     const CountriesVlaue: any = await Promise.all(bxmlPromise);
     // res(JSON.stringify(Countries));
-    return JSON.stringify({});
+    return JSON.stringify(CountriesVlaue);
 }

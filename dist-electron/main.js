@@ -293,8 +293,8 @@ async function parserWotFile() {
     promises.push(loadAllTanks(item));
   }
   await Promise.all(promises);
-  await Promise.all(bxmlPromise);
-  return JSON.stringify({});
+  const CountriesVlaue = await Promise.all(bxmlPromise);
+  return JSON.stringify(CountriesVlaue);
 }
 const path$1 = require("path");
 const fs = require("fs");

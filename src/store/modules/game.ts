@@ -100,7 +100,7 @@ const actions: ActionTree<IGameState, IRootState> = {
                 alert('游戏数据载入失败，请检查游戏目录设置是否正确，以及游戏客户端完整性')
                 commit(GameMutation.SET_CURRENT_GAME_PATH, '');
             }
-        }, 100)
+        }, 1)
     },
     changeCurrent({ commit, state, dispatch }, path) {
         commit(GameMutation.SET_CURRENT_GAME_PATH, path)
