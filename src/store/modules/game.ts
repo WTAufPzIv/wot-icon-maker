@@ -11,12 +11,14 @@ export interface IgameInstallations {
 
 export interface IGameState {
     gameInstallations: Record<string, IgameInstallations>,
+    tankRenderDatas: Record<string, any>,
     current: string,
     gameLoading: boolean;
 }
 
 export const state: IGameState = {
     gameInstallations: {},
+    tankRenderDatas: {},
     current: '',
     gameLoading: false,
 };
@@ -30,6 +32,9 @@ export const mutations: MutationTree<IGameState> = {
     },
     [GameMutation.SET_GAME_LOADING](state: IGameState, payload: any) {
         state.gameLoading = payload;
+    },
+    [GameMutation.SET_RENDER_DATAS](state: IGameState, payload: any) {
+        state.tankRenderDatas = payload;
     },
 };
 
@@ -88,7 +93,7 @@ const actions: ActionTree<IGameState, IRootState> = {
             }
         }
     },
-    async reloadGameData({ commit, state, rootState }) {
+    async reloadGameData({ commit, state, rootState, dispatch }) {
         commit(GameMutation.SET_GAME_LOADING, true);
         const res = await handleReloadGameData(state.current, state.gameInstallations[state.current].gameName);
         commit(GameMutation.SET_GAME_LOADING, false);
@@ -101,11 +106,28 @@ const actions: ActionTree<IGameState, IRootState> = {
                     ...JSON.parse(res.payload)
                 }
             }
+            dispatch('readForRender')
             ipcMessageTool('vuex', 'tank-write', { tank: JSON.stringify((window as any).countries) })
         } else {
             alert('游戏数据载入失败，请检查游戏目录设置是否正确，以及游戏客户端完整性')
             commit(GameMutation.SET_CURRENT_GAME_PATH, '');
         }
+    },
+    readForRender({ state, commit }) {
+        if (!state.current) return;
+        const current = state.current;
+        const countriesName = Object.keys((window as any).countries[current])
+        const CountryItem: any = {};
+        countriesName.forEach((item: string) => {
+            if (item !== 'version') {
+                CountryItem[item] = Object.keys((window as any).countries[current][item]);
+                // commit(GameMutation.SET_RENDER_DATAS, {
+                //     ...state.tankRenderDatas,
+                //     [item]: Object.keys((window as any).countries[current][item]),
+                // })
+            }
+        })
+        commit(GameMutation.SET_RENDER_DATAS, CountryItem)
     },
     changeCurrent({ commit, state, dispatch }, path) {
         commit(GameMutation.SET_CURRENT_GAME_PATH, path)

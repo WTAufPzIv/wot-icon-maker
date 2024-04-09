@@ -1,5 +1,12 @@
 "use strict";
 const electron = require("electron");
+const GameName = {
+  ASIA: "坦克世界亚服",
+  CN: "坦克世界国服360",
+  RU: "坦克世界莱斯塔服",
+  EU: "坦克世界欧服",
+  NA: "坦克世界美服"
+};
 const countries = [
   "ussr",
   "germany",
@@ -232,6 +239,7 @@ const path$2 = require("path");
 const xml2js = require("xml2js");
 const fs$1 = require("fs");
 const StreamZip = require("node-stream-zip");
+const readedTrans = {};
 function readAndParseXML(filePath, Binary = false) {
   return new Promise((resolve, reject) => {
     fs$1.readFile(filePath, (err, data) => {
@@ -287,9 +295,17 @@ async function loadTankList(country) {
     throw new Error("parserWotFile Error" + err);
   }
 }
-async function loadTankItem(country, tankName, pre) {
+async function loadTankItem(country, tankName) {
   try {
     const fd = await fsOpen(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/${tankName}.xml`);
+    return await bXmlReader(fd);
+  } catch (err) {
+    throw new Error("parserWotFile Error");
+  }
+}
+async function loadGuns(country) {
+  try {
+    const fd = await fsOpen(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/components/guns.xml`);
     return await bXmlReader(fd);
   } catch (err) {
     throw new Error("parserWotFile Error");
@@ -298,33 +314,56 @@ async function loadTankItem(country, tankName, pre) {
 async function loadAllTanks(country, trans) {
   const promises = [];
   const tanklist = await loadTankList(country);
-  for (const [key, value] of Object.entries(tanklist)) {
-    if (key === "xmlns:xmlref" || !key)
-      continue;
-    promises.push(loadTankItem(country, key));
-  }
+  const tankGuns = await loadGuns(country);
+  Object.entries(tanklist).forEach(([key, value]) => {
+    if (key !== "" && key !== "xmlns:xmlref") {
+      promises.push(loadTankItem(country, key));
+    } else {
+      promises.push(new Promise((res) => {
+        res({});
+      }));
+    }
+  });
   const tankMainInfos = await Promise.all(promises);
   const tankFullList = {};
   Object.entries(tanklist).forEach(([key, value], index) => {
-    tankFullList[key] = {
-      ...value,
-      ...tankMainInfos[index]
-    };
-    const name = tankFullList[key].shortUserString || tankFullList[key].userString;
-    if (name) {
-      const realName = name.split(":")[1];
-      trans[realName];
-      tankFullList[key].namefortrans = trans[realName];
+    var _a, _b;
+    if (key && key !== "xmlns:xmlref") {
+      const mainInfo = { ...tankMainInfos[index] };
+      const Turrets = Object.keys(mainInfo.turrets0);
+      const TopTurretName = Turrets[Turrets.length - 1];
+      const topTurret = mainInfo.turrets0[TopTurretName];
+      const Guns = Object.keys(topTurret.guns);
+      const TopGunName = Guns[Guns.length - 1];
+      const shells = Object.values(tankGuns.shared[TopGunName].shots);
+      tankFullList[key] = {
+        ...value,
+        ...tankMainInfos[index],
+        shell1: shells[0].piercingPower.split(" ")[0],
+        shell2: (_b = (_a = shells[1]) == null ? void 0 : _a.piercingPower) == null ? void 0 : _b.split(" ")[0]
+      };
+      const name = tankFullList[key].shortUserString || tankFullList[key].userString;
+      if (name) {
+        const realName = name.split(":")[1];
+        readedTrans[realName] = trans[realName];
+        tankFullList[key].namefortrans = trans[realName];
+      }
     }
   });
   return {
     [country]: tankFullList
   };
 }
-async function parserWotFile() {
+async function parserWotFile(gameName) {
   const promises = [];
   const wg = fs$1.readFileSync(path$2.join(__dirname, "../trans/wg.json"), "utf8");
-  const wgObj = JSON.parse(wg);
+  const lesta = fs$1.readFileSync(path$2.join(__dirname, "../trans/lesta.json"), "utf8");
+  let wgObj;
+  if (gameName === GameName.RU) {
+    wgObj = JSON.parse(lesta);
+  } else {
+    wgObj = JSON.parse(wg);
+  }
   for (const item of countries) {
     promises.push(loadAllTanks(item, wgObj));
   }
@@ -334,6 +373,8 @@ async function parserWotFile() {
     Object.entries(item).forEach(([key, value]) => {
       Countries[key] = value;
     });
+  });
+  fs$1.writeFile(path$2.join(__dirname, "../trans/new-lesta.json"), JSON.stringify(readedTrans), () => {
   });
   return JSON.stringify(Countries);
 }
@@ -454,7 +495,7 @@ const ipc = (mainWindow) => {
         const { basePath, gameName } = args;
         try {
           await extractWotFile(basePath);
-          const wotData = await parserWotFile();
+          const wotData = await parserWotFile(gameName);
           event.sender.send("reload-wot-data-done", createSuccessIpcMessage(wotData));
         } catch (err) {
           console.log(err);

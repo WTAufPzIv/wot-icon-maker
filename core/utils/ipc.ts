@@ -126,7 +126,7 @@ export default (mainWindow: BrowserWindow) => {
           const { basePath, gameName } = args;
           try {
             await extractWotFile(basePath);
-            const wotData = await parserWotFile();
+            const wotData = await parserWotFile(gameName);
             event.sender.send('reload-wot-data-done', createSuccessIpcMessage(wotData));
           } catch(err) {
             console.log(err)

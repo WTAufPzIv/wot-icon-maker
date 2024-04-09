@@ -2,14 +2,20 @@
   <div class="overview-wrapper">
     <p class="current-path">当前目录：{{ gameState.current || '未选择（请进入设置选择游戏目录）' }}</p>
     <div class="tab">
-      <div
+      <!-- <div
         :class="['tab-item', selectedTab === 'data' ? 'active' : '']"
         @click="selectedTab = 'data'"
-      >客户端数据</div>
+      >客户端数据</div> -->
       <div
-        :class="['tab-item', selectedTab === 'icon' ? 'active' : '']"
-        @click="selectedTab = 'icon'"
-      >图标预览</div>
+        :class="['tab-item', selectedTab === key ? 'active' : '']"
+        @click="selectedTab = key"
+        v-for="[key, value] in tabs"
+      >{{ value }}</div>
+    </div>
+    <div>
+      <div
+        v-for="tank in gameState.tankRenderDatas[selectedTab]"
+      >{{ tank }}</div>
     </div>
   </div>
 </template>
@@ -18,10 +24,12 @@
 import { StoreModule } from '@core/const/store';
 import { toRef } from 'vue';
 import { useStore } from 'vuex';
+import { CountryName } from '@core/const/game';
 
+const tabs = Object.entries(CountryName)
 const Store = useStore();
 const gameState = Store.state[StoreModule.GAME]
-const selectedTab = toRef('data')
+const selectedTab = toRef(tabs[0][0])
 </script>
 
 <style scoped>
@@ -35,7 +43,7 @@ const selectedTab = toRef('data')
   color: #ffffff99;
 }
 .tab {
-  width: 500px;
+  width: 1100px;
   display: flex;
   flex-direction: row;
   color: #7b7b6e;
@@ -51,8 +59,8 @@ const selectedTab = toRef('data')
     border-right: 1px solid #504f47;
     cursor: pointer;
     justify-content: center;
-    padding: 13px 1%;
-    width: 250px;
+    padding: 10px 0;
+    width: 100px;
   }
   .tab-item:hover {
     color: #f25322b9;

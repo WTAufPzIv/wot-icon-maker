@@ -26,6 +26,7 @@ const store = createStore({
                 // 读取成功才进行state载入
                 const localState = JSON.parse(localStore.payload);
                 store.dispatch(`${StoreModule.GAME}/initGameState`, localState[StoreModule.GAME]);
+                store.dispatch(`${StoreModule.GAME}/readForRender`);
             }
 
              // 当状态变化时，发送状态到主进程进行存储
