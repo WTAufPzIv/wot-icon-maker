@@ -1,3 +1,4 @@
+import { CategoryEnum, ClassEnum } from '@core/const/game';
 import { GameMutation, StoreModule } from '@core/const/store';
 import { addGamePathByDialog, handleReloadGameData, ipcMessageTool, isWotFolder, parseGameInstallation, showErrorByDialog } from '@core/utils/game';
 import { Module, MutationTree, ActionTree } from 'vuex';
@@ -120,11 +121,40 @@ const actions: ActionTree<IGameState, IRootState> = {
         const CountryItem: any = {};
         countriesName.forEach((item: string) => {
             if (item !== 'version') {
-                CountryItem[item] = Object.keys((window as any).countries[current][item]);
-                // commit(GameMutation.SET_RENDER_DATAS, {
-                //     ...state.tankRenderDatas,
-                //     [item]: Object.keys((window as any).countries[current][item]),
-                // })
+                const tankNames = Object.keys((window as any).countries[current][item]);
+                const tankItem: any= {}
+                tankNames.forEach(itemName => {
+                    const cur = (window as any).countries[current][item][itemName]
+                    const Tags = cur.tags;
+                    const Special = Tags.includes("special") ? CategoryEnum.Special : '';
+                    const Collector = Tags.includes("collectorVehicle") ? CategoryEnum.Collector : '';
+                    const Gold = JSON.stringify(cur.price).includes('gold') ? CategoryEnum.Gold : '';
+                    let Class = ''
+                    if (Tags.includes("lightTank"))
+                        Class = ClassEnum.lightTank;
+                    else if (Tags.includes("mediumTank"))
+                        Class = ClassEnum.mediumTank;
+                    else if (Tags.includes("heavyTank"))
+                        Class = ClassEnum.heavyTank;
+                    else if (Tags.includes("AT-SPG"))
+                        Class = ClassEnum['AT-SPG'];
+                    else if (Tags.includes("SPG"))
+                        Class = ClassEnum['SPG'];
+                    else
+                        Class = '';
+                    tankItem[itemName] = {
+                        tranksCode: (cur.shortUserString || cur.userString || '').split(':')[1],
+                        transName: cur.namefortrans,
+                        visibility: cur.visibility,
+                        category: Special || Collector || Gold || CategoryEnum.Normal,
+                        class: Class,
+                        level: cur.level,
+                        shell1: cur.shell1,
+                        shell2: cur.shell2 || '',
+                        tankId: cur.tankId,
+                    }
+                })
+                CountryItem[item] = tankItem
             }
         })
         commit(GameMutation.SET_RENDER_DATAS, CountryItem)
@@ -135,6 +165,8 @@ const actions: ActionTree<IGameState, IRootState> = {
             && Object.keys(state.gameInstallations).length > 0
             && !(window as any).countries[state.current]) {
             dispatch(`reloadGameData`);
+        } else {
+            dispatch('readForRender');
         }
     },
 }

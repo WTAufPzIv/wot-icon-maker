@@ -16,10 +16,12 @@
     "binary-xml": "^0.0.1",
     "edge": "^7.10.1",
     "electron": "^29.1.6",
+    "html2canvas": "^1.4.1",
     "node-stream-zip": "^1.15.0",
     "vite-electron-plugin": "^0.8.3",
     "vite-plugin-electron-renderer": "^0.14.5",
     "vue": "^3.4.21",
+    "vue-json-pretty": "^2.4.0",
     "vue-router": "^4.3.0",
     "xml2js": "^0.6.2"
   },

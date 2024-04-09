@@ -340,7 +340,9 @@ async function loadAllTanks(country, trans) {
         ...value,
         ...tankMainInfos[index],
         shell1: shells[0].piercingPower.split(" ")[0],
-        shell2: (_b = (_a = shells[1]) == null ? void 0 : _a.piercingPower) == null ? void 0 : _b.split(" ")[0]
+        shell2: (_b = (_a = shells[1]) == null ? void 0 : _a.piercingPower) == null ? void 0 : _b.split(" ")[0],
+        visibility: topTurret.circularVisionRadius,
+        tankId: key
       };
       const name = tankFullList[key].shortUserString || tankFullList[key].userString;
       if (name) {

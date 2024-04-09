@@ -3,7 +3,7 @@
         class="page-container"
     >
         <header-bar></header-bar>
-        <div class="main-wrapper">
+        <div class="main-wrapper" id="main-wrapper">
             <a-side></a-side>
             <div class="main-container">
                 <slot></slot>

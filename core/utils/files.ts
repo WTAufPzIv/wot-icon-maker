@@ -124,6 +124,8 @@ async function loadAllTanks(country: string, trans: any): Promise<any> {
                 ...tankMainInfos[index],
                 shell1: shells[0].piercingPower.split(' ')[0],
                 shell2: shells[1]?.piercingPower?.split(' ')[0],
+                visibility: topTurret.circularVisionRadius,
+                tankId: key,
             }
             const name = tankFullList[key].shortUserString || tankFullList[key].userString
             if (name) {

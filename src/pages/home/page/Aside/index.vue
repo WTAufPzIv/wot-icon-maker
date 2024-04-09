@@ -35,6 +35,8 @@ function handleOpenEditor() {
   width: 150px;
   background-color: rgb(27,27,27);
   height: calc(100vh - 80px);
+  flex-shrink: 0;
+  // flex-grow: 1;
   a {
     text-decoration: none;
   }
