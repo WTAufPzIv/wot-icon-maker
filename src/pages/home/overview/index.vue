@@ -26,7 +26,7 @@
         >{{ value }}</div>
       </div>
       <div class="tank-wrapper">
-        <div v-for="tank in renderData" ref="itemRefs">
+        <div class="margin-box" v-for="tank in renderData" ref="itemRefs">
           <jx-normal
             :tank="tank"
             @click="handleOpen(tank)"
@@ -64,6 +64,31 @@
       </div>
     </div>
   </a-drawer>
+  <a-drawer
+    v-model:open="openPreview"
+    :root-style="{ color: '#fff' }"
+    class="custom-drawe-class"
+    title="导出预览"
+    placement="bottom"
+    height="900"
+  >
+    <div @click="handleClickCon">
+      <a class="add-button">
+        <span>
+          确认导出
+        </span>
+      </a>
+    </div>
+    <div class="tank-wrapper tank-wrapper-scale">
+      <div ref="itemRef" class="target">
+        <jx-normal
+            :tank="tank"
+            v-for="tank in renderData"
+            @click="handleOpen(tank)"
+          ></jx-normal>
+      </div>
+    </div>
+  </a-drawer>
 </template>
 
 <script setup lang="ts">
@@ -82,8 +107,9 @@ const Store = useStore();
 const gameState = Store.state[StoreModule.GAME]
 const selectedTab = ref(tabs[0][0])
 const open = ref(false);
+const openPreview = ref(false);
 const curentTank: any = ref({})
-const itemRefs: any = ref(null);
+const itemRef: any = ref(null);
 const tankExtInfo = ref({});
 
 function handleOpen(tank: any) {
@@ -110,21 +136,36 @@ function sortObjects(arr: any) {
 }
 
 function handleClick() {
+  openPreview.value = true;
   // 遍历每个 div，导出为图片
-  (itemRefs.value).forEach((itemRef: any, index: number) => {
-    html2canvas(itemRef).then(canvas => {
+  // (itemRefs.value).forEach((itemRef: any, index: number) => {
+  //   html2canvas(itemRef).then(canvas => {
+  //     // 将 Canvas 转换为 base64 格式的图片数据
+  //     const imageData = canvas.toDataURL('image/png');
+  //     // 创建一个 a 标签，并设置图片数据和下载属性
+  //     const link = document.createElement('a');
+  //     link.href = imageData;
+  //     link.download = `image_${index}.png`; // 设置文件名
+  //     // 将 a 标签添加到页面，并触发点击事件来下载图片
+  //     document.body.appendChild(link);
+  //     link.click();
+  //     document.body.removeChild(link); // 下载完成后移除 a 标签
+  //   });
+  // });
+}
+function handleClickCon() {
+    html2canvas(itemRef.value).then(canvas => {
       // 将 Canvas 转换为 base64 格式的图片数据
       const imageData = canvas.toDataURL('image/png');
       // 创建一个 a 标签，并设置图片数据和下载属性
       const link = document.createElement('a');
       link.href = imageData;
-      link.download = `image_${index}.png`; // 设置文件名
+      link.download = `image_${123}.png`; // 设置文件名
       // 将 a 标签添加到页面，并触发点击事件来下载图片
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link); // 下载完成后移除 a 标签
     });
-  });
 }
 
 const renderData = computed(() => {
@@ -163,6 +204,20 @@ const renderData = computed(() => {
   justify-content: flex-start;
   align-content: flex-start;
   flex-wrap: wrap;
+  .margin-box {
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+}
+.target {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+.tank-wrapper-scale {
+  zoom: 0.5;
 }
 .tank-wrapper::-webkit-scrollbar {
   width: 0;

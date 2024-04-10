@@ -66,8 +66,8 @@ function calculateFontSize(str: string, maxLength: number) {
     overflow: hidden;
     width: 160px;
     height: 52px;
-    margin-bottom: 20px;
-    margin-right: 20px;
+    // margin-bottom: 20px;
+    // margin-right: 20px;
     font-size: 12px;
     cursor: pointer;
     border: 2px solid #000;
