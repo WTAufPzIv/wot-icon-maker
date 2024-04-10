@@ -22,10 +22,12 @@ const countries = [
 ];
 const path$3 = require("path");
 const PathSourceVehicle = "/res/packages/scripts.pkg|scripts/item_defs/vehicles/";
+const PathSourceAtlases = "/res/packages/gui-part1.pkg|gui/flash/atlases/";
 const STORE_PATH = path$3.join(electron.app.getPath("userData"), "store.json");
 const TANK_PATH = path$3.join(electron.app.getPath("userData"), "tank.json");
 const WOT_EXTRACT_PATH = path$3.join(electron.app.getPath("userData"), "extract");
 const VEHICLES_PATH = "/vehicles";
+const ATLASES_PATH = "/atlases";
 const fs$2 = require("fs");
 async function ReadBytes(fd, length = 1, needBuffer = false) {
   return new Promise((res, rej) => {
@@ -238,6 +240,7 @@ async function bXmlReader(fd) {
 const path$2 = require("path");
 const xml2js = require("xml2js");
 const fs$1 = require("fs");
+const fsPromise = require("fs/promises");
 const StreamZip = require("node-stream-zip");
 const readedTrans = {};
 function readAndParseXML(filePath, Binary = false) {
@@ -274,6 +277,11 @@ async function extractWotFile(basePath) {
   const pkgEntryPath = PathSourceVehicle.split("|")[1];
   const zip = new StreamZip.async({ file: basePath + pkgPath });
   await zip.extract(pkgEntryPath, WOT_EXTRACT_PATH + VEHICLES_PATH);
+  const atlasesPath = PathSourceAtlases.split("|")[0];
+  const atlasesEntryPath = PathSourceAtlases.split("|")[1];
+  const atlasesZip = new StreamZip.async({ file: basePath + atlasesPath });
+  await fsPromise.mkdir(WOT_EXTRACT_PATH + ATLASES_PATH);
+  await atlasesZip.extract(atlasesEntryPath, WOT_EXTRACT_PATH + ATLASES_PATH);
 }
 function fsOpen(path2) {
   return new Promise((res, rej) => {
@@ -379,6 +387,27 @@ async function parserWotFile(gameName) {
   fs$1.writeFile(path$2.join(__dirname, "../trans/new-lesta.json"), JSON.stringify(readedTrans), () => {
   });
   return JSON.stringify(Countries);
+}
+function saveFiles(imageDataUrl, xmlContent, defaultFilename = "battleAtlases") {
+  return new Promise((res, rej) => {
+    electron.dialog.showSaveDialog({
+      defaultPath: defaultFilename,
+      filters: [
+        { name: "All Files", extensions: ["*"] }
+      ]
+    }).then(async (result) => {
+      if (!result.canceled && result.filePath) {
+        const filePath = result.filePath;
+        const base64Data = imageDataUrl.split(";base64,").pop();
+        const imageBuffer = Buffer.from(base64Data, "base64");
+        await fsPromise.writeFile(filePath + ".dds", imageBuffer);
+        await fsPromise.writeFile(filePath + ".xml", xmlContent);
+        res(1);
+      }
+    }).catch((err) => {
+      rej("Error saving files:" + err);
+    });
+  });
 }
 const path$1 = require("path");
 const fs = require("fs");
@@ -499,6 +528,15 @@ const ipc = (mainWindow) => {
           await extractWotFile(basePath);
           const wotData = await parserWotFile(gameName);
           event.sender.send("reload-wot-data-done", createSuccessIpcMessage(wotData));
+        } catch (err) {
+          console.log(err);
+          event.sender.send("reload-wot-data-done", createFailIpcMessage("读取客户端数据失败"));
+        }
+        break;
+      case "save-data":
+        const { img, xmlData } = args;
+        try {
+          await saveFiles(img, xmlData);
         } catch (err) {
           console.log(err);
           event.sender.send("reload-wot-data-done", createFailIpcMessage("读取客户端数据失败"));

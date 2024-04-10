@@ -1,6 +1,6 @@
 import { ipcMain, BrowserWindow, dialog, shell } from 'electron'
 import { IipcMessage } from '../const/type';
-import { extractWotFile, parserWotFile, readAndParseXML } from './files';
+import { extractWotFile, parserWotFile, readAndParseXML, saveFiles } from './files';
 import { STORE_PATH, TANK_PATH } from '../const/path'
 const path = require('path')
 const fs = require('fs');
@@ -133,6 +133,16 @@ export default (mainWindow: BrowserWindow) => {
             event.sender.send('reload-wot-data-done', createFailIpcMessage('读取客户端数据失败'));
           }
           break;
+        case 'save-data':
+          const { img, xmlData } = args;
+          try {
+            await saveFiles(img, xmlData);
+          } catch(err) {
+            console.log(err)
+            event.sender.send('reload-wot-data-done', createFailIpcMessage('读取客户端数据失败'));
+          }
+          break;
+          
       }
   });
   // vuex持久化存储监听

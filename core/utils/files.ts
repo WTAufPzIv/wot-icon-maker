@@ -1,10 +1,12 @@
 import { countries, GameName } from "../const/game";
-import { PathSourceVehicle, VEHICLES_PATH, WOT_EXTRACT_PATH } from "../const/path";
+import { ATLASES_PATH, PathSourceAtlases, PathSourceVehicle, VEHICLES_PATH, WOT_EXTRACT_PATH } from "../const/path";
 import { bXmlReader } from "./bxml";
+import { dialog } from 'electron';
 const path = require('path')
 
 const xml2js = require('xml2js')
 const fs = require('fs');
+const fsPromise = require('fs/promises')
 const StreamZip = require('node-stream-zip');
 
 let bxmlPromise: any = [];
@@ -51,11 +53,15 @@ export function sleep(ms: number) {
 // 解压缩坦克世界客户端文件并保存至app data中
 export async function extractWotFile(basePath: string) {
     await deleteTargetFolder(WOT_EXTRACT_PATH)
-    // await sleep(100);
     const pkgPath = PathSourceVehicle.split('|')[0];
     const pkgEntryPath = PathSourceVehicle.split('|')[1];
     const zip = new StreamZip.async({ file: basePath + pkgPath });
     await zip.extract(pkgEntryPath, WOT_EXTRACT_PATH + VEHICLES_PATH);
+    const atlasesPath = PathSourceAtlases.split('|')[0];
+    const atlasesEntryPath = PathSourceAtlases.split('|')[1];
+    const atlasesZip = new StreamZip.async({ file: basePath + atlasesPath });
+    await fsPromise.mkdir(WOT_EXTRACT_PATH + ATLASES_PATH)
+    await atlasesZip.extract(atlasesEntryPath, WOT_EXTRACT_PATH + ATLASES_PATH);
 }
 
 function fsOpen(path: string): Promise<number> {
@@ -210,27 +216,32 @@ export async function parserWotFile(gameName: string) {
     return JSON.stringify(Countries);
 }
 
-// 为数据注入翻译
-// export function injectTrans(Countries: any, gameName: string) {
-//     // Read JSON file
-//     const wg = fs.readFileSync(path.join(__dirname, '../trans/wg.json'), 'utf8');
-//     const lesta = fs.readFileSync(path.join(__dirname, '../trans/lesta.json'), 'utf8');
-//     const wgObj = JSON.parse(wg);
-
-//     const payload: any = {}
-//     const countries = JSON.parse(JSON.stringify(Countries))
-//     Object.entries(countries).forEach(([country, tanks]: any) => {
-//         // console.log(country)
-//         Object.keys(tanks).forEach((tankName: any) => {
-//             const tankData = countries[]
-//             const name = tankData.shortUserString || tankData.userString
-//             if (name) {
-//                 const realName = name.split('!')[1];
-//                 payload[realName] = wgObj[realName];
-//                 countries[country][tankName].namefortrans = wgObj[realName];
-//             }
-//         })
-//     })
-//     fs.writeFile(path.join(__dirname, '../trans/new-wg.json'), JSON.stringify(payload))
-//     return Countries;
-// }
+// 保存图片和 XML 文件
+export function saveFiles(imageDataUrl: string, xmlContent: string, defaultFilename = 'battleAtlases') {
+  // 显示自定义文件保存对话框
+  return new Promise((res, rej) => {
+    dialog.showSaveDialog({
+        defaultPath: defaultFilename,
+        filters: [
+          { name: 'All Files', extensions: ['*'] }
+        ]
+      }).then(async (result) => {
+        if (!result.canceled && result.filePath) {
+          const filePath = result.filePath;
+          
+          // 将 data URL 转换为二进制数据
+          const base64Data: any = imageDataUrl.split(';base64,').pop();
+          const imageBuffer = Buffer.from(base64Data, 'base64');
+    
+          // 写入图片文件
+          await fsPromise.writeFile(filePath + '.dds', imageBuffer);
+    
+          // 写入 XML 文件
+          await fsPromise.writeFile(filePath + '.xml', xmlContent);
+          res(1);
+        }
+      }).catch((err: any) => {
+        rej('Error saving files:' + err)
+      });
+  })
+}

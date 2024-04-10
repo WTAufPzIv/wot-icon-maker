@@ -1,7 +1,7 @@
 <template>
   <div class="overview-wrapper">
     <p class="current-path">当前目录：{{ gameState.current || '未选择（请进入设置选择游戏目录）' }}
-      <div @click="handleClick">
+      <div @click="handleClick" v-if="gameState.current">
           <a class="add-button">
             <span>
               导出
@@ -11,10 +11,6 @@
     </p>
     <template v-if="gameState.current">
       <div class="tab">
-        <!-- <div
-          :class="['tab-item', selectedTab === 'data' ? 'active' : '']"
-          @click="selectedTab = 'data'"
-        >客户端数据</div> -->
         <div
           :class="['tab-item', selectedTab === 'all' ? 'active' : '']"
           @click="selectedTab = 'all'"
@@ -79,14 +75,12 @@
         </span>
       </a>
     </div>
-    <div class="tank-wrapper tank-wrapper-scale">
-      <div ref="itemRef" class="target">
-        <jx-normal
-            :tank="tank"
-            v-for="tank in renderData"
-            @click="handleOpen(tank)"
-          ></jx-normal>
-      </div>
+    <div ref="itemRef" class="target">
+      <jx-normal
+          :tank="tank"
+          v-for="tank in renderData"
+          @click="handleOpen(tank)"
+        ></jx-normal>
     </div>
   </a-drawer>
 </template>
@@ -100,7 +94,8 @@ import { message } from 'ant-design-vue';
 import VueJsonPretty from 'vue-json-pretty';
 import 'vue-json-pretty/lib/styles.css';
 import JxNormal from './jx-normal.vue';
-import html2canvas from 'html2canvas';
+import { toPng } from 'html-to-image';
+import { ipcMessageTool } from '@core/utils/game';
 
 const tabs = Object.entries(CountryName)
 const Store = useStore();
@@ -137,43 +132,69 @@ function sortObjects(arr: any) {
 
 function handleClick() {
   openPreview.value = true;
-  // 遍历每个 div，导出为图片
-  // (itemRefs.value).forEach((itemRef: any, index: number) => {
-  //   html2canvas(itemRef).then(canvas => {
-  //     // 将 Canvas 转换为 base64 格式的图片数据
-  //     const imageData = canvas.toDataURL('image/png');
-  //     // 创建一个 a 标签，并设置图片数据和下载属性
-  //     const link = document.createElement('a');
-  //     link.href = imageData;
-  //     link.download = `image_${index}.png`; // 设置文件名
-  //     // 将 a 标签添加到页面，并触发点击事件来下载图片
-  //     document.body.appendChild(link);
-  //     link.click();
-  //     document.body.removeChild(link); // 下载完成后移除 a 标签
-  //   });
-  // });
 }
-function handleClickCon() {
-    html2canvas(itemRef.value).then(canvas => {
-      // 将 Canvas 转换为 base64 格式的图片数据
-      const imageData = canvas.toDataURL('image/png');
-      // 创建一个 a 标签，并设置图片数据和下载属性
-      const link = document.createElement('a');
-      link.href = imageData;
-      link.download = `image_${123}.png`; // 设置文件名
-      // 将 a 标签添加到页面，并触发点击事件来下载图片
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link); // 下载完成后移除 a 标签
-    });
+
+function generalXml(json: any) {
+  const xml2 = '<root>' +
+    Object.keys(json).map(key => {
+        const item = json[key];
+        return '<SubTexture>' +
+            '<name>' + key + '</name>' +
+            '<x>' + item.x + '</x>' +
+            '<y>' + item.y + '</y>' +
+            '<width>' + item.width + '</width>' +
+            '<height>' + item.height + '</height>' +
+            '</SubTexture>';
+    }).join('') +
+    '</root>';
+    return xml2
+}
+
+function exportXml() {
+  let x = 0;
+  let y = 0;
+  let curLine = 0;
+  const xml: any = {};
+  renderData.value.forEach((item: any) => {
+    curLine++;
+    if (curLine === 41) {
+      curLine = 1;
+      y += 26;
+      x = 0;
+    }
+    xml[item.tankIconId] = {
+      x,
+      y,
+      width: 80,
+      height: 26,
+      name: item.transName
+    }
+    x += 80
+  })
+  return generalXml(xml);
+}
+
+function handleExport() {
+  return new Promise(res => {
+    setTimeout(() => {
+      const xmlData = exportXml();
+      toPng(itemRef.value, {pixelRatio: 0.5}).then(dataUrl => {
+        res({ img: dataUrl, xmlData })
+      });
+    }, 100)
+  })
+}
+async function handleClickCon() {
+  Store.dispatch(`${StoreModule.GAME}/setGameLoading`, true);
+  const saveData: any = await handleExport();
+  await ipcMessageTool('file', 'save-data', { ...saveData });
+  Store.dispatch(`${StoreModule.GAME}/setGameLoading`, false);
 }
 
 const renderData = computed(() => {
   if (selectedTab.value === 'all') {
     let arr: any = []
     tabs.forEach((item: any) => {
-      // console.log(item)
-      // console.log(Object.values(gameState.tankRenderDatas[item[0]]))
       arr = [
         ...arr,
         ...Object.values(gameState.tankRenderDatas[item[0]])
@@ -194,8 +215,9 @@ const renderData = computed(() => {
 }
 .tank-wrapper {
   min-width: 1300px;
+  margin-top: 20px;
   padding: 20px 0;
-  height: calc(100vh - 185px);
+  height: calc(100vh - 250px);
   /* height: 100%; */
   /* background-color: red; */
   overflow: scroll;
@@ -215,9 +237,7 @@ const renderData = computed(() => {
   justify-content: flex-start;
   align-content: flex-start;
   flex-wrap: wrap;
-}
-.tank-wrapper-scale {
-  zoom: 0.5;
+  width: 6400px;
 }
 .tank-wrapper::-webkit-scrollbar {
   width: 0;
@@ -346,5 +366,8 @@ const renderData = computed(() => {
   .ant-drawer-body::-webkit-scrollbar {
     width: 0;
   }
+}
+.ant-drawer-body {
+  overflow: unset !important;
 }
 </style>

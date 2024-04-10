@@ -60,21 +60,26 @@ const gameState = Store.state[StoreModule.GAME]
 }
 .loading {
     position: absolute;
+    overflow: hidden;
+    transform: translate(0);
+    will-change: transform;
     left: 0;
     top: 80px;
     background-color: rgba(0,0,0,0.8);
     width: 100vw;
     height: calc(100vh - 80px);
-    z-index: 10;
+    z-index: 9999;
     .loading-icon {
         position: absolute;
         top: 50%;
         left: 50%;
         margin: 9px 0 0;
+        will-change: transform;
         transform: translate(-50%, -50%);
         width: 114px;
         height: 114px;
         text-align: center;
+        z-index: 9999;
         .loading1 {
             position: absolute;
             top: 0;
@@ -83,14 +88,18 @@ const gameState = Store.state[StoreModule.GAME]
             left: 0;
             background: url('@src/assets/loading1.png') center no-repeat;
             animation: rotate 3s linear infinite;
+            z-index: 9999;
         }
         .loading2 {
             position: absolute;
+            transform: translate(0);
+            will-change: transform;
             top: 6px;
             right: 0;
             bottom: 0;
             left: 0;
             background: url("@src/assets/loading2.png") center no-repeat;
+            z-index: 9999;
         }
     }
 }

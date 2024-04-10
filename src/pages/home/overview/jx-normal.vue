@@ -3,13 +3,13 @@
         :tank="props.tank"
         :class="['tank-item', cssMap[tank.class]]"
         :style="{
-            color: (tank.category === CategoryEnum.Normal || tank.category === CategoryEnum.Collector )? 'rgb(235,236,238)' : 'rgb(229,191,29)'
+            color: (tank.category === CategoryEnum.Normal || tank.category === CategoryEnum.Collector )? '#fff' : 'rgb(241,220,46)'
         }"
     >
     <div class="left">{{ tank.level }}</div>
     <div class="right"
         :style="{
-            fontSize: `${calculateFontSize(tank.transName, 100)}px`,
+            fontSize: `${calculateFontSize(tank.transName, 110)}px`,
         }"
     >
         {{ tank.transName }}
@@ -35,18 +35,18 @@ const cssMap: any = {
 function calculateFontSize(str: string, maxLength: number) {
   const div = document.createElement('div');
   div.style.visibility = 'hidden';
-  div.style.fontSize = '20px';
+  div.style.fontSize = '24px';
   div.style.position = 'absolute';
   div.style.top = '-9999px';
   div.innerHTML = str;
   document.body.appendChild(div);
   
-  let fontSize = 20;
+  let fontSize = 24;
   let width = div.offsetWidth;
   
   if (width <= maxLength) {
     document.body.removeChild(div);
-    return 20;
+    return 24;
   }
   
   while (width > maxLength && fontSize > 0) {
@@ -84,18 +84,18 @@ function calculateFontSize(str: string, maxLength: number) {
         align-items: center;
         left: 4px;
         top: 4px;
-        font-size: 20px;
+        font-size: 24px;
     }
     .right {
         position: absolute;
-        width: 100px;
+        width: 110px;
         height: 40px;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        left: 48px;
+        left: 44px;
         top: 4px;
         white-space: nowrap;
         // background-color: red;
@@ -108,7 +108,7 @@ function calculateFontSize(str: string, maxLength: number) {
     height: 40px;
     top: 4px;
     left: 42px;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.8);
     box-shadow: 3px 0 4px 1px rgba(0, 0, 0, 0.3);
 }
 .tank-item::before {

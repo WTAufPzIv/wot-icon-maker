@@ -16,6 +16,7 @@
     "binary-xml": "^0.0.1",
     "edge": "^7.10.1",
     "electron": "^29.1.6",
+    "html-to-image": "^1.11.11",
     "html2canvas": "^1.4.1",
     "node-stream-zip": "^1.15.0",
     "vite-electron-plugin": "^0.8.3",

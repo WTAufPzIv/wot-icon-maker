@@ -49,6 +49,9 @@ const actions: ActionTree<IGameState, IRootState> = {
             dispatch(`reloadGameData`);
         }
     },
+    setGameLoading({ commit }, payload) {
+        commit(GameMutation.SET_GAME_LOADING, payload)
+    },
     async addGameInstallation({ commit, state, dispatch }) {
         const res = await addGamePathByDialog();
         const { status, payload, message } = res;
@@ -124,34 +127,37 @@ const actions: ActionTree<IGameState, IRootState> = {
                 const tankNames = Object.keys((window as any).countries[current][item]);
                 const tankItem: any= {}
                 tankNames.forEach(itemName => {
-                    const cur = (window as any).countries[current][item][itemName]
-                    const Tags = cur.tags;
-                    const Special = Tags.includes("special") ? CategoryEnum.Special : '';
-                    const Collector = Tags.includes("collectorVehicle") ? CategoryEnum.Collector : '';
-                    const Gold = JSON.stringify(cur.price).includes('gold') ? CategoryEnum.Gold : '';
-                    let Class = ''
-                    if (Tags.includes("lightTank"))
-                        Class = ClassEnum.lightTank;
-                    else if (Tags.includes("mediumTank"))
-                        Class = ClassEnum.mediumTank;
-                    else if (Tags.includes("heavyTank"))
-                        Class = ClassEnum.heavyTank;
-                    else if (Tags.includes("AT-SPG"))
-                        Class = ClassEnum['AT-SPG'];
-                    else if (Tags.includes("SPG"))
-                        Class = ClassEnum['SPG'];
-                    else
-                        Class = '';
-                    tankItem[itemName] = {
-                        tranksCode: (cur.shortUserString || cur.userString || '').split(':')[1],
-                        transName: cur.namefortrans,
-                        visibility: cur.visibility,
-                        category: Special || Collector || Gold || CategoryEnum.Normal,
-                        class: Class,
-                        level: cur.level,
-                        shell1: cur.shell1,
-                        shell2: cur.shell2 || '',
-                        tankId: cur.tankId,
+                    if (!itemName.includes('MapsTraining') && !itemName.includes('Env_Artillery')) {
+                        const cur = (window as any).countries[current][item][itemName]
+                        const Tags = cur.tags;
+                        const Special = Tags.includes("special") ? CategoryEnum.Special : '';
+                        const Collector = Tags.includes("collectorVehicle") ? CategoryEnum.Collector : '';
+                        const Gold = JSON.stringify(cur.price).includes('gold') ? CategoryEnum.Gold : '';
+                        let Class = ''
+                        if (Tags.includes("lightTank"))
+                            Class = ClassEnum.lightTank;
+                        else if (Tags.includes("mediumTank"))
+                            Class = ClassEnum.mediumTank;
+                        else if (Tags.includes("heavyTank"))
+                            Class = ClassEnum.heavyTank;
+                        else if (Tags.includes("AT-SPG"))
+                            Class = ClassEnum['AT-SPG'];
+                        else if (Tags.includes("SPG"))
+                            Class = ClassEnum['SPG'];
+                        else
+                            Class = '';
+                        tankItem[itemName] = {
+                            tranksCode: (cur.shortUserString || cur.userString || '').split(':')[1],
+                            transName: cur.namefortrans,
+                            visibility: cur.visibility,
+                            category: Special || Collector || Gold || CategoryEnum.Normal,
+                            class: Class,
+                            level: cur.level,
+                            shell1: cur.shell1,
+                            shell2: cur.shell2 || '',
+                            tankId: cur.tankId,
+                            tankIconId: (cur.userString || '').replace('_vehicles:', '-').replace('#', '')
+                        }
                     }
                 })
                 CountryItem[item] = tankItem
