@@ -22,12 +22,10 @@ const countries = [
 ];
 const path$3 = require("path");
 const PathSourceVehicle = "/res/packages/scripts.pkg|scripts/item_defs/vehicles/";
-const PathSourceAtlases = "/res/packages/gui-part1.pkg|gui/flash/atlases/";
 const STORE_PATH = path$3.join(electron.app.getPath("userData"), "store.json");
 const TANK_PATH = path$3.join(electron.app.getPath("userData"), "tank.json");
 const WOT_EXTRACT_PATH = path$3.join(electron.app.getPath("userData"), "extract");
 const VEHICLES_PATH = "/vehicles";
-const ATLASES_PATH = "/atlases";
 const fs$2 = require("fs");
 async function ReadBytes(fd, length = 1, needBuffer = false) {
   return new Promise((res, rej) => {
@@ -277,11 +275,6 @@ async function extractWotFile(basePath) {
   const pkgEntryPath = PathSourceVehicle.split("|")[1];
   const zip = new StreamZip.async({ file: basePath + pkgPath });
   await zip.extract(pkgEntryPath, WOT_EXTRACT_PATH + VEHICLES_PATH);
-  const atlasesPath = PathSourceAtlases.split("|")[0];
-  const atlasesEntryPath = PathSourceAtlases.split("|")[1];
-  const atlasesZip = new StreamZip.async({ file: basePath + atlasesPath });
-  await fsPromise.mkdir(WOT_EXTRACT_PATH + ATLASES_PATH);
-  await atlasesZip.extract(atlasesEntryPath, WOT_EXTRACT_PATH + ATLASES_PATH);
 }
 function fsOpen(path2) {
   return new Promise((res, rej) => {
@@ -306,7 +299,7 @@ async function loadTankList(country) {
 async function loadTankItem(country, tankName) {
   try {
     const fd = await fsOpen(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/${tankName}.xml`);
-    return await bXmlReader(fd);
+    return { ...await bXmlReader(fd), countryId: country };
   } catch (err) {
     throw new Error("parserWotFile Error");
   }
@@ -388,7 +381,7 @@ async function parserWotFile(gameName) {
   });
   return JSON.stringify(Countries);
 }
-function saveFiles(imageDataUrl, xmlContent, defaultFilename = "battleAtlases") {
+function saveFiles(imageDataUrl, xmlContent, defaultFilename = "output") {
   return new Promise((res, rej) => {
     electron.dialog.showSaveDialog({
       defaultPath: defaultFilename,
@@ -607,9 +600,6 @@ const createWindow = () => {
   });
   process.env.VITE_DEV_SERVER_URL && win.loadURL("http://localhost:3000") || win.loadFile("dist/index.html");
   ipc(win);
-  if (process.env.NODE_ENV === "development" || process.env.DEBUG_PROD === "true") {
-    win.webContents.openDevTools();
-  }
 };
 electron.app.whenReady().then(async () => {
   createWindow();

@@ -82,9 +82,10 @@ function calculateFontSize(str: string, maxLength: number) {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        left: 4px;
+        left: 2px;
         top: 4px;
         font-size: 24px;
+        // background-color: red;
     }
     .right {
         position: absolute;

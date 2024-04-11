@@ -156,7 +156,7 @@ const actions: ActionTree<IGameState, IRootState> = {
                             shell1: cur.shell1,
                             shell2: cur.shell2 || '',
                             tankId: cur.tankId,
-                            tankIconId: (cur.userString || '').replace('_vehicles:', '-').replace('#', '')
+                            tankIconId: `${cur.countryId}-${cur.tankId}`
                         }
                     }
                 })

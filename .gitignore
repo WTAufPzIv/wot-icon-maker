@@ -11,6 +11,9 @@ node_modules
 dist
 dist-electron
 dist-ssr
+python/**/*.dds
+python/**/*.png
+python/**/*.xml
 *.local
 
 # Editor directories and files
@@ -23,3 +26,4 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+*.dds

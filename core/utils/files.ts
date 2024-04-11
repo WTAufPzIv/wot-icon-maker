@@ -57,11 +57,11 @@ export async function extractWotFile(basePath: string) {
     const pkgEntryPath = PathSourceVehicle.split('|')[1];
     const zip = new StreamZip.async({ file: basePath + pkgPath });
     await zip.extract(pkgEntryPath, WOT_EXTRACT_PATH + VEHICLES_PATH);
-    const atlasesPath = PathSourceAtlases.split('|')[0];
-    const atlasesEntryPath = PathSourceAtlases.split('|')[1];
-    const atlasesZip = new StreamZip.async({ file: basePath + atlasesPath });
-    await fsPromise.mkdir(WOT_EXTRACT_PATH + ATLASES_PATH)
-    await atlasesZip.extract(atlasesEntryPath, WOT_EXTRACT_PATH + ATLASES_PATH);
+    // const atlasesPath = PathSourceAtlases.split('|')[0];
+    // const atlasesEntryPath = PathSourceAtlases.split('|')[1];
+    // const atlasesZip = new StreamZip.async({ file: basePath + atlasesPath });
+    // await fsPromise.mkdir(WOT_EXTRACT_PATH + ATLASES_PATH)
+    // await atlasesZip.extract(atlasesEntryPath, WOT_EXTRACT_PATH + ATLASES_PATH);
 }
 
 function fsOpen(path: string): Promise<number> {
@@ -88,7 +88,7 @@ async function loadTankList(country: string): Promise<any> {
 async function loadTankItem(country: string, tankName: string): Promise<Promise<any>> {
     try {
         const fd = await fsOpen(`${WOT_EXTRACT_PATH + VEHICLES_PATH}/${country}/${tankName}.xml`);
-        return await bXmlReader(fd)
+        return { ...await bXmlReader(fd), countryId: country };
     } catch (err) {
         throw new Error('parserWotFile Error');
     }
@@ -217,7 +217,7 @@ export async function parserWotFile(gameName: string) {
 }
 
 // 保存图片和 XML 文件
-export function saveFiles(imageDataUrl: string, xmlContent: string, defaultFilename = 'battleAtlases') {
+export function saveFiles(imageDataUrl: string, xmlContent: string, defaultFilename = 'output') {
   // 显示自定义文件保存对话框
   return new Promise((res, rej) => {
     dialog.showSaveDialog({
