@@ -38,3 +38,15 @@ for file in output_files2:
     source_path = os.path.join(battle_atlas_directory, file)
     destination_path = os.path.join(res_directory, 'gui\\flash\\atlases', file)
     shutil.copy(source_path, destination_path)
+    
+# 删除文件夹及其内容
+folders = ['battleAtlas', 'vehicleMarkerAtlas', 'output']
+for folder in folders:
+    if os.path.exists(folder):
+        shutil.rmtree(folder)
+
+# 删除文件
+files = ['output.dds', 'output.xml']
+for file in files:
+    if os.path.exists(file):
+        os.remove(file)

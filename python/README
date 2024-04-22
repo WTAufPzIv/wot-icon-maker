@@ -3,3 +3,5 @@
 直接运行
 然后在vehicleMarkerAtlas和battleAtlas文件夹下就是处理好的png，直接拿去CCAtlas中合并就可以使用了
 
+CCAtlas合并完成后运行pack打包成mod文件夹
+battleAtlas 
