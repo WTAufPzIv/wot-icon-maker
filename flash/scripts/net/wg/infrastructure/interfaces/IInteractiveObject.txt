@@ -1,0 +1,63 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 2
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.infrastructure.interfaces
+{
+   public interface IInteractiveObject extends IDisplayObject
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 0
+               localcount 1
+               initscopedepth 5
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      function get tabEnabled() : Boolean;
+      
+      function set tabEnabled(param1:Boolean) : void;
+      
+      function get tabIndex() : int;
+      
+      function set tabIndex(param1:int) : void;
+      
+      function get focusRect() : Object;
+      
+      function set focusRect(param1:Object) : void;
+      
+      function get mouseEnabled() : Boolean;
+      
+      function set mouseEnabled(param1:Boolean) : void;
+      
+      function get doubleClickEnabled() : Boolean;
+      
+      function set doubleClickEnabled(param1:Boolean) : void;
+   }
+}

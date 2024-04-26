@@ -1,0 +1,98 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.gui.battle.views.vehicleMarkers.VO
+{
+   public class VehicleMarkerVO
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var vClass:String = "";
+      
+      public var vIconSource:String = "";
+      
+      public var vType:String = "";
+      
+      public var vLevel:int = -1;
+      
+      public var pFullName:String = "";
+      
+      public var pName:String = "";
+      
+      public var pClan:String = "";
+      
+      public var pRegion:String = "";
+      
+      public var currHealth:int = 0;
+      
+      public var maxHealth:int = -1;
+      
+      public var entityName:String = "";
+      
+      public var speaking:Boolean = false;
+      
+      public var hunt:Boolean = false;
+      
+      public var squadIndex:int = 0;
+      
+      public var locSecString:String = "";
+      
+      public var roleName:String = "";
+      
+      public var roleSkillLevel:int = 0;
+      
+      public var isPlayerLoaded:Boolean = true;
+      
+      public function VehicleMarkerVO()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+   }
+}

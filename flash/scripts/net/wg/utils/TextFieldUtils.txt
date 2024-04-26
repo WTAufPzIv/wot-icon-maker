@@ -1,0 +1,258 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.utils
+{
+   import flash.text.TextField;
+   import net.wg.data.constants.Values;
+   
+   public class TextFieldUtils
+   {
+      
+      private static var _instance:TextFieldUtils = null;
+      
+      private static const STR_MORE:String = ">";
+      
+      private static const STR_LESS:String = "<";
+      
+      private static const REGEXP_WIDTH:RegExp;
+      
+      private static const STR_TWO_DOTS:String = "..";
+      
+      private static const DEFAULT_TEXT_PADDING:uint = 4;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 3
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function TextFieldUtils()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public static function get instance() : TextFieldUtils
+      {
+         trait getter QName(PackageNamespace(""),"instance")
+            flag FINAL
+            dispid 3
+            method
+               name null
+               returns QName(PackageNamespace("net.wg.utils"),"TextFieldUtils")
+               
+               body
+                  maxstack 2
+                  localcount 1
+                  initscopedepth 3
+                  maxscopedepth 4
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function cutHtmlText(param1:String) : String
+         {
+            trait method QName(PackageNamespace(""),"cutHtmlText")
+               dispid 0
+               method
+                  name null
+                  param QName(PackageNamespace(""),"String")
+                  returns QName(PackageNamespace(""),"String")
+                  
+                  body
+                     maxstack 4
+                     localcount 6
+                     initscopedepth 4
+                     maxscopedepth 5
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function truncateHtmlTextMultiline(param1:TextField, param2:String, param3:uint = 1, param4:String = "..") : Boolean
+            {
+               trait method QName(PackageNamespace(""),"truncateHtmlTextMultiline")
+                  dispid 0
+                  method
+                     name null
+                     flag HAS_OPTIONAL
+                     param QName(PackageNamespace("flash.text"),"TextField")
+                     param QName(PackageNamespace(""),"String")
+                     param QName(PackageNamespace(""),"uint")
+                     param QName(PackageNamespace(""),"String")
+                     optional Integer(1)
+                     optional Utf8("..")
+                     returns QName(PackageNamespace(""),"Boolean")
+                     
+                     body
+                        maxstack 4
+                        localcount 7
+                        initscopedepth 4
+                        maxscopedepth 5
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function truncateTextFieldMultiline(param1:TextField, param2:String, param3:uint, param4:String = "..") : Boolean
+               {
+                  trait method QName(PackageNamespace(""),"truncateTextFieldMultiline")
+                     dispid 0
+                     method
+                        name null
+                        flag HAS_OPTIONAL
+                        param QName(PackageNamespace("flash.text"),"TextField")
+                        param QName(PackageNamespace(""),"String")
+                        param QName(PackageNamespace(""),"uint")
+                        param QName(PackageNamespace(""),"String")
+                        optional Utf8("..")
+                        returns QName(PackageNamespace(""),"Boolean")
+                        
+                        body
+                           maxstack 4
+                           localcount 8
+                           initscopedepth 4
+                           maxscopedepth 5
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function truncateTextFieldText(param1:TextField, param2:String, param3:Boolean = true, param4:Boolean = false, param5:String = "..", param6:uint = 4) : String
+                  {
+                     trait method QName(PackageNamespace(""),"truncateTextFieldText")
+                        dispid 0
+                        method
+                           name null
+                           flag HAS_OPTIONAL
+                           param QName(PackageNamespace("flash.text"),"TextField")
+                           param QName(PackageNamespace(""),"String")
+                           param QName(PackageNamespace(""),"Boolean")
+                           param QName(PackageNamespace(""),"Boolean")
+                           param QName(PackageNamespace(""),"String")
+                           param QName(PackageNamespace(""),"uint")
+                           optional True()
+                           optional False()
+                           optional Utf8("..")
+                           optional Integer(4)
+                           returns QName(PackageNamespace(""),"String")
+                           
+                           body
+                              maxstack 7
+                              localcount 23
+                              initscopedepth 4
+                              maxscopedepth 5
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     private function trunkTextFieldTextProcess(param1:TextField, param2:String, param3:Boolean, param4:int, param5:uint, param6:String) : String
+                     {
+                        trait method QName(PrivateNamespace(null,"66"),"trunkTextFieldTextProcess")
+                           dispid 0
+                           method
+                              name null
+                              param QName(PackageNamespace("flash.text"),"TextField")
+                              param QName(PackageNamespace(""),"String")
+                              param QName(PackageNamespace(""),"Boolean")
+                              param QName(PackageNamespace(""),"int")
+                              param QName(PackageNamespace(""),"uint")
+                              param QName(PackageNamespace(""),"String")
+                              returns QName(PackageNamespace(""),"String")
+                              
+                              body
+                                 maxstack 4
+                                 localcount 8
+                                 initscopedepth 4
+                                 maxscopedepth 5
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        private function getTruncationSize(param1:TextField, param2:Boolean) : Number
+                        {
+                           trait method QName(PrivateNamespace(null,"66"),"getTruncationSize")
+                              dispid 0
+                              method
+                                 name null
+                                 param QName(PackageNamespace("flash.text"),"TextField")
+                                 param QName(PackageNamespace(""),"Boolean")
+                                 returns QName(PackageNamespace(""),"Number")
+                                 
+                                 body
+                                    maxstack 1
+                                    localcount 3
+                                    initscopedepth 4
+                                    maxscopedepth 5
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                        }
+                     }

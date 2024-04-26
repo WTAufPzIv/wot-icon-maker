@@ -1,0 +1,210 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.mock.utils
+{
+   import flash.display.DisplayObject;
+   import flash.display.DisplayObjectContainer;
+   import net.wg.utils.IPopUpManager;
+   import net.wg.utils.helpLayout.PopupLayoutVO;
+   
+   public class MockPopUpManager implements IPopUpManager
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function MockPopUpManager()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function contains(param1:DisplayObject) : Boolean
+      {
+         trait method QName(PackageNamespace(""),"contains")
+            dispid 0
+            method
+               name null
+               param QName(PackageNamespace("flash.display"),"DisplayObject")
+               returns QName(PackageNamespace(""),"Boolean")
+               
+               body
+                  maxstack 1
+                  localcount 2
+                  initscopedepth 4
+                  maxscopedepth 5
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function create(param1:String, param2:PopupLayoutVO = null) : DisplayObject
+         {
+            trait method QName(PackageNamespace(""),"create")
+               dispid 0
+               method
+                  name null
+                  flag HAS_OPTIONAL
+                  param QName(PackageNamespace(""),"String")
+                  param QName(PackageNamespace("net.wg.utils.helpLayout"),"PopupLayoutVO")
+                  optional Null()
+                  returns QName(PackageNamespace("flash.display"),"DisplayObject")
+                  
+                  body
+                     maxstack 1
+                     localcount 3
+                     initscopedepth 4
+                     maxscopedepth 5
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function remove(param1:DisplayObject, param2:Boolean = true) : void
+            {
+               trait method QName(PackageNamespace(""),"remove")
+                  dispid 0
+                  method
+                     name null
+                     flag HAS_OPTIONAL
+                     param QName(PackageNamespace("flash.display"),"DisplayObject")
+                     param QName(PackageNamespace(""),"Boolean")
+                     optional True()
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 1
+                        localcount 3
+                        initscopedepth 4
+                        maxscopedepth 5
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function removeAll() : void
+               {
+                  trait method QName(PackageNamespace(""),"removeAll")
+                     dispid 0
+                     method
+                        name null
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 1
+                           localcount 1
+                           initscopedepth 4
+                           maxscopedepth 5
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function show(param1:DisplayObject, param2:Number = 0, param3:Number = 0, param4:DisplayObjectContainer = null) : void
+                  {
+                     trait method QName(PackageNamespace(""),"show")
+                        dispid 0
+                        method
+                           name null
+                           flag HAS_OPTIONAL
+                           param QName(PackageNamespace("flash.display"),"DisplayObject")
+                           param QName(PackageNamespace(""),"Number")
+                           param QName(PackageNamespace(""),"Number")
+                           param QName(PackageNamespace("flash.display"),"DisplayObjectContainer")
+                           optional Integer(0)
+                           optional Integer(0)
+                           optional Null()
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 1
+                              localcount 5
+                              initscopedepth 4
+                              maxscopedepth 5
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public function get popupCanvas() : DisplayObjectContainer
+                     {
+                        trait getter QName(PackageNamespace(""),"popupCanvas")
+                           dispid 0
+                           method
+                              name null
+                              returns QName(PackageNamespace("flash.display"),"DisplayObjectContainer")
+                              
+                              body
+                                 maxstack 1
+                                 localcount 1
+                                 initscopedepth 4
+                                 maxscopedepth 5
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                     }
+                  }

@@ -1,0 +1,477 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.mock.utils
+{
+   import flash.display.DisplayObject;
+   import net.wg.infrastructure.interfaces.ITween;
+   import net.wg.infrastructure.interfaces.ITweenAnimatorHandler;
+   import net.wg.infrastructure.interfaces.ITweenPropertiesVO;
+   import net.wg.utils.ITweenAnimator;
+   
+   public class MockTweenAnimator implements ITweenAnimator
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function MockTweenAnimator()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function addFadeInAnim(param1:DisplayObject, param2:ITweenAnimatorHandler) : void
+      {
+         trait method QName(PackageNamespace(""),"addFadeInAnim")
+            dispid 0
+            method
+               name null
+               param QName(PackageNamespace("flash.display"),"DisplayObject")
+               param QName(PackageNamespace("net.wg.infrastructure.interfaces"),"ITweenAnimatorHandler")
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 1
+                  localcount 3
+                  initscopedepth 4
+                  maxscopedepth 5
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function addFadeInAnimEx(param1:DisplayObject) : ITween
+         {
+            trait method QName(PackageNamespace(""),"addFadeInAnimEx")
+               dispid 0
+               method
+                  name null
+                  param QName(PackageNamespace("flash.display"),"DisplayObject")
+                  returns QName(PackageNamespace("net.wg.infrastructure.interfaces"),"ITween")
+                  
+                  body
+                     maxstack 1
+                     localcount 2
+                     initscopedepth 4
+                     maxscopedepth 5
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function addFadeOutAnim(param1:DisplayObject, param2:ITweenAnimatorHandler) : void
+            {
+               trait method QName(PackageNamespace(""),"addFadeOutAnim")
+                  dispid 0
+                  method
+                     name null
+                     param QName(PackageNamespace("flash.display"),"DisplayObject")
+                     param QName(PackageNamespace("net.wg.infrastructure.interfaces"),"ITweenAnimatorHandler")
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 1
+                        localcount 3
+                        initscopedepth 4
+                        maxscopedepth 5
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function addFadeOutAnimEx(param1:DisplayObject) : ITween
+               {
+                  trait method QName(PackageNamespace(""),"addFadeOutAnimEx")
+                     dispid 0
+                     method
+                        name null
+                        param QName(PackageNamespace("flash.display"),"DisplayObject")
+                        returns QName(PackageNamespace("net.wg.infrastructure.interfaces"),"ITween")
+                        
+                        body
+                           maxstack 1
+                           localcount 2
+                           initscopedepth 4
+                           maxscopedepth 5
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function addHalfTurnAnim(param1:DisplayObject) : void
+                  {
+                     trait method QName(PackageNamespace(""),"addHalfTurnAnim")
+                        dispid 0
+                        method
+                           name null
+                           param QName(PackageNamespace("flash.display"),"DisplayObject")
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 1
+                              localcount 2
+                              initscopedepth 4
+                              maxscopedepth 5
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public function addHalfTurnAnimEx(param1:DisplayObject) : ITween
+                     {
+                        trait method QName(PackageNamespace(""),"addHalfTurnAnimEx")
+                           dispid 0
+                           method
+                              name null
+                              param QName(PackageNamespace("flash.display"),"DisplayObject")
+                              returns QName(PackageNamespace("net.wg.infrastructure.interfaces"),"ITween")
+                              
+                              body
+                                 maxstack 1
+                                 localcount 2
+                                 initscopedepth 4
+                                 maxscopedepth 5
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        public function addMoveDownAnim(param1:DisplayObject, param2:Number, param3:ITweenAnimatorHandler) : void
+                        {
+                           trait method QName(PackageNamespace(""),"addMoveDownAnim")
+                              dispid 0
+                              method
+                                 name null
+                                 param QName(PackageNamespace("flash.display"),"DisplayObject")
+                                 param QName(PackageNamespace(""),"Number")
+                                 param QName(PackageNamespace("net.wg.infrastructure.interfaces"),"ITweenAnimatorHandler")
+                                 returns QName(PackageNamespace(""),"void")
+                                 
+                                 body
+                                    maxstack 1
+                                    localcount 4
+                                    initscopedepth 4
+                                    maxscopedepth 5
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           public function addMoveDownAnimEx(param1:DisplayObject, param2:Number) : ITween
+                           {
+                              trait method QName(PackageNamespace(""),"addMoveDownAnimEx")
+                                 dispid 0
+                                 method
+                                    name null
+                                    param QName(PackageNamespace("flash.display"),"DisplayObject")
+                                    param QName(PackageNamespace(""),"Number")
+                                    returns QName(PackageNamespace("net.wg.infrastructure.interfaces"),"ITween")
+                                    
+                                    body
+                                       maxstack 1
+                                       localcount 3
+                                       initscopedepth 4
+                                       maxscopedepth 5
+                                       
+                                       code
+                                          Constant export mode is not supported.
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                              
+                              public function addMoveUpAnim(param1:DisplayObject, param2:Number, param3:ITweenAnimatorHandler) : void
+                              {
+                                 trait method QName(PackageNamespace(""),"addMoveUpAnim")
+                                    dispid 0
+                                    method
+                                       name null
+                                       param QName(PackageNamespace("flash.display"),"DisplayObject")
+                                       param QName(PackageNamespace(""),"Number")
+                                       param QName(PackageNamespace("net.wg.infrastructure.interfaces"),"ITweenAnimatorHandler")
+                                       returns QName(PackageNamespace(""),"void")
+                                       
+                                       body
+                                          maxstack 1
+                                          localcount 4
+                                          initscopedepth 4
+                                          maxscopedepth 5
+                                          
+                                          code
+                                             Constant export mode is not supported.
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                                 
+                                 public function addMoveUpAnimEx(param1:DisplayObject, param2:Number) : ITween
+                                 {
+                                    trait method QName(PackageNamespace(""),"addMoveUpAnimEx")
+                                       dispid 0
+                                       method
+                                          name null
+                                          param QName(PackageNamespace("flash.display"),"DisplayObject")
+                                          param QName(PackageNamespace(""),"Number")
+                                          returns QName(PackageNamespace("net.wg.infrastructure.interfaces"),"ITween")
+                                          
+                                          body
+                                             maxstack 1
+                                             localcount 3
+                                             initscopedepth 4
+                                             maxscopedepth 5
+                                             
+                                             code
+                                                Constant export mode is not supported.
+                                             end ; code
+                                          end ; body
+                                       end ; method
+                                    }
+                                    
+                                    public function blinkInfinity(param1:DisplayObject) : void
+                                    {
+                                       trait method QName(PackageNamespace(""),"blinkInfinity")
+                                          dispid 0
+                                          method
+                                             name null
+                                             param QName(PackageNamespace("flash.display"),"DisplayObject")
+                                             returns QName(PackageNamespace(""),"void")
+                                             
+                                             body
+                                                maxstack 1
+                                                localcount 2
+                                                initscopedepth 4
+                                                maxscopedepth 5
+                                                
+                                                code
+                                                   Constant export mode is not supported.
+                                                end ; code
+                                             end ; body
+                                          end ; method
+                                       }
+                                       
+                                       public function createPropsForAlpha(param1:DisplayObject, param2:uint, param3:Number, param4:uint = 0) : ITweenPropertiesVO
+                                       {
+                                          trait method QName(PackageNamespace(""),"createPropsForAlpha")
+                                             dispid 0
+                                             method
+                                                name null
+                                                flag HAS_OPTIONAL
+                                                param QName(PackageNamespace("flash.display"),"DisplayObject")
+                                                param QName(PackageNamespace(""),"uint")
+                                                param QName(PackageNamespace(""),"Number")
+                                                param QName(PackageNamespace(""),"uint")
+                                                optional Integer(0)
+                                                returns QName(PackageNamespace("net.wg.infrastructure.interfaces"),"ITweenPropertiesVO")
+                                                
+                                                body
+                                                   maxstack 1
+                                                   localcount 5
+                                                   initscopedepth 4
+                                                   maxscopedepth 5
+                                                   
+                                                   code
+                                                      Constant export mode is not supported.
+                                                   end ; code
+                                                end ; body
+                                             end ; method
+                                          }
+                                          
+                                          public function createPropsForFrameBasedAnim(param1:DisplayObject, param2:int, param3:int) : ITweenPropertiesVO
+                                          {
+                                             trait method QName(PackageNamespace(""),"createPropsForFrameBasedAnim")
+                                                dispid 0
+                                                method
+                                                   name null
+                                                   param QName(PackageNamespace("flash.display"),"DisplayObject")
+                                                   param QName(PackageNamespace(""),"int")
+                                                   param QName(PackageNamespace(""),"int")
+                                                   returns QName(PackageNamespace("net.wg.infrastructure.interfaces"),"ITweenPropertiesVO")
+                                                   
+                                                   body
+                                                      maxstack 1
+                                                      localcount 4
+                                                      initscopedepth 4
+                                                      maxscopedepth 5
+                                                      
+                                                      code
+                                                         Constant export mode is not supported.
+                                                      end ; code
+                                                   end ; body
+                                                end ; method
+                                             }
+                                             
+                                             public function dispose() : void
+                                             {
+                                                trait method QName(PackageNamespace(""),"dispose")
+                                                   dispid 0
+                                                   method
+                                                      name null
+                                                      returns QName(PackageNamespace(""),"void")
+                                                      
+                                                      body
+                                                         maxstack 1
+                                                         localcount 1
+                                                         initscopedepth 4
+                                                         maxscopedepth 5
+                                                         
+                                                         code
+                                                            Constant export mode is not supported.
+                                                         end ; code
+                                                      end ; body
+                                                   end ; method
+                                                }
+                                                
+                                                public function onComplete(param1:ITween) : void
+                                                {
+                                                   trait method QName(PackageNamespace(""),"onComplete")
+                                                      dispid 0
+                                                      method
+                                                         name null
+                                                         param QName(PackageNamespace("net.wg.infrastructure.interfaces"),"ITween")
+                                                         returns QName(PackageNamespace(""),"void")
+                                                         
+                                                         body
+                                                            maxstack 1
+                                                            localcount 2
+                                                            initscopedepth 4
+                                                            maxscopedepth 5
+                                                            
+                                                            code
+                                                               Constant export mode is not supported.
+                                                            end ; code
+                                                         end ; body
+                                                      end ; method
+                                                   }
+                                                   
+                                                   public function onStart(param1:ITween) : void
+                                                   {
+                                                      trait method QName(PackageNamespace(""),"onStart")
+                                                         dispid 0
+                                                         method
+                                                            name null
+                                                            param QName(PackageNamespace("net.wg.infrastructure.interfaces"),"ITween")
+                                                            returns QName(PackageNamespace(""),"void")
+                                                            
+                                                            body
+                                                               maxstack 1
+                                                               localcount 2
+                                                               initscopedepth 4
+                                                               maxscopedepth 5
+                                                               
+                                                               code
+                                                                  Constant export mode is not supported.
+                                                               end ; code
+                                                            end ; body
+                                                         end ; method
+                                                      }
+                                                      
+                                                      public function removeAnims(param1:DisplayObject) : void
+                                                      {
+                                                         trait method QName(PackageNamespace(""),"removeAnims")
+                                                            dispid 0
+                                                            method
+                                                               name null
+                                                               param QName(PackageNamespace("flash.display"),"DisplayObject")
+                                                               returns QName(PackageNamespace(""),"void")
+                                                               
+                                                               body
+                                                                  maxstack 1
+                                                                  localcount 2
+                                                                  initscopedepth 4
+                                                                  maxscopedepth 5
+                                                                  
+                                                                  code
+                                                                     Constant export mode is not supported.
+                                                                  end ; code
+                                                               end ; body
+                                                            end ; method
+                                                         }
+                                                         
+                                                         public function isDisposed() : Boolean
+                                                         {
+                                                            trait method QName(PackageNamespace(""),"isDisposed")
+                                                               dispid 0
+                                                               method
+                                                                  name null
+                                                                  returns QName(PackageNamespace(""),"Boolean")
+                                                                  
+                                                                  body
+                                                                     maxstack 1
+                                                                     localcount 1
+                                                                     initscopedepth 4
+                                                                     maxscopedepth 5
+                                                                     
+                                                                     code
+                                                                        Constant export mode is not supported.
+                                                                     end ; code
+                                                                  end ; body
+                                                               end ; method
+                                                            }
+                                                         }
+                                                      }

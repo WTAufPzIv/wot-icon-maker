@@ -1,0 +1,68 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package lesta.unbound2.type_system
+{
+   public class UbUnits
+   {
+      
+      public static const NONE:int = 0;
+      
+      public static const PX:int = 1;
+      
+      public static const PERCENT:int = 2;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function UbUnits()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+   }
+}

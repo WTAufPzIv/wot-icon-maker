@@ -1,0 +1,255 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package scaleform.clik.core
+{
+   import flash.display.DisplayObjectContainer;
+   import flash.display.Stage;
+   import flash.events.Event;
+   import flash.utils.Dictionary;
+   import scaleform.clik.managers.FocusHandler;
+   import scaleform.clik.managers.PopUpManager;
+   import scaleform.gfx.Extensions;
+   
+   public dynamic class CLIK
+   {
+      
+      public static var stage:Stage;
+      
+      public static var initialized:Boolean = false;
+      
+      public static var disableNullFocusMoves:Boolean = false;
+      
+      public static var disableDynamicTextFieldFocus:Boolean = false;
+      
+      public static var disableTextFieldToNullFocusMoves:Boolean = true;
+      
+      public static var useImmediateCallbacks:Boolean = false;
+      
+      protected static var isInitListenerActive:Boolean = false;
+      
+      protected static var firingInitCallbacks:Boolean = false;
+      
+      protected static var initQueue:Dictionary;
+      
+      protected static var validDictIndices:Vector.<uint>;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function CLIK()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public static function initialize(param1:Stage, param2:UIComponent) : void
+      {
+         trait method QName(PackageNamespace(""),"initialize")
+            flag FINAL
+            dispid 3
+            method
+               name null
+               param QName(PackageNamespace("flash.display"),"Stage")
+               param QName(PackageNamespace("scaleform.clik.core"),"UIComponent")
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 3
+                  localcount 3
+                  initscopedepth 3
+                  maxscopedepth 4
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public static function getTargetPathFor(param1:DisplayObjectContainer) : String
+         {
+            trait method QName(PackageNamespace(""),"getTargetPathFor")
+               flag FINAL
+               dispid 4
+               method
+                  name null
+                  param QName(PackageNamespace("flash.display"),"DisplayObjectContainer")
+                  returns QName(PackageNamespace(""),"String")
+                  
+                  body
+                     maxstack 3
+                     localcount 3
+                     initscopedepth 3
+                     maxscopedepth 4
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public static function queueInitCallback(param1:UIComponent) : void
+            {
+               trait method QName(PackageNamespace(""),"queueInitCallback")
+                  flag FINAL
+                  dispid 5
+                  method
+                     name null
+                     param QName(PackageNamespace("scaleform.clik.core"),"UIComponent")
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 6
+                        localcount 6
+                        initscopedepth 3
+                        maxscopedepth 4
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               protected static function fireInitCallback(param1:Event) : void
+               {
+                  trait method QName(StaticProtectedNs("scaleform.clik.core:CLIK"),"fireInitCallback")
+                     flag FINAL
+                     dispid 6
+                     method
+                        name null
+                        param QName(PackageNamespace("flash.events"),"Event")
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 4
+                           localcount 9
+                           initscopedepth 3
+                           maxscopedepth 4
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  protected static function clearQueue() : void
+                  {
+                     trait method QName(StaticProtectedNs("scaleform.clik.core:CLIK"),"clearQueue")
+                        flag FINAL
+                        dispid 7
+                        method
+                           name null
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 3
+                              localcount 4
+                              initscopedepth 3
+                              maxscopedepth 4
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     protected static function sortFunc(param1:uint, param2:uint) : Number
+                     {
+                        trait method QName(StaticProtectedNs("scaleform.clik.core:CLIK"),"sortFunc")
+                           flag FINAL
+                           dispid 8
+                           method
+                              name null
+                              param QName(PackageNamespace(""),"uint")
+                              param QName(PackageNamespace(""),"uint")
+                              returns QName(PackageNamespace(""),"Number")
+                              
+                              body
+                                 maxstack 2
+                                 localcount 3
+                                 initscopedepth 3
+                                 maxscopedepth 4
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        protected static function getTargetPathImpl(param1:DisplayObjectContainer, param2:String = "") : String
+                        {
+                           trait method QName(StaticProtectedNs("scaleform.clik.core:CLIK"),"getTargetPathImpl")
+                              flag FINAL
+                              dispid 9
+                              method
+                                 name null
+                                 flag HAS_OPTIONAL
+                                 param QName(PackageNamespace("flash.display"),"DisplayObjectContainer")
+                                 param QName(PackageNamespace(""),"String")
+                                 optional Utf8("")
+                                 returns QName(PackageNamespace(""),"String")
+                                 
+                                 body
+                                    maxstack 3
+                                    localcount 4
+                                    initscopedepth 3
+                                    maxscopedepth 4
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                        }
+                     }

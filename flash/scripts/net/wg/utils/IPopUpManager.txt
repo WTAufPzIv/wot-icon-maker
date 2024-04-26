@@ -1,0 +1,59 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 2
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.utils
+{
+   import flash.display.DisplayObject;
+   import flash.display.DisplayObjectContainer;
+   import net.wg.utils.helpLayout.PopupLayoutVO;
+   
+   public interface IPopUpManager
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 0
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 3
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      function show(param1:DisplayObject, param2:Number = 0, param3:Number = 0, param4:DisplayObjectContainer = null) : void;
+      
+      function create(param1:String, param2:PopupLayoutVO = null) : DisplayObject;
+      
+      function remove(param1:DisplayObject, param2:Boolean = true) : void;
+      
+      function removeAll() : void;
+      
+      function contains(param1:DisplayObject) : Boolean;
+      
+      function get popupCanvas() : DisplayObjectContainer;
+   }
+}

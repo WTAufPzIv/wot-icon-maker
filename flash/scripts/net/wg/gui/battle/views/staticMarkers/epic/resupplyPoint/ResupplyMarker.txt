@@ -1,0 +1,187 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 8
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.gui.battle.views.staticMarkers.epic.resupplyPoint
+{
+   import flash.display.Sprite;
+   import flash.text.TextField;
+   import net.wg.data.constants.Values;
+   import net.wg.infrastructure.interfaces.entity.IDisposable;
+   import scaleform.gfx.TextFieldEx;
+   
+   public class ResupplyMarker extends Sprite implements IDisposable
+   {
+      
+      private static const INSIDE_ALPHA_VALUE:Number = 0;
+      
+      private static const OUTSIDE_ALPHA_VALUE:Number = 1;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 8
+               maxscopedepth 9
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var cooldownTF:TextField = null;
+      
+      public var marker:ResupplyIcon = null;
+      
+      private var _disposed:Boolean = false;
+      
+      public function ResupplyMarker()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 3
+               localcount 1
+               initscopedepth 9
+               maxscopedepth 10
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      final public function dispose() : void
+      {
+         trait method QName(PackageNamespace(""),"dispose")
+            flag FINAL
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 2
+                  localcount 1
+                  initscopedepth 9
+                  maxscopedepth 10
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function notifyVehicleInCircle(param1:Boolean) : void
+         {
+            trait method QName(PackageNamespace(""),"notifyVehicleInCircle")
+               dispid 0
+               method
+                  name null
+                  param QName(PackageNamespace(""),"Boolean")
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 2
+                     localcount 2
+                     initscopedepth 9
+                     maxscopedepth 10
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function setCooldown(param1:String) : void
+            {
+               trait method QName(PackageNamespace(""),"setCooldown")
+                  dispid 0
+                  method
+                     name null
+                     param QName(PackageNamespace(""),"String")
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 2
+                        localcount 2
+                        initscopedepth 9
+                        maxscopedepth 10
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function setState(param1:int) : void
+               {
+                  trait method QName(PackageNamespace(""),"setState")
+                     dispid 0
+                     method
+                        name null
+                        param QName(PackageNamespace(""),"int")
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 3
+                           localcount 2
+                           initscopedepth 9
+                           maxscopedepth 10
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function isDisposed() : Boolean
+                  {
+                     trait method QName(PackageNamespace(""),"isDisposed")
+                        dispid 0
+                        method
+                           name null
+                           returns QName(PackageNamespace(""),"Boolean")
+                           
+                           body
+                              maxstack 1
+                              localcount 1
+                              initscopedepth 9
+                              maxscopedepth 10
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                  }
+               }

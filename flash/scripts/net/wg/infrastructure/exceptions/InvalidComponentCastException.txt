@@ -1,0 +1,67 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 6
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.infrastructure.exceptions
+{
+   public class InvalidComponentCastException extends TypeCastException
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 6
+               maxscopedepth 7
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function InvalidComponentCastException(param1:* = "", param2:* = 0)
+      {
+         method
+            name null
+            flag HAS_OPTIONAL
+            param null
+            param null
+            optional Utf8("")
+            optional Integer(0)
+            returns null
+            
+            body
+               maxstack 3
+               localcount 3
+               initscopedepth 7
+               maxscopedepth 8
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+   }
+}

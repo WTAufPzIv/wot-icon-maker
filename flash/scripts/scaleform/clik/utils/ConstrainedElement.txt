@@ -1,0 +1,109 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package scaleform.clik.utils
+{
+   import flash.display.DisplayObject;
+   
+   public class ConstrainedElement
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var clip:DisplayObject;
+      
+      public var edges:uint;
+      
+      public var left:Number;
+      
+      public var top:Number;
+      
+      public var right:Number;
+      
+      public var bottom:Number;
+      
+      public var scaleX:Number;
+      
+      public var scaleY:Number;
+      
+      public function ConstrainedElement(param1:DisplayObject, param2:uint, param3:Number, param4:Number, param5:Number, param6:Number, param7:Number, param8:Number)
+      {
+         method
+            name null
+            param QName(PackageNamespace("flash.display"),"DisplayObject")
+            param QName(PackageNamespace(""),"uint")
+            param QName(PackageNamespace(""),"Number")
+            param QName(PackageNamespace(""),"Number")
+            param QName(PackageNamespace(""),"Number")
+            param QName(PackageNamespace(""),"Number")
+            param QName(PackageNamespace(""),"Number")
+            param QName(PackageNamespace(""),"Number")
+            returns null
+            
+            body
+               maxstack 2
+               localcount 9
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function toString() : String
+      {
+         trait method QName(PackageNamespace(""),"toString")
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"String")
+               
+               body
+                  maxstack 2
+                  localcount 1
+                  initscopedepth 4
+                  maxscopedepth 5
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+      }
+   }

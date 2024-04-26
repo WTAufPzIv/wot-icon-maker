@@ -1,0 +1,172 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.mock.utils
+{
+   import net.wg.utils.INations;
+   
+   public class MockNations implements INations
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function MockNations()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function getNationID(param1:String) : uint
+      {
+         trait method QName(PackageNamespace(""),"getNationID")
+            dispid 0
+            method
+               name null
+               param QName(PackageNamespace(""),"String")
+               returns QName(PackageNamespace(""),"uint")
+               
+               body
+                  maxstack 1
+                  localcount 2
+                  initscopedepth 4
+                  maxscopedepth 5
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function getNationIcon(param1:int) : String
+         {
+            trait method QName(PackageNamespace(""),"getNationIcon")
+               dispid 0
+               method
+                  name null
+                  param QName(PackageNamespace(""),"int")
+                  returns QName(PackageNamespace(""),"String")
+                  
+                  body
+                     maxstack 1
+                     localcount 2
+                     initscopedepth 4
+                     maxscopedepth 5
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function getNationName(param1:uint) : String
+            {
+               trait method QName(PackageNamespace(""),"getNationName")
+                  dispid 0
+                  method
+                     name null
+                     param QName(PackageNamespace(""),"uint")
+                     returns QName(PackageNamespace(""),"String")
+                     
+                     body
+                        maxstack 1
+                        localcount 2
+                        initscopedepth 4
+                        maxscopedepth 5
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function getNations() : Array
+               {
+                  trait method QName(PackageNamespace(""),"getNations")
+                     dispid 0
+                     method
+                        name null
+                        returns QName(PackageNamespace(""),"Array")
+                        
+                        body
+                           maxstack 1
+                           localcount 1
+                           initscopedepth 4
+                           maxscopedepth 5
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function getNationsData() : Array
+                  {
+                     trait method QName(PackageNamespace(""),"getNationsData")
+                        dispid 0
+                        method
+                           name null
+                           returns QName(PackageNamespace(""),"Array")
+                           
+                           body
+                              maxstack 1
+                              localcount 1
+                              initscopedepth 4
+                              maxscopedepth 5
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                  }
+               }

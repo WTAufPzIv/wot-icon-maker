@@ -1,0 +1,437 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 11
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.gui.battle.components.poi.components
+{
+   import flash.display.MovieClip;
+   import net.wg.data.constants.InvalidationType;
+   import net.wg.data.constants.generated.POI_CONSTS;
+   import net.wg.gui.battle.components.BaseProgressCircle;
+   
+   public class PoiWithProgressStateCircle extends BaseProgressCircle
+   {
+      
+      private static const PROGRESS_STATE:String = "progress";
+      
+      private static const EMPTY_LAST_FRAME:int = 181;
+      
+      private static const ICON_COOLDOWN_ALPHA:Number = 0.6;
+      
+      private static const INV_FRAME:uint;
+      
+      private static const PRECISION:Number = 0.005;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 3
+               localcount 1
+               initscopedepth 11
+               maxscopedepth 12
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var icon:MovieClip = null;
+      
+      public var highlight:MovieClip = null;
+      
+      protected var iconType:uint = 0;
+      
+      protected var progress:Number = 0;
+      
+      protected var statusID:int = 0;
+      
+      private var _isAlly:Boolean;
+      
+      public function PoiWithProgressStateCircle()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 12
+               maxscopedepth 13
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      override public function updateProgress(param1:Number) : void
+      {
+         trait method QName(PackageNamespace(""),"updateProgress")
+            flag OVERRIDE
+            dispid 0
+            method
+               name null
+               param QName(PackageNamespace(""),"Number")
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 3
+                  localcount 3
+                  initscopedepth 12
+                  maxscopedepth 13
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         protected function afterProgressUpdate() : void
+         {
+            trait method QName(ProtectedNamespace("net.wg.gui.battle.components.poi.components:PoiWithProgressStateCircle"),"afterProgressUpdate")
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 2
+                     localcount 1
+                     initscopedepth 12
+                     maxscopedepth 13
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            override protected function initialize() : void
+            {
+               trait method QName(ProtectedNamespace("net.wg.gui.battle.components.poi.components:PoiWithProgressStateCircle"),"initialize")
+                  flag OVERRIDE
+                  dispid 0
+                  method
+                     name null
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 2
+                        localcount 1
+                        initscopedepth 12
+                        maxscopedepth 13
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               override protected function configUI() : void
+               {
+                  trait method QName(ProtectedNamespace("net.wg.gui.battle.components.poi.components:PoiWithProgressStateCircle"),"configUI")
+                     flag OVERRIDE
+                     dispid 0
+                     method
+                        name null
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 1
+                           localcount 1
+                           initscopedepth 12
+                           maxscopedepth 13
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  override protected function draw() : void
+                  {
+                     trait method QName(ProtectedNamespace("net.wg.gui.battle.components.poi.components:PoiWithProgressStateCircle"),"draw")
+                        flag OVERRIDE
+                        dispid 0
+                        method
+                           name null
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 2
+                              localcount 3
+                              initscopedepth 12
+                              maxscopedepth 13
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     override protected function onDispose() : void
+                     {
+                        trait method QName(ProtectedNamespace("net.wg.gui.battle.components.poi.components:PoiWithProgressStateCircle"),"onDispose")
+                           flag OVERRIDE
+                           dispid 0
+                           method
+                              name null
+                              returns QName(PackageNamespace(""),"void")
+                              
+                              body
+                                 maxstack 2
+                                 localcount 1
+                                 initscopedepth 12
+                                 maxscopedepth 13
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        override protected function getCorrectState(param1:String) : String
+                        {
+                           trait method QName(ProtectedNamespace("net.wg.gui.battle.components.poi.components:PoiWithProgressStateCircle"),"getCorrectState")
+                              flag OVERRIDE
+                              dispid 0
+                              method
+                                 name null
+                                 param QName(PackageNamespace(""),"String")
+                                 returns QName(PackageNamespace(""),"String")
+                                 
+                                 body
+                                    maxstack 2
+                                    localcount 2
+                                    initscopedepth 12
+                                    maxscopedepth 13
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           public function setIconType(param1:uint) : void
+                           {
+                              trait method QName(PackageNamespace(""),"setIconType")
+                                 dispid 0
+                                 method
+                                    name null
+                                    param QName(PackageNamespace(""),"uint")
+                                    returns QName(PackageNamespace(""),"void")
+                                    
+                                    body
+                                       maxstack 2
+                                       localcount 2
+                                       initscopedepth 12
+                                       maxscopedepth 13
+                                       
+                                       code
+                                          Constant export mode is not supported.
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                              
+                              public function setIsAlly(param1:Boolean) : void
+                              {
+                                 trait method QName(PackageNamespace(""),"setIsAlly")
+                                    dispid 0
+                                    method
+                                       name null
+                                       param QName(PackageNamespace(""),"Boolean")
+                                       returns QName(PackageNamespace(""),"void")
+                                       
+                                       body
+                                          maxstack 2
+                                          localcount 2
+                                          initscopedepth 12
+                                          maxscopedepth 13
+                                          
+                                          code
+                                             Constant export mode is not supported.
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                                 
+                                 public function setStatusID(param1:int) : void
+                                 {
+                                    trait method QName(PackageNamespace(""),"setStatusID")
+                                       dispid 0
+                                       method
+                                          name null
+                                          param QName(PackageNamespace(""),"int")
+                                          returns QName(PackageNamespace(""),"void")
+                                          
+                                          body
+                                             maxstack 2
+                                             localcount 2
+                                             initscopedepth 12
+                                             maxscopedepth 13
+                                             
+                                             code
+                                                Constant export mode is not supported.
+                                             end ; code
+                                          end ; body
+                                       end ; method
+                                    }
+                                    
+                                    protected function getIconCooldownAlpha() : Number
+                                    {
+                                       trait method QName(ProtectedNamespace("net.wg.gui.battle.components.poi.components:PoiWithProgressStateCircle"),"getIconCooldownAlpha")
+                                          dispid 0
+                                          method
+                                             name null
+                                             returns QName(PackageNamespace(""),"Number")
+                                             
+                                             body
+                                                maxstack 1
+                                                localcount 1
+                                                initscopedepth 12
+                                                maxscopedepth 13
+                                                
+                                                code
+                                                   Constant export mode is not supported.
+                                                end ; code
+                                             end ; body
+                                          end ; method
+                                       }
+                                       
+                                       protected function drawIconType() : void
+                                       {
+                                          trait method QName(ProtectedNamespace("net.wg.gui.battle.components.poi.components:PoiWithProgressStateCircle"),"drawIconType")
+                                             dispid 0
+                                             method
+                                                name null
+                                                returns QName(PackageNamespace(""),"void")
+                                                
+                                                body
+                                                   maxstack 1
+                                                   localcount 1
+                                                   initscopedepth 12
+                                                   maxscopedepth 13
+                                                   
+                                                   code
+                                                      Constant export mode is not supported.
+                                                   end ; code
+                                                end ; body
+                                             end ; method
+                                          }
+                                          
+                                          protected function setColorBlindMode(param1:Boolean) : void
+                                          {
+                                             trait method QName(ProtectedNamespace("net.wg.gui.battle.components.poi.components:PoiWithProgressStateCircle"),"setColorBlindMode")
+                                                dispid 0
+                                                method
+                                                   name null
+                                                   param QName(PackageNamespace(""),"Boolean")
+                                                   returns QName(PackageNamespace(""),"void")
+                                                   
+                                                   body
+                                                      maxstack 2
+                                                      localcount 2
+                                                      initscopedepth 12
+                                                      maxscopedepth 13
+                                                      
+                                                      code
+                                                         Constant export mode is not supported.
+                                                      end ; code
+                                                   end ; body
+                                                end ; method
+                                             }
+                                             
+                                             protected function drawBackIcon() : void
+                                             {
+                                                trait method QName(ProtectedNamespace("net.wg.gui.battle.components.poi.components:PoiWithProgressStateCircle"),"drawBackIcon")
+                                                   dispid 0
+                                                   method
+                                                      name null
+                                                      returns QName(PackageNamespace(""),"void")
+                                                      
+                                                      body
+                                                         maxstack 1
+                                                         localcount 1
+                                                         initscopedepth 12
+                                                         maxscopedepth 13
+                                                         
+                                                         code
+                                                            Constant export mode is not supported.
+                                                         end ; code
+                                                      end ; body
+                                                   end ; method
+                                                }
+                                                
+                                                protected function updateColorBlind() : void
+                                                {
+                                                   trait method QName(ProtectedNamespace("net.wg.gui.battle.components.poi.components:PoiWithProgressStateCircle"),"updateColorBlind")
+                                                      dispid 0
+                                                      method
+                                                         name null
+                                                         returns QName(PackageNamespace(""),"void")
+                                                         
+                                                         body
+                                                            maxstack 1
+                                                            localcount 1
+                                                            initscopedepth 12
+                                                            maxscopedepth 13
+                                                            
+                                                            code
+                                                               Constant export mode is not supported.
+                                                            end ; code
+                                                         end ; body
+                                                      end ; method
+                                                   }
+                                                   
+                                                   protected function applyStateAndProgress() : void
+                                                   {
+                                                      trait method QName(ProtectedNamespace("net.wg.gui.battle.components.poi.components:PoiWithProgressStateCircle"),"applyStateAndProgress")
+                                                         dispid 0
+                                                         method
+                                                            name null
+                                                            returns QName(PackageNamespace(""),"void")
+                                                            
+                                                            body
+                                                               maxstack 2
+                                                               localcount 1
+                                                               initscopedepth 12
+                                                               maxscopedepth 13
+                                                               
+                                                               code
+                                                                  Constant export mode is not supported.
+                                                               end ; code
+                                                            end ; body
+                                                         end ; method
+                                                      }
+                                                   }
+                                                }

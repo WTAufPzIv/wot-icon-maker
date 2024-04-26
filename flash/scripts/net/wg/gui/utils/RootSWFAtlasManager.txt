@@ -1,0 +1,426 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 4
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.gui.utils
+{
+   import flash.display.Graphics;
+   import flash.events.EventDispatcher;
+   import flash.geom.Matrix;
+   import flash.geom.Point;
+   import flash.geom.Rectangle;
+   import net.wg.gui.components.containers.Atlas;
+   import net.wg.infrastructure.events.AtlasEvent;
+   import net.wg.infrastructure.interfaces.IAtlas;
+   import net.wg.infrastructure.interfaces.IAtlasItemVO;
+   import net.wg.infrastructure.interfaces.entity.IDisposable;
+   
+   public class RootSWFAtlasManager extends EventDispatcher implements IDisposable
+   {
+      
+      private static var _instance:RootSWFAtlasManager;
+      
+      private static const STR_IN:String = " in ";
+      
+      private static const MESSAGE_ATLAS_ALREADY_INITED:String = "Atlas already inited, atlasName: ";
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      private var _itemsToDraw:Vector.<AtlasItemData> = null;
+      
+      private var _atlasMap:Object;
+      
+      private var _disposed:Boolean = false;
+      
+      public function RootSWFAtlasManager()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 5
+               maxscopedepth 6
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public static function get instance() : RootSWFAtlasManager
+      {
+         trait getter QName(PackageNamespace(""),"instance")
+            flag FINAL
+            dispid 3
+            method
+               name null
+               returns QName(PackageNamespace("net.wg.gui.utils"),"RootSWFAtlasManager")
+               
+               body
+                  maxstack 2
+                  localcount 1
+                  initscopedepth 4
+                  maxscopedepth 5
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function dispose() : void
+         {
+            trait method QName(PackageNamespace(""),"dispose")
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 3
+                     localcount 6
+                     initscopedepth 5
+                     maxscopedepth 6
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function drawGraphics(param1:String, param2:String, param3:Graphics, param4:Point = null) : void
+            {
+               trait method QName(PackageNamespace(""),"drawGraphics")
+                  dispid 0
+                  method
+                     name null
+                     flag HAS_OPTIONAL
+                     param QName(PackageNamespace(""),"String")
+                     param QName(PackageNamespace(""),"String")
+                     param QName(PackageNamespace("flash.display"),"Graphics")
+                     param QName(PackageNamespace("flash.geom"),"Point")
+                     optional Null()
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 8
+                        localcount 8
+                        initscopedepth 5
+                        maxscopedepth 6
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function drawWithCenterAlign(param1:String, param2:String, param3:Graphics, param4:Boolean, param5:Boolean, param6:int = 0, param7:int = 0) : void
+               {
+                  trait method QName(PackageNamespace(""),"drawWithCenterAlign")
+                     dispid 0
+                     method
+                        name null
+                        flag HAS_OPTIONAL
+                        param QName(PackageNamespace(""),"String")
+                        param QName(PackageNamespace(""),"String")
+                        param QName(PackageNamespace("flash.display"),"Graphics")
+                        param QName(PackageNamespace(""),"Boolean")
+                        param QName(PackageNamespace(""),"Boolean")
+                        param QName(PackageNamespace(""),"int")
+                        param QName(PackageNamespace(""),"int")
+                        optional Integer(0)
+                        optional Integer(0)
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 8
+                           localcount 12
+                           initscopedepth 5
+                           maxscopedepth 6
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function getAtlasItemBounds(param1:String, param2:String) : Rectangle
+                  {
+                     trait method QName(PackageNamespace(""),"getAtlasItemBounds")
+                        dispid 0
+                        method
+                           name null
+                           param QName(PackageNamespace(""),"String")
+                           param QName(PackageNamespace(""),"String")
+                           returns QName(PackageNamespace("flash.geom"),"Rectangle")
+                           
+                           body
+                              maxstack 5
+                              localcount 4
+                              initscopedepth 5
+                              maxscopedepth 6
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public function initAtlas(param1:String) : void
+                     {
+                        trait method QName(PackageNamespace(""),"initAtlas")
+                           dispid 0
+                           method
+                              name null
+                              param QName(PackageNamespace(""),"String")
+                              returns QName(PackageNamespace(""),"void")
+                              
+                              body
+                                 maxstack 4
+                                 localcount 3
+                                 initscopedepth 5
+                                 maxscopedepth 6
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        public function isAtlasInitialized(param1:String) : Boolean
+                        {
+                           trait method QName(PackageNamespace(""),"isAtlasInitialized")
+                              dispid 0
+                              method
+                                 name null
+                                 param QName(PackageNamespace(""),"String")
+                                 returns QName(PackageNamespace(""),"Boolean")
+                                 
+                                 body
+                                    maxstack 2
+                                    localcount 3
+                                    initscopedepth 5
+                                    maxscopedepth 6
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           public function isDisposed() : Boolean
+                           {
+                              trait method QName(PackageNamespace(""),"isDisposed")
+                                 dispid 0
+                                 method
+                                    name null
+                                    returns QName(PackageNamespace(""),"Boolean")
+                                    
+                                    body
+                                       maxstack 1
+                                       localcount 1
+                                       initscopedepth 5
+                                       maxscopedepth 6
+                                       
+                                       code
+                                          Constant export mode is not supported.
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                              
+                              private function getAtlas(param1:String) : IAtlas
+                              {
+                                 trait method QName(PrivateNamespace(null,"58"),"getAtlas")
+                                    dispid 0
+                                    method
+                                       name null
+                                       param QName(PackageNamespace(""),"String")
+                                       returns QName(PackageNamespace("net.wg.infrastructure.interfaces"),"IAtlas")
+                                       
+                                       body
+                                          maxstack 2
+                                          localcount 3
+                                          initscopedepth 5
+                                          maxscopedepth 6
+                                          
+                                          code
+                                             Constant export mode is not supported.
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                                 
+                                 private function onAtlasInitializedHandler(param1:AtlasEvent) : void
+                                 {
+                                    trait method QName(PrivateNamespace(null,"58"),"onAtlasInitializedHandler")
+                                       dispid 0
+                                       method
+                                          name null
+                                          param QName(PackageNamespace("net.wg.infrastructure.events"),"AtlasEvent")
+                                          returns QName(PackageNamespace(""),"void")
+                                          
+                                          body
+                                             maxstack 8
+                                             localcount 3
+                                             initscopedepth 5
+                                             maxscopedepth 6
+                                             
+                                             code
+                                                Constant export mode is not supported.
+                                             end ; code
+                                          end ; body
+                                       end ; method
+                                    }
+                                 }
+                              }
+                              
+                              import flash.display.Graphics;
+                              import flash.geom.Point;
+                              import net.wg.infrastructure.interfaces.entity.IDisposable;
+                              
+                              class AtlasItemData implements IDisposable
+                              {
+                                 
+                                 {
+                                    method
+                                       name null
+                                       returns null
+                                       
+                                       body
+                                          maxstack 1
+                                          localcount 1
+                                          initscopedepth 3
+                                          maxscopedepth 4
+                                          
+                                          code
+                                             Constant export mode is not supported.
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                                 
+                                 public var name:String = null;
+                                 
+                                 public var atlasName:String = null;
+                                 
+                                 public var graphics:Graphics = null;
+                                 
+                                 public var position:Point = null;
+                                 
+                                 public var centerHorizontally:Boolean = false;
+                                 
+                                 public var centerVertically:Boolean = false;
+                                 
+                                 private var _disposed:Boolean = false;
+                                 
+                                 public function AtlasItemData(param1:String, param2:String, param3:Graphics, param4:Point, param5:Boolean, param6:Boolean)
+                                 {
+                                    method
+                                       name null
+                                       param QName(PackageNamespace(""),"String")
+                                       param QName(PackageNamespace(""),"String")
+                                       param QName(PackageNamespace("flash.display"),"Graphics")
+                                       param QName(PackageNamespace("flash.geom"),"Point")
+                                       param QName(PackageNamespace(""),"Boolean")
+                                       param QName(PackageNamespace(""),"Boolean")
+                                       returns null
+                                       
+                                       body
+                                          maxstack 2
+                                          localcount 7
+                                          initscopedepth 4
+                                          maxscopedepth 5
+                                          
+                                          code
+                                             Constant export mode is not supported.
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                                 
+                                 final public function dispose() : void
+                                 {
+                                    trait method QName(PackageNamespace(""),"dispose")
+                                       flag FINAL
+                                       dispid 0
+                                       method
+                                          name null
+                                          returns QName(PackageNamespace(""),"void")
+                                          
+                                          body
+                                             maxstack 2
+                                             localcount 1
+                                             initscopedepth 4
+                                             maxscopedepth 5
+                                             
+                                             code
+                                                Constant export mode is not supported.
+                                             end ; code
+                                          end ; body
+                                       end ; method
+                                    }
+                                    
+                                    public function isDisposed() : Boolean
+                                    {
+                                       trait method QName(PackageNamespace(""),"isDisposed")
+                                          dispid 0
+                                          method
+                                             name null
+                                             returns QName(PackageNamespace(""),"Boolean")
+                                             
+                                             body
+                                                maxstack 1
+                                                localcount 1
+                                                initscopedepth 4
+                                                maxscopedepth 5
+                                                
+                                                code
+                                                   Constant export mode is not supported.
+                                                end ; code
+                                             end ; body
+                                          end ; method
+                                       }
+                                    }

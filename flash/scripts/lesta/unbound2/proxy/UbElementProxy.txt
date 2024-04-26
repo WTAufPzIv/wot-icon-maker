@@ -1,0 +1,140 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 5
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package lesta.unbound2.proxy
+{
+   import flash.display.DisplayObject;
+   import lesta.unbound2.proxy.base.UbProxy;
+   
+   public class UbElementProxy extends UbProxy
+   {
+      
+      public static const EVENT_CLEANUP:String = "eventCleanup";
+      
+      public static const EVENT_REBUILT:String = "eventRebuilt";
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 5
+               maxscopedepth 6
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var p_elementId:int;
+      
+      public var p_view:DisplayObject;
+      
+      public var p_setScopeValue:Function;
+      
+      public function UbElementProxy()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 6
+               maxscopedepth 7
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function get elementId() : int
+      {
+         trait getter QName(PackageNamespace(""),"elementId")
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"int")
+               
+               body
+                  maxstack 1
+                  localcount 1
+                  initscopedepth 6
+                  maxscopedepth 7
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function get view() : DisplayObject
+         {
+            trait getter QName(PackageNamespace(""),"view")
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace("flash.display"),"DisplayObject")
+                  
+                  body
+                     maxstack 1
+                     localcount 1
+                     initscopedepth 6
+                     maxscopedepth 7
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function setScopeValue(param1:String, param2:*) : void
+            {
+               trait method QName(PackageNamespace(""),"setScopeValue")
+                  dispid 0
+                  method
+                     name null
+                     param QName(PackageNamespace(""),"String")
+                     param null
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 3
+                        localcount 3
+                        initscopedepth 6
+                        maxscopedepth 7
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+            }
+         }

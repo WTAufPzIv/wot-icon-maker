@@ -1,0 +1,118 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 9
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.gui.battle.views.staticMarkers.flag
+{
+   import flash.display.MovieClip;
+   import net.wg.gui.battle.components.BattleIconHolder;
+   import net.wg.gui.battle.views.staticMarkers.flag.constant.FlagMarkerState;
+   
+   public class FlagIcon extends BattleIconHolder
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 9
+               maxscopedepth 10
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var cooldown:MovieClip = null;
+      
+      public var ally:MovieClip = null;
+      
+      public var enemy:MovieClip = null;
+      
+      public var neutral:MovieClip = null;
+      
+      public function FlagIcon()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 10
+               maxscopedepth 11
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function showMarker(param1:String) : void
+      {
+         trait method QName(PackageNamespace(""),"showMarker")
+            dispid 0
+            method
+               name null
+               param QName(PackageNamespace(""),"String")
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 2
+                  localcount 2
+                  initscopedepth 10
+                  maxscopedepth 11
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         override protected function onDispose() : void
+         {
+            trait method QName(ProtectedNamespace("net.wg.gui.battle.views.staticMarkers.flag:FlagIcon"),"onDispose")
+               flag OVERRIDE
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 2
+                     localcount 1
+                     initscopedepth 10
+                     maxscopedepth 11
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+         }
+      }

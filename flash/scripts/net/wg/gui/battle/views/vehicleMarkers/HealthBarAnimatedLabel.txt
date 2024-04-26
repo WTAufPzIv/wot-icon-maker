@@ -1,0 +1,323 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 11
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.gui.battle.views.vehicleMarkers
+{
+   import net.wg.data.constants.InvalidationType;
+   import net.wg.data.constants.Values;
+   
+   public class HealthBarAnimatedLabel extends HealthBarAnimatedPart
+   {
+      
+      private static const INVALIDATE_DAMAGE:uint;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 3
+               localcount 1
+               initscopedepth 11
+               maxscopedepth 12
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var damageLabel:DamageLabel = null;
+      
+      private var _damage:int;
+      
+      private var _fakeDamage:int;
+      
+      private var _imitation:Boolean = false;
+      
+      private var _imitationFlag:String = "";
+      
+      public function HealthBarAnimatedLabel()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 12
+               maxscopedepth 13
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      override protected function onDispose() : void
+      {
+         trait method QName(ProtectedNamespace("net.wg.gui.battle.views.vehicleMarkers:HealthBarAnimatedLabel"),"onDispose")
+            flag OVERRIDE
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 2
+                  localcount 1
+                  initscopedepth 12
+                  maxscopedepth 13
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         override protected function draw() : void
+         {
+            trait method QName(ProtectedNamespace("net.wg.gui.battle.views.vehicleMarkers:HealthBarAnimatedLabel"),"draw")
+               flag OVERRIDE
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 3
+                     localcount 1
+                     initscopedepth 12
+                     maxscopedepth 13
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function damage(param1:int, param2:String, param3:Boolean = false) : void
+            {
+               trait method QName(PackageNamespace(""),"damage")
+                  dispid 0
+                  method
+                     name null
+                     flag HAS_OPTIONAL
+                     param QName(PackageNamespace(""),"int")
+                     param QName(PackageNamespace(""),"String")
+                     param QName(PackageNamespace(""),"Boolean")
+                     optional False()
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 4
+                        localcount 5
+                        initscopedepth 12
+                        maxscopedepth 13
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function setLabel(param1:String, param2:String) : void
+               {
+                  trait method QName(PackageNamespace(""),"setLabel")
+                     dispid 0
+                     method
+                        name null
+                        param QName(PackageNamespace(""),"String")
+                        param QName(PackageNamespace(""),"String")
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 2
+                           localcount 3
+                           initscopedepth 12
+                           maxscopedepth 13
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  private function imitationDamage(param1:Boolean, param2:int, param3:String) : void
+                  {
+                     trait method QName(PrivateNamespace(null,"28"),"imitationDamage")
+                        dispid 0
+                        method
+                           name null
+                           param QName(PackageNamespace(""),"Boolean")
+                           param QName(PackageNamespace(""),"int")
+                           param QName(PackageNamespace(""),"String")
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 1
+                              localcount 4
+                              initscopedepth 12
+                              maxscopedepth 13
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public function get fakeDamage() : Number
+                     {
+                        trait getter QName(PackageNamespace(""),"fakeDamage")
+                           dispid 0
+                           method
+                              name null
+                              returns QName(PackageNamespace(""),"Number")
+                              
+                              body
+                                 maxstack 1
+                                 localcount 1
+                                 initscopedepth 12
+                                 maxscopedepth 13
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        public function set fakeDamage(param1:Number) : void
+                        {
+                           trait setter QName(PackageNamespace(""),"fakeDamage")
+                              dispid 0
+                              method
+                                 name null
+                                 param QName(PackageNamespace(""),"Number")
+                                 returns QName(PackageNamespace(""),"void")
+                                 
+                                 body
+                                    maxstack 2
+                                    localcount 2
+                                    initscopedepth 12
+                                    maxscopedepth 13
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           public function get imitationFlag() : String
+                           {
+                              trait getter QName(PackageNamespace(""),"imitationFlag")
+                                 dispid 0
+                                 method
+                                    name null
+                                    returns QName(PackageNamespace(""),"String")
+                                    
+                                    body
+                                       maxstack 1
+                                       localcount 1
+                                       initscopedepth 12
+                                       maxscopedepth 13
+                                       
+                                       code
+                                          Constant export mode is not supported.
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                              
+                              public function set imitationFlag(param1:String) : void
+                              {
+                                 trait setter QName(PackageNamespace(""),"imitationFlag")
+                                    dispid 0
+                                    method
+                                       name null
+                                       param QName(PackageNamespace(""),"String")
+                                       returns QName(PackageNamespace(""),"void")
+                                       
+                                       body
+                                          maxstack 2
+                                          localcount 2
+                                          initscopedepth 12
+                                          maxscopedepth 13
+                                          
+                                          code
+                                             Constant export mode is not supported.
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                                 
+                                 public function get imitation() : Boolean
+                                 {
+                                    trait getter QName(PackageNamespace(""),"imitation")
+                                       dispid 0
+                                       method
+                                          name null
+                                          returns QName(PackageNamespace(""),"Boolean")
+                                          
+                                          body
+                                             maxstack 1
+                                             localcount 1
+                                             initscopedepth 12
+                                             maxscopedepth 13
+                                             
+                                             code
+                                                Constant export mode is not supported.
+                                             end ; code
+                                          end ; body
+                                       end ; method
+                                    }
+                                    
+                                    public function set imitation(param1:Boolean) : void
+                                    {
+                                       trait setter QName(PackageNamespace(""),"imitation")
+                                          dispid 0
+                                          method
+                                             name null
+                                             param QName(PackageNamespace(""),"Boolean")
+                                             returns QName(PackageNamespace(""),"void")
+                                             
+                                             body
+                                                maxstack 2
+                                                localcount 2
+                                                initscopedepth 12
+                                                maxscopedepth 13
+                                                
+                                                code
+                                                   Constant export mode is not supported.
+                                                end ; code
+                                             end ; body
+                                          end ; method
+                                       }
+                                    }
+                                 }

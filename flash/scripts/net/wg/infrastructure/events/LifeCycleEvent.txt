@@ -1,0 +1,106 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 4
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.infrastructure.events
+{
+   import flash.events.Event;
+   
+   public class LifeCycleEvent extends Event
+   {
+      
+      public static const ON_BEFORE_POPULATE:String = "onBeforePopulate";
+      
+      public static const ON_AFTER_POPULATE:String = "onAfterPopulate";
+      
+      public static const ON_POPULATE:String = "onAfterPopulate";
+      
+      public static const ON_GRAPHICS_RECTANGLES_UPDATE:String = "onGraphicsRectanglesUpdate";
+      
+      public static const ON_BEFORE_DISPOSE:String = "onBefireDispose";
+      
+      public static const ON_AFTER_DISPOSE:String = "onAfterDispose";
+      
+      public static const ON_DISPOSE:String = "onBefireDispose";
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function LifeCycleEvent(param1:String, param2:Boolean = false, param3:Boolean = false)
+      {
+         method
+            name null
+            flag HAS_OPTIONAL
+            param QName(PackageNamespace(""),"String")
+            param QName(PackageNamespace(""),"Boolean")
+            param QName(PackageNamespace(""),"Boolean")
+            optional False()
+            optional False()
+            returns null
+            
+            body
+               maxstack 4
+               localcount 4
+               initscopedepth 5
+               maxscopedepth 6
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      override public function clone() : Event
+      {
+         trait method QName(PackageNamespace(""),"clone")
+            flag OVERRIDE
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace("flash.events"),"Event")
+               
+               body
+                  maxstack 4
+                  localcount 1
+                  initscopedepth 5
+                  maxscopedepth 6
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+      }
+   }

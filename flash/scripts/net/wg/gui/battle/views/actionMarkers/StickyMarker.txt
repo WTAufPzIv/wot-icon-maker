@@ -1,0 +1,229 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 8
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.gui.battle.views.actionMarkers
+{
+   import flash.display.MovieClip;
+   import flash.display.Sprite;
+   import flash.geom.Point;
+   import flash.text.TextField;
+   import net.wg.infrastructure.interfaces.entity.IDisposable;
+   
+   public class StickyMarker extends Sprite implements IDisposable
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 8
+               maxscopedepth 9
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var arrow:MovieClip = null;
+      
+      public var txtLabel:TextField = null;
+      
+      public var targetHighlight:MovieClip = null;
+      
+      private var _disposed:Boolean = false;
+      
+      public function StickyMarker()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 9
+               maxscopedepth 10
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      final public function dispose() : void
+      {
+         trait method QName(PackageNamespace(""),"dispose")
+            flag FINAL
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 2
+                  localcount 1
+                  initscopedepth 9
+                  maxscopedepth 10
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function setArrowPosition(param1:Point) : void
+         {
+            trait method QName(PackageNamespace(""),"setArrowPosition")
+               dispid 0
+               method
+                  name null
+                  param QName(PackageNamespace("flash.geom"),"Point")
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 2
+                     localcount 2
+                     initscopedepth 9
+                     maxscopedepth 10
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function setArrowVisible(param1:Boolean) : void
+            {
+               trait method QName(PackageNamespace(""),"setArrowVisible")
+                  dispid 0
+                  method
+                     name null
+                     param QName(PackageNamespace(""),"Boolean")
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 2
+                        localcount 2
+                        initscopedepth 9
+                        maxscopedepth 10
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function setTextLabelEnabled(param1:Boolean) : void
+               {
+                  trait method QName(PackageNamespace(""),"setTextLabelEnabled")
+                     dispid 0
+                     method
+                        name null
+                        param QName(PackageNamespace(""),"Boolean")
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 2
+                           localcount 2
+                           initscopedepth 9
+                           maxscopedepth 10
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function setTextLabelPosition(param1:Point) : void
+                  {
+                     trait method QName(PackageNamespace(""),"setTextLabelPosition")
+                        dispid 0
+                        method
+                           name null
+                           param QName(PackageNamespace("flash.geom"),"Point")
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 2
+                              localcount 2
+                              initscopedepth 9
+                              maxscopedepth 10
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public function setTextLabelVisible(param1:Boolean) : void
+                     {
+                        trait method QName(PackageNamespace(""),"setTextLabelVisible")
+                           dispid 0
+                           method
+                              name null
+                              param QName(PackageNamespace(""),"Boolean")
+                              returns QName(PackageNamespace(""),"void")
+                              
+                              body
+                                 maxstack 2
+                                 localcount 2
+                                 initscopedepth 9
+                                 maxscopedepth 10
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        public function isDisposed() : Boolean
+                        {
+                           trait method QName(PackageNamespace(""),"isDisposed")
+                              dispid 0
+                              method
+                                 name null
+                                 returns QName(PackageNamespace(""),"Boolean")
+                                 
+                                 body
+                                    maxstack 1
+                                    localcount 1
+                                    initscopedepth 9
+                                    maxscopedepth 10
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                        }
+                     }

@@ -1,0 +1,133 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 4
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.infrastructure.events
+{
+   import flash.display.Loader;
+   import flash.events.Event;
+   
+   public class LibraryLoaderEvent extends Event
+   {
+      
+      public static const LOADED:String = "libLoaded";
+      
+      public static const LOADING_FAILED:String = "libLoadingFailed";
+      
+      public static const LOADED_COMPLETED:String = "libsLoadedCompleted";
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var loader:Loader;
+      
+      public var url:String;
+      
+      public var requestedUrl:String;
+      
+      public function LibraryLoaderEvent(param1:String, param2:Loader = null, param3:String = null, param4:String = null, param5:Boolean = false, param6:Boolean = false)
+      {
+         method
+            name null
+            flag HAS_OPTIONAL
+            param QName(PackageNamespace(""),"String")
+            param QName(PackageNamespace("flash.display"),"Loader")
+            param QName(PackageNamespace(""),"String")
+            param QName(PackageNamespace(""),"String")
+            param QName(PackageNamespace(""),"Boolean")
+            param QName(PackageNamespace(""),"Boolean")
+            optional Null()
+            optional Null()
+            optional Null()
+            optional False()
+            optional False()
+            returns null
+            
+            body
+               maxstack 4
+               localcount 7
+               initscopedepth 5
+               maxscopedepth 6
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      override public function clone() : Event
+      {
+         trait method QName(PackageNamespace(""),"clone")
+            flag OVERRIDE
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace("flash.events"),"Event")
+               
+               body
+                  maxstack 7
+                  localcount 1
+                  initscopedepth 5
+                  maxscopedepth 6
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         override public function toString() : String
+         {
+            trait method QName(PackageNamespace(""),"toString")
+               flag OVERRIDE
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace(""),"String")
+                  
+                  body
+                     maxstack 8
+                     localcount 1
+                     initscopedepth 5
+                     maxscopedepth 6
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+         }
+      }

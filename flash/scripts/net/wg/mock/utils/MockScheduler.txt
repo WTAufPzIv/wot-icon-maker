@@ -1,0 +1,268 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.mock.utils
+{
+   import net.wg.utils.IScheduler;
+   
+   public class MockScheduler implements IScheduler
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function MockScheduler()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function cancelAll() : void
+      {
+         trait method QName(PackageNamespace(""),"cancelAll")
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 1
+                  localcount 1
+                  initscopedepth 4
+                  maxscopedepth 5
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function cancelTask(param1:Function) : void
+         {
+            trait method QName(PackageNamespace(""),"cancelTask")
+               dispid 0
+               method
+                  name null
+                  param QName(PackageNamespace(""),"Function")
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 1
+                     localcount 2
+                     initscopedepth 4
+                     maxscopedepth 5
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function dispose() : void
+            {
+               trait method QName(PackageNamespace(""),"dispose")
+                  dispid 0
+                  method
+                     name null
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 1
+                        localcount 1
+                        initscopedepth 4
+                        maxscopedepth 5
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function isEmpty() : Boolean
+               {
+                  trait method QName(PackageNamespace(""),"isEmpty")
+                     dispid 0
+                     method
+                        name null
+                        returns QName(PackageNamespace(""),"Boolean")
+                        
+                        body
+                           maxstack 1
+                           localcount 1
+                           initscopedepth 4
+                           maxscopedepth 5
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function scheduleNonCancelableTask(param1:Function, param2:Number, ... rest) : void
+                  {
+                     trait method QName(PackageNamespace(""),"scheduleNonCancelableTask")
+                        dispid 0
+                        method
+                           name null
+                           flag NEED_REST
+                           param QName(PackageNamespace(""),"Function")
+                           param QName(PackageNamespace(""),"Number")
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 1
+                              localcount 4
+                              initscopedepth 4
+                              maxscopedepth 5
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public function scheduleOnNextFrame(param1:Function, ... rest) : void
+                     {
+                        trait method QName(PackageNamespace(""),"scheduleOnNextFrame")
+                           dispid 0
+                           method
+                              name null
+                              flag NEED_REST
+                              param QName(PackageNamespace(""),"Function")
+                              returns QName(PackageNamespace(""),"void")
+                              
+                              body
+                                 maxstack 1
+                                 localcount 3
+                                 initscopedepth 4
+                                 maxscopedepth 5
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        public function scheduleRepeatableTask(param1:Function, param2:Number, param3:int = 1, ... rest) : void
+                        {
+                           trait method QName(PackageNamespace(""),"scheduleRepeatableTask")
+                              dispid 0
+                              method
+                                 name null
+                                 flag HAS_OPTIONAL
+                                 flag NEED_REST
+                                 param QName(PackageNamespace(""),"Function")
+                                 param QName(PackageNamespace(""),"Number")
+                                 param QName(PackageNamespace(""),"int")
+                                 optional Integer(1)
+                                 returns QName(PackageNamespace(""),"void")
+                                 
+                                 body
+                                    maxstack 1
+                                    localcount 5
+                                    initscopedepth 4
+                                    maxscopedepth 5
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           public function scheduleTask(param1:Function, param2:Number, ... rest) : void
+                           {
+                              trait method QName(PackageNamespace(""),"scheduleTask")
+                                 dispid 0
+                                 method
+                                    name null
+                                    flag NEED_REST
+                                    param QName(PackageNamespace(""),"Function")
+                                    param QName(PackageNamespace(""),"Number")
+                                    returns QName(PackageNamespace(""),"void")
+                                    
+                                    body
+                                       maxstack 1
+                                       localcount 4
+                                       initscopedepth 4
+                                       maxscopedepth 5
+                                       
+                                       code
+                                          Constant export mode is not supported.
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                              
+                              public function isDisposed() : Boolean
+                              {
+                                 trait method QName(PackageNamespace(""),"isDisposed")
+                                    dispid 0
+                                    method
+                                       name null
+                                       returns QName(PackageNamespace(""),"Boolean")
+                                       
+                                       body
+                                          maxstack 1
+                                          localcount 1
+                                          initscopedepth 4
+                                          maxscopedepth 5
+                                          
+                                          code
+                                             Constant export mode is not supported.
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                              }
+                           }

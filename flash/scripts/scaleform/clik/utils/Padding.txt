@@ -1,0 +1,134 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package scaleform.clik.utils
+{
+   public class Padding
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var top:Number = 0;
+      
+      public var bottom:Number = 0;
+      
+      public var left:Number = 0;
+      
+      public var right:Number = 0;
+      
+      public function Padding(... rest)
+      {
+         method
+            name null
+            flag NEED_REST
+            returns null
+            
+            body
+               maxstack 7
+               localcount 3
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function get vertical() : Number
+      {
+         trait getter QName(PackageNamespace(""),"vertical")
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"Number")
+               
+               body
+                  maxstack 2
+                  localcount 1
+                  initscopedepth 4
+                  maxscopedepth 5
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function get horizontal() : Number
+         {
+            trait getter QName(PackageNamespace(""),"horizontal")
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace(""),"Number")
+                  
+                  body
+                     maxstack 2
+                     localcount 1
+                     initscopedepth 4
+                     maxscopedepth 5
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function toString() : String
+            {
+               trait method QName(PackageNamespace(""),"toString")
+                  dispid 0
+                  method
+                     name null
+                     returns QName(PackageNamespace(""),"String")
+                     
+                     body
+                        maxstack 2
+                        localcount 1
+                        initscopedepth 4
+                        maxscopedepth 5
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+            }
+         }

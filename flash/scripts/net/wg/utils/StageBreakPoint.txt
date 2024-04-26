@@ -1,0 +1,134 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.utils
+{
+   public class StageBreakPoint
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      private var _name:String = "";
+      
+      private var _width:int = 0;
+      
+      private var _height:int = 0;
+      
+      public function StageBreakPoint(param1:String, param2:int, param3:int)
+      {
+         method
+            name null
+            param QName(PackageNamespace(""),"String")
+            param QName(PackageNamespace(""),"int")
+            param QName(PackageNamespace(""),"int")
+            returns null
+            
+            body
+               maxstack 2
+               localcount 4
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function get name() : String
+      {
+         trait getter QName(PackageNamespace(""),"name")
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"String")
+               
+               body
+                  maxstack 1
+                  localcount 1
+                  initscopedepth 4
+                  maxscopedepth 5
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function get width() : int
+         {
+            trait getter QName(PackageNamespace(""),"width")
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace(""),"int")
+                  
+                  body
+                     maxstack 1
+                     localcount 1
+                     initscopedepth 4
+                     maxscopedepth 5
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function get height() : int
+            {
+               trait getter QName(PackageNamespace(""),"height")
+                  dispid 0
+                  method
+                     name null
+                     returns QName(PackageNamespace(""),"int")
+                     
+                     body
+                        maxstack 1
+                        localcount 1
+                        initscopedepth 4
+                        maxscopedepth 5
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+            }
+         }

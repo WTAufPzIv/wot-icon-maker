@@ -1,0 +1,68 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.data.constants.generated
+{
+   public class ROOT_SWF_CONSTANTS
+   {
+      
+      public static const BATTLE_VEHICLE_MARKERS_REGISTER_CALLBACK:String = "registerMarkersManager";
+      
+      public static const BATTLE_CROSSHAIRS_REGISTER_CALLBACK:String = "registerCrosshairPanel";
+      
+      public static const WAITING_TRANSITION_CALLBACK:String = "registerWaitingTransition";
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function ROOT_SWF_CONSTANTS()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+   }
+}

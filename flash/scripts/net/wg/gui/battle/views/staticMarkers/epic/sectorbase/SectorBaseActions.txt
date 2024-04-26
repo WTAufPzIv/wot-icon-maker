@@ -1,0 +1,372 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 11
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.gui.battle.views.staticMarkers.epic.sectorbase
+{
+   import flash.display.MovieClip;
+   import flash.geom.Point;
+   import net.wg.gui.battle.views.actionMarkers.ActionMarkerStates;
+   import net.wg.gui.battle.views.actionMarkers.BaseActionMarker;
+   import net.wg.gui.battle.views.staticMarkers.epic.ObjectiveIdReplyState;
+   import net.wg.gui.battle.views.vehicleMarkers.VehicleMarkersManager;
+   import net.wg.infrastructure.interfaces.entity.IDisposable;
+   
+   public class SectorBaseActions extends BaseActionMarker implements IDisposable
+   {
+      
+      private static const ARROW_POSITION:Point;
+      
+      private static const REPLY_POSITION:Point;
+      
+      private static const DISTANCE_POSITION:Point;
+      
+      private static const ATTACK:String = "attack";
+      
+      private static const ATTACK_COLORBLIND:String = "attackColorBlind";
+      
+      private static const DEFEND:String = "defend";
+      
+      private static const ENEMY:String = "enemy";
+      
+      private static const NEUTRAL:String = "neutral";
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 11
+               maxscopedepth 12
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var clickAnimation:MovieClip = null;
+      
+      public var highlightAnimation:MovieClip = null;
+      
+      public var epicBaseID:ObjectiveIdReplyState = null;
+      
+      public var epicBaseMarker:MovieClip = null;
+      
+      public var baseMarker:MovieClip = null;
+      
+      public var hoverShadow:MovieClip = null;
+      
+      private var _count:int = 0;
+      
+      private var _showHighlight:Boolean = true;
+      
+      private var _vmManager:VehicleMarkersManager = null;
+      
+      private var _baseType:String = "";
+      
+      private var _baseColor:String = "";
+      
+      private var _isEpic:Boolean = false;
+      
+      public function SectorBaseActions()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 12
+               maxscopedepth 13
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      override protected function get getReplyPosition() : Point
+      {
+         trait getter QName(ProtectedNamespace("net.wg.gui.battle.views.staticMarkers.epic.sectorbase:SectorBaseActions"),"getReplyPosition")
+            flag OVERRIDE
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace("flash.geom"),"Point")
+               
+               body
+                  maxstack 1
+                  localcount 1
+                  initscopedepth 12
+                  maxscopedepth 13
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         override protected function get getArrowPosition() : Point
+         {
+            trait getter QName(ProtectedNamespace("net.wg.gui.battle.views.staticMarkers.epic.sectorbase:SectorBaseActions"),"getArrowPosition")
+               flag OVERRIDE
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace("flash.geom"),"Point")
+                  
+                  body
+                     maxstack 1
+                     localcount 1
+                     initscopedepth 12
+                     maxscopedepth 13
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            override protected function get getDistanceToMarkerPosition() : Point
+            {
+               trait getter QName(ProtectedNamespace("net.wg.gui.battle.views.staticMarkers.epic.sectorbase:SectorBaseActions"),"getDistanceToMarkerPosition")
+                  flag OVERRIDE
+                  dispid 0
+                  method
+                     name null
+                     returns QName(PackageNamespace("flash.geom"),"Point")
+                     
+                     body
+                        maxstack 1
+                        localcount 1
+                        initscopedepth 12
+                        maxscopedepth 13
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function deactivateAttackAndDefendStates() : void
+               {
+                  trait method QName(PackageNamespace(""),"deactivateAttackAndDefendStates")
+                     dispid 0
+                     method
+                        name null
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 2
+                           localcount 1
+                           initscopedepth 12
+                           maxscopedepth 13
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  override protected function onDispose() : void
+                  {
+                     trait method QName(ProtectedNamespace("net.wg.gui.battle.views.staticMarkers.epic.sectorbase:SectorBaseActions"),"onDispose")
+                        flag OVERRIDE
+                        dispid 0
+                        method
+                           name null
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 2
+                              localcount 1
+                              initscopedepth 12
+                              maxscopedepth 13
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public function triggerClickAnimation() : void
+                     {
+                        trait method QName(PackageNamespace(""),"triggerClickAnimation")
+                           dispid 0
+                           method
+                              name null
+                              returns QName(PackageNamespace(""),"void")
+                              
+                              body
+                                 maxstack 2
+                                 localcount 1
+                                 initscopedepth 12
+                                 maxscopedepth 13
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        public function initializeBase(param1:String) : void
+                        {
+                           trait method QName(PackageNamespace(""),"initializeBase")
+                              dispid 0
+                              method
+                                 name null
+                                 param QName(PackageNamespace(""),"String")
+                                 returns QName(PackageNamespace(""),"void")
+                                 
+                                 body
+                                    maxstack 2
+                                    localcount 2
+                                    initscopedepth 12
+                                    maxscopedepth 13
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           public function activateEpicVisibility(param1:Boolean) : void
+                           {
+                              trait method QName(PackageNamespace(""),"activateEpicVisibility")
+                                 dispid 0
+                                 method
+                                    name null
+                                    param QName(PackageNamespace(""),"Boolean")
+                                    returns QName(PackageNamespace(""),"void")
+                                    
+                                    body
+                                       maxstack 2
+                                       localcount 2
+                                       initscopedepth 12
+                                       maxscopedepth 13
+                                       
+                                       code
+                                          Constant export mode is not supported.
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                              
+                              public function setBaseColor() : void
+                              {
+                                 trait method QName(PackageNamespace(""),"setBaseColor")
+                                    dispid 0
+                                    method
+                                       name null
+                                       returns QName(PackageNamespace(""),"void")
+                                       
+                                       body
+                                          maxstack 2
+                                          localcount 1
+                                          initscopedepth 12
+                                          maxscopedepth 13
+                                          
+                                          code
+                                             Constant export mode is not supported.
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                                 
+                                 public function activateHover(param1:Boolean) : void
+                                 {
+                                    trait method QName(PackageNamespace(""),"activateHover")
+                                       dispid 0
+                                       method
+                                          name null
+                                          param QName(PackageNamespace(""),"Boolean")
+                                          returns QName(PackageNamespace(""),"void")
+                                          
+                                          body
+                                             maxstack 2
+                                             localcount 2
+                                             initscopedepth 12
+                                             maxscopedepth 13
+                                             
+                                             code
+                                                Constant export mode is not supported.
+                                             end ; code
+                                          end ; body
+                                       end ; method
+                                    }
+                                    
+                                    public function setActiveState(param1:int) : void
+                                    {
+                                       trait method QName(PackageNamespace(""),"setActiveState")
+                                          dispid 0
+                                          method
+                                             name null
+                                             param QName(PackageNamespace(""),"int")
+                                             returns QName(PackageNamespace(""),"void")
+                                             
+                                             body
+                                                maxstack 3
+                                                localcount 2
+                                                initscopedepth 12
+                                                maxscopedepth 13
+                                                
+                                                code
+                                                   Constant export mode is not supported.
+                                                end ; code
+                                             end ; body
+                                          end ; method
+                                       }
+                                       
+                                       override public function setReplyCount(param1:int) : void
+                                       {
+                                          trait method QName(PackageNamespace(""),"setReplyCount")
+                                             flag OVERRIDE
+                                             dispid 0
+                                             method
+                                                name null
+                                                param QName(PackageNamespace(""),"int")
+                                                returns QName(PackageNamespace(""),"void")
+                                                
+                                                body
+                                                   maxstack 2
+                                                   localcount 2
+                                                   initscopedepth 12
+                                                   maxscopedepth 13
+                                                   
+                                                   code
+                                                      Constant export mode is not supported.
+                                                   end ; code
+                                                end ; body
+                                             end ; method
+                                          }
+                                       }
+                                    }

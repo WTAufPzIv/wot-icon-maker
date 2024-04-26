@@ -1,0 +1,337 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.mock.utils
+{
+   import flash.display.DisplayObject;
+   import net.wg.infrastructure.interfaces.ITween;
+   import net.wg.infrastructure.interfaces.ITweenConstructionHandler;
+   import net.wg.utils.IAnimBuilder;
+   import net.wg.utils.animation.ITweenConstruction;
+   
+   public class MockAnimBuilder implements IAnimBuilder
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function MockAnimBuilder()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function addFadeIn(param1:DisplayObject, param2:ITweenConstructionHandler, param3:int, param4:String = null) : ITweenConstruction
+      {
+         trait method QName(PackageNamespace(""),"addFadeIn")
+            dispid 0
+            method
+               name null
+               flag HAS_OPTIONAL
+               param QName(PackageNamespace("flash.display"),"DisplayObject")
+               param QName(PackageNamespace("net.wg.infrastructure.interfaces"),"ITweenConstructionHandler")
+               param QName(PackageNamespace(""),"int")
+               param QName(PackageNamespace(""),"String")
+               optional Null()
+               returns QName(PackageNamespace("net.wg.utils.animation"),"ITweenConstruction")
+               
+               body
+                  maxstack 1
+                  localcount 5
+                  initscopedepth 4
+                  maxscopedepth 5
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function addFadeOut(param1:DisplayObject, param2:ITweenConstructionHandler, param3:int, param4:String = null) : ITweenConstruction
+         {
+            trait method QName(PackageNamespace(""),"addFadeOut")
+               dispid 0
+               method
+                  name null
+                  flag HAS_OPTIONAL
+                  param QName(PackageNamespace("flash.display"),"DisplayObject")
+                  param QName(PackageNamespace("net.wg.infrastructure.interfaces"),"ITweenConstructionHandler")
+                  param QName(PackageNamespace(""),"int")
+                  param QName(PackageNamespace(""),"String")
+                  optional Null()
+                  returns QName(PackageNamespace("net.wg.utils.animation"),"ITweenConstruction")
+                  
+                  body
+                     maxstack 1
+                     localcount 5
+                     initscopedepth 4
+                     maxscopedepth 5
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function addGlowIn(param1:DisplayObject, param2:ITweenConstructionHandler, param3:int, param4:String = null) : ITweenConstruction
+            {
+               trait method QName(PackageNamespace(""),"addGlowIn")
+                  dispid 0
+                  method
+                     name null
+                     flag HAS_OPTIONAL
+                     param QName(PackageNamespace("flash.display"),"DisplayObject")
+                     param QName(PackageNamespace("net.wg.infrastructure.interfaces"),"ITweenConstructionHandler")
+                     param QName(PackageNamespace(""),"int")
+                     param QName(PackageNamespace(""),"String")
+                     optional Null()
+                     returns QName(PackageNamespace("net.wg.utils.animation"),"ITweenConstruction")
+                     
+                     body
+                        maxstack 1
+                        localcount 5
+                        initscopedepth 4
+                        maxscopedepth 5
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function addGlowOut(param1:DisplayObject, param2:ITweenConstructionHandler, param3:int, param4:String = null) : ITweenConstruction
+               {
+                  trait method QName(PackageNamespace(""),"addGlowOut")
+                     dispid 0
+                     method
+                        name null
+                        flag HAS_OPTIONAL
+                        param QName(PackageNamespace("flash.display"),"DisplayObject")
+                        param QName(PackageNamespace("net.wg.infrastructure.interfaces"),"ITweenConstructionHandler")
+                        param QName(PackageNamespace(""),"int")
+                        param QName(PackageNamespace(""),"String")
+                        optional Null()
+                        returns QName(PackageNamespace("net.wg.utils.animation"),"ITweenConstruction")
+                        
+                        body
+                           maxstack 1
+                           localcount 5
+                           initscopedepth 4
+                           maxscopedepth 5
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function addHalfTurn(param1:DisplayObject, param2:ITweenConstructionHandler, param3:int, param4:String = null) : ITweenConstruction
+                  {
+                     trait method QName(PackageNamespace(""),"addHalfTurn")
+                        dispid 0
+                        method
+                           name null
+                           flag HAS_OPTIONAL
+                           param QName(PackageNamespace("flash.display"),"DisplayObject")
+                           param QName(PackageNamespace("net.wg.infrastructure.interfaces"),"ITweenConstructionHandler")
+                           param QName(PackageNamespace(""),"int")
+                           param QName(PackageNamespace(""),"String")
+                           optional Null()
+                           returns QName(PackageNamespace("net.wg.utils.animation"),"ITweenConstruction")
+                           
+                           body
+                              maxstack 1
+                              localcount 5
+                              initscopedepth 4
+                              maxscopedepth 5
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public function addMoveDown(param1:DisplayObject, param2:ITweenConstructionHandler, param3:int, param4:String = null) : ITweenConstruction
+                     {
+                        trait method QName(PackageNamespace(""),"addMoveDown")
+                           dispid 0
+                           method
+                              name null
+                              flag HAS_OPTIONAL
+                              param QName(PackageNamespace("flash.display"),"DisplayObject")
+                              param QName(PackageNamespace("net.wg.infrastructure.interfaces"),"ITweenConstructionHandler")
+                              param QName(PackageNamespace(""),"int")
+                              param QName(PackageNamespace(""),"String")
+                              optional Null()
+                              returns QName(PackageNamespace("net.wg.utils.animation"),"ITweenConstruction")
+                              
+                              body
+                                 maxstack 1
+                                 localcount 5
+                                 initscopedepth 4
+                                 maxscopedepth 5
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        public function addMoveUp(param1:DisplayObject, param2:ITweenConstructionHandler, param3:int, param4:String = null) : ITweenConstruction
+                        {
+                           trait method QName(PackageNamespace(""),"addMoveUp")
+                              dispid 0
+                              method
+                                 name null
+                                 flag HAS_OPTIONAL
+                                 param QName(PackageNamespace("flash.display"),"DisplayObject")
+                                 param QName(PackageNamespace("net.wg.infrastructure.interfaces"),"ITweenConstructionHandler")
+                                 param QName(PackageNamespace(""),"int")
+                                 param QName(PackageNamespace(""),"String")
+                                 optional Null()
+                                 returns QName(PackageNamespace("net.wg.utils.animation"),"ITweenConstruction")
+                                 
+                                 body
+                                    maxstack 1
+                                    localcount 5
+                                    initscopedepth 4
+                                    maxscopedepth 5
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           public function addShadowIn(param1:DisplayObject, param2:ITweenConstructionHandler, param3:int, param4:String = null) : ITweenConstruction
+                           {
+                              trait method QName(PackageNamespace(""),"addShadowIn")
+                                 dispid 0
+                                 method
+                                    name null
+                                    flag HAS_OPTIONAL
+                                    param QName(PackageNamespace("flash.display"),"DisplayObject")
+                                    param QName(PackageNamespace("net.wg.infrastructure.interfaces"),"ITweenConstructionHandler")
+                                    param QName(PackageNamespace(""),"int")
+                                    param QName(PackageNamespace(""),"String")
+                                    optional Null()
+                                    returns QName(PackageNamespace("net.wg.utils.animation"),"ITweenConstruction")
+                                    
+                                    body
+                                       maxstack 1
+                                       localcount 5
+                                       initscopedepth 4
+                                       maxscopedepth 5
+                                       
+                                       code
+                                          Constant export mode is not supported.
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                              
+                              public function addShadowOut(param1:DisplayObject, param2:ITweenConstructionHandler, param3:int, param4:String = null) : ITweenConstruction
+                              {
+                                 trait method QName(PackageNamespace(""),"addShadowOut")
+                                    dispid 0
+                                    method
+                                       name null
+                                       flag HAS_OPTIONAL
+                                       param QName(PackageNamespace("flash.display"),"DisplayObject")
+                                       param QName(PackageNamespace("net.wg.infrastructure.interfaces"),"ITweenConstructionHandler")
+                                       param QName(PackageNamespace(""),"int")
+                                       param QName(PackageNamespace(""),"String")
+                                       optional Null()
+                                       returns QName(PackageNamespace("net.wg.utils.animation"),"ITweenConstruction")
+                                       
+                                       body
+                                          maxstack 1
+                                          localcount 5
+                                          initscopedepth 4
+                                          maxscopedepth 5
+                                          
+                                          code
+                                             Constant export mode is not supported.
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                                 
+                                 public function addTween(param1:String, param2:int, param3:ITween, param4:DisplayObject, param5:ITweenConstructionHandler) : ITweenConstruction
+                                 {
+                                    trait method QName(PackageNamespace(""),"addTween")
+                                       dispid 0
+                                       method
+                                          name null
+                                          param QName(PackageNamespace(""),"String")
+                                          param QName(PackageNamespace(""),"int")
+                                          param QName(PackageNamespace("net.wg.infrastructure.interfaces"),"ITween")
+                                          param QName(PackageNamespace("flash.display"),"DisplayObject")
+                                          param QName(PackageNamespace("net.wg.infrastructure.interfaces"),"ITweenConstructionHandler")
+                                          returns QName(PackageNamespace("net.wg.utils.animation"),"ITweenConstruction")
+                                          
+                                          body
+                                             maxstack 1
+                                             localcount 6
+                                             initscopedepth 4
+                                             maxscopedepth 5
+                                             
+                                             code
+                                                Constant export mode is not supported.
+                                             end ; code
+                                          end ; body
+                                       end ; method
+                                    }
+                                 }
+                              }

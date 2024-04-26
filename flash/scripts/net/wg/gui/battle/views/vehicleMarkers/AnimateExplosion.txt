@@ -1,0 +1,85 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 11
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.gui.battle.views.vehicleMarkers
+{
+   public class AnimateExplosion extends HealthBarAnimatedPart
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 11
+               maxscopedepth 12
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function AnimateExplosion()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 12
+               maxscopedepth 13
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function setColorAndDamageType(param1:String, param2:String) : void
+      {
+         trait method QName(PackageNamespace(""),"setColorAndDamageType")
+            dispid 0
+            method
+               name null
+               param QName(PackageNamespace(""),"String")
+               param QName(PackageNamespace(""),"String")
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 3
+                  localcount 3
+                  initscopedepth 12
+                  maxscopedepth 13
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+      }
+   }

@@ -1,0 +1,114 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 12
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.gui.battle.views.staticMarkers.location
+{
+   import flash.geom.Point;
+   
+   public class FlagLocationActionMarker extends LocationActionMarker
+   {
+      
+      private static const FLAG_STICKY_MARKER_UI:String = "FlagStickyMarkerUI";
+      
+      private static const FLAG_REPLY_POSITION_X:Number = 32;
+      
+      private static const FLAG_REPLY_POSITION_Y:Number = -8;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 12
+               maxscopedepth 13
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function FlagLocationActionMarker()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 13
+               maxscopedepth 14
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      override protected function get stickyMarkerClassLinkage() : String
+      {
+         trait getter QName(ProtectedNamespace("net.wg.gui.battle.views.staticMarkers.location:FlagLocationActionMarker"),"stickyMarkerClassLinkage")
+            flag OVERRIDE
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"String")
+               
+               body
+                  maxstack 1
+                  localcount 1
+                  initscopedepth 13
+                  maxscopedepth 14
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         override protected function get getReplyPosition() : Point
+         {
+            trait getter QName(ProtectedNamespace("net.wg.gui.battle.views.staticMarkers.location:FlagLocationActionMarker"),"getReplyPosition")
+               flag OVERRIDE
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace("flash.geom"),"Point")
+                  
+                  body
+                     maxstack 3
+                     localcount 1
+                     initscopedepth 13
+                     maxscopedepth 14
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+         }
+      }

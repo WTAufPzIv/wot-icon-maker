@@ -1,0 +1,89 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 5
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.data.daapi
+{
+   import net.wg.data.daapi.base.DAAPIDataClass;
+   
+   public class ViewSettingsVO extends DAAPIDataClass
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 5
+               maxscopedepth 6
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var alias:String = "";
+      
+      public var url:String = "";
+      
+      public var layer:int = -1;
+      
+      public var flags:int = 0;
+      
+      public var event:String = "";
+      
+      public var group:String = "";
+      
+      public var isGrouped:Boolean;
+      
+      public var canDrag:Boolean = true;
+      
+      public var canClose:Boolean = true;
+      
+      public var isModal:Boolean;
+      
+      public var isCentered:Boolean;
+      
+      public var isResizable:Boolean = true;
+      
+      public function ViewSettingsVO(param1:Object)
+      {
+         method
+            name null
+            param QName(PackageNamespace(""),"Object")
+            returns null
+            
+            body
+               maxstack 2
+               localcount 2
+               initscopedepth 6
+               maxscopedepth 7
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+   }
+}

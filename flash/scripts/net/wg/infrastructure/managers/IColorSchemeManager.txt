@@ -1,0 +1,56 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 2
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.infrastructure.managers
+{
+   import flash.events.IEventDispatcher;
+   import flash.geom.ColorTransform;
+   import net.wg.infrastructure.base.meta.IColorSchemeManagerMeta;
+   import net.wg.infrastructure.interfaces.IColorScheme;
+   
+   public interface IColorSchemeManager extends IColorSchemeManagerMeta, IEventDispatcher
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 0
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      function getScheme(param1:String) : IColorScheme;
+      
+      function getAliasColor(param1:String) : String;
+      
+      function getRGB(param1:String) : Number;
+      
+      function getTransform(param1:String) : ColorTransform;
+   }
+}

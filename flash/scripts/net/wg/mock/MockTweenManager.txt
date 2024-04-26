@@ -1,0 +1,174 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.mock
+{
+   import net.wg.infrastructure.interfaces.ITween;
+   import net.wg.infrastructure.interfaces.ITweenPropertiesVO;
+   import net.wg.infrastructure.managers.ITweenManagerHelper;
+   import net.wg.utils.ITweenManager;
+   
+   public class MockTweenManager implements ITweenManager
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function MockTweenManager()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function createNewTween(param1:ITweenPropertiesVO) : ITween
+      {
+         trait method QName(PackageNamespace(""),"createNewTween")
+            dispid 0
+            method
+               name null
+               param QName(PackageNamespace("net.wg.infrastructure.interfaces"),"ITweenPropertiesVO")
+               returns QName(PackageNamespace("net.wg.infrastructure.interfaces"),"ITween")
+               
+               body
+                  maxstack 1
+                  localcount 2
+                  initscopedepth 4
+                  maxscopedepth 5
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function dispose() : void
+         {
+            trait method QName(PackageNamespace(""),"dispose")
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 1
+                     localcount 1
+                     initscopedepth 4
+                     maxscopedepth 5
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function disposeAllS() : void
+            {
+               trait method QName(PackageNamespace(""),"disposeAllS")
+                  dispid 0
+                  method
+                     name null
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 1
+                        localcount 1
+                        initscopedepth 4
+                        maxscopedepth 5
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function disposeTweenS(param1:ITween) : void
+               {
+                  trait method QName(PackageNamespace(""),"disposeTweenS")
+                     dispid 0
+                     method
+                        name null
+                        param QName(PackageNamespace("net.wg.infrastructure.interfaces"),"ITween")
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 1
+                           localcount 2
+                           initscopedepth 4
+                           maxscopedepth 5
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function getTweenManagerHelper() : ITweenManagerHelper
+                  {
+                     trait method QName(PackageNamespace(""),"getTweenManagerHelper")
+                        dispid 0
+                        method
+                           name null
+                           returns QName(PackageNamespace("net.wg.infrastructure.managers"),"ITweenManagerHelper")
+                           
+                           body
+                              maxstack 1
+                              localcount 1
+                              initscopedepth 4
+                              maxscopedepth 5
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                  }
+               }

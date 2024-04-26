@@ -1,0 +1,67 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 4
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.infrastructure.events
+{
+   import flash.events.Event;
+   
+   public class ColorSchemeEvent extends Event
+   {
+      
+      public static const SCHEMAS_UPDATED:String = "schemas";
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function ColorSchemeEvent(param1:String)
+      {
+         method
+            name null
+            param QName(PackageNamespace(""),"String")
+            returns null
+            
+            body
+               maxstack 2
+               localcount 2
+               initscopedepth 5
+               maxscopedepth 6
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+   }
+}

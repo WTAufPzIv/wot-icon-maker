@@ -1,0 +1,306 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 11
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.gui.battle.components
+{
+   public class EpicProgressCircle extends BaseProgressCircle
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 11
+               maxscopedepth 12
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      private var _capturingActive:Boolean = false;
+      
+      private var _isPlayerTeam:Boolean = false;
+      
+      private var _isOwnerSet:Boolean = false;
+      
+      public function EpicProgressCircle()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 12
+               maxscopedepth 13
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      override public function updateProgress(param1:Number) : void
+      {
+         trait method QName(PackageNamespace(""),"updateProgress")
+            flag OVERRIDE
+            dispid 0
+            method
+               name null
+               param QName(PackageNamespace(""),"Number")
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 3
+                  localcount 4
+                  initscopedepth 12
+                  maxscopedepth 13
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function setColorBlindMode(param1:Boolean) : void
+         {
+            trait method QName(PackageNamespace(""),"setColorBlindMode")
+               dispid 0
+               method
+                  name null
+                  param QName(PackageNamespace(""),"Boolean")
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 2
+                     localcount 2
+                     initscopedepth 12
+                     maxscopedepth 13
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function setOwner(param1:Boolean) : void
+            {
+               trait method QName(PackageNamespace(""),"setOwner")
+                  dispid 0
+                  method
+                     name null
+                     param QName(PackageNamespace(""),"Boolean")
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 3
+                        localcount 2
+                        initscopedepth 12
+                        maxscopedepth 13
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               protected function getCapturingActiveState() : String
+               {
+                  trait method QName(ProtectedNamespace("net.wg.gui.battle.components:EpicProgressCircle"),"getCapturingActiveState")
+                     dispid 0
+                     method
+                        name null
+                        returns QName(PackageNamespace(""),"String")
+                        
+                        body
+                           maxstack 2
+                           localcount 1
+                           initscopedepth 12
+                           maxscopedepth 13
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function get isPlayerTeam() : Boolean
+                  {
+                     trait getter QName(PackageNamespace(""),"isPlayerTeam")
+                        dispid 0
+                        method
+                           name null
+                           returns QName(PackageNamespace(""),"Boolean")
+                           
+                           body
+                              maxstack 1
+                              localcount 1
+                              initscopedepth 12
+                              maxscopedepth 13
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public function set isPlayerTeam(param1:Boolean) : void
+                     {
+                        trait setter QName(PackageNamespace(""),"isPlayerTeam")
+                           dispid 0
+                           method
+                              name null
+                              param QName(PackageNamespace(""),"Boolean")
+                              returns QName(PackageNamespace(""),"void")
+                              
+                              body
+                                 maxstack 2
+                                 localcount 2
+                                 initscopedepth 12
+                                 maxscopedepth 13
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        public function get isOwnerSet() : Boolean
+                        {
+                           trait getter QName(PackageNamespace(""),"isOwnerSet")
+                              dispid 0
+                              method
+                                 name null
+                                 returns QName(PackageNamespace(""),"Boolean")
+                                 
+                                 body
+                                    maxstack 1
+                                    localcount 1
+                                    initscopedepth 12
+                                    maxscopedepth 13
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           public function set isOwnerSet(param1:Boolean) : void
+                           {
+                              trait setter QName(PackageNamespace(""),"isOwnerSet")
+                                 dispid 0
+                                 method
+                                    name null
+                                    param QName(PackageNamespace(""),"Boolean")
+                                    returns QName(PackageNamespace(""),"void")
+                                    
+                                    body
+                                       maxstack 2
+                                       localcount 2
+                                       initscopedepth 12
+                                       maxscopedepth 13
+                                       
+                                       code
+                                          Constant export mode is not supported.
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                              
+                              public function get capturingActive() : Boolean
+                              {
+                                 trait getter QName(PackageNamespace(""),"capturingActive")
+                                    dispid 0
+                                    method
+                                       name null
+                                       returns QName(PackageNamespace(""),"Boolean")
+                                       
+                                       body
+                                          maxstack 1
+                                          localcount 1
+                                          initscopedepth 12
+                                          maxscopedepth 13
+                                          
+                                          code
+                                             Constant export mode is not supported.
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                                 
+                                 public function set capturingActive(param1:Boolean) : void
+                                 {
+                                    trait setter QName(PackageNamespace(""),"capturingActive")
+                                       dispid 0
+                                       method
+                                          name null
+                                          param QName(PackageNamespace(""),"Boolean")
+                                          returns QName(PackageNamespace(""),"void")
+                                          
+                                          body
+                                             maxstack 2
+                                             localcount 2
+                                             initscopedepth 12
+                                             maxscopedepth 13
+                                             
+                                             code
+                                                Constant export mode is not supported.
+                                             end ; code
+                                          end ; body
+                                       end ; method
+                                    }
+                                    
+                                    protected function get defaultEmptyFrame() : int
+                                    {
+                                       trait getter QName(ProtectedNamespace("net.wg.gui.battle.components:EpicProgressCircle"),"defaultEmptyFrame")
+                                          dispid 0
+                                          method
+                                             name null
+                                             returns QName(PackageNamespace(""),"int")
+                                             
+                                             body
+                                                maxstack 1
+                                                localcount 1
+                                                initscopedepth 12
+                                                maxscopedepth 13
+                                                
+                                                code
+                                                   Constant export mode is not supported.
+                                                end ; code
+                                             end ; body
+                                          end ; method
+                                       }
+                                    }
+                                 }

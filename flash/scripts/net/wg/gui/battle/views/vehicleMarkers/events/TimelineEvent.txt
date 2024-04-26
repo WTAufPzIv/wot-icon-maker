@@ -1,0 +1,98 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 4
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.gui.battle.views.vehicleMarkers.events
+{
+   import flash.events.Event;
+   
+   public class TimelineEvent extends Event
+   {
+      
+      public static const TWEEN_COMPLETE:String = "tweenComplete";
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var isShow:Boolean = false;
+      
+      public function TimelineEvent(param1:String, param2:Boolean = false, param3:Boolean = false, param4:Boolean = false)
+      {
+         method
+            name null
+            flag HAS_OPTIONAL
+            param QName(PackageNamespace(""),"String")
+            param QName(PackageNamespace(""),"Boolean")
+            param QName(PackageNamespace(""),"Boolean")
+            param QName(PackageNamespace(""),"Boolean")
+            optional False()
+            optional False()
+            optional False()
+            returns null
+            
+            body
+               maxstack 4
+               localcount 5
+               initscopedepth 5
+               maxscopedepth 6
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      override public function clone() : Event
+      {
+         trait method QName(PackageNamespace(""),"clone")
+            flag OVERRIDE
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace("flash.events"),"Event")
+               
+               body
+                  maxstack 5
+                  localcount 1
+                  initscopedepth 5
+                  maxscopedepth 6
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+      }
+   }

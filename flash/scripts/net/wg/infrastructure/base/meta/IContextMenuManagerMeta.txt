@@ -1,0 +1,57 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 2
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.infrastructure.base.meta
+{
+   import flash.events.IEventDispatcher;
+   
+   public interface IContextMenuManagerMeta extends IEventDispatcher
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 0
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      function requestOptionsS(param1:String, param2:Object = null) : void;
+      
+      function onOptionSelectS(param1:String) : void;
+      
+      function onHideS() : void;
+      
+      function as_setOptions(param1:Object) : void;
+      
+      function as_show(param1:String, param2:Object) : void;
+      
+      function as_hide() : void;
+   }
+}

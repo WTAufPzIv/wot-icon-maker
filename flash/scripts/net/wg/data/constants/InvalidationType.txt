@@ -1,0 +1,82 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.data.constants
+{
+   public class InvalidationType
+   {
+      
+      public static const VALID:uint = 0;
+      
+      public static const DATA:uint = 1;
+      
+      public static const SIZE:uint;
+      
+      public static const STATE:uint;
+      
+      public static const FI_STATE:uint;
+      
+      public static const COLOR_SCHEME:uint;
+      
+      public static const INVALID_TEXTFIELD_SELECTION:uint;
+      
+      public static const POSITION:uint;
+      
+      public static const SYSTEM_FLAGS_BORDER:uint;
+      
+      public static const ALL:uint = 4294967295;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 3
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function InvalidationType()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+   }
+}

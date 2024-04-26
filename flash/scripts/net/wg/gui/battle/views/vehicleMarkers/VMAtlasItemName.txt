@@ -1,0 +1,329 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.gui.battle.views.vehicleMarkers
+{
+   public class VMAtlasItemName
+   {
+      
+      public static const SPEAKING_ICON:String = "dynamic";
+      
+      public static const POI_MARKER_BACK_ICON:String = "poiMarkerBack";
+      
+      public static const SCENARIO_MARKER_ICON:String = "scenarioMarkerIcon";
+      
+      private static const SHADOW_PREFIX:String = "shadow_";
+      
+      private static const HUNTED_POSTFIX:String = "_hunted";
+      
+      private static const LEVEL_PREFIX:String = "vehicleLevel_";
+      
+      private static const SQUAD_ICON_PREFIX:String = "squadIcon_";
+      
+      private static const DAMAGE_BAR_PREFIX:String = "damageBar_";
+      
+      private static const ROLE_SKILL_LEVEL_PREFIX:String = "roleSkillLevel_";
+      
+      private static const POI_MARKER_ICON_PREFIX:String = "poiMarkerIcon_";
+      
+      private static const POI_MARKER_ICON_SMALL_PREFIX:String = "poiMarkerIconSmall_";
+      
+      private static const STATUS_MARKER_PREFIX:String = "sm_";
+      
+      private static const STATUS_MARKER_GLOW_PREFIX:String = "sm_glow_";
+      
+      private static const EMPTY_STR:String = "";
+      
+      private static const UNDERSCORE_STR:String = "_";
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function VMAtlasItemName()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public static function getShadowName(param1:int) : String
+      {
+         trait method QName(PackageNamespace(""),"getShadowName")
+            flag FINAL
+            dispid 3
+            method
+               name null
+               param QName(PackageNamespace(""),"int")
+               returns QName(PackageNamespace(""),"String")
+               
+               body
+                  maxstack 3
+                  localcount 2
+                  initscopedepth 3
+                  maxscopedepth 4
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public static function getVehicleTypeIconName(param1:String, param2:String, param3:Boolean) : String
+         {
+            trait method QName(PackageNamespace(""),"getVehicleTypeIconName")
+               flag FINAL
+               dispid 4
+               method
+                  name null
+                  param QName(PackageNamespace(""),"String")
+                  param QName(PackageNamespace(""),"String")
+                  param QName(PackageNamespace(""),"Boolean")
+                  returns QName(PackageNamespace(""),"String")
+                  
+                  body
+                     maxstack 2
+                     localcount 4
+                     initscopedepth 3
+                     maxscopedepth 4
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public static function getLevelIconName(param1:int) : String
+            {
+               trait method QName(PackageNamespace(""),"getLevelIconName")
+                  flag FINAL
+                  dispid 5
+                  method
+                     name null
+                     param QName(PackageNamespace(""),"int")
+                     returns QName(PackageNamespace(""),"String")
+                     
+                     body
+                        maxstack 2
+                        localcount 2
+                        initscopedepth 3
+                        maxscopedepth 4
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public static function getSquadIconName(param1:String, param2:int) : String
+               {
+                  trait method QName(PackageNamespace(""),"getSquadIconName")
+                     flag FINAL
+                     dispid 6
+                     method
+                        name null
+                        param QName(PackageNamespace(""),"String")
+                        param QName(PackageNamespace(""),"int")
+                        returns QName(PackageNamespace(""),"String")
+                        
+                        body
+                           maxstack 2
+                           localcount 3
+                           initscopedepth 3
+                           maxscopedepth 4
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public static function getDamageBarName(param1:String) : String
+                  {
+                     trait method QName(PackageNamespace(""),"getDamageBarName")
+                        flag FINAL
+                        dispid 7
+                        method
+                           name null
+                           param QName(PackageNamespace(""),"String")
+                           returns QName(PackageNamespace(""),"String")
+                           
+                           body
+                              maxstack 2
+                              localcount 2
+                              initscopedepth 3
+                              maxscopedepth 4
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public static function getHitAnimationName(param1:String) : String
+                     {
+                        trait method QName(PackageNamespace(""),"getHitAnimationName")
+                           flag FINAL
+                           dispid 8
+                           method
+                              name null
+                              param QName(PackageNamespace(""),"String")
+                              returns QName(PackageNamespace(""),"String")
+                              
+                              body
+                                 maxstack 1
+                                 localcount 2
+                                 initscopedepth 3
+                                 maxscopedepth 4
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        public static function getRoleSkillLevelName(param1:int) : String
+                        {
+                           trait method QName(PackageNamespace(""),"getRoleSkillLevelName")
+                              flag FINAL
+                              dispid 9
+                              method
+                                 name null
+                                 param QName(PackageNamespace(""),"int")
+                                 returns QName(PackageNamespace(""),"String")
+                                 
+                                 body
+                                    maxstack 2
+                                    localcount 2
+                                    initscopedepth 3
+                                    maxscopedepth 4
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           public static function getPOIMarkerIconByType(param1:uint, param2:Boolean = false) : String
+                           {
+                              trait method QName(PackageNamespace(""),"getPOIMarkerIconByType")
+                                 flag FINAL
+                                 dispid 10
+                                 method
+                                    name null
+                                    flag HAS_OPTIONAL
+                                    param QName(PackageNamespace(""),"uint")
+                                    param QName(PackageNamespace(""),"Boolean")
+                                    optional False()
+                                    returns QName(PackageNamespace(""),"String")
+                                    
+                                    body
+                                       maxstack 2
+                                       localcount 3
+                                       initscopedepth 3
+                                       maxscopedepth 4
+                                       
+                                       code
+                                          Constant export mode is not supported.
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                              
+                              public static function getStatusMarkerIcon(param1:String, param2:String) : String
+                              {
+                                 trait method QName(PackageNamespace(""),"getStatusMarkerIcon")
+                                    flag FINAL
+                                    dispid 11
+                                    method
+                                       name null
+                                       param QName(PackageNamespace(""),"String")
+                                       param QName(PackageNamespace(""),"String")
+                                       returns QName(PackageNamespace(""),"String")
+                                       
+                                       body
+                                          maxstack 2
+                                          localcount 3
+                                          initscopedepth 3
+                                          maxscopedepth 4
+                                          
+                                          code
+                                             Constant export mode is not supported.
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                                 
+                                 public static function getStatusMarkerGlow(param1:String) : String
+                                 {
+                                    trait method QName(PackageNamespace(""),"getStatusMarkerGlow")
+                                       flag FINAL
+                                       dispid 12
+                                       method
+                                          name null
+                                          param QName(PackageNamespace(""),"String")
+                                          returns QName(PackageNamespace(""),"String")
+                                          
+                                          body
+                                             maxstack 2
+                                             localcount 2
+                                             initscopedepth 3
+                                             maxscopedepth 4
+                                             
+                                             code
+                                                Constant export mode is not supported.
+                                             end ; code
+                                          end ; body
+                                       end ; method
+                                    }
+                                 }
+                              }

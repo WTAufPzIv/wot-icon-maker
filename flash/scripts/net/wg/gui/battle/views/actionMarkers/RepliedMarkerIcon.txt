@@ -1,0 +1,173 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 8
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.gui.battle.views.actionMarkers
+{
+   import flash.display.MovieClip;
+   import flash.display.Sprite;
+   import flash.events.TimerEvent;
+   import flash.text.TextField;
+   import flash.utils.Timer;
+   import net.wg.infrastructure.interfaces.entity.IDisposable;
+   
+   public class RepliedMarkerIcon extends Sprite implements IDisposable
+   {
+      
+      private static const DEFAULT_DELAY:int = 3000;
+      
+      private static const TICKS:int = 1;
+      
+      private static const REPLY_ANIMATION:String = "replyAnimation";
+      
+      private static const DEFAULT:String = "default";
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 8
+               maxscopedepth 9
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var txtLabel:TextField = null;
+      
+      public var personIcon:MovieClip = null;
+      
+      private var _timer:Timer;
+      
+      private var _disposed:Boolean = false;
+      
+      public function RepliedMarkerIcon()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 9
+               maxscopedepth 10
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function playIconAnimation() : void
+      {
+         trait method QName(PackageNamespace(""),"playIconAnimation")
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 2
+                  localcount 1
+                  initscopedepth 9
+                  maxscopedepth 10
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         final public function dispose() : void
+         {
+            trait method QName(PackageNamespace(""),"dispose")
+               flag FINAL
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 3
+                     localcount 1
+                     initscopedepth 9
+                     maxscopedepth 10
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            private function onTimerCompleteHandler(param1:TimerEvent = null) : void
+            {
+               trait method QName(PrivateNamespace(null,"72"),"onTimerCompleteHandler")
+                  dispid 0
+                  method
+                     name null
+                     flag HAS_OPTIONAL
+                     param QName(PackageNamespace("flash.events"),"TimerEvent")
+                     optional Null()
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 2
+                        localcount 2
+                        initscopedepth 9
+                        maxscopedepth 10
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function isDisposed() : Boolean
+               {
+                  trait method QName(PackageNamespace(""),"isDisposed")
+                     dispid 0
+                     method
+                        name null
+                        returns QName(PackageNamespace(""),"Boolean")
+                        
+                        body
+                           maxstack 1
+                           localcount 1
+                           initscopedepth 9
+                           maxscopedepth 10
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+               }
+            }

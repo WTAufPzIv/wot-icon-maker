@@ -1,0 +1,324 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 4
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package scaleform.clik.managers
+{
+   import flash.display.Stage;
+   import flash.events.EventDispatcher;
+   import flash.events.KeyboardEvent;
+   import flash.ui.Keyboard;
+   import scaleform.clik.constants.InputValue;
+   import scaleform.clik.constants.NavigationCode;
+   import scaleform.clik.events.InputEvent;
+   import scaleform.clik.ui.InputDetails;
+   import scaleform.gfx.KeyboardEventEx;
+   
+   public class InputDelegate extends EventDispatcher
+   {
+      
+      private static var instance:InputDelegate;
+      
+      public static const MAX_KEY_CODES:uint = 1000;
+      
+      public static const KEY_PRESSED:uint = 1;
+      
+      public static const KEY_SUPRESSED:uint = 2;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var stage:Stage;
+      
+      public var externalInputHandler:Function;
+      
+      protected var keyHash:Array;
+      
+      private var _currentEvent:KeyboardEvent;
+      
+      public function InputDelegate()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 5
+               maxscopedepth 6
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public static function getInstance() : InputDelegate
+      {
+         trait method QName(PackageNamespace(""),"getInstance")
+            flag FINAL
+            dispid 3
+            method
+               name null
+               returns QName(PackageNamespace("scaleform.clik.managers"),"InputDelegate")
+               
+               body
+                  maxstack 2
+                  localcount 1
+                  initscopedepth 4
+                  maxscopedepth 5
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function initialize(param1:Stage) : void
+         {
+            trait method QName(PackageNamespace(""),"initialize")
+               dispid 0
+               method
+                  name null
+                  param QName(PackageNamespace("flash.display"),"Stage")
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 6
+                     localcount 2
+                     initscopedepth 5
+                     maxscopedepth 6
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function setKeyRepeat(param1:Number, param2:Boolean, param3:uint = 0) : void
+            {
+               trait method QName(PackageNamespace(""),"setKeyRepeat")
+                  dispid 0
+                  method
+                     name null
+                     flag HAS_OPTIONAL
+                     param QName(PackageNamespace(""),"Number")
+                     param QName(PackageNamespace(""),"Boolean")
+                     param QName(PackageNamespace(""),"uint")
+                     optional Integer(0)
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 4
+                        localcount 5
+                        initscopedepth 5
+                        maxscopedepth 6
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function inputToNav(param1:String, param2:Number, param3:Boolean = false, param4:* = null) : String
+               {
+                  trait method QName(PackageNamespace(""),"inputToNav")
+                     dispid 0
+                     method
+                        name null
+                        flag HAS_OPTIONAL
+                        param QName(PackageNamespace(""),"String")
+                        param QName(PackageNamespace(""),"Number")
+                        param QName(PackageNamespace(""),"Boolean")
+                        param null
+                        optional False()
+                        optional Null()
+                        returns QName(PackageNamespace(""),"String")
+                        
+                        body
+                           maxstack 4
+                           localcount 6
+                           initscopedepth 5
+                           maxscopedepth 6
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function readInput(param1:String, param2:int, param3:Function) : Object
+                  {
+                     trait method QName(PackageNamespace(""),"readInput")
+                        dispid 0
+                        method
+                           name null
+                           param QName(PackageNamespace(""),"String")
+                           param QName(PackageNamespace(""),"int")
+                           param QName(PackageNamespace(""),"Function")
+                           returns QName(PackageNamespace(""),"Object")
+                           
+                           body
+                              maxstack 1
+                              localcount 4
+                              initscopedepth 5
+                              maxscopedepth 6
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public function stopPropagationEvent() : void
+                     {
+                        trait method QName(PackageNamespace(""),"stopPropagationEvent")
+                           dispid 0
+                           method
+                              name null
+                              returns QName(PackageNamespace(""),"void")
+                              
+                              body
+                                 maxstack 2
+                                 localcount 1
+                                 initscopedepth 5
+                                 maxscopedepth 6
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        public function checkAndCleanUpCurrentEvent(param1:Object) : void
+                        {
+                           trait method QName(PackageNamespace(""),"checkAndCleanUpCurrentEvent")
+                              dispid 0
+                              method
+                                 name null
+                                 param QName(PackageNamespace(""),"Object")
+                                 returns QName(PackageNamespace(""),"void")
+                                 
+                                 body
+                                    maxstack 2
+                                    localcount 3
+                                    initscopedepth 5
+                                    maxscopedepth 6
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           protected function handleKeyDown(param1:KeyboardEvent) : void
+                           {
+                              trait method QName(ProtectedNamespace("scaleform.clik.managers:InputDelegate"),"handleKeyDown")
+                                 dispid 0
+                                 method
+                                    name null
+                                    param QName(PackageNamespace("flash.events"),"KeyboardEvent")
+                                    returns QName(PackageNamespace(""),"void")
+                                    
+                                    body
+                                       maxstack 7
+                                       localcount 7
+                                       initscopedepth 5
+                                       maxscopedepth 6
+                                       
+                                       code
+                                          Constant export mode is not supported.
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                              
+                              protected function handleKeyUp(param1:KeyboardEvent) : void
+                              {
+                                 trait method QName(ProtectedNamespace("scaleform.clik.managers:InputDelegate"),"handleKeyUp")
+                                    dispid 0
+                                    method
+                                       name null
+                                       param QName(PackageNamespace("flash.events"),"KeyboardEvent")
+                                       returns QName(PackageNamespace(""),"void")
+                                       
+                                       body
+                                          maxstack 7
+                                          localcount 6
+                                          initscopedepth 5
+                                          maxscopedepth 6
+                                          
+                                          code
+                                             Constant export mode is not supported.
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                                 
+                                 protected function handleKeyPress(param1:String, param2:Number, param3:Number, param4:Boolean, param5:Boolean, param6:Boolean) : void
+                                 {
+                                    trait method QName(ProtectedNamespace("scaleform.clik.managers:InputDelegate"),"handleKeyPress")
+                                       dispid 0
+                                       method
+                                          name null
+                                          param QName(PackageNamespace(""),"String")
+                                          param QName(PackageNamespace(""),"Number")
+                                          param QName(PackageNamespace(""),"Number")
+                                          param QName(PackageNamespace(""),"Boolean")
+                                          param QName(PackageNamespace(""),"Boolean")
+                                          param QName(PackageNamespace(""),"Boolean")
+                                          returns QName(PackageNamespace(""),"void")
+                                          
+                                          body
+                                             maxstack 9
+                                             localcount 8
+                                             initscopedepth 5
+                                             maxscopedepth 6
+                                             
+                                             code
+                                                Constant export mode is not supported.
+                                             end ; code
+                                          end ; body
+                                       end ; method
+                                    }
+                                 }
+                              }

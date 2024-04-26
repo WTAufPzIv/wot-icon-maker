@@ -1,0 +1,205 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package scaleform.gfx
+{
+   import flash.display.DisplayObject;
+   
+   public class DisplayObjectEx
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function DisplayObjectEx()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public static function disableBatching(param1:DisplayObject, param2:Boolean) : void
+      {
+         trait method QName(PackageNamespace(""),"disableBatching")
+            flag FINAL
+            dispid 3
+            method
+               name null
+               param QName(PackageNamespace("flash.display"),"DisplayObject")
+               param QName(PackageNamespace(""),"Boolean")
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 1
+                  localcount 3
+                  initscopedepth 3
+                  maxscopedepth 4
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public static function isBatchingDisabled(param1:DisplayObject) : Boolean
+         {
+            trait method QName(PackageNamespace(""),"isBatchingDisabled")
+               flag FINAL
+               dispid 4
+               method
+                  name null
+                  param QName(PackageNamespace("flash.display"),"DisplayObject")
+                  returns QName(PackageNamespace(""),"Boolean")
+                  
+                  body
+                     maxstack 1
+                     localcount 2
+                     initscopedepth 3
+                     maxscopedepth 4
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public static function setRendererString(param1:DisplayObject, param2:String) : void
+            {
+               trait method QName(PackageNamespace(""),"setRendererString")
+                  flag FINAL
+                  dispid 5
+                  method
+                     name null
+                     param QName(PackageNamespace("flash.display"),"DisplayObject")
+                     param QName(PackageNamespace(""),"String")
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 1
+                        localcount 3
+                        initscopedepth 3
+                        maxscopedepth 4
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public static function getRendererString(param1:DisplayObject) : String
+               {
+                  trait method QName(PackageNamespace(""),"getRendererString")
+                     flag FINAL
+                     dispid 6
+                     method
+                        name null
+                        param QName(PackageNamespace("flash.display"),"DisplayObject")
+                        returns QName(PackageNamespace(""),"String")
+                        
+                        body
+                           maxstack 1
+                           localcount 2
+                           initscopedepth 3
+                           maxscopedepth 4
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public static function setRendererFloat(param1:DisplayObject, param2:Number) : void
+                  {
+                     trait method QName(PackageNamespace(""),"setRendererFloat")
+                        flag FINAL
+                        dispid 7
+                        method
+                           name null
+                           param QName(PackageNamespace("flash.display"),"DisplayObject")
+                           param QName(PackageNamespace(""),"Number")
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 1
+                              localcount 3
+                              initscopedepth 3
+                              maxscopedepth 4
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public static function getRendererFloat(param1:DisplayObject) : Number
+                     {
+                        trait method QName(PackageNamespace(""),"getRendererFloat")
+                           flag FINAL
+                           dispid 8
+                           method
+                              name null
+                              param QName(PackageNamespace("flash.display"),"DisplayObject")
+                              returns QName(PackageNamespace(""),"Number")
+                              
+                              body
+                                 maxstack 1
+                                 localcount 2
+                                 initscopedepth 3
+                                 maxscopedepth 4
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                     }
+                  }

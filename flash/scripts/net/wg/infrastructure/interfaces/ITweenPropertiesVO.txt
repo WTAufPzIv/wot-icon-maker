@@ -1,0 +1,77 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 2
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.infrastructure.interfaces
+{
+   import flash.display.DisplayObject;
+   
+   public interface ITweenPropertiesVO extends ISimpleTweenPropertiesVO
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 0
+               localcount 1
+               initscopedepth 5
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      function setPosition(param1:int) : void;
+      
+      function setDuration(param1:int) : void;
+      
+      function setGlobalDelay(param1:int) : void;
+      
+      function setLocalDelay(param1:int) : void;
+      
+      function setTarget(param1:DisplayObject) : void;
+      
+      function setActionAfterRemoveFromStage(param1:String) : void;
+      
+      function setLoop(param1:Boolean) : void;
+      
+      function setHandler(param1:ITweenHandler) : void;
+      
+      function setPaused(param1:Boolean) : void;
+      
+      function setX(param1:Number) : void;
+      
+      function setY(param1:Number) : void;
+      
+      function setScaleX(param1:Number) : void;
+      
+      function setScaleY(param1:Number) : void;
+      
+      function setAlpha(param1:Number) : void;
+      
+      function setRotation(param1:Number) : void;
+      
+      function setTweenIdx(param1:int) : void;
+   }
+}

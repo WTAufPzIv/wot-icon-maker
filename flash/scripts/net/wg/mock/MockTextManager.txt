@@ -1,0 +1,131 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.mock
+{
+   import flash.text.TextField;
+   import net.wg.utils.ITextManager;
+   
+   public class MockTextManager implements ITextManager
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function MockTextManager()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function createTextField() : TextField
+      {
+         trait method QName(PackageNamespace(""),"createTextField")
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace("flash.text"),"TextField")
+               
+               body
+                  maxstack 1
+                  localcount 1
+                  initscopedepth 4
+                  maxscopedepth 5
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function getTextStyleById(param1:String, param2:String) : String
+         {
+            trait method QName(PackageNamespace(""),"getTextStyleById")
+               dispid 0
+               method
+                  name null
+                  param QName(PackageNamespace(""),"String")
+                  param QName(PackageNamespace(""),"String")
+                  returns QName(PackageNamespace(""),"String")
+                  
+                  body
+                     maxstack 1
+                     localcount 3
+                     initscopedepth 4
+                     maxscopedepth 5
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function setDefTextSelection(param1:TextField) : void
+            {
+               trait method QName(PackageNamespace(""),"setDefTextSelection")
+                  dispid 0
+                  method
+                     name null
+                     param QName(PackageNamespace("flash.text"),"TextField")
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 1
+                        localcount 2
+                        initscopedepth 4
+                        maxscopedepth 5
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+            }
+         }

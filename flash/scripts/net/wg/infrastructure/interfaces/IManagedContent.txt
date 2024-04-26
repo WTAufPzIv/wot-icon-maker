@@ -1,0 +1,51 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 2
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.infrastructure.interfaces
+{
+   public interface IManagedContent extends IUIComponentEx
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 0
+               localcount 1
+               initscopedepth 6
+               maxscopedepth 6
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      function get isModal() : Boolean;
+      
+      function get modalAlpha() : Number;
+      
+      function get sourceView() : IView;
+      
+      function get containerContent() : IManagedContent;
+   }
+}

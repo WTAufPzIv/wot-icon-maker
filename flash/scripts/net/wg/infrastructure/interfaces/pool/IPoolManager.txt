@@ -1,0 +1,53 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 2
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.infrastructure.interfaces.pool
+{
+   import net.wg.infrastructure.interfaces.entity.IDisposable;
+   
+   public interface IPoolManager extends IDisposable
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 0
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      function addPool(param1:String, param2:IPool) : void;
+      
+      function getItem(param1:String) : IPoolItem;
+      
+      function releaseItem(param1:String, param2:IPoolItem) : void;
+      
+      function containsPool(param1:String) : Boolean;
+   }
+}

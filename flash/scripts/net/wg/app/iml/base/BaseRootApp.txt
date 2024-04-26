@@ -1,0 +1,225 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 8
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.app.iml.base
+{
+   import flash.display.DisplayObject;
+   import flash.display.Sprite;
+   import flash.utils.getDefinitionByName;
+   import net.wg.infrastructure.interfaces.IRootAppMainContent;
+   import net.wg.infrastructure.interfaces.entity.IDisposable;
+   
+   public class BaseRootApp extends Sprite implements IDisposable
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 8
+               maxscopedepth 9
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      private var _main:IRootAppMainContent = null;
+      
+      private var _disposed:Boolean = false;
+      
+      public function BaseRootApp(param1:IRootAppMainContent = null)
+      {
+         method
+            name null
+            flag HAS_OPTIONAL
+            param QName(PackageNamespace("net.wg.infrastructure.interfaces"),"IRootAppMainContent")
+            optional Null()
+            returns null
+            
+            body
+               maxstack 2
+               localcount 2
+               initscopedepth 9
+               maxscopedepth 10
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      final public function dispose() : void
+      {
+         trait method QName(PackageNamespace(""),"dispose")
+            flag FINAL
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 2
+                  localcount 1
+                  initscopedepth 9
+                  maxscopedepth 10
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         protected function getObject(param1:String) : Object
+         {
+            trait method QName(ProtectedNamespace("net.wg.app.iml.base:BaseRootApp"),"getObject")
+               dispid 0
+               method
+                  name null
+                  param QName(PackageNamespace(""),"String")
+                  returns QName(PackageNamespace(""),"Object")
+                  
+                  body
+                     maxstack 3
+                     localcount 3
+                     initscopedepth 9
+                     maxscopedepth 10
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            protected function setMainContent(param1:IRootAppMainContent) : void
+            {
+               trait method QName(ProtectedNamespace("net.wg.app.iml.base:BaseRootApp"),"setMainContent")
+                  dispid 0
+                  method
+                     name null
+                     param QName(PackageNamespace("net.wg.infrastructure.interfaces"),"IRootAppMainContent")
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 3
+                        localcount 2
+                        initscopedepth 9
+                        maxscopedepth 10
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               protected function onDispose() : void
+               {
+                  trait method QName(ProtectedNamespace("net.wg.app.iml.base:BaseRootApp"),"onDispose")
+                     dispid 0
+                     method
+                        name null
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 1
+                           localcount 1
+                           initscopedepth 9
+                           maxscopedepth 10
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  private function tryDisposeMainContent() : void
+                  {
+                     trait method QName(PrivateNamespace(null,"1"),"tryDisposeMainContent")
+                        dispid 0
+                        method
+                           name null
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 2
+                              localcount 2
+                              initscopedepth 9
+                              maxscopedepth 10
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public function get main() : IRootAppMainContent
+                     {
+                        trait getter QName(PackageNamespace(""),"main")
+                           dispid 0
+                           method
+                              name null
+                              returns QName(PackageNamespace("net.wg.infrastructure.interfaces"),"IRootAppMainContent")
+                              
+                              body
+                                 maxstack 1
+                                 localcount 1
+                                 initscopedepth 9
+                                 maxscopedepth 10
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        public function isDisposed() : Boolean
+                        {
+                           trait method QName(PackageNamespace(""),"isDisposed")
+                              dispid 0
+                              method
+                                 name null
+                                 returns QName(PackageNamespace(""),"Boolean")
+                                 
+                                 body
+                                    maxstack 1
+                                    localcount 1
+                                    initscopedepth 9
+                                    maxscopedepth 10
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                        }
+                     }

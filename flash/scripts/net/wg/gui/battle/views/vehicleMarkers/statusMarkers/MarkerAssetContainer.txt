@@ -1,0 +1,252 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 9
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.gui.battle.views.vehicleMarkers.statusMarkers
+{
+   import flash.display.MovieClip;
+   import net.wg.gui.battle.views.vehicleMarkers.IMarkerManagerHandler;
+   import net.wg.gui.battle.views.vehicleMarkers.VehicleMarkersManager;
+   import net.wg.infrastructure.interfaces.entity.IDisposable;
+   import org.idmedia.as3commons.util.StringUtils;
+   
+   public class MarkerAssetContainer extends MovieClip implements IDisposable, IMarkerManagerHandler
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 9
+               maxscopedepth 10
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var markerMc:MovieClip = null;
+      
+      private var _baseDisposed:Boolean = false;
+      
+      private var _iconName:String = "";
+      
+      private var _atlasSrcMode:Boolean;
+      
+      private var _vmManager:VehicleMarkersManager = null;
+      
+      private var _animated:Boolean = true;
+      
+      public function MarkerAssetContainer()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 10
+               maxscopedepth 11
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      final public function dispose() : void
+      {
+         trait method QName(PackageNamespace(""),"dispose")
+            flag FINAL
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 2
+                  localcount 1
+                  initscopedepth 10
+                  maxscopedepth 11
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function isDisposed() : Boolean
+         {
+            trait method QName(PackageNamespace(""),"isDisposed")
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace(""),"Boolean")
+                  
+                  body
+                     maxstack 1
+                     localcount 1
+                     initscopedepth 10
+                     maxscopedepth 11
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function managerReadyHandler() : void
+            {
+               trait method QName(PackageNamespace(""),"managerReadyHandler")
+                  dispid 0
+                  method
+                     name null
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 1
+                        localcount 1
+                        initscopedepth 10
+                        maxscopedepth 11
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function setIconName(param1:String) : void
+               {
+                  trait method QName(PackageNamespace(""),"setIconName")
+                     dispid 0
+                     method
+                        name null
+                        param QName(PackageNamespace(""),"String")
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 3
+                           localcount 2
+                           initscopedepth 10
+                           maxscopedepth 11
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function setAnimated(param1:Boolean) : void
+                  {
+                     trait method QName(PackageNamespace(""),"setAnimated")
+                        dispid 0
+                        method
+                           name null
+                           param QName(PackageNamespace(""),"Boolean")
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 2
+                              localcount 2
+                              initscopedepth 10
+                              maxscopedepth 11
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public function updateColorSettings(param1:String) : void
+                     {
+                        trait method QName(PackageNamespace(""),"updateColorSettings")
+                           dispid 0
+                           method
+                              name null
+                              param QName(PackageNamespace(""),"String")
+                              returns QName(PackageNamespace(""),"void")
+                              
+                              body
+                                 maxstack 2
+                                 localcount 2
+                                 initscopedepth 10
+                                 maxscopedepth 11
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        protected function onDispose() : void
+                        {
+                           trait method QName(ProtectedNamespace("net.wg.gui.battle.views.vehicleMarkers.statusMarkers:MarkerAssetContainer"),"onDispose")
+                              dispid 0
+                              method
+                                 name null
+                                 returns QName(PackageNamespace(""),"void")
+                                 
+                                 body
+                                    maxstack 2
+                                    localcount 1
+                                    initscopedepth 10
+                                    maxscopedepth 11
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           private function redrawIcon() : void
+                           {
+                              trait method QName(PrivateNamespace(null,"31"),"redrawIcon")
+                                 dispid 0
+                                 method
+                                    name null
+                                    returns QName(PackageNamespace(""),"void")
+                                    
+                                    body
+                                       maxstack 5
+                                       localcount 1
+                                       initscopedepth 10
+                                       maxscopedepth 11
+                                       
+                                       code
+                                          Constant export mode is not supported.
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                           }
+                        }

@@ -1,0 +1,277 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 4
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.infrastructure.managers.impl
+{
+   import flash.display.Loader;
+   import flash.display.LoaderInfo;
+   import flash.events.Event;
+   import flash.events.EventDispatcher;
+   import flash.events.IOErrorEvent;
+   import flash.net.URLRequest;
+   import flash.system.ApplicationDomain;
+   import flash.system.LoaderContext;
+   import flash.utils.Dictionary;
+   import net.wg.infrastructure.events.LibraryLoaderEvent;
+   import net.wg.infrastructure.managers.ILibrariesLoader;
+   
+   public class LibrariesLoader extends EventDispatcher implements ILibrariesLoader
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      private var _loaders:Vector.<Loader> = null;
+      
+      private var _librariesDict:Dictionary;
+      
+      private var _processedCounter:int = 0;
+      
+      private var _disposed:Boolean = false;
+      
+      public function LibrariesLoader()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 3
+               localcount 1
+               initscopedepth 5
+               maxscopedepth 6
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      final public function dispose() : void
+      {
+         trait method QName(PackageNamespace(""),"dispose")
+            flag FINAL
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 2
+                  localcount 1
+                  initscopedepth 5
+                  maxscopedepth 6
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function load(param1:Vector.<String>) : void
+         {
+            trait method QName(PackageNamespace(""),"load")
+               dispid 0
+               method
+                  name null
+                  param TypeName(QName(PackageNamespace("__AS3__.vec"),"Vector")<QName(PackageNamespace(""),"String")>)
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 3
+                     localcount 8
+                     initscopedepth 5
+                     maxscopedepth 6
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            private function addListeners(param1:LoaderInfo) : void
+            {
+               trait method QName(PrivateNamespace(null,"3"),"addListeners")
+                  dispid 0
+                  method
+                     name null
+                     param QName(PackageNamespace("flash.display"),"LoaderInfo")
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 3
+                        localcount 2
+                        initscopedepth 5
+                        maxscopedepth 6
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               private function removeListeners(param1:LoaderInfo) : void
+               {
+                  trait method QName(PrivateNamespace(null,"3"),"removeListeners")
+                     dispid 0
+                     method
+                        name null
+                        param QName(PackageNamespace("flash.display"),"LoaderInfo")
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 3
+                           localcount 2
+                           initscopedepth 5
+                           maxscopedepth 6
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  private function checkLoadComplete() : void
+                  {
+                     trait method QName(PrivateNamespace(null,"3"),"checkLoadComplete")
+                        dispid 0
+                        method
+                           name null
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 3
+                              localcount 3
+                              initscopedepth 5
+                              maxscopedepth 6
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     private function clear() : void
+                     {
+                        trait method QName(PrivateNamespace(null,"3"),"clear")
+                           dispid 0
+                           method
+                              name null
+                              returns QName(PackageNamespace(""),"void")
+                              
+                              body
+                                 maxstack 3
+                                 localcount 4
+                                 initscopedepth 5
+                                 maxscopedepth 6
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        private function onLoaderInfoInitHandler(param1:Event) : void
+                        {
+                           trait method QName(PrivateNamespace(null,"3"),"onLoaderInfoInitHandler")
+                              dispid 0
+                              method
+                                 name null
+                                 param QName(PackageNamespace("flash.events"),"Event")
+                                 returns QName(PackageNamespace(""),"void")
+                                 
+                                 body
+                                    maxstack 6
+                                    localcount 4
+                                    initscopedepth 5
+                                    maxscopedepth 6
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           private function onLoaderInfoIoErrorHandler(param1:IOErrorEvent) : void
+                           {
+                              trait method QName(PrivateNamespace(null,"3"),"onLoaderInfoIoErrorHandler")
+                                 dispid 0
+                                 method
+                                    name null
+                                    param QName(PackageNamespace("flash.events"),"IOErrorEvent")
+                                    returns QName(PackageNamespace(""),"void")
+                                    
+                                    body
+                                       maxstack 6
+                                       localcount 4
+                                       initscopedepth 5
+                                       maxscopedepth 6
+                                       
+                                       code
+                                          Constant export mode is not supported.
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                              
+                              public function isDisposed() : Boolean
+                              {
+                                 trait method QName(PackageNamespace(""),"isDisposed")
+                                    dispid 0
+                                    method
+                                       name null
+                                       returns QName(PackageNamespace(""),"Boolean")
+                                       
+                                       body
+                                          maxstack 1
+                                          localcount 1
+                                          initscopedepth 5
+                                          maxscopedepth 6
+                                          
+                                          code
+                                             Constant export mode is not supported.
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                              }
+                           }

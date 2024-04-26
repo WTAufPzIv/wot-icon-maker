@@ -1,0 +1,122 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 4
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package scaleform.clik.events
+{
+   import flash.events.Event;
+   
+   public final class FocusHandlerEvent extends Event
+   {
+      
+      public static const FOCUS_IN:String = "CLIK_focusIn";
+      
+      public static const FOCUS_OUT:String = "CLIK_focusOut";
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var controllerIdx:uint = 0;
+      
+      public function FocusHandlerEvent(param1:String, param2:Boolean = true, param3:Boolean = false, param4:uint = 0)
+      {
+         method
+            name null
+            flag HAS_OPTIONAL
+            param QName(PackageNamespace(""),"String")
+            param QName(PackageNamespace(""),"Boolean")
+            param QName(PackageNamespace(""),"Boolean")
+            param QName(PackageNamespace(""),"uint")
+            optional True()
+            optional False()
+            optional Integer(0)
+            returns null
+            
+            body
+               maxstack 4
+               localcount 5
+               initscopedepth 5
+               maxscopedepth 6
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      override public function clone() : Event
+      {
+         trait method QName(PackageNamespace(""),"clone")
+            flag OVERRIDE
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace("flash.events"),"Event")
+               
+               body
+                  maxstack 5
+                  localcount 1
+                  initscopedepth 5
+                  maxscopedepth 6
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         override public function toString() : String
+         {
+            trait method QName(PackageNamespace(""),"toString")
+               flag OVERRIDE
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace(""),"String")
+                  
+                  body
+                     maxstack 6
+                     localcount 1
+                     initscopedepth 5
+                     maxscopedepth 6
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+         }
+      }

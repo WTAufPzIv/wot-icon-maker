@@ -1,0 +1,281 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package scaleform.clik.managers
+{
+   import flash.display.DisplayObject;
+   import flash.display.DisplayObjectContainer;
+   import flash.display.MovieClip;
+   import flash.display.Sprite;
+   import flash.display.Stage;
+   import flash.events.Event;
+   import flash.geom.Point;
+   import scaleform.gfx.FocusManager;
+   
+   public class PopUpManager
+   {
+      
+      protected static var initialized:Boolean = false;
+      
+      protected static var _stage:Stage;
+      
+      protected static var _defaultPopupCanvas:MovieClip;
+      
+      protected static var _modalMc:Sprite;
+      
+      protected static var _modalBg:Sprite;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function PopUpManager()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public static function init(param1:Stage) : void
+      {
+         trait method QName(PackageNamespace(""),"init")
+            flag FINAL
+            dispid 3
+            method
+               name null
+               param QName(PackageNamespace("flash.display"),"Stage")
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 6
+                  localcount 2
+                  initscopedepth 3
+                  maxscopedepth 4
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public static function get popupCanvas() : MovieClip
+         {
+            trait getter QName(PackageNamespace(""),"popupCanvas")
+               flag FINAL
+               dispid 4
+               method
+                  name null
+                  returns QName(PackageNamespace("flash.display"),"MovieClip")
+                  
+                  body
+                     maxstack 1
+                     localcount 1
+                     initscopedepth 3
+                     maxscopedepth 4
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public static function show(param1:DisplayObject, param2:Number = 0, param3:Number = 0, param4:DisplayObjectContainer = null) : void
+            {
+               trait method QName(PackageNamespace(""),"show")
+                  flag FINAL
+                  dispid 5
+                  method
+                     name null
+                     flag HAS_OPTIONAL
+                     param QName(PackageNamespace("flash.display"),"DisplayObject")
+                     param QName(PackageNamespace(""),"Number")
+                     param QName(PackageNamespace(""),"Number")
+                     param QName(PackageNamespace("flash.display"),"DisplayObjectContainer")
+                     optional Integer(0)
+                     optional Integer(0)
+                     optional Null()
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 6
+                        localcount 6
+                        initscopedepth 3
+                        maxscopedepth 4
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public static function showModal(param1:Sprite, param2:Number = 0, param3:Number = 0, param4:Sprite = null, param5:uint = 0, param6:Sprite = null) : void
+               {
+                  trait method QName(PackageNamespace(""),"showModal")
+                     flag FINAL
+                     dispid 6
+                     method
+                        name null
+                        flag HAS_OPTIONAL
+                        param QName(PackageNamespace("flash.display"),"Sprite")
+                        param QName(PackageNamespace(""),"Number")
+                        param QName(PackageNamespace(""),"Number")
+                        param QName(PackageNamespace("flash.display"),"Sprite")
+                        param QName(PackageNamespace(""),"uint")
+                        param QName(PackageNamespace("flash.display"),"Sprite")
+                        optional Integer(0)
+                        optional Integer(0)
+                        optional Null()
+                        optional Integer(0)
+                        optional Null()
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 6
+                           localcount 7
+                           initscopedepth 3
+                           maxscopedepth 4
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  protected static function handleStageAddedEvent(param1:Event) : void
+                  {
+                     trait method QName(StaticProtectedNs("scaleform.clik.managers:PopUpManager"),"handleStageAddedEvent")
+                        flag FINAL
+                        dispid 7
+                        method
+                           name null
+                           param QName(PackageNamespace("flash.events"),"Event")
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 4
+                              localcount 2
+                              initscopedepth 3
+                              maxscopedepth 4
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     protected static function handleRemovePopup(param1:Event) : void
+                     {
+                        trait method QName(StaticProtectedNs("scaleform.clik.managers:PopUpManager"),"handleRemovePopup")
+                           flag FINAL
+                           dispid 8
+                           method
+                              name null
+                              param QName(PackageNamespace("flash.events"),"Event")
+                              returns QName(PackageNamespace(""),"void")
+                              
+                              body
+                                 maxstack 1
+                                 localcount 2
+                                 initscopedepth 3
+                                 maxscopedepth 4
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        protected static function handleRemoveModalMc(param1:Event) : void
+                        {
+                           trait method QName(StaticProtectedNs("scaleform.clik.managers:PopUpManager"),"handleRemoveModalMc")
+                              flag FINAL
+                              dispid 9
+                              method
+                                 name null
+                                 param QName(PackageNamespace("flash.events"),"Event")
+                                 returns QName(PackageNamespace(""),"void")
+                                 
+                                 body
+                                    maxstack 4
+                                    localcount 2
+                                    initscopedepth 3
+                                    maxscopedepth 4
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           protected static function removeAddedToStageListener() : void
+                           {
+                              trait method QName(StaticProtectedNs("scaleform.clik.managers:PopUpManager"),"removeAddedToStageListener")
+                                 flag FINAL
+                                 dispid 10
+                                 method
+                                    name null
+                                    returns QName(PackageNamespace(""),"void")
+                                    
+                                    body
+                                       maxstack 4
+                                       localcount 1
+                                       initscopedepth 3
+                                       maxscopedepth 4
+                                       
+                                       code
+                                          Constant export mode is not supported.
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                           }
+                        }

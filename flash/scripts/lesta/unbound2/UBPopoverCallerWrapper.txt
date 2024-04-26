@@ -1,0 +1,110 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package lesta.unbound2
+{
+   import flash.display.DisplayObject;
+   import net.wg.infrastructure.interfaces.IPopOverCaller;
+   
+   public class UBPopoverCallerWrapper implements IPopOverCaller
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      private var _target:DisplayObject;
+      
+      public function UBPopoverCallerWrapper(param1:DisplayObject)
+      {
+         method
+            name null
+            param QName(PackageNamespace("flash.display"),"DisplayObject")
+            returns null
+            
+            body
+               maxstack 2
+               localcount 2
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function getHitArea() : DisplayObject
+      {
+         trait method QName(PackageNamespace(""),"getHitArea")
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace("flash.display"),"DisplayObject")
+               
+               body
+                  maxstack 1
+                  localcount 1
+                  initscopedepth 4
+                  maxscopedepth 5
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function getTargetButton() : DisplayObject
+         {
+            trait method QName(PackageNamespace(""),"getTargetButton")
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace("flash.display"),"DisplayObject")
+                  
+                  body
+                     maxstack 1
+                     localcount 1
+                     initscopedepth 4
+                     maxscopedepth 5
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+         }
+      }

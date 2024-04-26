@@ -1,0 +1,53 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 2
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.gui.battle.components.interfaces
+{
+   import flash.events.Event;
+   import net.wg.infrastructure.interfaces.IMovieClip;
+   import net.wg.infrastructure.interfaces.entity.IDisposable;
+   
+   public interface IBattleUIComponent extends IDisposable, IMovieClip
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 0
+               localcount 1
+               initscopedepth 9
+               maxscopedepth 9
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      function validateNow(param1:Event = null) : void;
+      
+      function get initialized() : Boolean;
+      
+      function invalidate(param1:uint = 4294967295) : void;
+   }
+}

@@ -1,0 +1,288 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.infrastructure.base.meta.impl
+{
+   import net.wg.gui.battle.views.staticMarkers.epic.ObjectiveIdReplyState;
+   import net.wg.gui.battle.views.staticMarkers.epic.headquarter.HeadquarterActionMarker;
+   import net.wg.gui.battle.views.staticMarkers.epic.headquarter.HeadquarterAnimation;
+   import net.wg.gui.battle.views.staticMarkers.epic.headquarter.HeadquarterIcon;
+   import net.wg.gui.battle.views.staticMarkers.epic.headquarter.HeadquarterLifeStates;
+   import net.wg.gui.battle.views.staticMarkers.epic.headquarter.HeadquarterMarker;
+   import net.wg.gui.battle.views.staticMarkers.epic.resupplyPoint.ResupplyIcon;
+   import net.wg.gui.battle.views.staticMarkers.epic.resupplyPoint.ResupplyMarker;
+   import net.wg.gui.battle.views.staticMarkers.epic.sectorWarning.SectorWarningMarker;
+   import net.wg.gui.battle.views.staticMarkers.epic.sectorWaypoint.SectorWaypointIcon;
+   import net.wg.gui.battle.views.staticMarkers.epic.sectorWaypoint.SectorWaypointMarker;
+   import net.wg.gui.battle.views.staticMarkers.epic.sectorbase.SectorBaseActions;
+   import net.wg.gui.battle.views.staticMarkers.epic.sectorbase.SectorBaseIcon;
+   import net.wg.gui.battle.views.staticMarkers.epic.sectorbase.SectorBaseMarker;
+   import net.wg.gui.battle.views.staticMarkers.flag.FlagIcon;
+   import net.wg.gui.battle.views.staticMarkers.flag.FlagMarker;
+   import net.wg.gui.battle.views.staticMarkers.flag.constant.FlagMarkerState;
+   import net.wg.gui.battle.views.staticMarkers.interestPoint.InterestPointMarker;
+   import net.wg.gui.battle.views.staticMarkers.interestPoint.MarkerPoiProgressCircle;
+   import net.wg.gui.battle.views.staticMarkers.location.FlagLocationActionMarker;
+   import net.wg.gui.battle.views.staticMarkers.location.LocationActionMarker;
+   import net.wg.gui.battle.views.staticMarkers.location.LocationMarker;
+   import net.wg.gui.battle.views.staticMarkers.repairPoint.RepairPointIcon;
+   import net.wg.gui.battle.views.staticMarkers.repairPoint.RepairPointMarker;
+   import net.wg.gui.battle.views.staticMarkers.safeZone.SafeZoneMarker;
+   import net.wg.gui.battle.views.staticMarkers.scenario.ScenarioMarker;
+   import net.wg.gui.battle.views.staticMarkers.scenario.ScenarioMarkerProgressCircle;
+   import net.wg.gui.battle.views.staticMarkers.targetPoint.TargetPointMarker;
+   import net.wg.gui.battle.views.vehicleMarkers.ActionIconStateMarker;
+   import net.wg.gui.battle.views.vehicleMarkers.AnimateExplosion;
+   import net.wg.gui.battle.views.vehicleMarkers.BRBotVehicleMarker;
+   import net.wg.gui.battle.views.vehicleMarkers.BranderVehicle2dMarker;
+   import net.wg.gui.battle.views.vehicleMarkers.Comp7VehicleMarker;
+   import net.wg.gui.battle.views.vehicleMarkers.DamageLabel;
+   import net.wg.gui.battle.views.vehicleMarkers.FlagContainer;
+   import net.wg.gui.battle.views.vehicleMarkers.FortConsumablesMarker;
+   import net.wg.gui.battle.views.vehicleMarkers.GoalFlagMarker;
+   import net.wg.gui.battle.views.vehicleMarkers.HPFieldContainer;
+   import net.wg.gui.battle.views.vehicleMarkers.HealthBar;
+   import net.wg.gui.battle.views.vehicleMarkers.HealthBarAnimatedLabel;
+   import net.wg.gui.battle.views.vehicleMarkers.HealthBarAnimatedPart;
+   import net.wg.gui.battle.views.vehicleMarkers.IMarkerManagerHandler;
+   import net.wg.gui.battle.views.vehicleMarkers.IVehicleMarkerInvokable;
+   import net.wg.gui.battle.views.vehicleMarkers.IVehicleMarkersManager;
+   import net.wg.gui.battle.views.vehicleMarkers.StaticArtyMarker;
+   import net.wg.gui.battle.views.vehicleMarkers.StaticObjectMarker;
+   import net.wg.gui.battle.views.vehicleMarkers.TargetMarker;
+   import net.wg.gui.battle.views.vehicleMarkers.VMAtlasItemName;
+   import net.wg.gui.battle.views.vehicleMarkers.VO.CrossOffset;
+   import net.wg.gui.battle.views.vehicleMarkers.VO.HPDisplayMode;
+   import net.wg.gui.battle.views.vehicleMarkers.VO.VehicleMarkerFlags;
+   import net.wg.gui.battle.views.vehicleMarkers.VO.VehicleMarkerPart;
+   import net.wg.gui.battle.views.vehicleMarkers.VO.VehicleMarkerSettings;
+   import net.wg.gui.battle.views.vehicleMarkers.VO.VehicleMarkerVO;
+   import net.wg.gui.battle.views.vehicleMarkers.VehicleActionMarker;
+   import net.wg.gui.battle.views.vehicleMarkers.VehicleIconAnimation;
+   import net.wg.gui.battle.views.vehicleMarkers.VehicleMarker;
+   import net.wg.gui.battle.views.vehicleMarkers.VehicleMarkersConstants;
+   import net.wg.gui.battle.views.vehicleMarkers.VehicleMarkersLinkages;
+   import net.wg.gui.battle.views.vehicleMarkers.VehicleMarkersManager;
+   import net.wg.gui.battle.views.vehicleMarkers.VehicleStatusContainerMarker;
+   import net.wg.gui.battle.views.vehicleMarkers.events.StatusAnimationEvent;
+   import net.wg.gui.battle.views.vehicleMarkers.events.TimelineEvent;
+   import net.wg.gui.battle.views.vehicleMarkers.events.VehicleMarkersManagerEvent;
+   import net.wg.gui.battle.views.vehicleMarkers.statusMarkers.MarkerAssetContainer;
+   import net.wg.gui.battle.views.vehicleMarkers.statusMarkers.MarkerTimer;
+   import net.wg.gui.battle.views.vehicleMarkers.statusMarkers.VehicleAnimatedStatusBaseMarker;
+   import net.wg.gui.battle.views.vehicleMarkers.statusMarkers.VehicleBerserkerMarker;
+   import net.wg.gui.battle.views.vehicleMarkers.statusMarkers.VehicleEngineerEffectMarker;
+   import net.wg.gui.battle.views.vehicleMarkers.statusMarkers.VehicleFLBasicMarker;
+   import net.wg.gui.battle.views.vehicleMarkers.statusMarkers.VehicleInspireMarker;
+   import net.wg.gui.battle.views.vehicleMarkers.statusMarkers.VehicleInspireTargetMarker;
+   import net.wg.gui.battle.views.vehicleMarkers.statusMarkers.VehicleStatusIconMarker;
+   import net.wg.gui.battle.views.vehicleMarkers.statusMarkers.VehicleStatusMarker;
+   import net.wg.gui.battle.views.vehicleMarkers.statusMarkers.VehicleStunMarker;
+   
+   public class ClassManagerBattleMarkersMeta
+   {
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_STATICMARKERS_EPIC_OBJECTIVEIDREPLYSTATE:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_STATICMARKERS_EPIC_HEADQUARTER_HEADQUARTERACTIONMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_STATICMARKERS_EPIC_HEADQUARTER_HEADQUARTERANIMATION:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_STATICMARKERS_EPIC_HEADQUARTER_HEADQUARTERICON:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_STATICMARKERS_EPIC_HEADQUARTER_HEADQUARTERLIFESTATES:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_STATICMARKERS_EPIC_HEADQUARTER_HEADQUARTERMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_STATICMARKERS_EPIC_RESUPPLYPOINT_RESUPPLYICON:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_STATICMARKERS_EPIC_RESUPPLYPOINT_RESUPPLYMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_STATICMARKERS_EPIC_SECTORBASE_SECTORBASEACTIONS:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_STATICMARKERS_EPIC_SECTORBASE_SECTORBASEICON:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_STATICMARKERS_EPIC_SECTORBASE_SECTORBASEMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_STATICMARKERS_EPIC_SECTORWARNING_SECTORWARNINGMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_STATICMARKERS_EPIC_SECTORWAYPOINT_SECTORWAYPOINTICON:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_STATICMARKERS_EPIC_SECTORWAYPOINT_SECTORWAYPOINTMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_STATICMARKERS_FLAG_FLAGICON:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_STATICMARKERS_FLAG_FLAGMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_STATICMARKERS_FLAG_CONSTANT_FLAGMARKERSTATE:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_STATICMARKERS_INTERESTPOINT_INTERESTPOINTMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_STATICMARKERS_INTERESTPOINT_MARKERPOIPROGRESSCIRCLE:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_STATICMARKERS_LOCATION_FLAGLOCATIONACTIONMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_STATICMARKERS_LOCATION_LOCATIONACTIONMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_STATICMARKERS_LOCATION_LOCATIONMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_STATICMARKERS_REPAIRPOINT_REPAIRPOINTICON:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_STATICMARKERS_REPAIRPOINT_REPAIRPOINTMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_STATICMARKERS_SAFEZONE_SAFEZONEMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_STATICMARKERS_SCENARIO_SCENARIOMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_STATICMARKERS_SCENARIO_SCENARIOMARKERPROGRESSCIRCLE:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_STATICMARKERS_TARGETPOINT_TARGETPOINTMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_ACTIONICONSTATEMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_ANIMATEEXPLOSION:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_BRANDERVEHICLE2DMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_BRBOTVEHICLEMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_COMP7VEHICLEMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_DAMAGELABEL:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_FLAGCONTAINER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_FORTCONSUMABLESMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_GOALFLAGMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_HEALTHBAR:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_HEALTHBARANIMATEDLABEL:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_HEALTHBARANIMATEDPART:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_HPFIELDCONTAINER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_IMARKERMANAGERHANDLER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_IVEHICLEMARKERINVOKABLE:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_IVEHICLEMARKERSMANAGER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_STATICARTYMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_STATICOBJECTMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_TARGETMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_VEHICLEACTIONMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_VEHICLEICONANIMATION:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_VEHICLEMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_VEHICLEMARKERSCONSTANTS:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_VEHICLEMARKERSLINKAGES:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_VEHICLEMARKERSMANAGER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_VEHICLESTATUSCONTAINERMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_VMATLASITEMNAME:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_EVENTS_STATUSANIMATIONEVENT:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_EVENTS_TIMELINEEVENT:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_EVENTS_VEHICLEMARKERSMANAGEREVENT:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_STATUSMARKERS_MARKERASSETCONTAINER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_STATUSMARKERS_MARKERTIMER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_STATUSMARKERS_VEHICLEANIMATEDSTATUSBASEMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_STATUSMARKERS_VEHICLEBERSERKERMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_STATUSMARKERS_VEHICLEENGINEEREFFECTMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_STATUSMARKERS_VEHICLEFLBASICMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_STATUSMARKERS_VEHICLEINSPIREMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_STATUSMARKERS_VEHICLEINSPIRETARGETMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_STATUSMARKERS_VEHICLESTATUSICONMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_STATUSMARKERS_VEHICLESTATUSMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_STATUSMARKERS_VEHICLESTUNMARKER:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_VO_CROSSOFFSET:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_VO_HPDISPLAYMODE:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_VO_VEHICLEMARKERFLAGS:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_VO_VEHICLEMARKERPART:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_VO_VEHICLEMARKERSETTINGS:Class;
+      
+      public static const NET_WG_GUI_BATTLE_VIEWS_VEHICLEMARKERS_VO_VEHICLEMARKERVO:Class;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function ClassManagerBattleMarkersMeta()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+   }
+}

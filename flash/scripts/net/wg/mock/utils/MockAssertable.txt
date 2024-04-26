@@ -1,0 +1,191 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.mock.utils
+{
+   import flash.display.MovieClip;
+   import net.wg.utils.IAssertable;
+   
+   public class MockAssertable implements IAssertable
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function MockAssertable()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function assert(param1:Boolean, param2:String, param3:Class = null) : void
+      {
+         trait method QName(PackageNamespace(""),"assert")
+            dispid 0
+            method
+               name null
+               flag HAS_OPTIONAL
+               param QName(PackageNamespace(""),"Boolean")
+               param QName(PackageNamespace(""),"String")
+               param QName(PackageNamespace(""),"Class")
+               optional Null()
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 1
+                  localcount 4
+                  initscopedepth 4
+                  maxscopedepth 5
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function assertFrameExists(param1:String, param2:MovieClip, param3:Class = null) : void
+         {
+            trait method QName(PackageNamespace(""),"assertFrameExists")
+               dispid 0
+               method
+                  name null
+                  flag HAS_OPTIONAL
+                  param QName(PackageNamespace(""),"String")
+                  param QName(PackageNamespace("flash.display"),"MovieClip")
+                  param QName(PackageNamespace(""),"Class")
+                  optional Null()
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 1
+                     localcount 4
+                     initscopedepth 4
+                     maxscopedepth 5
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function assertNotNull(param1:Object, param2:String, param3:Class = null) : void
+            {
+               trait method QName(PackageNamespace(""),"assertNotNull")
+                  dispid 0
+                  method
+                     name null
+                     flag HAS_OPTIONAL
+                     param QName(PackageNamespace(""),"Object")
+                     param QName(PackageNamespace(""),"String")
+                     param QName(PackageNamespace(""),"Class")
+                     optional Null()
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 1
+                        localcount 4
+                        initscopedepth 4
+                        maxscopedepth 5
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function assertNull(param1:Object, param2:String, param3:Class = null) : void
+               {
+                  trait method QName(PackageNamespace(""),"assertNull")
+                     dispid 0
+                     method
+                        name null
+                        flag HAS_OPTIONAL
+                        param QName(PackageNamespace(""),"Object")
+                        param QName(PackageNamespace(""),"String")
+                        param QName(PackageNamespace(""),"Class")
+                        optional Null()
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 1
+                           localcount 4
+                           initscopedepth 4
+                           maxscopedepth 5
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function enableErrorLogging(param1:Boolean) : void
+                  {
+                     trait method QName(PackageNamespace(""),"enableErrorLogging")
+                        dispid 0
+                        method
+                           name null
+                           param QName(PackageNamespace(""),"Boolean")
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 1
+                              localcount 2
+                              initscopedepth 4
+                              maxscopedepth 5
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                  }
+               }

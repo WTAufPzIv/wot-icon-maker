@@ -1,0 +1,51 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 2
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.infrastructure.managers
+{
+   import net.wg.infrastructure.base.meta.IWaitingViewMeta;
+   import net.wg.infrastructure.interfaces.IUIComponentEx;
+   import net.wg.infrastructure.interfaces.IView;
+   
+   public interface IWaitingView extends IWaitingViewMeta, IUIComponentEx, IView
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 0
+               localcount 1
+               initscopedepth 6
+               maxscopedepth 6
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      function get isOnStage() : Boolean;
+      
+      function get isFocusable() : Boolean;
+   }
+}

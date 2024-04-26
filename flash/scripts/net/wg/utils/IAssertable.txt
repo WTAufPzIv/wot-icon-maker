@@ -1,0 +1,55 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 2
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.utils
+{
+   import flash.display.MovieClip;
+   
+   public interface IAssertable
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 0
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 3
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      function assert(param1:Boolean, param2:String, param3:Class = null) : void;
+      
+      function assertNotNull(param1:Object, param2:String, param3:Class = null) : void;
+      
+      function assertNull(param1:Object, param2:String, param3:Class = null) : void;
+      
+      function assertFrameExists(param1:String, param2:MovieClip, param3:Class = null) : void;
+      
+      function enableErrorLogging(param1:Boolean) : void;
+   }
+}

@@ -1,0 +1,145 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 5
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.data.daapi
+{
+   import net.wg.data.daapi.base.DAAPIDataClass;
+   
+   public class LoadViewVO extends DAAPIDataClass
+   {
+      
+      public static const CONFIG_FIELD_NAME:String = "config";
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 5
+               maxscopedepth 6
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var configVO:ViewSettingsVO;
+      
+      public var alias:String = "";
+      
+      public var name:String = "";
+      
+      public var viewTutorialId:String = "";
+      
+      public var cached:Boolean;
+      
+      public function LoadViewVO(param1:Object)
+      {
+         method
+            name null
+            param QName(PackageNamespace(""),"Object")
+            returns null
+            
+            body
+               maxstack 2
+               localcount 2
+               initscopedepth 6
+               maxscopedepth 7
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      override protected function onDataWrite(param1:String, param2:Object) : Boolean
+      {
+         trait method QName(ProtectedNamespace("net.wg.data.daapi:LoadViewVO"),"onDataWrite")
+            flag OVERRIDE
+            dispid 0
+            method
+               name null
+               param QName(PackageNamespace(""),"String")
+               param QName(PackageNamespace(""),"Object")
+               returns QName(PackageNamespace(""),"Boolean")
+               
+               body
+                  maxstack 3
+                  localcount 3
+                  initscopedepth 6
+                  maxscopedepth 7
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         override protected function onDispose() : void
+         {
+            trait method QName(ProtectedNamespace("net.wg.data.daapi:LoadViewVO"),"onDispose")
+               flag OVERRIDE
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 2
+                     localcount 1
+                     initscopedepth 6
+                     maxscopedepth 7
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            override public function toString() : String
+            {
+               trait method QName(PackageNamespace(""),"toString")
+                  flag OVERRIDE
+                  dispid 0
+                  method
+                     name null
+                     returns QName(PackageNamespace(""),"String")
+                     
+                     body
+                        maxstack 2
+                        localcount 1
+                        initscopedepth 6
+                        maxscopedepth 7
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+            }
+         }

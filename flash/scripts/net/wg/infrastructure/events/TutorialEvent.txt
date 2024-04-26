@@ -1,0 +1,124 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 4
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.infrastructure.events
+{
+   import flash.display.DisplayObject;
+   import flash.events.Event;
+   
+   public class TutorialEvent extends Event
+   {
+      
+      public static const VIEW_READY_FOR_TUTORIAL:String = "viewReadyForTutorial";
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var pathPointNames:Vector.<String>;
+      
+      public var pathPointObjects:Vector.<DisplayObject>;
+      
+      public var unstoppable:Boolean = false;
+      
+      public var ev_target:DisplayObject = null;
+      
+      public function TutorialEvent(param1:String, param2:Boolean = false)
+      {
+         method
+            name null
+            flag HAS_OPTIONAL
+            param QName(PackageNamespace(""),"String")
+            param QName(PackageNamespace(""),"Boolean")
+            optional False()
+            returns null
+            
+            body
+               maxstack 4
+               localcount 3
+               initscopedepth 5
+               maxscopedepth 6
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      override public function clone() : Event
+      {
+         trait method QName(PackageNamespace(""),"clone")
+            flag OVERRIDE
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace("flash.events"),"Event")
+               
+               body
+                  maxstack 3
+                  localcount 2
+                  initscopedepth 5
+                  maxscopedepth 6
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function addPathPoint(param1:DisplayObject, param2:String) : void
+         {
+            trait method QName(PackageNamespace(""),"addPathPoint")
+               dispid 0
+               method
+                  name null
+                  param QName(PackageNamespace("flash.display"),"DisplayObject")
+                  param QName(PackageNamespace(""),"String")
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 2
+                     localcount 3
+                     initscopedepth 5
+                     maxscopedepth 6
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+         }
+      }

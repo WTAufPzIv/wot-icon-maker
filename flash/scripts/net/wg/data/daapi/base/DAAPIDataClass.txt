@@ -1,0 +1,397 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 4
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.data.daapi.base
+{
+   import avmplus.getQualifiedClassName;
+   import flash.events.EventDispatcher;
+   import net.wg.data.constants.Errors;
+   import net.wg.infrastructure.exceptions.DAAPIBindException;
+   import net.wg.infrastructure.interfaces.IDAAPIDataClass;
+   
+   public class DAAPIDataClass extends EventDispatcher implements IDAAPIDataClass
+   {
+      
+      private static const HASH_CANT_NULL_ASSERT_MESSAGE:String;
+      
+      private static const FIELD_NAME_CANT_FIND_ASSERT_MESSAGE:String = "can\'t find property for DAAPI data binding: ";
+      
+      private static const OBJECT_TYPE_NAME:String = "object";
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 3
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      private var _hash:Object = null;
+      
+      private var _disposed:Boolean = false;
+      
+      public function DAAPIDataClass(param1:Object = null)
+      {
+         method
+            name null
+            flag HAS_OPTIONAL
+            param QName(PackageNamespace(""),"Object")
+            optional Null()
+            returns null
+            
+            body
+               maxstack 2
+               localcount 2
+               initscopedepth 5
+               maxscopedepth 6
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public static function compare(param1:Object, param2:Object) : Boolean
+      {
+         trait method QName(PackageNamespace(""),"compare")
+            flag FINAL
+            dispid 3
+            method
+               name null
+               param QName(PackageNamespace(""),"Object")
+               param QName(PackageNamespace(""),"Object")
+               returns QName(PackageNamespace(""),"Boolean")
+               
+               body
+                  maxstack 4
+                  localcount 10
+                  initscopedepth 4
+                  maxscopedepth 5
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         final public function dispose() : void
+         {
+            trait method QName(PackageNamespace(""),"dispose")
+               flag FINAL
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 2
+                     localcount 1
+                     initscopedepth 5
+                     maxscopedepth 6
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function clone() : *
+            {
+               trait method QName(PackageNamespace(""),"clone")
+                  dispid 0
+                  method
+                     name null
+                     returns null
+                     
+                     body
+                        maxstack 2
+                        localcount 1
+                        initscopedepth 5
+                        maxscopedepth 6
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function fromHash(param1:Object) : void
+               {
+                  trait method QName(PackageNamespace(""),"fromHash")
+                     dispid 0
+                     method
+                        name null
+                        param QName(PackageNamespace(""),"Object")
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 5
+                           localcount 9
+                           initscopedepth 5
+                           maxscopedepth 6
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function isEquals(param1:DAAPIDataClass) : Boolean
+                  {
+                     trait method QName(PackageNamespace(""),"isEquals")
+                        dispid 0
+                        method
+                           name null
+                           param QName(PackageNamespace("net.wg.data.daapi.base"),"DAAPIDataClass")
+                           returns QName(PackageNamespace(""),"Boolean")
+                           
+                           body
+                              maxstack 3
+                              localcount 2
+                              initscopedepth 5
+                              maxscopedepth 6
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public function toHash() : Object
+                     {
+                        trait method QName(PackageNamespace(""),"toHash")
+                           dispid 0
+                           method
+                              name null
+                              returns QName(PackageNamespace(""),"Object")
+                              
+                              body
+                                 maxstack 3
+                                 localcount 7
+                                 initscopedepth 5
+                                 maxscopedepth 6
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        protected function onDispose() : void
+                        {
+                           trait method QName(ProtectedNamespace("net.wg.data.daapi.base:DAAPIDataClass"),"onDispose")
+                              dispid 0
+                              method
+                                 name null
+                                 returns QName(PackageNamespace(""),"void")
+                                 
+                                 body
+                                    maxstack 1
+                                    localcount 1
+                                    initscopedepth 5
+                                    maxscopedepth 6
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           protected function onDataWrite(param1:String, param2:Object) : Boolean
+                           {
+                              trait method QName(ProtectedNamespace("net.wg.data.daapi.base:DAAPIDataClass"),"onDataWrite")
+                                 dispid 0
+                                 method
+                                    name null
+                                    param QName(PackageNamespace(""),"String")
+                                    param QName(PackageNamespace(""),"Object")
+                                    returns QName(PackageNamespace(""),"Boolean")
+                                    
+                                    body
+                                       maxstack 1
+                                       localcount 3
+                                       initscopedepth 5
+                                       maxscopedepth 6
+                                       
+                                       code
+                                          Constant export mode is not supported.
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                              
+                              protected function onDataRead(param1:String, param2:Object) : Boolean
+                              {
+                                 trait method QName(ProtectedNamespace("net.wg.data.daapi.base:DAAPIDataClass"),"onDataRead")
+                                    dispid 0
+                                    method
+                                       name null
+                                       param QName(PackageNamespace(""),"String")
+                                       param QName(PackageNamespace(""),"Object")
+                                       returns QName(PackageNamespace(""),"Boolean")
+                                       
+                                       body
+                                          maxstack 1
+                                          localcount 3
+                                          initscopedepth 5
+                                          maxscopedepth 6
+                                          
+                                          code
+                                             Constant export mode is not supported.
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                                 
+                                 internal function getHash() : Object
+                                 {
+                                    trait method QName(PackageInternalNs("net.wg.data.daapi.base"),"getHash")
+                                       dispid 0
+                                       method
+                                          name null
+                                          returns QName(PackageNamespace(""),"Object")
+                                          
+                                          body
+                                             maxstack 1
+                                             localcount 1
+                                             initscopedepth 5
+                                             maxscopedepth 6
+                                             
+                                             code
+                                                Constant export mode is not supported.
+                                             end ; code
+                                          end ; body
+                                       end ; method
+                                    }
+                                    
+                                    private function assert(param1:Boolean, param2:String, param3:Class = null) : void
+                                    {
+                                       trait method QName(PrivateNamespace(null,"70"),"assert")
+                                          dispid 0
+                                          method
+                                             name null
+                                             flag HAS_OPTIONAL
+                                             param QName(PackageNamespace(""),"Boolean")
+                                             param QName(PackageNamespace(""),"String")
+                                             param QName(PackageNamespace(""),"Class")
+                                             optional Null()
+                                             returns QName(PackageNamespace(""),"void")
+                                             
+                                             body
+                                                maxstack 4
+                                                localcount 4
+                                                initscopedepth 5
+                                                maxscopedepth 6
+                                                
+                                                code
+                                                   Constant export mode is not supported.
+                                                end ; code
+                                             end ; body
+                                          end ; method
+                                       }
+                                       
+                                       private function assertNotNull(param1:Object, param2:String, param3:Class = null) : void
+                                       {
+                                          trait method QName(PrivateNamespace(null,"70"),"assertNotNull")
+                                             dispid 0
+                                             method
+                                                name null
+                                                flag HAS_OPTIONAL
+                                                param QName(PackageNamespace(""),"Object")
+                                                param QName(PackageNamespace(""),"String")
+                                                param QName(PackageNamespace(""),"Class")
+                                                optional Null()
+                                                returns QName(PackageNamespace(""),"void")
+                                                
+                                                body
+                                                   maxstack 4
+                                                   localcount 4
+                                                   initscopedepth 5
+                                                   maxscopedepth 6
+                                                   
+                                                   code
+                                                      Constant export mode is not supported.
+                                                   end ; code
+                                                end ; body
+                                             end ; method
+                                          }
+                                          
+                                          protected function isHomogenArraysEquals(param1:Array, param2:Array) : Boolean
+                                          {
+                                             trait method QName(ProtectedNamespace("net.wg.data.daapi.base:DAAPIDataClass"),"isHomogenArraysEquals")
+                                                dispid 0
+                                                method
+                                                   name null
+                                                   param QName(PackageNamespace(""),"Array")
+                                                   param QName(PackageNamespace(""),"Array")
+                                                   returns QName(PackageNamespace(""),"Boolean")
+                                                   
+                                                   body
+                                                      maxstack 3
+                                                      localcount 5
+                                                      initscopedepth 5
+                                                      maxscopedepth 6
+                                                      
+                                                      code
+                                                         Constant export mode is not supported.
+                                                      end ; code
+                                                   end ; body
+                                                end ; method
+                                             }
+                                             
+                                             public function isDisposed() : Boolean
+                                             {
+                                                trait method QName(PackageNamespace(""),"isDisposed")
+                                                   dispid 0
+                                                   method
+                                                      name null
+                                                      returns QName(PackageNamespace(""),"Boolean")
+                                                      
+                                                      body
+                                                         maxstack 1
+                                                         localcount 1
+                                                         initscopedepth 5
+                                                         maxscopedepth 6
+                                                         
+                                                         code
+                                                            Constant export mode is not supported.
+                                                         end ; code
+                                                      end ; body
+                                                   end ; method
+                                                }
+                                             }
+                                          }

@@ -1,0 +1,180 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.gui.battle.views.vehicleMarkers.VO
+{
+   import flash.utils.Dictionary;
+   import net.wg.infrastructure.interfaces.entity.IDisposable;
+   
+   public class CrossOffset implements IDisposable
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      private var _offsetByObject:Dictionary;
+      
+      private var _disposed:Boolean = false;
+      
+      public function CrossOffset(... rest)
+      {
+         method
+            name null
+            flag NEED_REST
+            returns null
+            
+            body
+               maxstack 3
+               localcount 6
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      final public function dispose() : void
+      {
+         trait method QName(PackageNamespace(""),"dispose")
+            flag FINAL
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 3
+                  localcount 4
+                  initscopedepth 4
+                  maxscopedepth 5
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function getOffset(param1:Object) : int
+         {
+            trait method QName(PackageNamespace(""),"getOffset")
+               dispid 0
+               method
+                  name null
+                  param QName(PackageNamespace(""),"Object")
+                  returns QName(PackageNamespace(""),"int")
+                  
+                  body
+                     maxstack 2
+                     localcount 2
+                     initscopedepth 4
+                     maxscopedepth 5
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function hasOffset(param1:Object) : Boolean
+            {
+               trait method QName(PackageNamespace(""),"hasOffset")
+                  dispid 0
+                  method
+                     name null
+                     param QName(PackageNamespace(""),"Object")
+                     returns QName(PackageNamespace(""),"Boolean")
+                     
+                     body
+                        maxstack 2
+                        localcount 2
+                        initscopedepth 4
+                        maxscopedepth 5
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function isDisposed() : Boolean
+               {
+                  trait method QName(PackageNamespace(""),"isDisposed")
+                     dispid 0
+                     method
+                        name null
+                        returns QName(PackageNamespace(""),"Boolean")
+                        
+                        body
+                           maxstack 1
+                           localcount 1
+                           initscopedepth 4
+                           maxscopedepth 5
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function appendOffset(param1:Object, param2:int) : void
+                  {
+                     trait method QName(PackageNamespace(""),"appendOffset")
+                        dispid 0
+                        method
+                           name null
+                           param QName(PackageNamespace(""),"Object")
+                           param QName(PackageNamespace(""),"int")
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 3
+                              localcount 3
+                              initscopedepth 4
+                              maxscopedepth 5
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                  }
+               }

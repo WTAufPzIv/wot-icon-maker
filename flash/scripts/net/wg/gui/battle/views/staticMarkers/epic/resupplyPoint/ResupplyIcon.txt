@@ -1,0 +1,161 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 9
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.gui.battle.views.staticMarkers.epic.resupplyPoint
+{
+   import flash.display.DisplayObject;
+   import flash.display.MovieClip;
+   import net.wg.gui.battle.components.BattleIconHolder;
+   
+   public class ResupplyIcon extends BattleIconHolder
+   {
+      
+      private static const UNAVAILABLE_STATE:int = 1;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 9
+               maxscopedepth 10
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var active:MovieClip = null;
+      
+      public var unavailable:MovieClip = null;
+      
+      private var _state:int = -1;
+      
+      public function ResupplyIcon()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 10
+               maxscopedepth 11
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      override protected function onDispose() : void
+      {
+         trait method QName(ProtectedNamespace("net.wg.gui.battle.views.staticMarkers.epic.resupplyPoint:ResupplyIcon"),"onDispose")
+            flag OVERRIDE
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 2
+                  localcount 1
+                  initscopedepth 10
+                  maxscopedepth 11
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function setState(param1:int) : void
+         {
+            trait method QName(PackageNamespace(""),"setState")
+               dispid 0
+               method
+                  name null
+                  param QName(PackageNamespace(""),"int")
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 2
+                     localcount 2
+                     initscopedepth 10
+                     maxscopedepth 11
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function setUnavailableState() : void
+            {
+               trait method QName(PackageNamespace(""),"setUnavailableState")
+                  dispid 0
+                  method
+                     name null
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 2
+                        localcount 1
+                        initscopedepth 10
+                        maxscopedepth 11
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               private function setElements(param1:int) : void
+               {
+                  trait method QName(PrivateNamespace(null,"37"),"setElements")
+                     dispid 0
+                     method
+                        name null
+                        param QName(PackageNamespace(""),"int")
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 3
+                           localcount 2
+                           initscopedepth 10
+                           maxscopedepth 11
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+               }
+            }

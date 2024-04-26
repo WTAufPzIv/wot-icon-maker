@@ -1,0 +1,81 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.data.daapi
+{
+   import net.wg.data.constants.Errors;
+   import net.wg.infrastructure.exceptions.AssertionException;
+   
+   public class ViewRestrictionVO
+   {
+      
+      public static const LAYOUT_TYPE_TOP:int = 0;
+      
+      public static const LAYOUT_TYPE_BOTTOM:int = 1;
+      
+      public static const LAYOUT_TYPE_LEFT:int = 2;
+      
+      public static const LAYOUT_TYPE_RIGHT:int = 3;
+      
+      private static const LAYOUT_TYPES:Array;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 5
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var layoutType:int = 0;
+      
+      public var offset:int = 0;
+      
+      public function ViewRestrictionVO(param1:int, param2:int)
+      {
+         method
+            name null
+            param QName(PackageNamespace(""),"int")
+            param QName(PackageNamespace(""),"int")
+            returns null
+            
+            body
+               maxstack 2
+               localcount 3
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+   }
+}

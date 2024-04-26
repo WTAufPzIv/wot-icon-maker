@@ -1,0 +1,115 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 10
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.app.impl
+{
+   import net.wg.app.iml.base.RootApp;
+   import net.wg.data.constants.generated.ROOT_SWF_CONSTANTS;
+   import net.wg.gui.battle.views.vehicleMarkers.VehicleMarkersManager;
+   import net.wg.infrastructure.base.meta.impl.ClassManagerBattleMarkersMeta;
+   import net.wg.infrastructure.interfaces.IRootAppMainContent;
+   
+   public class BattleVehicleMarkersApp extends RootApp
+   {
+      
+      public static const CLASS_MANAGER_META:Class;
+      
+      private static const LIBS_LIST:Vector.<String>;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 5
+               localcount 1
+               initscopedepth 10
+               maxscopedepth 11
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function BattleVehicleMarkersApp()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 11
+               maxscopedepth 12
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      override protected function onLibsLoadingComplete() : void
+      {
+         trait method QName(ProtectedNamespace("net.wg.app.impl:BattleVehicleMarkersApp"),"onLibsLoadingComplete")
+            flag OVERRIDE
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 1
+                  localcount 1
+                  initscopedepth 11
+                  maxscopedepth 12
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function get vehicleMarkersCanvas() : IRootAppMainContent
+         {
+            trait getter QName(PackageNamespace(""),"vehicleMarkersCanvas")
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace("net.wg.infrastructure.interfaces"),"IRootAppMainContent")
+                  
+                  body
+                     maxstack 1
+                     localcount 1
+                     initscopedepth 11
+                     maxscopedepth 12
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+         }
+      }

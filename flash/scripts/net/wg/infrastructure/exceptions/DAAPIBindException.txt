@@ -1,0 +1,69 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 5
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.infrastructure.exceptions
+{
+   import net.wg.infrastructure.exceptions.base.WGGUIException;
+   
+   public class DAAPIBindException extends WGGUIException
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 5
+               maxscopedepth 6
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function DAAPIBindException(param1:* = "", param2:* = 0)
+      {
+         method
+            name null
+            flag HAS_OPTIONAL
+            param null
+            param null
+            optional Utf8("")
+            optional Integer(0)
+            returns QName(PackageNamespace(""),"void")
+            
+            body
+               maxstack 3
+               localcount 3
+               initscopedepth 6
+               maxscopedepth 7
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+   }
+}

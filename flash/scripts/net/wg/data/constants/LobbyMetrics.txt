@@ -1,0 +1,74 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.data.constants
+{
+   public class LobbyMetrics
+   {
+      
+      public static const MIN_STAGE_WIDTH:int = 1024;
+      
+      public static const MIN_STAGE_HEIGHT:int = 768;
+      
+      public static const STAGE_HEIGHT_1080:int = 1080;
+      
+      public static const STAGE_HEIGHT_1440:int = 1440;
+      
+      public static const STAGE_HEIGHT_2160:int = 2160;
+      
+      public static var LOBBY_MESSENGER_HEIGHT:int = 40;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function LobbyMetrics()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+   }
+}

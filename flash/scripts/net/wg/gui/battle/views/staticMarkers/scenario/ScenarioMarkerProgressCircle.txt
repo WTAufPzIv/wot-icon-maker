@@ -1,0 +1,237 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 11
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.gui.battle.views.staticMarkers.scenario
+{
+   import flash.display.MovieClip;
+   import net.wg.data.constants.InvalidationType;
+   import net.wg.gui.battle.components.BaseProgressCircle;
+   import net.wg.gui.battle.views.vehicleMarkers.IMarkerManagerHandler;
+   import net.wg.gui.battle.views.vehicleMarkers.VMAtlasItemName;
+   import net.wg.gui.battle.views.vehicleMarkers.VehicleMarkersManager;
+   
+   public class ScenarioMarkerProgressCircle extends BaseProgressCircle implements IMarkerManagerHandler
+   {
+      
+      private static const PRECISION:Number = 0.005;
+      
+      private static const INV_FRAME:uint;
+      
+      private static const EMPTY_LAST_FRAME:int = 181;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 3
+               localcount 1
+               initscopedepth 11
+               maxscopedepth 12
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var icon:MovieClip = null;
+      
+      public var highlight:MovieClip = null;
+      
+      private var _progress:Number = 0;
+      
+      private var _vmManager:VehicleMarkersManager = null;
+      
+      private var _isManagerReady:Boolean = false;
+      
+      public function ScenarioMarkerProgressCircle()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 12
+               maxscopedepth 13
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      override public function updateProgress(param1:Number) : void
+      {
+         trait method QName(PackageNamespace(""),"updateProgress")
+            flag OVERRIDE
+            dispid 0
+            method
+               name null
+               param QName(PackageNamespace(""),"Number")
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 3
+                  localcount 2
+                  initscopedepth 12
+                  maxscopedepth 13
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         override protected function initialize() : void
+         {
+            trait method QName(ProtectedNamespace("net.wg.gui.battle.views.staticMarkers.scenario:ScenarioMarkerProgressCircle"),"initialize")
+               flag OVERRIDE
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 2
+                     localcount 1
+                     initscopedepth 12
+                     maxscopedepth 13
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            override protected function draw() : void
+            {
+               trait method QName(ProtectedNamespace("net.wg.gui.battle.views.staticMarkers.scenario:ScenarioMarkerProgressCircle"),"draw")
+                  flag OVERRIDE
+                  dispid 0
+                  method
+                     name null
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 2
+                        localcount 1
+                        initscopedepth 12
+                        maxscopedepth 13
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               override protected function onDispose() : void
+               {
+                  trait method QName(ProtectedNamespace("net.wg.gui.battle.views.staticMarkers.scenario:ScenarioMarkerProgressCircle"),"onDispose")
+                     flag OVERRIDE
+                     dispid 0
+                     method
+                        name null
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 2
+                           localcount 1
+                           initscopedepth 12
+                           maxscopedepth 13
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function managerReadyHandler() : void
+                  {
+                     trait method QName(PackageNamespace(""),"managerReadyHandler")
+                        dispid 0
+                        method
+                           name null
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 2
+                              localcount 1
+                              initscopedepth 12
+                              maxscopedepth 13
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     private function drawIconType() : void
+                     {
+                        trait method QName(PrivateNamespace(null,"55"),"drawIconType")
+                           dispid 0
+                           method
+                              name null
+                              returns QName(PackageNamespace(""),"void")
+                              
+                              body
+                                 maxstack 5
+                                 localcount 1
+                                 initscopedepth 12
+                                 maxscopedepth 13
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        private function drawBackIcon() : void
+                        {
+                           trait method QName(PrivateNamespace(null,"55"),"drawBackIcon")
+                              dispid 0
+                              method
+                                 name null
+                                 returns QName(PackageNamespace(""),"void")
+                                 
+                                 body
+                                    maxstack 5
+                                    localcount 1
+                                    initscopedepth 12
+                                    maxscopedepth 13
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                        }
+                     }

@@ -1,0 +1,128 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package scaleform.clik.layout
+{
+   import flash.utils.Dictionary;
+   
+   public class LayoutData
+   {
+      
+      public static const ASPECT_RATIO_4_3:String = "4:3";
+      
+      public static const ASPECT_RATIO_16_9:String = "16:9";
+      
+      public static const ASPECT_RATIO_16_10:String = "16:10";
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var alignH:String = null;
+      
+      public var alignV:String = null;
+      
+      public var offsetH:int = -1;
+      
+      public var offsetV:int = -1;
+      
+      public var offsetHashH:Dictionary = null;
+      
+      public var offsetHashV:Dictionary = null;
+      
+      public var relativeToH:String = null;
+      
+      public var relativeToV:String = null;
+      
+      public var layoutIndex:int = -1;
+      
+      public var layoutIdentifier:String = null;
+      
+      public function LayoutData(param1:String = "none", param2:String = "none", param3:int = -1, param4:int = -1, param5:String = null, param6:String = null, param7:int = -1, param8:String = null)
+      {
+         method
+            name null
+            flag HAS_OPTIONAL
+            param QName(PackageNamespace(""),"String")
+            param QName(PackageNamespace(""),"String")
+            param QName(PackageNamespace(""),"int")
+            param QName(PackageNamespace(""),"int")
+            param QName(PackageNamespace(""),"String")
+            param QName(PackageNamespace(""),"String")
+            param QName(PackageNamespace(""),"int")
+            param QName(PackageNamespace(""),"String")
+            optional Utf8("none")
+            optional Utf8("none")
+            optional Integer(-1)
+            optional Integer(-1)
+            optional Null()
+            optional Null()
+            optional Integer(-1)
+            optional Null()
+            returns null
+            
+            body
+               maxstack 2
+               localcount 9
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function toString() : String
+      {
+         trait method QName(PackageNamespace(""),"toString")
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"String")
+               
+               body
+                  maxstack 2
+                  localcount 1
+                  initscopedepth 4
+                  maxscopedepth 5
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+      }
+   }

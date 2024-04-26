@@ -1,0 +1,461 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package scaleform.gfx
+{
+   import flash.display.DisplayObjectContainer;
+   import flash.display.InteractiveObject;
+   import flash.display.Sprite;
+   
+   public final class FocusManager
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function FocusManager()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public static function set alwaysEnableArrowKeys(param1:Boolean) : void
+      {
+         trait setter QName(PackageNamespace(""),"alwaysEnableArrowKeys")
+            flag FINAL
+            dispid 3
+            method
+               name null
+               param QName(PackageNamespace(""),"Boolean")
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 1
+                  localcount 2
+                  initscopedepth 3
+                  maxscopedepth 4
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public static function get alwaysEnableArrowKeys() : Boolean
+         {
+            trait getter QName(PackageNamespace(""),"alwaysEnableArrowKeys")
+               flag FINAL
+               dispid 4
+               method
+                  name null
+                  returns QName(PackageNamespace(""),"Boolean")
+                  
+                  body
+                     maxstack 1
+                     localcount 1
+                     initscopedepth 3
+                     maxscopedepth 4
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public static function set disableFocusKeys(param1:Boolean) : void
+            {
+               trait setter QName(PackageNamespace(""),"disableFocusKeys")
+                  flag FINAL
+                  dispid 5
+                  method
+                     name null
+                     param QName(PackageNamespace(""),"Boolean")
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 1
+                        localcount 2
+                        initscopedepth 3
+                        maxscopedepth 4
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public static function get disableFocusKeys() : Boolean
+               {
+                  trait getter QName(PackageNamespace(""),"disableFocusKeys")
+                     flag FINAL
+                     dispid 6
+                     method
+                        name null
+                        returns QName(PackageNamespace(""),"Boolean")
+                        
+                        body
+                           maxstack 1
+                           localcount 1
+                           initscopedepth 3
+                           maxscopedepth 4
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public static function moveFocus(param1:String, param2:InteractiveObject = null, param3:Boolean = false, param4:uint = 0) : InteractiveObject
+                  {
+                     trait method QName(PackageNamespace(""),"moveFocus")
+                        flag FINAL
+                        dispid 7
+                        method
+                           name null
+                           flag HAS_OPTIONAL
+                           param QName(PackageNamespace(""),"String")
+                           param QName(PackageNamespace("flash.display"),"InteractiveObject")
+                           param QName(PackageNamespace(""),"Boolean")
+                           param QName(PackageNamespace(""),"uint")
+                           optional Null()
+                           optional False()
+                           optional Integer(0)
+                           returns QName(PackageNamespace("flash.display"),"InteractiveObject")
+                           
+                           body
+                              maxstack 1
+                              localcount 5
+                              initscopedepth 3
+                              maxscopedepth 4
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public static function findFocus(param1:String, param2:DisplayObjectContainer = null, param3:Boolean = false, param4:InteractiveObject = null, param5:Boolean = false, param6:uint = 0) : InteractiveObject
+                     {
+                        trait method QName(PackageNamespace(""),"findFocus")
+                           flag FINAL
+                           dispid 8
+                           method
+                              name null
+                              flag HAS_OPTIONAL
+                              param QName(PackageNamespace(""),"String")
+                              param QName(PackageNamespace("flash.display"),"DisplayObjectContainer")
+                              param QName(PackageNamespace(""),"Boolean")
+                              param QName(PackageNamespace("flash.display"),"InteractiveObject")
+                              param QName(PackageNamespace(""),"Boolean")
+                              param QName(PackageNamespace(""),"uint")
+                              optional Null()
+                              optional False()
+                              optional Null()
+                              optional False()
+                              optional Integer(0)
+                              returns QName(PackageNamespace("flash.display"),"InteractiveObject")
+                              
+                              body
+                                 maxstack 1
+                                 localcount 7
+                                 initscopedepth 3
+                                 maxscopedepth 4
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        public static function setFocus(param1:InteractiveObject, param2:uint = 0) : void
+                        {
+                           trait method QName(PackageNamespace(""),"setFocus")
+                              flag FINAL
+                              dispid 9
+                              method
+                                 name null
+                                 flag HAS_OPTIONAL
+                                 param QName(PackageNamespace("flash.display"),"InteractiveObject")
+                                 param QName(PackageNamespace(""),"uint")
+                                 optional Integer(0)
+                                 returns QName(PackageNamespace(""),"void")
+                                 
+                                 body
+                                    maxstack 1
+                                    localcount 3
+                                    initscopedepth 3
+                                    maxscopedepth 4
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           public static function getFocus(param1:uint = 0) : InteractiveObject
+                           {
+                              trait method QName(PackageNamespace(""),"getFocus")
+                                 flag FINAL
+                                 dispid 10
+                                 method
+                                    name null
+                                    flag HAS_OPTIONAL
+                                    param QName(PackageNamespace(""),"uint")
+                                    optional Integer(0)
+                                    returns QName(PackageNamespace("flash.display"),"InteractiveObject")
+                                    
+                                    body
+                                       maxstack 1
+                                       localcount 2
+                                       initscopedepth 3
+                                       maxscopedepth 4
+                                       
+                                       code
+                                          Constant export mode is not supported.
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                              
+                              public static function get numFocusGroups() : uint
+                              {
+                                 trait getter QName(PackageNamespace(""),"numFocusGroups")
+                                    flag FINAL
+                                    dispid 11
+                                    method
+                                       name null
+                                       returns QName(PackageNamespace(""),"uint")
+                                       
+                                       body
+                                          maxstack 1
+                                          localcount 1
+                                          initscopedepth 3
+                                          maxscopedepth 4
+                                          
+                                          code
+                                             Constant export mode is not supported.
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                                 
+                                 public static function setFocusGroupMask(param1:InteractiveObject, param2:uint) : void
+                                 {
+                                    trait method QName(PackageNamespace(""),"setFocusGroupMask")
+                                       flag FINAL
+                                       dispid 12
+                                       method
+                                          name null
+                                          param QName(PackageNamespace("flash.display"),"InteractiveObject")
+                                          param QName(PackageNamespace(""),"uint")
+                                          returns QName(PackageNamespace(""),"void")
+                                          
+                                          body
+                                             maxstack 1
+                                             localcount 3
+                                             initscopedepth 3
+                                             maxscopedepth 4
+                                             
+                                             code
+                                                Constant export mode is not supported.
+                                             end ; code
+                                          end ; body
+                                       end ; method
+                                    }
+                                    
+                                    public static function getFocusGroupMask(param1:InteractiveObject) : uint
+                                    {
+                                       trait method QName(PackageNamespace(""),"getFocusGroupMask")
+                                          flag FINAL
+                                          dispid 13
+                                          method
+                                             name null
+                                             param QName(PackageNamespace("flash.display"),"InteractiveObject")
+                                             returns QName(PackageNamespace(""),"uint")
+                                             
+                                             body
+                                                maxstack 1
+                                                localcount 2
+                                                initscopedepth 3
+                                                maxscopedepth 4
+                                                
+                                                code
+                                                   Constant export mode is not supported.
+                                                end ; code
+                                             end ; body
+                                          end ; method
+                                       }
+                                       
+                                       public static function setControllerFocusGroup(param1:uint, param2:uint) : Boolean
+                                       {
+                                          trait method QName(PackageNamespace(""),"setControllerFocusGroup")
+                                             flag FINAL
+                                             dispid 14
+                                             method
+                                                name null
+                                                param QName(PackageNamespace(""),"uint")
+                                                param QName(PackageNamespace(""),"uint")
+                                                returns QName(PackageNamespace(""),"Boolean")
+                                                
+                                                body
+                                                   maxstack 1
+                                                   localcount 3
+                                                   initscopedepth 3
+                                                   maxscopedepth 4
+                                                   
+                                                   code
+                                                      Constant export mode is not supported.
+                                                   end ; code
+                                                end ; body
+                                             end ; method
+                                          }
+                                          
+                                          public static function getControllerFocusGroup(param1:uint) : uint
+                                          {
+                                             trait method QName(PackageNamespace(""),"getControllerFocusGroup")
+                                                flag FINAL
+                                                dispid 15
+                                                method
+                                                   name null
+                                                   param QName(PackageNamespace(""),"uint")
+                                                   returns QName(PackageNamespace(""),"uint")
+                                                   
+                                                   body
+                                                      maxstack 1
+                                                      localcount 2
+                                                      initscopedepth 3
+                                                      maxscopedepth 4
+                                                      
+                                                      code
+                                                         Constant export mode is not supported.
+                                                      end ; code
+                                                   end ; body
+                                                end ; method
+                                             }
+                                             
+                                             public static function getControllerMaskByFocusGroup(param1:uint) : uint
+                                             {
+                                                trait method QName(PackageNamespace(""),"getControllerMaskByFocusGroup")
+                                                   flag FINAL
+                                                   dispid 16
+                                                   method
+                                                      name null
+                                                      param QName(PackageNamespace(""),"uint")
+                                                      returns QName(PackageNamespace(""),"uint")
+                                                      
+                                                      body
+                                                         maxstack 1
+                                                         localcount 2
+                                                         initscopedepth 3
+                                                         maxscopedepth 4
+                                                         
+                                                         code
+                                                            Constant export mode is not supported.
+                                                         end ; code
+                                                      end ; body
+                                                   end ; method
+                                                }
+                                                
+                                                public static function getModalClip(param1:uint = 0) : Sprite
+                                                {
+                                                   trait method QName(PackageNamespace(""),"getModalClip")
+                                                      flag FINAL
+                                                      dispid 17
+                                                      method
+                                                         name null
+                                                         flag HAS_OPTIONAL
+                                                         param QName(PackageNamespace(""),"uint")
+                                                         optional Integer(0)
+                                                         returns QName(PackageNamespace("flash.display"),"Sprite")
+                                                         
+                                                         body
+                                                            maxstack 1
+                                                            localcount 2
+                                                            initscopedepth 3
+                                                            maxscopedepth 4
+                                                            
+                                                            code
+                                                               Constant export mode is not supported.
+                                                            end ; code
+                                                         end ; body
+                                                      end ; method
+                                                   }
+                                                   
+                                                   public static function setModalClip(param1:Sprite, param2:uint = 0) : void
+                                                   {
+                                                      trait method QName(PackageNamespace(""),"setModalClip")
+                                                         flag FINAL
+                                                         dispid 18
+                                                         method
+                                                            name null
+                                                            flag HAS_OPTIONAL
+                                                            param QName(PackageNamespace("flash.display"),"Sprite")
+                                                            param QName(PackageNamespace(""),"uint")
+                                                            optional Integer(0)
+                                                            returns QName(PackageNamespace(""),"void")
+                                                            
+                                                            body
+                                                               maxstack 1
+                                                               localcount 3
+                                                               initscopedepth 3
+                                                               maxscopedepth 4
+                                                               
+                                                               code
+                                                                  Constant export mode is not supported.
+                                                               end ; code
+                                                            end ; body
+                                                         end ; method
+                                                      }
+                                                   }
+                                                }

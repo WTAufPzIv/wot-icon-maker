@@ -1,0 +1,61 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 2
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.data.managers
+{
+   import net.wg.infrastructure.interfaces.entity.ICloneable;
+   
+   public interface ITooltipProps extends ICloneable
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 0
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      function get type() : String;
+      
+      function get x() : Number;
+      
+      function get y() : Number;
+      
+      function get minWidth() : Number;
+      
+      function get drawDelay() : Number;
+      
+      function get showDelay() : Number;
+      
+      function get maxWidth() : Number;
+      
+      function set maxWidth(param1:Number) : void;
+   }
+}

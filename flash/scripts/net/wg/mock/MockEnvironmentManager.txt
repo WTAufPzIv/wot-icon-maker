@@ -1,0 +1,262 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.mock
+{
+   import net.wg.infrastructure.managers.IEnvironmentManager;
+   
+   public class MockEnvironmentManager implements IEnvironmentManager
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function MockEnvironmentManager()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function addCallback(param1:String, param2:Function) : void
+      {
+         trait method QName(PackageNamespace(""),"addCallback")
+            dispid 0
+            method
+               name null
+               param QName(PackageNamespace(""),"String")
+               param QName(PackageNamespace(""),"Function")
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 1
+                  localcount 3
+                  initscopedepth 4
+                  maxscopedepth 5
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function call(... rest) : *
+         {
+            trait method QName(PackageNamespace(""),"call")
+               dispid 0
+               method
+                  name null
+                  flag NEED_REST
+                  returns null
+                  
+                  body
+                     maxstack 1
+                     localcount 2
+                     initscopedepth 4
+                     maxscopedepth 5
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function envoke(param1:String) : *
+            {
+               trait method QName(PackageNamespace(""),"envoke")
+                  dispid 0
+                  method
+                     name null
+                     param QName(PackageNamespace(""),"String")
+                     returns null
+                     
+                     body
+                        maxstack 1
+                        localcount 2
+                        initscopedepth 4
+                        maxscopedepth 5
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function logoff() : void
+               {
+                  trait method QName(PackageNamespace(""),"logoff")
+                     dispid 0
+                     method
+                        name null
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 1
+                           localcount 1
+                           initscopedepth 4
+                           maxscopedepth 5
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function quit() : void
+                  {
+                     trait method QName(PackageNamespace(""),"quit")
+                        dispid 0
+                        method
+                           name null
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 1
+                              localcount 1
+                              initscopedepth 4
+                              maxscopedepth 5
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public function setLastResult(param1:Object) : void
+                     {
+                        trait method QName(PackageNamespace(""),"setLastResult")
+                           dispid 0
+                           method
+                              name null
+                              param QName(PackageNamespace(""),"Object")
+                              returns QName(PackageNamespace(""),"void")
+                              
+                              body
+                                 maxstack 1
+                                 localcount 2
+                                 initscopedepth 4
+                                 maxscopedepth 5
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        public function useEventSystem() : void
+                        {
+                           trait method QName(PackageNamespace(""),"useEventSystem")
+                              dispid 0
+                              method
+                                 name null
+                                 returns QName(PackageNamespace(""),"void")
+                                 
+                                 body
+                                    maxstack 1
+                                    localcount 1
+                                    initscopedepth 4
+                                    maxscopedepth 5
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           public function useExternallInterface() : void
+                           {
+                              trait method QName(PackageNamespace(""),"useExternallInterface")
+                                 dispid 0
+                                 method
+                                    name null
+                                    returns QName(PackageNamespace(""),"void")
+                                    
+                                    body
+                                       maxstack 1
+                                       localcount 1
+                                       initscopedepth 4
+                                       maxscopedepth 5
+                                       
+                                       code
+                                          Constant export mode is not supported.
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                              
+                              public function checkEnvokeReady(param1:Function, param2:Function = null) : void
+                              {
+                                 trait method QName(PackageNamespace(""),"checkEnvokeReady")
+                                    dispid 0
+                                    method
+                                       name null
+                                       flag HAS_OPTIONAL
+                                       param QName(PackageNamespace(""),"Function")
+                                       param QName(PackageNamespace(""),"Function")
+                                       optional Null()
+                                       returns QName(PackageNamespace(""),"void")
+                                       
+                                       body
+                                          maxstack 1
+                                          localcount 3
+                                          initscopedepth 4
+                                          maxscopedepth 5
+                                          
+                                          code
+                                             Constant export mode is not supported.
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                              }
+                           }

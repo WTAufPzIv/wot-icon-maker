@@ -1,0 +1,419 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 4
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package scaleform.clik.utils
+{
+   import flash.display.DisplayObject;
+   import flash.display.DisplayObjectContainer;
+   import flash.display.Sprite;
+   import flash.display.Stage;
+   import flash.events.Event;
+   import flash.events.EventDispatcher;
+   import flash.text.TextField;
+   import net.wg.infrastructure.interfaces.entity.IDisposable;
+   import scaleform.clik.constants.ConstrainMode;
+   import scaleform.clik.core.UIComponent;
+   import scaleform.clik.events.ResizeEvent;
+   
+   public class Constraints extends EventDispatcher implements IDisposable
+   {
+      
+      public static const LEFT:uint = 1;
+      
+      public static const RIGHT:uint = 2;
+      
+      public static const TOP:uint = 4;
+      
+      public static const BOTTOM:uint = 8;
+      
+      public static var ALL:uint;
+      
+      public static const CENTER_H:uint = 16;
+      
+      public static const CENTER_V:uint = 32;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 3
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var scope:DisplayObject;
+      
+      public var scaleMode:String = "counterScale";
+      
+      public var parentXAdjust:Number = 1;
+      
+      public var parentYAdjust:Number = 1;
+      
+      protected var elements:Object;
+      
+      protected var elementCount:int = 0;
+      
+      protected var parentConstraints:Constraints;
+      
+      public var lastWidth:Number = NaN;
+      
+      public var lastHeight:Number = NaN;
+      
+      private var _disposed:Boolean = false;
+      
+      public function Constraints(param1:Sprite, param2:String = "counterScale")
+      {
+         method
+            name null
+            flag HAS_OPTIONAL
+            param QName(PackageNamespace("flash.display"),"Sprite")
+            param QName(PackageNamespace(""),"String")
+            optional Utf8("counterScale")
+            returns null
+            
+            body
+               maxstack 6
+               localcount 3
+               initscopedepth 5
+               maxscopedepth 6
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function addElement(param1:String, param2:DisplayObject, param3:uint) : void
+      {
+         trait method QName(PackageNamespace(""),"addElement")
+            dispid 0
+            method
+               name null
+               param QName(PackageNamespace(""),"String")
+               param QName(PackageNamespace("flash.display"),"DisplayObject")
+               param QName(PackageNamespace(""),"uint")
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 9
+                  localcount 9
+                  initscopedepth 5
+                  maxscopedepth 6
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function removeElement(param1:String) : void
+         {
+            trait method QName(PackageNamespace(""),"removeElement")
+               dispid 0
+               method
+                  name null
+                  param QName(PackageNamespace(""),"String")
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 2
+                     localcount 4
+                     initscopedepth 5
+                     maxscopedepth 6
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function removeAllElements() : void
+            {
+               trait method QName(PackageNamespace(""),"removeAllElements")
+                  dispid 0
+                  method
+                     name null
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 2
+                        localcount 6
+                        initscopedepth 5
+                        maxscopedepth 6
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function getElement(param1:String) : ConstrainedElement
+               {
+                  trait method QName(PackageNamespace(""),"getElement")
+                     dispid 0
+                     method
+                        name null
+                        param QName(PackageNamespace(""),"String")
+                        returns QName(PackageNamespace("scaleform.clik.utils"),"ConstrainedElement")
+                        
+                        body
+                           maxstack 2
+                           localcount 2
+                           initscopedepth 5
+                           maxscopedepth 6
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function updateElement(param1:String, param2:DisplayObject) : void
+                  {
+                     trait method QName(PackageNamespace(""),"updateElement")
+                        dispid 0
+                        method
+                           name null
+                           param QName(PackageNamespace(""),"String")
+                           param QName(PackageNamespace("flash.display"),"DisplayObject")
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 2
+                              localcount 4
+                              initscopedepth 5
+                              maxscopedepth 6
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public function getXAdjust() : Number
+                     {
+                        trait method QName(PackageNamespace(""),"getXAdjust")
+                           dispid 0
+                           method
+                              name null
+                              returns QName(PackageNamespace(""),"Number")
+                              
+                              body
+                                 maxstack 2
+                                 localcount 1
+                                 initscopedepth 5
+                                 maxscopedepth 6
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        public function getYAdjust() : Number
+                        {
+                           trait method QName(PackageNamespace(""),"getYAdjust")
+                              dispid 0
+                              method
+                                 name null
+                                 returns QName(PackageNamespace(""),"Number")
+                                 
+                                 body
+                                    maxstack 2
+                                    localcount 1
+                                    initscopedepth 5
+                                    maxscopedepth 6
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           public function update(param1:Number, param2:Number) : void
+                           {
+                              trait method QName(PackageNamespace(""),"update")
+                                 dispid 0
+                                 method
+                                    name null
+                                    param QName(PackageNamespace(""),"Number")
+                                    param QName(PackageNamespace(""),"Number")
+                                    returns QName(PackageNamespace(""),"void")
+                                    
+                                    body
+                                       maxstack 5
+                                       localcount 14
+                                       initscopedepth 5
+                                       maxscopedepth 6
+                                       
+                                       code
+                                          Constant export mode is not supported.
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                              
+                              override public function toString() : String
+                              {
+                                 trait method QName(PackageNamespace(""),"toString")
+                                    flag OVERRIDE
+                                    dispid 0
+                                    method
+                                       name null
+                                       returns QName(PackageNamespace(""),"String")
+                                       
+                                       body
+                                          maxstack 4
+                                          localcount 6
+                                          initscopedepth 5
+                                          maxscopedepth 6
+                                          
+                                          code
+                                             Constant export mode is not supported.
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                                 
+                                 protected function handleScopeAddedToStage(param1:Event) : void
+                                 {
+                                    trait method QName(ProtectedNamespace("scaleform.clik.utils:Constraints"),"handleScopeAddedToStage")
+                                       dispid 0
+                                       method
+                                          name null
+                                          param QName(PackageNamespace("flash.events"),"Event")
+                                          returns QName(PackageNamespace(""),"void")
+                                          
+                                          body
+                                             maxstack 1
+                                             localcount 2
+                                             initscopedepth 5
+                                             maxscopedepth 6
+                                             
+                                             code
+                                                Constant export mode is not supported.
+                                             end ; code
+                                          end ; body
+                                       end ; method
+                                    }
+                                    
+                                    protected function addToParentConstraints() : void
+                                    {
+                                       trait method QName(ProtectedNamespace("scaleform.clik.utils:Constraints"),"addToParentConstraints")
+                                          dispid 0
+                                          method
+                                             name null
+                                             returns QName(PackageNamespace(""),"void")
+                                             
+                                             body
+                                                maxstack 6
+                                                localcount 2
+                                                initscopedepth 5
+                                                maxscopedepth 6
+                                                
+                                                code
+                                                   Constant export mode is not supported.
+                                                end ; code
+                                             end ; body
+                                          end ; method
+                                       }
+                                       
+                                       protected function handleParentConstraintsResize(param1:ResizeEvent) : void
+                                       {
+                                          trait method QName(ProtectedNamespace("scaleform.clik.utils:Constraints"),"handleParentConstraintsResize")
+                                             dispid 0
+                                             method
+                                                name null
+                                                param QName(PackageNamespace("scaleform.clik.events"),"ResizeEvent")
+                                                returns QName(PackageNamespace(""),"void")
+                                                
+                                                body
+                                                   maxstack 3
+                                                   localcount 2
+                                                   initscopedepth 5
+                                                   maxscopedepth 6
+                                                   
+                                                   code
+                                                      Constant export mode is not supported.
+                                                   end ; code
+                                                end ; body
+                                             end ; method
+                                          }
+                                          
+                                          final public function dispose() : void
+                                          {
+                                             trait method QName(PackageNamespace(""),"dispose")
+                                                flag FINAL
+                                                dispid 0
+                                                method
+                                                   name null
+                                                   returns QName(PackageNamespace(""),"void")
+                                                   
+                                                   body
+                                                      maxstack 4
+                                                      localcount 1
+                                                      initscopedepth 5
+                                                      maxscopedepth 6
+                                                      
+                                                      code
+                                                         Constant export mode is not supported.
+                                                      end ; code
+                                                   end ; body
+                                                end ; method
+                                             }
+                                             
+                                             public function isDisposed() : Boolean
+                                             {
+                                                trait method QName(PackageNamespace(""),"isDisposed")
+                                                   dispid 0
+                                                   method
+                                                      name null
+                                                      returns QName(PackageNamespace(""),"Boolean")
+                                                      
+                                                      body
+                                                         maxstack 1
+                                                         localcount 1
+                                                         initscopedepth 5
+                                                         maxscopedepth 6
+                                                         
+                                                         code
+                                                            Constant export mode is not supported.
+                                                         end ; code
+                                                      end ; body
+                                                   end ; method
+                                                }
+                                             }
+                                          }

@@ -1,0 +1,68 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 4
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package lesta.unbound2.proxy.base
+{
+   import flash.events.Event;
+   
+   public class UbProxyEvent extends Event
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var data:Object;
+      
+      public function UbProxyEvent(param1:String, param2:Object)
+      {
+         method
+            name null
+            param QName(PackageNamespace(""),"String")
+            param QName(PackageNamespace(""),"Object")
+            returns null
+            
+            body
+               maxstack 2
+               localcount 3
+               initscopedepth 5
+               maxscopedepth 6
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+   }
+}

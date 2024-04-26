@@ -1,0 +1,52 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 2
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.infrastructure.managers
+{
+   import flash.display.DisplayObject;
+   import net.wg.infrastructure.interfaces.entity.IDisposable;
+   
+   public interface IElementBlurAdapter extends IDisposable
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 0
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      function blurElements(param1:int, param2:int) : void;
+      
+      function unblurElements() : void;
+      
+      function set containers(param1:Vector.<DisplayObject>) : void;
+   }
+}

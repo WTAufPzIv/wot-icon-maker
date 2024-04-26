@@ -1,0 +1,50 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 2
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.utils
+{
+   import net.wg.infrastructure.interfaces.IUniversalBtn;
+   import net.wg.infrastructure.interfaces.entity.IDisposable;
+   
+   public interface IUniversalBtnStyles extends IDisposable
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 0
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      function setStyle(param1:IUniversalBtn, param2:String) : void;
+      
+      function setClassFactory(param1:IClassFactory) : void;
+   }
+}

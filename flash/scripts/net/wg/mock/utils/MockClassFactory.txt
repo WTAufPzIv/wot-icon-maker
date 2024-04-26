@@ -1,0 +1,273 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.mock.utils
+{
+   import flash.display.DisplayObject;
+   import flash.display.LoaderInfo;
+   import flash.utils.getDefinitionByName;
+   import net.wg.data.constants.Errors;
+   import net.wg.infrastructure.exceptions.ArgumentException;
+   import net.wg.infrastructure.exceptions.InvalidComponentCastException;
+   import net.wg.utils.IAssertable;
+   import net.wg.utils.IClassFactory;
+   
+   public class MockClassFactory implements IClassFactory
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function MockClassFactory()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function dispose() : void
+      {
+         trait method QName(PackageNamespace(""),"dispose")
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 1
+                  localcount 1
+                  initscopedepth 4
+                  maxscopedepth 5
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function getClass(param1:String, param2:LoaderInfo = null) : Class
+         {
+            trait method QName(PackageNamespace(""),"getClass")
+               dispid 0
+               method
+                  name null
+                  flag HAS_OPTIONAL
+                  flag NEED_ACTIVATION
+                  param QName(PackageNamespace(""),"String")
+                  param QName(PackageNamespace("flash.display"),"LoaderInfo")
+                  optional Null()
+                  returns QName(PackageNamespace(""),"Class")
+                  
+                  body
+                     maxstack 3
+                     localcount 5
+                     initscopedepth 5
+                     maxscopedepth 10
+                     trait slot QName(PackageInternalNs("net.wg.mock.utils"),"classpath")
+                        slotid 1
+                        type QName(PackageNamespace(""),"String")
+                     end ; trait
+                     trait slot QName(PackageInternalNs("net.wg.mock.utils"),"loaderInfo")
+                        slotid 2
+                        type QName(PackageNamespace("flash.display"),"LoaderInfo")
+                        value Null()
+                     end ; trait
+                     trait slot QName(PackageInternalNs("net.wg.mock.utils"),"outcomeClass")
+                        slotid 3
+                        type QName(PackageNamespace(""),"Class")
+                     end ; trait
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                     try from ofs0017 to ofs002b target ofs002f type QName(PackageNamespace(""),"ReferenceError") name QName(PackageNamespace(""),"e") end
+                  end ; body
+               end ; method
+            }
+            
+            public function getClassName(param1:*) : String
+            {
+               trait method QName(PackageNamespace(""),"getClassName")
+                  dispid 0
+                  method
+                     name null
+                     param null
+                     returns QName(PackageNamespace(""),"String")
+                     
+                     body
+                        maxstack 1
+                        localcount 2
+                        initscopedepth 4
+                        maxscopedepth 5
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function getComponent(param1:String, param2:Class, param3:Object = null, param4:LoaderInfo = null) : *
+               {
+                  trait method QName(PackageNamespace(""),"getComponent")
+                     dispid 0
+                     method
+                        name null
+                        flag HAS_OPTIONAL
+                        param QName(PackageNamespace(""),"String")
+                        param QName(PackageNamespace(""),"Class")
+                        param QName(PackageNamespace(""),"Object")
+                        param QName(PackageNamespace("flash.display"),"LoaderInfo")
+                        optional Null()
+                        optional Null()
+                        returns null
+                        
+                        body
+                           maxstack 4
+                           localcount 10
+                           initscopedepth 4
+                           maxscopedepth 5
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function getObject(param1:String, param2:Object = null, param3:LoaderInfo = null) : Object
+                  {
+                     trait method QName(PackageNamespace(""),"getObject")
+                        dispid 0
+                        method
+                           name null
+                           flag HAS_OPTIONAL
+                           param QName(PackageNamespace(""),"String")
+                           param QName(PackageNamespace(""),"Object")
+                           param QName(PackageNamespace("flash.display"),"LoaderInfo")
+                           optional Null()
+                           optional Null()
+                           returns QName(PackageNamespace(""),"Object")
+                           
+                           body
+                              maxstack 4
+                              localcount 10
+                              initscopedepth 4
+                              maxscopedepth 5
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public function get createComponentCallback() : Function
+                     {
+                        trait getter QName(PackageNamespace(""),"createComponentCallback")
+                           dispid 0
+                           method
+                              name null
+                              returns QName(PackageNamespace(""),"Function")
+                              
+                              body
+                                 maxstack 1
+                                 localcount 1
+                                 initscopedepth 4
+                                 maxscopedepth 5
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        public function set createComponentCallback(param1:Function) : void
+                        {
+                           trait setter QName(PackageNamespace(""),"createComponentCallback")
+                              dispid 0
+                              method
+                                 name null
+                                 param QName(PackageNamespace(""),"Function")
+                                 returns QName(PackageNamespace(""),"void")
+                                 
+                                 body
+                                    maxstack 1
+                                    localcount 2
+                                    initscopedepth 4
+                                    maxscopedepth 5
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           public function isDisposed() : Boolean
+                           {
+                              trait method QName(PackageNamespace(""),"isDisposed")
+                                 dispid 0
+                                 method
+                                    name null
+                                    returns QName(PackageNamespace(""),"Boolean")
+                                    
+                                    body
+                                       maxstack 1
+                                       localcount 1
+                                       initscopedepth 4
+                                       maxscopedepth 5
+                                       
+                                       code
+                                          Constant export mode is not supported.
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                           }
+                        }

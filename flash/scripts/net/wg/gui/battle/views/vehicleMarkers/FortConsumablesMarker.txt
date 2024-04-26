@@ -1,0 +1,306 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 10
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.gui.battle.views.vehicleMarkers
+{
+   import flash.display.Bitmap;
+   import flash.display.MovieClip;
+   import flash.filters.DropShadowFilter;
+   import flash.text.TextField;
+   import flash.utils.getDefinitionByName;
+   import net.wg.data.constants.Errors;
+   import net.wg.data.constants.generated.BATTLE_MARKERS_CONSTS;
+   import net.wg.gui.battle.components.BattleUIComponent;
+   import net.wg.gui.battle.views.vehicleMarkers.events.VehicleMarkersManagerEvent;
+   import org.idmedia.as3commons.util.StringUtils;
+   import scaleform.gfx.TextFieldEx;
+   
+   public class FortConsumablesMarker extends BattleUIComponent
+   {
+      
+      private static const MARKER_X:int = -52;
+      
+      private static const MARKER_Y:int = -58;
+      
+      private static const GREEN_DROPSHADOW_FILTERS:Array;
+      
+      private static const YELLOW_DROPSHADOW_FILTERS:Array;
+      
+      private static const RED_DROPSHADOW_FILTERS:Array;
+      
+      private static const PURPLE_DROPSHADOW_FILTERS:Array;
+      
+      private static const ARTILLERY_FORT_ENEMY:String = "artillery_fort_enemy";
+      
+      private static const ARTILLERY_FORT_ENEMY_COLOR_BLIND:String = "artillery_fort_enemy_color_blind";
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 9
+               localcount 1
+               initscopedepth 10
+               maxscopedepth 11
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var marker:MovieClip = null;
+      
+      public var bgShadow:MovieClip = null;
+      
+      public var timerTF:TextField = null;
+      
+      public var defaultTF:TextField = null;
+      
+      private var _timer:String = "";
+      
+      private var _markerBitmap:Bitmap = null;
+      
+      private var _vmManager:VehicleMarkersManager = null;
+      
+      private var _markerType:String = "";
+      
+      private var _markerColor:String = "";
+      
+      public function FortConsumablesMarker()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 3
+               localcount 1
+               initscopedepth 11
+               maxscopedepth 12
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      private function getFilters() : Array
+      {
+         trait method QName(PrivateNamespace(null,"53"),"getFilters")
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"Array")
+               
+               body
+                  maxstack 2
+                  localcount 1
+                  initscopedepth 11
+                  maxscopedepth 12
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         private function getMarkerClassName() : String
+         {
+            trait method QName(PrivateNamespace(null,"53"),"getMarkerClassName")
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace(""),"String")
+                  
+                  body
+                     maxstack 2
+                     localcount 1
+                     initscopedepth 11
+                     maxscopedepth 12
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            override protected function onDispose() : void
+            {
+               trait method QName(ProtectedNamespace("net.wg.gui.battle.views.vehicleMarkers:FortConsumablesMarker"),"onDispose")
+                  flag OVERRIDE
+                  dispid 0
+                  method
+                     name null
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 3
+                        localcount 1
+                        initscopedepth 11
+                        maxscopedepth 12
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function init(param1:String, param2:String, param3:String, param4:String = "green") : void
+               {
+                  trait method QName(PackageNamespace(""),"init")
+                     dispid 0
+                     method
+                        name null
+                        flag HAS_OPTIONAL
+                        param QName(PackageNamespace(""),"String")
+                        param QName(PackageNamespace(""),"String")
+                        param QName(PackageNamespace(""),"String")
+                        param QName(PackageNamespace(""),"String")
+                        optional Utf8("green")
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 2
+                           localcount 5
+                           initscopedepth 11
+                           maxscopedepth 12
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function updateTimer(param1:String) : void
+                  {
+                     trait method QName(PackageNamespace(""),"updateTimer")
+                        dispid 0
+                        method
+                           name null
+                           param QName(PackageNamespace(""),"String")
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 2
+                              localcount 2
+                              initscopedepth 11
+                              maxscopedepth 12
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     private function clearMarkerBitmap() : void
+                     {
+                        trait method QName(PrivateNamespace(null,"53"),"clearMarkerBitmap")
+                           dispid 0
+                           method
+                              name null
+                              returns QName(PackageNamespace(""),"void")
+                              
+                              body
+                                 maxstack 2
+                                 localcount 1
+                                 initscopedepth 11
+                                 maxscopedepth 12
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        private function updateTimerText() : void
+                        {
+                           trait method QName(PrivateNamespace(null,"53"),"updateTimerText")
+                              dispid 0
+                              method
+                                 name null
+                                 returns QName(PackageNamespace(""),"void")
+                                 
+                                 body
+                                    maxstack 2
+                                    localcount 1
+                                    initscopedepth 11
+                                    maxscopedepth 12
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           private function onUpdateColorsHandler(param1:VehicleMarkersManagerEvent) : void
+                           {
+                              trait method QName(PrivateNamespace(null,"53"),"onUpdateColorsHandler")
+                                 dispid 0
+                                 method
+                                    name null
+                                    param QName(PackageNamespace("net.wg.gui.battle.views.vehicleMarkers.events"),"VehicleMarkersManagerEvent")
+                                    returns QName(PackageNamespace(""),"void")
+                                    
+                                    body
+                                       maxstack 2
+                                       localcount 2
+                                       initscopedepth 11
+                                       maxscopedepth 12
+                                       
+                                       code
+                                          Constant export mode is not supported.
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                              
+                              private function createMarker() : void
+                              {
+                                 trait method QName(PrivateNamespace(null,"53"),"createMarker")
+                                    dispid 0
+                                    method
+                                       name null
+                                       returns QName(PackageNamespace(""),"void")
+                                       
+                                       body
+                                          maxstack 4
+                                          localcount 3
+                                          initscopedepth 11
+                                          maxscopedepth 12
+                                          
+                                          code
+                                             Constant export mode is not supported.
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                              }
+                           }

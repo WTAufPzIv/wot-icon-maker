@@ -1,0 +1,88 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package scaleform.clik.utils
+{
+   import flash.utils.Dictionary;
+   
+   public class WeakReference
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      protected var _dictionary:Dictionary;
+      
+      public function WeakReference(param1:Object)
+      {
+         method
+            name null
+            param QName(PackageNamespace(""),"Object")
+            returns null
+            
+            body
+               maxstack 3
+               localcount 2
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function get value() : Object
+      {
+         trait getter QName(PackageNamespace(""),"value")
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"Object")
+               
+               body
+                  maxstack 2
+                  localcount 4
+                  initscopedepth 4
+                  maxscopedepth 5
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+      }
+   }

@@ -1,0 +1,461 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package lesta.managers.windows
+{
+   import flash.display.BitmapData;
+   
+   public class BitmapManager
+   {
+      
+      private static var bitmapsCache:Object;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function BitmapManager()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public static function clean() : void
+      {
+         trait method QName(PackageNamespace(""),"clean")
+            flag FINAL
+            dispid 3
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 2
+                  localcount 1
+                  initscopedepth 3
+                  maxscopedepth 4
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function fini() : void
+         {
+            trait method QName(PackageNamespace(""),"fini")
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 1
+                     localcount 1
+                     initscopedepth 4
+                     maxscopedepth 5
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function loadBitmap(param1:String, param2:Function, param3:Function = null) : void
+            {
+               trait method QName(PackageNamespace(""),"loadBitmap")
+                  dispid 0
+                  method
+                     name null
+                     flag HAS_OPTIONAL
+                     param QName(PackageNamespace(""),"String")
+                     param QName(PackageNamespace(""),"Function")
+                     param QName(PackageNamespace(""),"Function")
+                     optional Null()
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 4
+                        localcount 5
+                        initscopedepth 4
+                        maxscopedepth 5
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function unloadBitmap(param1:String, param2:Function) : void
+               {
+                  trait method QName(PackageNamespace(""),"unloadBitmap")
+                     dispid 0
+                     method
+                        name null
+                        param QName(PackageNamespace(""),"String")
+                        param QName(PackageNamespace(""),"Function")
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 2
+                           localcount 4
+                           initscopedepth 4
+                           maxscopedepth 5
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function loadConfig(param1:String, param2:Function) : void
+                  {
+                     trait method QName(PackageNamespace(""),"loadConfig")
+                        dispid 0
+                        method
+                           name null
+                           flag NEED_ACTIVATION
+                           param QName(PackageNamespace(""),"String")
+                           param QName(PackageNamespace(""),"Function")
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 3
+                              localcount 6
+                              initscopedepth 5
+                              maxscopedepth 7
+                              trait slot QName(PackageInternalNs("lesta.managers.windows"),"images")
+                                 slotid 1
+                                 type QName(PackageNamespace(""),"String")
+                              end ; trait
+                              trait slot QName(PackageInternalNs("lesta.managers.windows"),"callback")
+                                 slotid 2
+                                 type QName(PackageNamespace(""),"Function")
+                              end ; trait
+                              trait slot QName(PackageInternalNs("lesta.managers.windows"),"loadersCounter")
+                                 slotid 3
+                                 type QName(PackageNamespace(""),"int")
+                              end ; trait
+                              trait slot QName(PackageInternalNs("lesta.managers.windows"),"checkLoaded")
+                                 slotid 4
+                                 type QName(PackageNamespace(""),"Function")
+                              end ; trait
+                              trait slot QName(PackageInternalNs("lesta.managers.windows"),"imageId")
+                                 slotid 5
+                                 type QName(PackageNamespace(""),"String")
+                              end ; trait
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public function unloadConfig(param1:String) : void
+                     {
+                        trait method QName(PackageNamespace(""),"unloadConfig")
+                           dispid 0
+                           method
+                              name null
+                              param QName(PackageNamespace(""),"String")
+                              returns QName(PackageNamespace(""),"void")
+                              
+                              body
+                                 maxstack 3
+                                 localcount 5
+                                 initscopedepth 4
+                                 maxscopedepth 5
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        private function trim(param1:String) : String
+                        {
+                           trait method QName(PrivateNamespace(null,"78"),"trim")
+                              dispid 0
+                              method
+                                 name null
+                                 param QName(PackageNamespace(""),"String")
+                                 returns QName(PackageNamespace(""),"String")
+                                 
+                                 body
+                                    maxstack 4
+                                    localcount 2
+                                    initscopedepth 4
+                                    maxscopedepth 5
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                        }
+                     }
+                     
+                     import flash.display.Bitmap;
+                     import flash.display.BitmapData;
+                     import flash.display.Loader;
+                     import flash.events.Event;
+                     import flash.events.IOErrorEvent;
+                     import flash.net.URLRequest;
+                     
+                     class BitmapWrapper
+                     {
+                        
+                        {
+                           method
+                              name null
+                              returns null
+                              
+                              body
+                                 maxstack 1
+                                 localcount 1
+                                 initscopedepth 3
+                                 maxscopedepth 4
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        public var failed:Boolean = false;
+                        
+                        private var bitmapData:BitmapData;
+                        
+                        private var loader:Loader;
+                        
+                        private var imageId:String;
+                        
+                        private var counter:int = 0;
+                        
+                        private var onLoadCallbackList:Array;
+                        
+                        private var onFailCallbackList:Array;
+                        
+                        public function BitmapWrapper(param1:String)
+                        {
+                           method
+                              name null
+                              param QName(PackageNamespace(""),"String")
+                              returns null
+                              
+                              body
+                                 maxstack 3
+                                 localcount 2
+                                 initscopedepth 4
+                                 maxscopedepth 5
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        private function onLoad(param1:Event) : void
+                        {
+                           trait method QName(PrivateNamespace(null,"80"),"onLoad")
+                              dispid 0
+                              method
+                                 name null
+                                 param QName(PackageNamespace("flash.events"),"Event")
+                                 returns QName(PackageNamespace(""),"void")
+                                 
+                                 body
+                                    maxstack 4
+                                    localcount 2
+                                    initscopedepth 4
+                                    maxscopedepth 5
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           private function onFail(param1:Event) : void
+                           {
+                              trait method QName(PrivateNamespace(null,"80"),"onFail")
+                                 dispid 0
+                                 method
+                                    name null
+                                    param QName(PackageNamespace("flash.events"),"Event")
+                                    returns QName(PackageNamespace(""),"void")
+                                    
+                                    body
+                                       maxstack 4
+                                       localcount 2
+                                       initscopedepth 4
+                                       maxscopedepth 5
+                                       
+                                       code
+                                          Constant export mode is not supported.
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                              
+                              public function fini() : void
+                              {
+                                 trait method QName(PackageNamespace(""),"fini")
+                                    dispid 0
+                                    method
+                                       name null
+                                       returns QName(PackageNamespace(""),"void")
+                                       
+                                       body
+                                          maxstack 3
+                                          localcount 1
+                                          initscopedepth 4
+                                          maxscopedepth 5
+                                          
+                                          code
+                                             Constant export mode is not supported.
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                                 
+                                 public function load(param1:Function, param2:Function) : void
+                                 {
+                                    trait method QName(PackageNamespace(""),"load")
+                                       dispid 0
+                                       method
+                                          name null
+                                          param QName(PackageNamespace(""),"Function")
+                                          param QName(PackageNamespace(""),"Function")
+                                          returns QName(PackageNamespace(""),"void")
+                                          
+                                          body
+                                             maxstack 4
+                                             localcount 5
+                                             initscopedepth 4
+                                             maxscopedepth 5
+                                             
+                                             code
+                                                Constant export mode is not supported.
+                                             end ; code
+                                          end ; body
+                                       end ; method
+                                    }
+                                    
+                                    public function unload(param1:Function) : void
+                                    {
+                                       trait method QName(PackageNamespace(""),"unload")
+                                          dispid 0
+                                          method
+                                             name null
+                                             param QName(PackageNamespace(""),"Function")
+                                             returns QName(PackageNamespace(""),"void")
+                                             
+                                             body
+                                                maxstack 3
+                                                localcount 5
+                                                initscopedepth 4
+                                                maxscopedepth 5
+                                                
+                                                code
+                                                   Constant export mode is not supported.
+                                                end ; code
+                                             end ; body
+                                          end ; method
+                                       }
+                                       
+                                       public function get isEmpty() : Boolean
+                                       {
+                                          trait getter QName(PackageNamespace(""),"isEmpty")
+                                             dispid 0
+                                             method
+                                                name null
+                                                returns QName(PackageNamespace(""),"Boolean")
+                                                
+                                                body
+                                                   maxstack 2
+                                                   localcount 1
+                                                   initscopedepth 4
+                                                   maxscopedepth 5
+                                                   
+                                                   code
+                                                      Constant export mode is not supported.
+                                                   end ; code
+                                                end ; body
+                                             end ; method
+                                          }
+                                          
+                                          public function toString() : String
+                                          {
+                                             trait method QName(PackageNamespace(""),"toString")
+                                                dispid 0
+                                                method
+                                                   name null
+                                                   returns QName(PackageNamespace(""),"String")
+                                                   
+                                                   body
+                                                      maxstack 2
+                                                      localcount 1
+                                                      initscopedepth 4
+                                                      maxscopedepth 5
+                                                      
+                                                      code
+                                                         Constant export mode is not supported.
+                                                      end ; code
+                                                   end ; body
+                                                end ; method
+                                             }
+                                          }

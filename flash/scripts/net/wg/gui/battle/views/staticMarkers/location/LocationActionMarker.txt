@@ -1,0 +1,342 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 11
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.gui.battle.views.staticMarkers.location
+{
+   import flash.display.MovieClip;
+   import flash.geom.Point;
+   import flash.text.TextField;
+   import net.wg.data.constants.InvalidationType;
+   import net.wg.gui.battle.views.actionMarkers.BaseActionMarker;
+   import net.wg.infrastructure.interfaces.entity.IDisposable;
+   
+   public class LocationActionMarker extends BaseActionMarker implements IDisposable
+   {
+      
+      public static const ARROW_POSITION:Point;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 11
+               maxscopedepth 12
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var locationLineElement:MovieClip = null;
+      
+      public var locationTopElement:MovieClip = null;
+      
+      public var highlightAnimation:MovieClip = null;
+      
+      public var clickAnimation:MovieClip = null;
+      
+      public var hoverShadow:MovieClip = null;
+      
+      public var creatorNameField:TextField = null;
+      
+      private var _replyMarkerVisible:Boolean = false;
+      
+      private var _replyMarkerCount:int = 0;
+      
+      public const REPLY_POSITION_X:Number = 20;
+      
+      public const REPLY_POSITION_Y:Number = -1;
+      
+      public const DISTANCE_POSITION_X:Number = -43;
+      
+      public const DISTANCE_POSITION_Y:Number = 8;
+      
+      public const TOP_ELEMENT_HEIGHT:Number = 60;
+      
+      public const DISTANCE_LINE_HEIGHT:Number = 60;
+      
+      public function LocationActionMarker()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 12
+               maxscopedepth 13
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      override public function setMarkerReplied(param1:Boolean) : void
+      {
+         trait method QName(PackageNamespace(""),"setMarkerReplied")
+            flag OVERRIDE
+            dispid 0
+            method
+               name null
+               param QName(PackageNamespace(""),"Boolean")
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 2
+                  localcount 2
+                  initscopedepth 12
+                  maxscopedepth 13
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         override public function setReplyCount(param1:int) : void
+         {
+            trait method QName(PackageNamespace(""),"setReplyCount")
+               flag OVERRIDE
+               dispid 0
+               method
+                  name null
+                  param QName(PackageNamespace(""),"int")
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 2
+                     localcount 2
+                     initscopedepth 12
+                     maxscopedepth 13
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            override protected function onDispose() : void
+            {
+               trait method QName(ProtectedNamespace("net.wg.gui.battle.views.staticMarkers.location:LocationActionMarker"),"onDispose")
+                  flag OVERRIDE
+                  dispid 0
+                  method
+                     name null
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 2
+                        localcount 1
+                        initscopedepth 12
+                        maxscopedepth 13
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               override protected function draw() : void
+               {
+                  trait method QName(ProtectedNamespace("net.wg.gui.battle.views.staticMarkers.location:LocationActionMarker"),"draw")
+                     flag OVERRIDE
+                     dispid 0
+                     method
+                        name null
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 2
+                           localcount 1
+                           initscopedepth 12
+                           maxscopedepth 13
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function setActiveState(param1:String) : void
+                  {
+                     trait method QName(PackageNamespace(""),"setActiveState")
+                        dispid 0
+                        method
+                           name null
+                           param QName(PackageNamespace(""),"String")
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 2
+                              localcount 2
+                              initscopedepth 12
+                              maxscopedepth 13
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public function setCreatorNameText(param1:String) : void
+                     {
+                        trait method QName(PackageNamespace(""),"setCreatorNameText")
+                           dispid 0
+                           method
+                              name null
+                              param QName(PackageNamespace(""),"String")
+                              returns QName(PackageNamespace(""),"void")
+                              
+                              body
+                                 maxstack 2
+                                 localcount 2
+                                 initscopedepth 12
+                                 maxscopedepth 13
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        public function setCreatorNameVisible(param1:Boolean) : void
+                        {
+                           trait method QName(PackageNamespace(""),"setCreatorNameVisible")
+                              dispid 0
+                              method
+                                 name null
+                                 param QName(PackageNamespace(""),"Boolean")
+                                 returns QName(PackageNamespace(""),"void")
+                                 
+                                 body
+                                    maxstack 2
+                                    localcount 2
+                                    initscopedepth 12
+                                    maxscopedepth 13
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           public function triggerClickAnimation() : void
+                           {
+                              trait method QName(PackageNamespace(""),"triggerClickAnimation")
+                                 dispid 0
+                                 method
+                                    name null
+                                    returns QName(PackageNamespace(""),"void")
+                                    
+                                    body
+                                       maxstack 2
+                                       localcount 1
+                                       initscopedepth 12
+                                       maxscopedepth 13
+                                       
+                                       code
+                                          Constant export mode is not supported.
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                              
+                              override protected function get getReplyPosition() : Point
+                              {
+                                 trait getter QName(ProtectedNamespace("net.wg.gui.battle.views.staticMarkers.location:LocationActionMarker"),"getReplyPosition")
+                                    flag OVERRIDE
+                                    dispid 0
+                                    method
+                                       name null
+                                       returns QName(PackageNamespace("flash.geom"),"Point")
+                                       
+                                       body
+                                          maxstack 3
+                                          localcount 1
+                                          initscopedepth 12
+                                          maxscopedepth 13
+                                          
+                                          code
+                                             Constant export mode is not supported.
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                                 
+                                 override protected function get getArrowPosition() : Point
+                                 {
+                                    trait getter QName(ProtectedNamespace("net.wg.gui.battle.views.staticMarkers.location:LocationActionMarker"),"getArrowPosition")
+                                       flag OVERRIDE
+                                       dispid 0
+                                       method
+                                          name null
+                                          returns QName(PackageNamespace("flash.geom"),"Point")
+                                          
+                                          body
+                                             maxstack 1
+                                             localcount 1
+                                             initscopedepth 12
+                                             maxscopedepth 13
+                                             
+                                             code
+                                                Constant export mode is not supported.
+                                             end ; code
+                                          end ; body
+                                       end ; method
+                                    }
+                                    
+                                    override protected function get getDistanceToMarkerPosition() : Point
+                                    {
+                                       trait getter QName(ProtectedNamespace("net.wg.gui.battle.views.staticMarkers.location:LocationActionMarker"),"getDistanceToMarkerPosition")
+                                          flag OVERRIDE
+                                          dispid 0
+                                          method
+                                             name null
+                                             returns QName(PackageNamespace("flash.geom"),"Point")
+                                             
+                                             body
+                                                maxstack 3
+                                                localcount 1
+                                                initscopedepth 12
+                                                maxscopedepth 13
+                                                
+                                                code
+                                                   Constant export mode is not supported.
+                                                end ; code
+                                             end ; body
+                                          end ; method
+                                       }
+                                    }
+                                 }

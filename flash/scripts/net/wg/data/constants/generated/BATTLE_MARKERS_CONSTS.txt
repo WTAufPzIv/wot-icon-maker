@@ -1,0 +1,86 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.data.constants.generated
+{
+   public class BATTLE_MARKERS_CONSTS
+   {
+      
+      public static const VEHICLE_TYPE_AT_SPG:String = "AT-SPG";
+      
+      public static const VEHICLE_TYPE_MEDIUM_AT_SPG:String = "mediumAT-SPG";
+      
+      public static const VEHICLE_TYPE_HEAVY_AT_SPG:String = "heavyAT-SPG";
+      
+      public static const VEHICLE_TYPE_LIGHT_TANK:String = "lightTank";
+      
+      public static const VEHICLE_TYPE_HEAVY_TANK:String = "heavyTank";
+      
+      public static const VEHICLE_TYPE_MEDIUM_TANK:String = "mediumTank";
+      
+      public static const VEHICLE_TYPE_SPG:String = "SPG";
+      
+      public static const VEHICLE_TYPE_MEDIUM_SPG:String = "mediumSPG";
+      
+      public static const VEHICLE_TYPE_HEAVY_SPG:String = "heavySPG";
+      
+      public static const COLOR_GREEN:String = "green";
+      
+      public static const COLOR_YELLOW:String = "yellow";
+      
+      public static const COLOR_RED:String = "red";
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function BATTLE_MARKERS_CONSTS()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+   }
+}

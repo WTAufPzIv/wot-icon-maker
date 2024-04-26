@@ -1,0 +1,46 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 2
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.gui.battle.views.vehicleMarkers
+{
+   import net.wg.infrastructure.base.meta.IVehicleMarkersManagerMeta;
+   import net.wg.infrastructure.interfaces.IRootAppMainContent;
+   
+   public interface IVehicleMarkersManager extends IVehicleMarkersManagerMeta, IRootAppMainContent
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 0
+               localcount 1
+               initscopedepth 5
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+   }
+}

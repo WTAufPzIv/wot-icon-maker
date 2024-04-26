@@ -1,0 +1,113 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package scaleform.clik.ui
+{
+   public class InputDetails
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var type:String;
+      
+      public var code:Number;
+      
+      public var value:*;
+      
+      public var navEquivalent:String;
+      
+      public var controllerIndex:uint;
+      
+      public var ctrlKey:Boolean;
+      
+      public var altKey:Boolean;
+      
+      public var shiftKey:Boolean;
+      
+      public function InputDetails(param1:String, param2:Number, param3:*, param4:String = null, param5:uint = 0, param6:Boolean = false, param7:Boolean = false, param8:Boolean = false)
+      {
+         method
+            name null
+            flag HAS_OPTIONAL
+            param QName(PackageNamespace(""),"String")
+            param QName(PackageNamespace(""),"Number")
+            param null
+            param QName(PackageNamespace(""),"String")
+            param QName(PackageNamespace(""),"uint")
+            param QName(PackageNamespace(""),"Boolean")
+            param QName(PackageNamespace(""),"Boolean")
+            param QName(PackageNamespace(""),"Boolean")
+            optional Null()
+            optional Integer(0)
+            optional False()
+            optional False()
+            optional False()
+            returns null
+            
+            body
+               maxstack 2
+               localcount 9
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function toString() : String
+      {
+         trait method QName(PackageNamespace(""),"toString")
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"String")
+               
+               body
+                  maxstack 2
+                  localcount 1
+                  initscopedepth 4
+                  maxscopedepth 5
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+      }
+   }

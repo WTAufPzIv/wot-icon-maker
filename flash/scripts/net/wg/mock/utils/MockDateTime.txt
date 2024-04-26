@@ -1,0 +1,612 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.mock.utils
+{
+   import net.wg.utils.IDateTime;
+   
+   public class MockDateTime implements IDateTime
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function MockDateTime()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function as3DayNumToPyDayNum(param1:int) : int
+      {
+         trait method QName(PackageNamespace(""),"as3DayNumToPyDayNum")
+            dispid 0
+            method
+               name null
+               param QName(PackageNamespace(""),"int")
+               returns QName(PackageNamespace(""),"int")
+               
+               body
+                  maxstack 1
+                  localcount 2
+                  initscopedepth 4
+                  maxscopedepth 5
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function as3MonthNumToPyMonthNum(param1:int) : int
+         {
+            trait method QName(PackageNamespace(""),"as3MonthNumToPyMonthNum")
+               dispid 0
+               method
+                  name null
+                  param QName(PackageNamespace(""),"int")
+                  returns QName(PackageNamespace(""),"int")
+                  
+                  body
+                     maxstack 1
+                     localcount 2
+                     initscopedepth 4
+                     maxscopedepth 5
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function cloneDate(param1:Date) : Date
+            {
+               trait method QName(PackageNamespace(""),"cloneDate")
+                  dispid 0
+                  method
+                     name null
+                     param QName(PackageNamespace(""),"Date")
+                     returns QName(PackageNamespace(""),"Date")
+                     
+                     body
+                        maxstack 1
+                        localcount 2
+                        initscopedepth 4
+                        maxscopedepth 5
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function convertToTwelveHourFormat(param1:int) : int
+               {
+                  trait method QName(PackageNamespace(""),"convertToTwelveHourFormat")
+                     dispid 0
+                     method
+                        name null
+                        param QName(PackageNamespace(""),"int")
+                        returns QName(PackageNamespace(""),"int")
+                        
+                        body
+                           maxstack 1
+                           localcount 2
+                           initscopedepth 4
+                           maxscopedepth 5
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function fromPyTimestamp(param1:Number) : Date
+                  {
+                     trait method QName(PackageNamespace(""),"fromPyTimestamp")
+                        dispid 0
+                        method
+                           name null
+                           param QName(PackageNamespace(""),"Number")
+                           returns QName(PackageNamespace(""),"Date")
+                           
+                           body
+                              maxstack 1
+                              localcount 2
+                              initscopedepth 4
+                              maxscopedepth 5
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public function getAS3FirstDayOfWeek() : int
+                     {
+                        trait method QName(PackageNamespace(""),"getAS3FirstDayOfWeek")
+                           dispid 0
+                           method
+                              name null
+                              returns QName(PackageNamespace(""),"int")
+                              
+                              body
+                                 maxstack 1
+                                 localcount 1
+                                 initscopedepth 4
+                                 maxscopedepth 5
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        public function getAmPmPrefix(param1:int) : String
+                        {
+                           trait method QName(PackageNamespace(""),"getAmPmPrefix")
+                              dispid 0
+                              method
+                                 name null
+                                 param QName(PackageNamespace(""),"int")
+                                 returns QName(PackageNamespace(""),"String")
+                                 
+                                 body
+                                    maxstack 1
+                                    localcount 2
+                                    initscopedepth 4
+                                    maxscopedepth 5
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           public function formatSecondsToString(param1:int) : String
+                           {
+                              trait method QName(PackageNamespace(""),"formatSecondsToString")
+                                 dispid 0
+                                 method
+                                    name null
+                                    param QName(PackageNamespace(""),"int")
+                                    returns QName(PackageNamespace(""),"String")
+                                    
+                                    body
+                                       maxstack 1
+                                       localcount 2
+                                       initscopedepth 4
+                                       maxscopedepth 5
+                                       
+                                       code
+                                          Constant export mode is not supported.
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                              
+                              public function getDayName(param1:int, param2:Boolean = true, param3:Boolean = true, param4:Boolean = false, param5:Boolean = false) : String
+                              {
+                                 trait method QName(PackageNamespace(""),"getDayName")
+                                    dispid 0
+                                    method
+                                       name null
+                                       flag HAS_OPTIONAL
+                                       param QName(PackageNamespace(""),"int")
+                                       param QName(PackageNamespace(""),"Boolean")
+                                       param QName(PackageNamespace(""),"Boolean")
+                                       param QName(PackageNamespace(""),"Boolean")
+                                       param QName(PackageNamespace(""),"Boolean")
+                                       optional True()
+                                       optional True()
+                                       optional False()
+                                       optional False()
+                                       returns QName(PackageNamespace(""),"String")
+                                       
+                                       body
+                                          maxstack 1
+                                          localcount 6
+                                          initscopedepth 4
+                                          maxscopedepth 5
+                                          
+                                          code
+                                             Constant export mode is not supported.
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                                 
+                                 public function getMonthDaysCount(param1:Date) : uint
+                                 {
+                                    trait method QName(PackageNamespace(""),"getMonthDaysCount")
+                                       dispid 0
+                                       method
+                                          name null
+                                          param QName(PackageNamespace(""),"Date")
+                                          returns QName(PackageNamespace(""),"uint")
+                                          
+                                          body
+                                             maxstack 1
+                                             localcount 2
+                                             initscopedepth 4
+                                             maxscopedepth 5
+                                             
+                                             code
+                                                Constant export mode is not supported.
+                                             end ; code
+                                          end ; body
+                                       end ; method
+                                    }
+                                    
+                                    public function getMonthName(param1:int, param2:Boolean = true, param3:Boolean = true, param4:Boolean = false, param5:Boolean = false) : String
+                                    {
+                                       trait method QName(PackageNamespace(""),"getMonthName")
+                                          dispid 0
+                                          method
+                                             name null
+                                             flag HAS_OPTIONAL
+                                             param QName(PackageNamespace(""),"int")
+                                             param QName(PackageNamespace(""),"Boolean")
+                                             param QName(PackageNamespace(""),"Boolean")
+                                             param QName(PackageNamespace(""),"Boolean")
+                                             param QName(PackageNamespace(""),"Boolean")
+                                             optional True()
+                                             optional True()
+                                             optional False()
+                                             optional False()
+                                             returns QName(PackageNamespace(""),"String")
+                                             
+                                             body
+                                                maxstack 1
+                                                localcount 6
+                                                initscopedepth 4
+                                                maxscopedepth 5
+                                                
+                                                code
+                                                   Constant export mode is not supported.
+                                                end ; code
+                                             end ; body
+                                          end ; method
+                                       }
+                                       
+                                       public function hourIsAm(param1:int) : Boolean
+                                       {
+                                          trait method QName(PackageNamespace(""),"hourIsAm")
+                                             dispid 0
+                                             method
+                                                name null
+                                                param QName(PackageNamespace(""),"int")
+                                                returns QName(PackageNamespace(""),"Boolean")
+                                                
+                                                body
+                                                   maxstack 1
+                                                   localcount 2
+                                                   initscopedepth 4
+                                                   maxscopedepth 5
+                                                   
+                                                   code
+                                                      Constant export mode is not supported.
+                                                   end ; code
+                                                end ; body
+                                             end ; method
+                                          }
+                                          
+                                          public function isCurrentMonth(param1:Date) : Boolean
+                                          {
+                                             trait method QName(PackageNamespace(""),"isCurrentMonth")
+                                                dispid 0
+                                                method
+                                                   name null
+                                                   param QName(PackageNamespace(""),"Date")
+                                                   returns QName(PackageNamespace(""),"Boolean")
+                                                   
+                                                   body
+                                                      maxstack 1
+                                                      localcount 2
+                                                      initscopedepth 4
+                                                      maxscopedepth 5
+                                                      
+                                                      code
+                                                         Constant export mode is not supported.
+                                                      end ; code
+                                                   end ; body
+                                                end ; method
+                                             }
+                                             
+                                             public function isFuture(param1:Date) : Boolean
+                                             {
+                                                trait method QName(PackageNamespace(""),"isFuture")
+                                                   dispid 0
+                                                   method
+                                                      name null
+                                                      param QName(PackageNamespace(""),"Date")
+                                                      returns QName(PackageNamespace(""),"Boolean")
+                                                      
+                                                      body
+                                                         maxstack 1
+                                                         localcount 2
+                                                         initscopedepth 4
+                                                         maxscopedepth 5
+                                                         
+                                                         code
+                                                            Constant export mode is not supported.
+                                                         end ; code
+                                                      end ; body
+                                                   end ; method
+                                                }
+                                                
+                                                public function isPast(param1:Date) : Boolean
+                                                {
+                                                   trait method QName(PackageNamespace(""),"isPast")
+                                                      dispid 0
+                                                      method
+                                                         name null
+                                                         param QName(PackageNamespace(""),"Date")
+                                                         returns QName(PackageNamespace(""),"Boolean")
+                                                         
+                                                         body
+                                                            maxstack 1
+                                                            localcount 2
+                                                            initscopedepth 4
+                                                            maxscopedepth 5
+                                                            
+                                                            code
+                                                               Constant export mode is not supported.
+                                                            end ; code
+                                                         end ; body
+                                                      end ; method
+                                                   }
+                                                   
+                                                   public function isSameDay(param1:Date, param2:Date) : Boolean
+                                                   {
+                                                      trait method QName(PackageNamespace(""),"isSameDay")
+                                                         dispid 0
+                                                         method
+                                                            name null
+                                                            param QName(PackageNamespace(""),"Date")
+                                                            param QName(PackageNamespace(""),"Date")
+                                                            returns QName(PackageNamespace(""),"Boolean")
+                                                            
+                                                            body
+                                                               maxstack 1
+                                                               localcount 3
+                                                               initscopedepth 4
+                                                               maxscopedepth 5
+                                                               
+                                                               code
+                                                                  Constant export mode is not supported.
+                                                               end ; code
+                                                            end ; body
+                                                         end ; method
+                                                      }
+                                                      
+                                                      public function isSameMonth(param1:Date, param2:Date) : Boolean
+                                                      {
+                                                         trait method QName(PackageNamespace(""),"isSameMonth")
+                                                            dispid 0
+                                                            method
+                                                               name null
+                                                               param QName(PackageNamespace(""),"Date")
+                                                               param QName(PackageNamespace(""),"Date")
+                                                               returns QName(PackageNamespace(""),"Boolean")
+                                                               
+                                                               body
+                                                                  maxstack 1
+                                                                  localcount 3
+                                                                  initscopedepth 4
+                                                                  maxscopedepth 5
+                                                                  
+                                                                  code
+                                                                     Constant export mode is not supported.
+                                                                  end ; code
+                                                               end ; body
+                                                            end ; method
+                                                         }
+                                                         
+                                                         public function isToday(param1:Date) : Boolean
+                                                         {
+                                                            trait method QName(PackageNamespace(""),"isToday")
+                                                               dispid 0
+                                                               method
+                                                                  name null
+                                                                  param QName(PackageNamespace(""),"Date")
+                                                                  returns QName(PackageNamespace(""),"Boolean")
+                                                                  
+                                                                  body
+                                                                     maxstack 1
+                                                                     localcount 2
+                                                                     initscopedepth 4
+                                                                     maxscopedepth 5
+                                                                     
+                                                                     code
+                                                                        Constant export mode is not supported.
+                                                                     end ; code
+                                                                  end ; body
+                                                               end ; method
+                                                            }
+                                                            
+                                                            public function now() : Date
+                                                            {
+                                                               trait method QName(PackageNamespace(""),"now")
+                                                                  dispid 0
+                                                                  method
+                                                                     name null
+                                                                     returns QName(PackageNamespace(""),"Date")
+                                                                     
+                                                                     body
+                                                                        maxstack 1
+                                                                        localcount 1
+                                                                        initscopedepth 4
+                                                                        maxscopedepth 5
+                                                                        
+                                                                        code
+                                                                           Constant export mode is not supported.
+                                                                        end ; code
+                                                                     end ; body
+                                                                  end ; method
+                                                               }
+                                                               
+                                                               public function pyDayNumToAS3DayNum(param1:int) : int
+                                                               {
+                                                                  trait method QName(PackageNamespace(""),"pyDayNumToAS3DayNum")
+                                                                     dispid 0
+                                                                     method
+                                                                        name null
+                                                                        param QName(PackageNamespace(""),"int")
+                                                                        returns QName(PackageNamespace(""),"int")
+                                                                        
+                                                                        body
+                                                                           maxstack 1
+                                                                           localcount 2
+                                                                           initscopedepth 4
+                                                                           maxscopedepth 5
+                                                                           
+                                                                           code
+                                                                              Constant export mode is not supported.
+                                                                           end ; code
+                                                                        end ; body
+                                                                     end ; method
+                                                                  }
+                                                                  
+                                                                  public function pyMonthNumToAS3MonthNum(param1:int) : int
+                                                                  {
+                                                                     trait method QName(PackageNamespace(""),"pyMonthNumToAS3MonthNum")
+                                                                        dispid 0
+                                                                        method
+                                                                           name null
+                                                                           param QName(PackageNamespace(""),"int")
+                                                                           returns QName(PackageNamespace(""),"int")
+                                                                           
+                                                                           body
+                                                                              maxstack 1
+                                                                              localcount 2
+                                                                              initscopedepth 4
+                                                                              maxscopedepth 5
+                                                                              
+                                                                              code
+                                                                                 Constant export mode is not supported.
+                                                                              end ; code
+                                                                           end ; body
+                                                                        end ; method
+                                                                     }
+                                                                     
+                                                                     public function shiftDate(param1:Date, param2:int) : Date
+                                                                     {
+                                                                        trait method QName(PackageNamespace(""),"shiftDate")
+                                                                           dispid 0
+                                                                           method
+                                                                              name null
+                                                                              param QName(PackageNamespace(""),"Date")
+                                                                              param QName(PackageNamespace(""),"int")
+                                                                              returns QName(PackageNamespace(""),"Date")
+                                                                              
+                                                                              body
+                                                                                 maxstack 1
+                                                                                 localcount 3
+                                                                                 initscopedepth 4
+                                                                                 maxscopedepth 5
+                                                                                 
+                                                                                 code
+                                                                                    Constant export mode is not supported.
+                                                                                 end ; code
+                                                                              end ; body
+                                                                           end ; method
+                                                                        }
+                                                                        
+                                                                        public function timeDiff(param1:Date, param2:Date) : Number
+                                                                        {
+                                                                           trait method QName(PackageNamespace(""),"timeDiff")
+                                                                              dispid 0
+                                                                              method
+                                                                                 name null
+                                                                                 param QName(PackageNamespace(""),"Date")
+                                                                                 param QName(PackageNamespace(""),"Date")
+                                                                                 returns QName(PackageNamespace(""),"Number")
+                                                                                 
+                                                                                 body
+                                                                                    maxstack 1
+                                                                                    localcount 3
+                                                                                    initscopedepth 4
+                                                                                    maxscopedepth 5
+                                                                                    
+                                                                                    code
+                                                                                       Constant export mode is not supported.
+                                                                                    end ; code
+                                                                                 end ; body
+                                                                              end ; method
+                                                                           }
+                                                                           
+                                                                           public function toPyTimestamp(param1:Date) : Number
+                                                                           {
+                                                                              trait method QName(PackageNamespace(""),"toPyTimestamp")
+                                                                                 dispid 0
+                                                                                 method
+                                                                                    name null
+                                                                                    param QName(PackageNamespace(""),"Date")
+                                                                                    returns QName(PackageNamespace(""),"Number")
+                                                                                    
+                                                                                    body
+                                                                                       maxstack 1
+                                                                                       localcount 2
+                                                                                       initscopedepth 4
+                                                                                       maxscopedepth 5
+                                                                                       
+                                                                                       code
+                                                                                          Constant export mode is not supported.
+                                                                                       end ; code
+                                                                                    end ; body
+                                                                                 end ; method
+                                                                              }
+                                                                           }
+                                                                        }

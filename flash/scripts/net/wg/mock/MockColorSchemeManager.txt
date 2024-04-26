@@ -1,0 +1,341 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.mock
+{
+   import flash.events.Event;
+   import flash.geom.ColorTransform;
+   import net.wg.infrastructure.interfaces.IColorScheme;
+   import net.wg.infrastructure.managers.IColorSchemeManager;
+   
+   public class MockColorSchemeManager implements IColorSchemeManager
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function MockColorSchemeManager()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function addEventListener(param1:String, param2:Function, param3:Boolean = false, param4:int = 0, param5:Boolean = false) : void
+      {
+         trait method QName(PackageNamespace(""),"addEventListener")
+            dispid 0
+            method
+               name null
+               flag HAS_OPTIONAL
+               param QName(PackageNamespace(""),"String")
+               param QName(PackageNamespace(""),"Function")
+               param QName(PackageNamespace(""),"Boolean")
+               param QName(PackageNamespace(""),"int")
+               param QName(PackageNamespace(""),"Boolean")
+               optional False()
+               optional Integer(0)
+               optional False()
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 1
+                  localcount 6
+                  initscopedepth 4
+                  maxscopedepth 5
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function as_update() : void
+         {
+            trait method QName(PackageNamespace(""),"as_update")
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 1
+                     localcount 1
+                     initscopedepth 4
+                     maxscopedepth 5
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function getAliasColor(param1:String) : String
+            {
+               trait method QName(PackageNamespace(""),"getAliasColor")
+                  dispid 0
+                  method
+                     name null
+                     param QName(PackageNamespace(""),"String")
+                     returns QName(PackageNamespace(""),"String")
+                     
+                     body
+                        maxstack 1
+                        localcount 2
+                        initscopedepth 4
+                        maxscopedepth 5
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function getColorSchemeS(param1:String) : Object
+               {
+                  trait method QName(PackageNamespace(""),"getColorSchemeS")
+                     dispid 0
+                     method
+                        name null
+                        param QName(PackageNamespace(""),"String")
+                        returns QName(PackageNamespace(""),"Object")
+                        
+                        body
+                           maxstack 1
+                           localcount 2
+                           initscopedepth 4
+                           maxscopedepth 5
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function getRGB(param1:String) : Number
+                  {
+                     trait method QName(PackageNamespace(""),"getRGB")
+                        dispid 0
+                        method
+                           name null
+                           param QName(PackageNamespace(""),"String")
+                           returns QName(PackageNamespace(""),"Number")
+                           
+                           body
+                              maxstack 1
+                              localcount 2
+                              initscopedepth 4
+                              maxscopedepth 5
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public function getScheme(param1:String) : IColorScheme
+                     {
+                        trait method QName(PackageNamespace(""),"getScheme")
+                           dispid 0
+                           method
+                              name null
+                              param QName(PackageNamespace(""),"String")
+                              returns QName(PackageNamespace("net.wg.infrastructure.interfaces"),"IColorScheme")
+                              
+                              body
+                                 maxstack 1
+                                 localcount 2
+                                 initscopedepth 4
+                                 maxscopedepth 5
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        public function getTransform(param1:String) : ColorTransform
+                        {
+                           trait method QName(PackageNamespace(""),"getTransform")
+                              dispid 0
+                              method
+                                 name null
+                                 param QName(PackageNamespace(""),"String")
+                                 returns QName(PackageNamespace("flash.geom"),"ColorTransform")
+                                 
+                                 body
+                                    maxstack 1
+                                    localcount 2
+                                    initscopedepth 4
+                                    maxscopedepth 5
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           public function hasEventListener(param1:String) : Boolean
+                           {
+                              trait method QName(PackageNamespace(""),"hasEventListener")
+                                 dispid 0
+                                 method
+                                    name null
+                                    param QName(PackageNamespace(""),"String")
+                                    returns QName(PackageNamespace(""),"Boolean")
+                                    
+                                    body
+                                       maxstack 1
+                                       localcount 2
+                                       initscopedepth 4
+                                       maxscopedepth 5
+                                       
+                                       code
+                                          Constant export mode is not supported.
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                              
+                              public function removeEventListener(param1:String, param2:Function, param3:Boolean = false) : void
+                              {
+                                 trait method QName(PackageNamespace(""),"removeEventListener")
+                                    dispid 0
+                                    method
+                                       name null
+                                       flag HAS_OPTIONAL
+                                       param QName(PackageNamespace(""),"String")
+                                       param QName(PackageNamespace(""),"Function")
+                                       param QName(PackageNamespace(""),"Boolean")
+                                       optional False()
+                                       returns QName(PackageNamespace(""),"void")
+                                       
+                                       body
+                                          maxstack 1
+                                          localcount 4
+                                          initscopedepth 4
+                                          maxscopedepth 5
+                                          
+                                          code
+                                             Constant export mode is not supported.
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                                 
+                                 public function willTrigger(param1:String) : Boolean
+                                 {
+                                    trait method QName(PackageNamespace(""),"willTrigger")
+                                       dispid 0
+                                       method
+                                          name null
+                                          param QName(PackageNamespace(""),"String")
+                                          returns QName(PackageNamespace(""),"Boolean")
+                                          
+                                          body
+                                             maxstack 1
+                                             localcount 2
+                                             initscopedepth 4
+                                             maxscopedepth 5
+                                             
+                                             code
+                                                Constant export mode is not supported.
+                                             end ; code
+                                          end ; body
+                                       end ; method
+                                    }
+                                    
+                                    public function dispatchEvent(param1:Event) : Boolean
+                                    {
+                                       trait method QName(PackageNamespace(""),"dispatchEvent")
+                                          dispid 0
+                                          method
+                                             name null
+                                             param QName(PackageNamespace("flash.events"),"Event")
+                                             returns QName(PackageNamespace(""),"Boolean")
+                                             
+                                             body
+                                                maxstack 1
+                                                localcount 2
+                                                initscopedepth 4
+                                                maxscopedepth 5
+                                                
+                                                code
+                                                   Constant export mode is not supported.
+                                                end ; code
+                                             end ; body
+                                          end ; method
+                                       }
+                                       
+                                       public function getIsColorBlindS() : Boolean
+                                       {
+                                          trait method QName(PackageNamespace(""),"getIsColorBlindS")
+                                             dispid 0
+                                             method
+                                                name null
+                                                returns QName(PackageNamespace(""),"Boolean")
+                                                
+                                                body
+                                                   maxstack 1
+                                                   localcount 1
+                                                   initscopedepth 4
+                                                   maxscopedepth 5
+                                                   
+                                                   code
+                                                      Constant export mode is not supported.
+                                                   end ; code
+                                                end ; body
+                                             end ; method
+                                          }
+                                       }
+                                    }

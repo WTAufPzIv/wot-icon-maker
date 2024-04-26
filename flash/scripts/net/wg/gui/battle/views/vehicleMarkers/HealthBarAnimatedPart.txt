@@ -1,0 +1,440 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 10
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.gui.battle.views.vehicleMarkers
+{
+   import flash.display.MovieClip;
+   import flash.events.Event;
+   import flash.events.TimerEvent;
+   import flash.geom.Point;
+   import flash.utils.Timer;
+   import net.wg.data.constants.generated.ATLAS_CONSTANTS;
+   import net.wg.gui.battle.components.BattleUIComponent;
+   import net.wg.gui.battle.views.vehicleMarkers.events.TimelineEvent;
+   import net.wg.gui.utils.RootSWFAtlasManager;
+   
+   public class HealthBarAnimatedPart extends BattleUIComponent
+   {
+      
+      public static const SHOW:String = "show";
+      
+      public static const HIDE:String = "hide";
+      
+      private static const SHOW_STATE:String = "show";
+      
+      private static const ACTIVE_STATE:String = "active";
+      
+      private static const HIDE_STATE:String = "hide";
+      
+      private static const DMG_BAR_XY:Point;
+      
+      private static const EXPLOSION_XY:Point;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 10
+               maxscopedepth 11
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var animateMc:MovieClip = null;
+      
+      private var _tweenState:String = "inactive";
+      
+      private var _partType:String = "splash";
+      
+      private var _splashTimer:Timer = null;
+      
+      private var _vmManager:VehicleMarkersManager = null;
+      
+      public function HealthBarAnimatedPart()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 11
+               maxscopedepth 12
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      override protected function onDispose() : void
+      {
+         trait method QName(ProtectedNamespace("net.wg.gui.battle.views.vehicleMarkers:HealthBarAnimatedPart"),"onDispose")
+            flag OVERRIDE
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 3
+                  localcount 1
+                  initscopedepth 11
+                  maxscopedepth 12
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         override protected function configUI() : void
+         {
+            trait method QName(ProtectedNamespace("net.wg.gui.battle.views.vehicleMarkers:HealthBarAnimatedPart"),"configUI")
+               flag OVERRIDE
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 3
+                     localcount 1
+                     initscopedepth 11
+                     maxscopedepth 12
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function playShowTween() : void
+            {
+               trait method QName(PackageNamespace(""),"playShowTween")
+                  dispid 0
+                  method
+                     name null
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 2
+                        localcount 3
+                        initscopedepth 11
+                        maxscopedepth 12
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function setAnimationType(param1:String) : void
+               {
+                  trait method QName(PackageNamespace(""),"setAnimationType")
+                     dispid 0
+                     method
+                        name null
+                        param QName(PackageNamespace(""),"String")
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 5
+                           localcount 5
+                           initscopedepth 11
+                           maxscopedepth 12
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function isActive() : Boolean
+                  {
+                     trait method QName(PackageNamespace(""),"isActive")
+                        dispid 0
+                        method
+                           name null
+                           returns QName(PackageNamespace(""),"Boolean")
+                           
+                           body
+                              maxstack 2
+                              localcount 1
+                              initscopedepth 11
+                              maxscopedepth 12
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     protected function setState() : void
+                     {
+                        trait method QName(ProtectedNamespace("net.wg.gui.battle.views.vehicleMarkers:HealthBarAnimatedPart"),"setState")
+                           dispid 0
+                           method
+                              name null
+                              returns QName(PackageNamespace(""),"void")
+                              
+                              body
+                                 maxstack 2
+                                 localcount 1
+                                 initscopedepth 11
+                                 maxscopedepth 12
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        private function addDispatchers() : void
+                        {
+                           trait method QName(PrivateNamespace(null,"13"),"addDispatchers")
+                              dispid 0
+                              method
+                                 name null
+                                 returns QName(PackageNamespace(""),"void")
+                                 
+                                 body
+                                    maxstack 3
+                                    localcount 2
+                                    initscopedepth 11
+                                    maxscopedepth 12
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           private function tweenCompleteDispatchTrue() : void
+                           {
+                              trait method QName(PrivateNamespace(null,"13"),"tweenCompleteDispatchTrue")
+                                 dispid 0
+                                 method
+                                    name null
+                                    returns QName(PackageNamespace(""),"void")
+                                    
+                                    body
+                                       maxstack 4
+                                       localcount 1
+                                       initscopedepth 11
+                                       maxscopedepth 12
+                                       
+                                       code
+                                          Constant export mode is not supported.
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                              
+                              private function tweenCompleteDispatchFalse() : void
+                              {
+                                 trait method QName(PrivateNamespace(null,"13"),"tweenCompleteDispatchFalse")
+                                    dispid 0
+                                    method
+                                       name null
+                                       returns QName(PackageNamespace(""),"void")
+                                       
+                                       body
+                                          maxstack 4
+                                          localcount 1
+                                          initscopedepth 11
+                                          maxscopedepth 12
+                                          
+                                          code
+                                             Constant export mode is not supported.
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                                 
+                                 private function onTweenComplete(param1:Boolean) : void
+                                 {
+                                    trait method QName(PrivateNamespace(null,"13"),"onTweenComplete")
+                                       dispid 0
+                                       method
+                                          name null
+                                          param QName(PackageNamespace(""),"Boolean")
+                                          returns QName(PackageNamespace(""),"void")
+                                          
+                                          body
+                                             maxstack 6
+                                             localcount 2
+                                             initscopedepth 11
+                                             maxscopedepth 12
+                                             
+                                             code
+                                                Constant export mode is not supported.
+                                             end ; code
+                                          end ; body
+                                       end ; method
+                                    }
+                                    
+                                    public function get tweenState() : String
+                                    {
+                                       trait getter QName(PackageNamespace(""),"tweenState")
+                                          dispid 0
+                                          method
+                                             name null
+                                             returns QName(PackageNamespace(""),"String")
+                                             
+                                             body
+                                                maxstack 1
+                                                localcount 1
+                                                initscopedepth 11
+                                                maxscopedepth 12
+                                                
+                                                code
+                                                   Constant export mode is not supported.
+                                                end ; code
+                                             end ; body
+                                          end ; method
+                                       }
+                                       
+                                       public function set tweenState(param1:String) : void
+                                       {
+                                          trait setter QName(PackageNamespace(""),"tweenState")
+                                             dispid 0
+                                             method
+                                                name null
+                                                param QName(PackageNamespace(""),"String")
+                                                returns QName(PackageNamespace(""),"void")
+                                                
+                                                body
+                                                   maxstack 2
+                                                   localcount 2
+                                                   initscopedepth 11
+                                                   maxscopedepth 12
+                                                   
+                                                   code
+                                                      Constant export mode is not supported.
+                                                   end ; code
+                                                end ; body
+                                             end ; method
+                                          }
+                                          
+                                          public function get partType() : String
+                                          {
+                                             trait getter QName(PackageNamespace(""),"partType")
+                                                dispid 0
+                                                method
+                                                   name null
+                                                   returns QName(PackageNamespace(""),"String")
+                                                   
+                                                   body
+                                                      maxstack 1
+                                                      localcount 1
+                                                      initscopedepth 11
+                                                      maxscopedepth 12
+                                                      
+                                                      code
+                                                         Constant export mode is not supported.
+                                                      end ; code
+                                                   end ; body
+                                                end ; method
+                                             }
+                                             
+                                             public function set partType(param1:String) : void
+                                             {
+                                                trait setter QName(PackageNamespace(""),"partType")
+                                                   dispid 0
+                                                   method
+                                                      name null
+                                                      param QName(PackageNamespace(""),"String")
+                                                      returns QName(PackageNamespace(""),"void")
+                                                      
+                                                      body
+                                                         maxstack 2
+                                                         localcount 2
+                                                         initscopedepth 11
+                                                         maxscopedepth 12
+                                                         
+                                                         code
+                                                            Constant export mode is not supported.
+                                                         end ; code
+                                                      end ; body
+                                                   end ; method
+                                                }
+                                                
+                                                private function onTimelineTweenCompleteHandler(param1:TimelineEvent) : void
+                                                {
+                                                   trait method QName(PrivateNamespace(null,"13"),"onTimelineTweenCompleteHandler")
+                                                      dispid 0
+                                                      method
+                                                         name null
+                                                         param QName(PackageNamespace("net.wg.gui.battle.views.vehicleMarkers.events"),"TimelineEvent")
+                                                         returns QName(PackageNamespace(""),"void")
+                                                         
+                                                         body
+                                                            maxstack 2
+                                                            localcount 2
+                                                            initscopedepth 11
+                                                            maxscopedepth 12
+                                                            
+                                                            code
+                                                               Constant export mode is not supported.
+                                                            end ; code
+                                                         end ; body
+                                                      end ; method
+                                                   }
+                                                   
+                                                   private function onSplashTimerCompleteHandler(param1:TimerEvent) : void
+                                                   {
+                                                      trait method QName(PrivateNamespace(null,"13"),"onSplashTimerCompleteHandler")
+                                                         dispid 0
+                                                         method
+                                                            name null
+                                                            param QName(PackageNamespace("flash.events"),"TimerEvent")
+                                                            returns QName(PackageNamespace(""),"void")
+                                                            
+                                                            body
+                                                               maxstack 3
+                                                               localcount 2
+                                                               initscopedepth 11
+                                                               maxscopedepth 12
+                                                               
+                                                               code
+                                                                  Constant export mode is not supported.
+                                                               end ; code
+                                                            end ; body
+                                                         end ; method
+                                                      }
+                                                   }
+                                                }

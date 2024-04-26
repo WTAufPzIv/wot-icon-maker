@@ -1,0 +1,67 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 5
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package scaleform.gfx
+{
+   import flash.events.KeyboardEvent;
+   
+   public final class KeyboardEventEx extends KeyboardEvent
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 5
+               maxscopedepth 6
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var controllerIdx:uint = 0;
+      
+      public function KeyboardEventEx(param1:String)
+      {
+         method
+            name null
+            param QName(PackageNamespace(""),"String")
+            returns null
+            
+            body
+               maxstack 2
+               localcount 2
+               initscopedepth 6
+               maxscopedepth 7
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+   }
+}

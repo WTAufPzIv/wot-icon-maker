@@ -1,0 +1,68 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 2
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.infrastructure.interfaces
+{
+   import flash.display.BitmapData;
+   import net.wg.infrastructure.interfaces.entity.IDisposable;
+   
+   public interface IImage extends ISprite, IDisposable
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 0
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      function readjustSize() : void;
+      
+      function clearImage() : void;
+      
+      function set bitmapData(param1:BitmapData) : void;
+      
+      function get source() : String;
+      
+      function set source(param1:String) : void;
+      
+      function set sourceAlt(param1:String) : void;
+      
+      function set cacheType(param1:int) : void;
+      
+      function get bitmapWidth() : int;
+      
+      function get bitmapHeight() : int;
+      
+      function get smoothing() : Boolean;
+      
+      function set smoothing(param1:Boolean) : void;
+   }
+}

@@ -1,0 +1,284 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 11
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.gui.battle.views.vehicleMarkers
+{
+   import flash.display.Sprite;
+   import flash.display.Stage;
+   import flash.events.Event;
+   import flash.text.TextField;
+   import net.wg.data.constants.Linkages;
+   import net.wg.data.constants.Values;
+   import net.wg.gui.battle.views.actionMarkers.BaseActionMarker;
+   import scaleform.gfx.TextFieldEx;
+   
+   public class GoalFlagMarker extends BaseActionMarker
+   {
+      
+      private static const HEIGHT:int = 67;
+      
+      private static const BIG_FLAG_FRAME:int = 2;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 11
+               maxscopedepth 12
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var distanceTF:TextField = null;
+      
+      public var flagMC:Sprite = null;
+      
+      public var marker:Sprite;
+      
+      private var _stage:Stage;
+      
+      private var _metersString:String = "";
+      
+      private var _distance:Number = 0;
+      
+      public function GoalFlagMarker()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 3
+               localcount 1
+               initscopedepth 12
+               maxscopedepth 13
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      override protected function onDispose() : void
+      {
+         trait method QName(ProtectedNamespace("net.wg.gui.battle.views.vehicleMarkers:GoalFlagMarker"),"onDispose")
+            flag OVERRIDE
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 3
+                  localcount 1
+                  initscopedepth 12
+                  maxscopedepth 13
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function setDistance(param1:Number) : void
+         {
+            trait method QName(PackageNamespace(""),"setDistance")
+               dispid 0
+               method
+                  name null
+                  param QName(PackageNamespace(""),"Number")
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 2
+                     localcount 2
+                     initscopedepth 12
+                     maxscopedepth 13
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            private function drawDistance() : void
+            {
+               trait method QName(PrivateNamespace(null,"52"),"drawDistance")
+                  dispid 0
+                  method
+                     name null
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 3
+                        localcount 1
+                        initscopedepth 12
+                        maxscopedepth 13
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function setMeters(param1:String) : void
+               {
+                  trait method QName(PackageNamespace(""),"setMeters")
+                     dispid 0
+                     method
+                        name null
+                        param QName(PackageNamespace(""),"String")
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 2
+                           localcount 2
+                           initscopedepth 12
+                           maxscopedepth 13
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function init(... rest) : void
+                  {
+                     trait method QName(PackageNamespace(""),"init")
+                        dispid 0
+                        method
+                           name null
+                           flag NEED_REST
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 6
+                              localcount 3
+                              initscopedepth 12
+                              maxscopedepth 13
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     private function onEnterFrameHandler(param1:Event) : void
+                     {
+                        trait method QName(PrivateNamespace(null,"52"),"onEnterFrameHandler")
+                           dispid 0
+                           method
+                              name null
+                              param QName(PackageNamespace("flash.events"),"Event")
+                              returns QName(PackageNamespace(""),"void")
+                              
+                              body
+                                 maxstack 4
+                                 localcount 3
+                                 initscopedepth 12
+                                 maxscopedepth 13
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        public function setActiveState(param1:int) : void
+                        {
+                           trait method QName(PackageNamespace(""),"setActiveState")
+                              dispid 0
+                              method
+                                 name null
+                                 param QName(PackageNamespace(""),"int")
+                                 returns QName(PackageNamespace(""),"void")
+                                 
+                                 body
+                                    maxstack 1
+                                    localcount 2
+                                    initscopedepth 12
+                                    maxscopedepth 13
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           override public function get height() : Number
+                           {
+                              trait getter QName(PackageNamespace(""),"height")
+                                 flag OVERRIDE
+                                 dispid 0
+                                 method
+                                    name null
+                                    returns QName(PackageNamespace(""),"Number")
+                                    
+                                    body
+                                       maxstack 1
+                                       localcount 1
+                                       initscopedepth 12
+                                       maxscopedepth 13
+                                       
+                                       code
+                                          Constant export mode is not supported.
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                              
+                              override protected function get stickyMarkerClassLinkage() : String
+                              {
+                                 trait getter QName(ProtectedNamespace("net.wg.gui.battle.views.vehicleMarkers:GoalFlagMarker"),"stickyMarkerClassLinkage")
+                                    flag OVERRIDE
+                                    dispid 0
+                                    method
+                                       name null
+                                       returns QName(PackageNamespace(""),"String")
+                                       
+                                       body
+                                          maxstack 1
+                                          localcount 1
+                                          initscopedepth 12
+                                          maxscopedepth 13
+                                          
+                                          code
+                                             Constant export mode is not supported.
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                              }
+                           }

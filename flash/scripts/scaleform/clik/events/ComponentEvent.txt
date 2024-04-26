@@ -1,0 +1,76 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 4
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package scaleform.clik.events
+{
+   import flash.events.Event;
+   
+   public class ComponentEvent extends Event
+   {
+      
+      public static const STATE_CHANGE:String = "stateChange";
+      
+      public static const SHOW:String = "show";
+      
+      public static const HIDE:String = "hide";
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function ComponentEvent(param1:String, param2:Boolean = false, param3:Boolean = true)
+      {
+         method
+            name null
+            flag HAS_OPTIONAL
+            param QName(PackageNamespace(""),"String")
+            param QName(PackageNamespace(""),"Boolean")
+            param QName(PackageNamespace(""),"Boolean")
+            optional False()
+            optional True()
+            returns null
+            
+            body
+               maxstack 4
+               localcount 4
+               initscopedepth 5
+               maxscopedepth 6
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+   }
+}

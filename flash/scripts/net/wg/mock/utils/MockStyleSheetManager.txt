@@ -1,0 +1,132 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.mock.utils
+{
+   import flash.text.TextField;
+   import net.wg.data.constants.Values;
+   import net.wg.utils.IStyleSheetManager;
+   
+   public class MockStyleSheetManager implements IStyleSheetManager
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function MockStyleSheetManager()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function setForceFocusedStyle(param1:String) : String
+      {
+         trait method QName(PackageNamespace(""),"setForceFocusedStyle")
+            dispid 0
+            method
+               name null
+               param QName(PackageNamespace(""),"String")
+               returns QName(PackageNamespace(""),"String")
+               
+               body
+                  maxstack 1
+                  localcount 2
+                  initscopedepth 4
+                  maxscopedepth 5
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function setLinkStyle(param1:TextField) : void
+         {
+            trait method QName(PackageNamespace(""),"setLinkStyle")
+               dispid 0
+               method
+                  name null
+                  param QName(PackageNamespace("flash.text"),"TextField")
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 1
+                     localcount 2
+                     initscopedepth 4
+                     maxscopedepth 5
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function setWhiteLinkStyle(param1:TextField) : void
+            {
+               trait method QName(PackageNamespace(""),"setWhiteLinkStyle")
+                  dispid 0
+                  method
+                     name null
+                     param QName(PackageNamespace("flash.text"),"TextField")
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 1
+                        localcount 2
+                        initscopedepth 4
+                        maxscopedepth 5
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+            }
+         }

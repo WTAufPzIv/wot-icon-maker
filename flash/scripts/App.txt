@@ -1,0 +1,777 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package
+{
+   import flash.display.DisplayObjectContainer;
+   import flash.display.Stage;
+   import net.wg.app.IApplication;
+   import net.wg.data.constants.LobbyMetrics;
+   import net.wg.infrastructure.base.meta.IGlobalVarsMgrMeta;
+   import net.wg.infrastructure.interfaces.ICursorManager;
+   import net.wg.infrastructure.managers.IAtlasManager;
+   import net.wg.infrastructure.managers.ICacheManager;
+   import net.wg.infrastructure.managers.IColorSchemeManager;
+   import net.wg.infrastructure.managers.IContainerManager;
+   import net.wg.infrastructure.managers.IContextMenuManager;
+   import net.wg.infrastructure.managers.IEnvironmentManager;
+   import net.wg.infrastructure.managers.IEventLogManager;
+   import net.wg.infrastructure.managers.IGraphicsOptimizationManager;
+   import net.wg.infrastructure.managers.IImageManager;
+   import net.wg.infrastructure.managers.IPopoverManager;
+   import net.wg.infrastructure.managers.ISoundManager;
+   import net.wg.infrastructure.managers.IStageSizeManager;
+   import net.wg.infrastructure.managers.ITooltipMgr;
+   import net.wg.infrastructure.managers.ITutorialManager;
+   import net.wg.infrastructure.managers.IUILoggerManager;
+   import net.wg.infrastructure.managers.IVoiceChatManager;
+   import net.wg.infrastructure.managers.IWaitingView;
+   import net.wg.mock.MockApplication;
+   import net.wg.utils.IGameInputManager;
+   import net.wg.utils.ITextManager;
+   import net.wg.utils.ITweenManager;
+   import net.wg.utils.IUtils;
+   import scaleform.gfx.Extensions;
+   
+   public class App
+   {
+      
+      private static var ms_instance:IApplication;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function App()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public static function get instance() : IApplication
+      {
+         trait getter QName(PackageNamespace(""),"instance")
+            flag FINAL
+            dispid 3
+            method
+               name null
+               returns QName(PackageNamespace("net.wg.app"),"IApplication")
+               
+               body
+                  maxstack 2
+                  localcount 1
+                  initscopedepth 3
+                  maxscopedepth 4
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public static function set instance(param1:IApplication) : void
+         {
+            trait setter QName(PackageNamespace(""),"instance")
+               flag FINAL
+               dispid 4
+               method
+                  name null
+                  param QName(PackageNamespace("net.wg.app"),"IApplication")
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 2
+                     localcount 2
+                     initscopedepth 3
+                     maxscopedepth 4
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public static function get globalVarsMgr() : IGlobalVarsMgrMeta
+            {
+               trait getter QName(PackageNamespace(""),"globalVarsMgr")
+                  flag FINAL
+                  dispid 5
+                  method
+                     name null
+                     returns QName(PackageNamespace("net.wg.infrastructure.base.meta"),"IGlobalVarsMgrMeta")
+                     
+                     body
+                        maxstack 1
+                        localcount 1
+                        initscopedepth 3
+                        maxscopedepth 4
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public static function get soundMgr() : ISoundManager
+               {
+                  trait getter QName(PackageNamespace(""),"soundMgr")
+                     flag FINAL
+                     dispid 6
+                     method
+                        name null
+                        returns QName(PackageNamespace("net.wg.infrastructure.managers"),"ISoundManager")
+                        
+                        body
+                           maxstack 1
+                           localcount 1
+                           initscopedepth 3
+                           maxscopedepth 4
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public static function get toolTipMgr() : ITooltipMgr
+                  {
+                     trait getter QName(PackageNamespace(""),"toolTipMgr")
+                        flag FINAL
+                        dispid 7
+                        method
+                           name null
+                           returns QName(PackageNamespace("net.wg.infrastructure.managers"),"ITooltipMgr")
+                           
+                           body
+                              maxstack 1
+                              localcount 1
+                              initscopedepth 3
+                              maxscopedepth 4
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public static function get container() : DisplayObjectContainer
+                     {
+                        trait getter QName(PackageNamespace(""),"container")
+                           flag FINAL
+                           dispid 8
+                           method
+                              name null
+                              returns QName(PackageNamespace("flash.display"),"DisplayObjectContainer")
+                              
+                              body
+                                 maxstack 1
+                                 localcount 1
+                                 initscopedepth 3
+                                 maxscopedepth 4
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        public static function get waiting() : IWaitingView
+                        {
+                           trait getter QName(PackageNamespace(""),"waiting")
+                              flag FINAL
+                              dispid 9
+                              method
+                                 name null
+                                 returns QName(PackageNamespace("net.wg.infrastructure.managers"),"IWaitingView")
+                                 
+                                 body
+                                    maxstack 2
+                                    localcount 1
+                                    initscopedepth 3
+                                    maxscopedepth 4
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           public static function get environment() : IEnvironmentManager
+                           {
+                              trait getter QName(PackageNamespace(""),"environment")
+                                 flag FINAL
+                                 dispid 10
+                                 method
+                                    name null
+                                    returns QName(PackageNamespace("net.wg.infrastructure.managers"),"IEnvironmentManager")
+                                    
+                                    body
+                                       maxstack 1
+                                       localcount 1
+                                       initscopedepth 3
+                                       maxscopedepth 4
+                                       
+                                       code
+                                          Constant export mode is not supported.
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                              
+                              public static function get contextMenuMgr() : IContextMenuManager
+                              {
+                                 trait getter QName(PackageNamespace(""),"contextMenuMgr")
+                                    flag FINAL
+                                    dispid 11
+                                    method
+                                       name null
+                                       returns QName(PackageNamespace("net.wg.infrastructure.managers"),"IContextMenuManager")
+                                       
+                                       body
+                                          maxstack 1
+                                          localcount 1
+                                          initscopedepth 3
+                                          maxscopedepth 4
+                                          
+                                          code
+                                             Constant export mode is not supported.
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                                 
+                                 public static function get popoverMgr() : IPopoverManager
+                                 {
+                                    trait getter QName(PackageNamespace(""),"popoverMgr")
+                                       flag FINAL
+                                       dispid 12
+                                       method
+                                          name null
+                                          returns QName(PackageNamespace("net.wg.infrastructure.managers"),"IPopoverManager")
+                                          
+                                          body
+                                             maxstack 1
+                                             localcount 1
+                                             initscopedepth 3
+                                             maxscopedepth 4
+                                             
+                                             code
+                                                Constant export mode is not supported.
+                                             end ; code
+                                          end ; body
+                                       end ; method
+                                    }
+                                    
+                                    public static function get colorSchemeMgr() : IColorSchemeManager
+                                    {
+                                       trait getter QName(PackageNamespace(""),"colorSchemeMgr")
+                                          flag FINAL
+                                          dispid 13
+                                          method
+                                             name null
+                                             returns QName(PackageNamespace("net.wg.infrastructure.managers"),"IColorSchemeManager")
+                                             
+                                             body
+                                                maxstack 1
+                                                localcount 1
+                                                initscopedepth 3
+                                                maxscopedepth 4
+                                                
+                                                code
+                                                   Constant export mode is not supported.
+                                                end ; code
+                                             end ; body
+                                          end ; method
+                                       }
+                                       
+                                       public static function get textMgr() : ITextManager
+                                       {
+                                          trait getter QName(PackageNamespace(""),"textMgr")
+                                             flag FINAL
+                                             dispid 14
+                                             method
+                                                name null
+                                                returns QName(PackageNamespace("net.wg.utils"),"ITextManager")
+                                                
+                                                body
+                                                   maxstack 1
+                                                   localcount 1
+                                                   initscopedepth 3
+                                                   maxscopedepth 4
+                                                   
+                                                   code
+                                                      Constant export mode is not supported.
+                                                   end ; code
+                                                end ; body
+                                             end ; method
+                                          }
+                                          
+                                          public static function get voiceChatMgr() : IVoiceChatManager
+                                          {
+                                             trait getter QName(PackageNamespace(""),"voiceChatMgr")
+                                                flag FINAL
+                                                dispid 15
+                                                method
+                                                   name null
+                                                   returns QName(PackageNamespace("net.wg.infrastructure.managers"),"IVoiceChatManager")
+                                                   
+                                                   body
+                                                      maxstack 1
+                                                      localcount 1
+                                                      initscopedepth 3
+                                                      maxscopedepth 4
+                                                      
+                                                      code
+                                                         Constant export mode is not supported.
+                                                      end ; code
+                                                   end ; body
+                                                end ; method
+                                             }
+                                             
+                                             public static function get utils() : IUtils
+                                             {
+                                                trait getter QName(PackageNamespace(""),"utils")
+                                                   flag FINAL
+                                                   dispid 16
+                                                   method
+                                                      name null
+                                                      returns QName(PackageNamespace("net.wg.utils"),"IUtils")
+                                                      
+                                                      body
+                                                         maxstack 1
+                                                         localcount 1
+                                                         initscopedepth 3
+                                                         maxscopedepth 4
+                                                         
+                                                         code
+                                                            Constant export mode is not supported.
+                                                         end ; code
+                                                      end ; body
+                                                   end ; method
+                                                }
+                                                
+                                                public static function get tweenMgr() : ITweenManager
+                                                {
+                                                   trait getter QName(PackageNamespace(""),"tweenMgr")
+                                                      flag FINAL
+                                                      dispid 17
+                                                      method
+                                                         name null
+                                                         returns QName(PackageNamespace("net.wg.utils"),"ITweenManager")
+                                                         
+                                                         body
+                                                            maxstack 1
+                                                            localcount 1
+                                                            initscopedepth 3
+                                                            maxscopedepth 4
+                                                            
+                                                            code
+                                                               Constant export mode is not supported.
+                                                            end ; code
+                                                         end ; body
+                                                      end ; method
+                                                   }
+                                                   
+                                                   public static function get cursor() : ICursorManager
+                                                   {
+                                                      trait getter QName(PackageNamespace(""),"cursor")
+                                                         flag FINAL
+                                                         dispid 18
+                                                         method
+                                                            name null
+                                                            returns QName(PackageNamespace("net.wg.infrastructure.interfaces"),"ICursorManager")
+                                                            
+                                                            body
+                                                               maxstack 1
+                                                               localcount 1
+                                                               initscopedepth 3
+                                                               maxscopedepth 4
+                                                               
+                                                               code
+                                                                  Constant export mode is not supported.
+                                                               end ; code
+                                                            end ; body
+                                                         end ; method
+                                                      }
+                                                      
+                                                      public static function get containerMgr() : IContainerManager
+                                                      {
+                                                         trait getter QName(PackageNamespace(""),"containerMgr")
+                                                            flag FINAL
+                                                            dispid 19
+                                                            method
+                                                               name null
+                                                               returns QName(PackageNamespace("net.wg.infrastructure.managers"),"IContainerManager")
+                                                               
+                                                               body
+                                                                  maxstack 1
+                                                                  localcount 1
+                                                                  initscopedepth 3
+                                                                  maxscopedepth 4
+                                                                  
+                                                                  code
+                                                                     Constant export mode is not supported.
+                                                                  end ; code
+                                                               end ; body
+                                                            end ; method
+                                                         }
+                                                         
+                                                         public static function get gameInputMgr() : IGameInputManager
+                                                         {
+                                                            trait getter QName(PackageNamespace(""),"gameInputMgr")
+                                                               flag FINAL
+                                                               dispid 20
+                                                               method
+                                                                  name null
+                                                                  returns QName(PackageNamespace("net.wg.utils"),"IGameInputManager")
+                                                                  
+                                                                  body
+                                                                     maxstack 1
+                                                                     localcount 1
+                                                                     initscopedepth 3
+                                                                     maxscopedepth 4
+                                                                     
+                                                                     code
+                                                                        Constant export mode is not supported.
+                                                                     end ; code
+                                                                  end ; body
+                                                               end ; method
+                                                            }
+                                                            
+                                                            public static function get eventLogManager() : IEventLogManager
+                                                            {
+                                                               trait getter QName(PackageNamespace(""),"eventLogManager")
+                                                                  flag FINAL
+                                                                  dispid 21
+                                                                  method
+                                                                     name null
+                                                                     returns QName(PackageNamespace("net.wg.infrastructure.managers"),"IEventLogManager")
+                                                                     
+                                                                     body
+                                                                        maxstack 1
+                                                                        localcount 1
+                                                                        initscopedepth 3
+                                                                        maxscopedepth 4
+                                                                        
+                                                                        code
+                                                                           Constant export mode is not supported.
+                                                                        end ; code
+                                                                     end ; body
+                                                                  end ; method
+                                                               }
+                                                               
+                                                               public static function get imageMgr() : IImageManager
+                                                               {
+                                                                  trait getter QName(PackageNamespace(""),"imageMgr")
+                                                                     flag FINAL
+                                                                     dispid 22
+                                                                     method
+                                                                        name null
+                                                                        returns QName(PackageNamespace("net.wg.infrastructure.managers"),"IImageManager")
+                                                                        
+                                                                        body
+                                                                           maxstack 1
+                                                                           localcount 1
+                                                                           initscopedepth 3
+                                                                           maxscopedepth 4
+                                                                           
+                                                                           code
+                                                                              Constant export mode is not supported.
+                                                                           end ; code
+                                                                        end ; body
+                                                                     end ; method
+                                                                  }
+                                                                  
+                                                                  public static function get cacheMgr() : ICacheManager
+                                                                  {
+                                                                     trait getter QName(PackageNamespace(""),"cacheMgr")
+                                                                        flag FINAL
+                                                                        dispid 23
+                                                                        method
+                                                                           name null
+                                                                           returns QName(PackageNamespace("net.wg.infrastructure.managers"),"ICacheManager")
+                                                                           
+                                                                           body
+                                                                              maxstack 1
+                                                                              localcount 1
+                                                                              initscopedepth 3
+                                                                              maxscopedepth 4
+                                                                              
+                                                                              code
+                                                                                 Constant export mode is not supported.
+                                                                              end ; code
+                                                                           end ; body
+                                                                        end ; method
+                                                                     }
+                                                                     
+                                                                     public static function get tutorialMgr() : ITutorialManager
+                                                                     {
+                                                                        trait getter QName(PackageNamespace(""),"tutorialMgr")
+                                                                           flag FINAL
+                                                                           dispid 24
+                                                                           method
+                                                                              name null
+                                                                              returns QName(PackageNamespace("net.wg.infrastructure.managers"),"ITutorialManager")
+                                                                              
+                                                                              body
+                                                                                 maxstack 1
+                                                                                 localcount 1
+                                                                                 initscopedepth 3
+                                                                                 maxscopedepth 4
+                                                                                 
+                                                                                 code
+                                                                                    Constant export mode is not supported.
+                                                                                 end ; code
+                                                                              end ; body
+                                                                           end ; method
+                                                                        }
+                                                                        
+                                                                        public static function get uiLoggerManager() : IUILoggerManager
+                                                                        {
+                                                                           trait getter QName(PackageNamespace(""),"uiLoggerManager")
+                                                                              flag FINAL
+                                                                              dispid 25
+                                                                              method
+                                                                                 name null
+                                                                                 returns QName(PackageNamespace("net.wg.infrastructure.managers"),"IUILoggerManager")
+                                                                                 
+                                                                                 body
+                                                                                    maxstack 1
+                                                                                    localcount 1
+                                                                                    initscopedepth 3
+                                                                                    maxscopedepth 4
+                                                                                    
+                                                                                    code
+                                                                                       Constant export mode is not supported.
+                                                                                    end ; code
+                                                                                 end ; body
+                                                                              end ; method
+                                                                           }
+                                                                           
+                                                                           public static function get atlasMgr() : IAtlasManager
+                                                                           {
+                                                                              trait getter QName(PackageNamespace(""),"atlasMgr")
+                                                                                 flag FINAL
+                                                                                 dispid 26
+                                                                                 method
+                                                                                    name null
+                                                                                    returns QName(PackageNamespace("net.wg.infrastructure.managers"),"IAtlasManager")
+                                                                                    
+                                                                                    body
+                                                                                       maxstack 1
+                                                                                       localcount 1
+                                                                                       initscopedepth 3
+                                                                                       maxscopedepth 4
+                                                                                       
+                                                                                       code
+                                                                                          Constant export mode is not supported.
+                                                                                       end ; code
+                                                                                    end ; body
+                                                                                 end ; method
+                                                                              }
+                                                                              
+                                                                              public static function get graphicsOptimizationMgr() : IGraphicsOptimizationManager
+                                                                              {
+                                                                                 trait getter QName(PackageNamespace(""),"graphicsOptimizationMgr")
+                                                                                    flag FINAL
+                                                                                    dispid 27
+                                                                                    method
+                                                                                       name null
+                                                                                       returns QName(PackageNamespace("net.wg.infrastructure.managers"),"IGraphicsOptimizationManager")
+                                                                                       
+                                                                                       body
+                                                                                          maxstack 1
+                                                                                          localcount 1
+                                                                                          initscopedepth 3
+                                                                                          maxscopedepth 4
+                                                                                          
+                                                                                          code
+                                                                                             Constant export mode is not supported.
+                                                                                          end ; code
+                                                                                       end ; body
+                                                                                    end ; method
+                                                                                 }
+                                                                                 
+                                                                                 public static function get stageSizeMgr() : IStageSizeManager
+                                                                                 {
+                                                                                    trait getter QName(PackageNamespace(""),"stageSizeMgr")
+                                                                                       flag FINAL
+                                                                                       dispid 28
+                                                                                       method
+                                                                                          name null
+                                                                                          returns QName(PackageNamespace("net.wg.infrastructure.managers"),"IStageSizeManager")
+                                                                                          
+                                                                                          body
+                                                                                             maxstack 1
+                                                                                             localcount 1
+                                                                                             initscopedepth 3
+                                                                                             maxscopedepth 4
+                                                                                             
+                                                                                             code
+                                                                                                Constant export mode is not supported.
+                                                                                             end ; code
+                                                                                          end ; body
+                                                                                       end ; method
+                                                                                    }
+                                                                                    
+                                                                                    public static function get appWidth() : Number
+                                                                                    {
+                                                                                       trait getter QName(PackageNamespace(""),"appWidth")
+                                                                                          flag FINAL
+                                                                                          dispid 29
+                                                                                          method
+                                                                                             name null
+                                                                                             returns QName(PackageNamespace(""),"Number")
+                                                                                             
+                                                                                             body
+                                                                                                maxstack 2
+                                                                                                localcount 1
+                                                                                                initscopedepth 3
+                                                                                                maxscopedepth 4
+                                                                                                
+                                                                                                code
+                                                                                                   Constant export mode is not supported.
+                                                                                                end ; code
+                                                                                             end ; body
+                                                                                          end ; method
+                                                                                       }
+                                                                                       
+                                                                                       public static function get appHeight() : Number
+                                                                                       {
+                                                                                          trait getter QName(PackageNamespace(""),"appHeight")
+                                                                                             flag FINAL
+                                                                                             dispid 30
+                                                                                             method
+                                                                                                name null
+                                                                                                returns QName(PackageNamespace(""),"Number")
+                                                                                                
+                                                                                                body
+                                                                                                   maxstack 2
+                                                                                                   localcount 1
+                                                                                                   initscopedepth 3
+                                                                                                   maxscopedepth 4
+                                                                                                   
+                                                                                                   code
+                                                                                                      Constant export mode is not supported.
+                                                                                                   end ; code
+                                                                                                end ; body
+                                                                                             end ; method
+                                                                                          }
+                                                                                          
+                                                                                          public static function get appScale() : Number
+                                                                                          {
+                                                                                             trait getter QName(PackageNamespace(""),"appScale")
+                                                                                                flag FINAL
+                                                                                                dispid 31
+                                                                                                method
+                                                                                                   name null
+                                                                                                   returns QName(PackageNamespace(""),"Number")
+                                                                                                   
+                                                                                                   body
+                                                                                                      maxstack 2
+                                                                                                      localcount 1
+                                                                                                      initscopedepth 3
+                                                                                                      maxscopedepth 4
+                                                                                                      
+                                                                                                      code
+                                                                                                         Constant export mode is not supported.
+                                                                                                      end ; code
+                                                                                                   end ; body
+                                                                                                end ; method
+                                                                                             }
+                                                                                             
+                                                                                             public static function get stage() : Stage
+                                                                                             {
+                                                                                                trait getter QName(PackageNamespace(""),"stage")
+                                                                                                   flag FINAL
+                                                                                                   dispid 32
+                                                                                                   method
+                                                                                                      name null
+                                                                                                      returns QName(PackageNamespace("flash.display"),"Stage")
+                                                                                                      
+                                                                                                      body
+                                                                                                         maxstack 1
+                                                                                                         localcount 1
+                                                                                                         initscopedepth 3
+                                                                                                         maxscopedepth 4
+                                                                                                         
+                                                                                                         code
+                                                                                                            Constant export mode is not supported.
+                                                                                                         end ; code
+                                                                                                      end ; body
+                                                                                                   end ; method
+                                                                                                }
+                                                                                                
+                                                                                                public static function get systemMessages() : DisplayObjectContainer
+                                                                                                {
+                                                                                                   trait getter QName(PackageNamespace(""),"systemMessages")
+                                                                                                      flag FINAL
+                                                                                                      dispid 33
+                                                                                                      method
+                                                                                                         name null
+                                                                                                         returns QName(PackageNamespace("flash.display"),"DisplayObjectContainer")
+                                                                                                         
+                                                                                                         body
+                                                                                                            maxstack 1
+                                                                                                            localcount 1
+                                                                                                            initscopedepth 3
+                                                                                                            maxscopedepth 4
+                                                                                                            
+                                                                                                            code
+                                                                                                               Constant export mode is not supported.
+                                                                                                            end ; code
+                                                                                                         end ; body
+                                                                                                      end ; method
+                                                                                                   }
+                                                                                                }
+                                                                                             }

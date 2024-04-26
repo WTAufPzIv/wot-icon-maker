@@ -1,0 +1,421 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 12
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.gui.battle.views.staticMarkers.interestPoint
+{
+   import flash.display.MovieClip;
+   import flash.text.TextField;
+   import net.wg.data.constants.InvalidationType;
+   import net.wg.data.constants.Time;
+   import net.wg.data.constants.Values;
+   import net.wg.data.constants.generated.POI_CONSTS;
+   import net.wg.gui.battle.components.poi.components.PoiWithProgressStateCircle;
+   import net.wg.gui.battle.views.vehicleMarkers.IMarkerManagerHandler;
+   import net.wg.gui.battle.views.vehicleMarkers.VMAtlasItemName;
+   import net.wg.gui.battle.views.vehicleMarkers.VehicleMarkersManager;
+   import net.wg.gui.battle.views.vehicleMarkers.events.VehicleMarkersManagerEvent;
+   import org.idmedia.as3commons.util.StringUtils;
+   import scaleform.gfx.TextFieldEx;
+   
+   public class MarkerPoiProgressCircle extends PoiWithProgressStateCircle implements IMarkerManagerHandler
+   {
+      
+      private static const INV_TIMER:uint;
+      
+      private static const ZERO_STR:String = "0";
+      
+      private static const COLON_STR:String = ":";
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 3
+               localcount 1
+               initscopedepth 12
+               maxscopedepth 13
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var smallIcon:MovieClip = null;
+      
+      public var label:TextField = null;
+      
+      private var _vmManager:VehicleMarkersManager = null;
+      
+      private var _isManagerReady:Boolean = false;
+      
+      private var _durationSeconds:int;
+      
+      public function MarkerPoiProgressCircle()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 3
+               localcount 1
+               initscopedepth 13
+               maxscopedepth 14
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      override public function setStatusID(param1:int) : void
+      {
+         trait method QName(PackageNamespace(""),"setStatusID")
+            flag OVERRIDE
+            dispid 0
+            method
+               name null
+               param QName(PackageNamespace(""),"int")
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 2
+                  localcount 2
+                  initscopedepth 13
+                  maxscopedepth 14
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         override public function updateProgress(param1:Number) : void
+         {
+            trait method QName(PackageNamespace(""),"updateProgress")
+               flag OVERRIDE
+               dispid 0
+               method
+                  name null
+                  param QName(PackageNamespace(""),"Number")
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 2
+                     localcount 2
+                     initscopedepth 13
+                     maxscopedepth 14
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            override protected function afterProgressUpdate() : void
+            {
+               trait method QName(ProtectedNamespace("net.wg.gui.battle.views.staticMarkers.interestPoint:MarkerPoiProgressCircle"),"afterProgressUpdate")
+                  flag OVERRIDE
+                  dispid 0
+                  method
+                     name null
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 2
+                        localcount 1
+                        initscopedepth 13
+                        maxscopedepth 14
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               override protected function initialize() : void
+               {
+                  trait method QName(ProtectedNamespace("net.wg.gui.battle.views.staticMarkers.interestPoint:MarkerPoiProgressCircle"),"initialize")
+                     flag OVERRIDE
+                     dispid 0
+                     method
+                        name null
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 3
+                           localcount 1
+                           initscopedepth 13
+                           maxscopedepth 14
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  override protected function onDispose() : void
+                  {
+                     trait method QName(ProtectedNamespace("net.wg.gui.battle.views.staticMarkers.interestPoint:MarkerPoiProgressCircle"),"onDispose")
+                        flag OVERRIDE
+                        dispid 0
+                        method
+                           name null
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 3
+                              localcount 1
+                              initscopedepth 13
+                              maxscopedepth 14
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     override protected function drawIconType() : void
+                     {
+                        trait method QName(ProtectedNamespace("net.wg.gui.battle.views.staticMarkers.interestPoint:MarkerPoiProgressCircle"),"drawIconType")
+                           flag OVERRIDE
+                           dispid 0
+                           method
+                              name null
+                              returns QName(PackageNamespace(""),"void")
+                              
+                              body
+                                 maxstack 5
+                                 localcount 2
+                                 initscopedepth 13
+                                 maxscopedepth 14
+                                 
+                                 code
+                                    Constant export mode is not supported.
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        override protected function draw() : void
+                        {
+                           trait method QName(ProtectedNamespace("net.wg.gui.battle.views.staticMarkers.interestPoint:MarkerPoiProgressCircle"),"draw")
+                              flag OVERRIDE
+                              dispid 0
+                              method
+                                 name null
+                                 returns QName(PackageNamespace(""),"void")
+                                 
+                                 body
+                                    maxstack 2
+                                    localcount 3
+                                    initscopedepth 13
+                                    maxscopedepth 14
+                                    
+                                    code
+                                       Constant export mode is not supported.
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           override protected function drawBackIcon() : void
+                           {
+                              trait method QName(ProtectedNamespace("net.wg.gui.battle.views.staticMarkers.interestPoint:MarkerPoiProgressCircle"),"drawBackIcon")
+                                 flag OVERRIDE
+                                 dispid 0
+                                 method
+                                    name null
+                                    returns QName(PackageNamespace(""),"void")
+                                    
+                                    body
+                                       maxstack 5
+                                       localcount 1
+                                       initscopedepth 13
+                                       maxscopedepth 14
+                                       
+                                       code
+                                          Constant export mode is not supported.
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                              
+                              override protected function updateColorBlind() : void
+                              {
+                                 trait method QName(ProtectedNamespace("net.wg.gui.battle.views.staticMarkers.interestPoint:MarkerPoiProgressCircle"),"updateColorBlind")
+                                    flag OVERRIDE
+                                    dispid 0
+                                    method
+                                       name null
+                                       returns QName(PackageNamespace(""),"void")
+                                       
+                                       body
+                                          maxstack 2
+                                          localcount 1
+                                          initscopedepth 13
+                                          maxscopedepth 14
+                                          
+                                          code
+                                             Constant export mode is not supported.
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                                 
+                                 override protected function applyStateAndProgress() : void
+                                 {
+                                    trait method QName(ProtectedNamespace("net.wg.gui.battle.views.staticMarkers.interestPoint:MarkerPoiProgressCircle"),"applyStateAndProgress")
+                                       flag OVERRIDE
+                                       dispid 0
+                                       method
+                                          name null
+                                          returns QName(PackageNamespace(""),"void")
+                                          
+                                          body
+                                             maxstack 1
+                                             localcount 1
+                                             initscopedepth 13
+                                             maxscopedepth 14
+                                             
+                                             code
+                                                Constant export mode is not supported.
+                                             end ; code
+                                          end ; body
+                                       end ; method
+                                    }
+                                    
+                                    public function managerReadyHandler() : void
+                                    {
+                                       trait method QName(PackageNamespace(""),"managerReadyHandler")
+                                          dispid 0
+                                          method
+                                             name null
+                                             returns QName(PackageNamespace(""),"void")
+                                             
+                                             body
+                                                maxstack 2
+                                                localcount 1
+                                                initscopedepth 13
+                                                maxscopedepth 14
+                                                
+                                                code
+                                                   Constant export mode is not supported.
+                                                end ; code
+                                             end ; body
+                                          end ; method
+                                       }
+                                       
+                                       public function setDuration(param1:int) : void
+                                       {
+                                          trait method QName(PackageNamespace(""),"setDuration")
+                                             dispid 0
+                                             method
+                                                name null
+                                                param QName(PackageNamespace(""),"int")
+                                                returns QName(PackageNamespace(""),"void")
+                                                
+                                                body
+                                                   maxstack 2
+                                                   localcount 2
+                                                   initscopedepth 13
+                                                   maxscopedepth 14
+                                                   
+                                                   code
+                                                      Constant export mode is not supported.
+                                                   end ; code
+                                                end ; body
+                                             end ; method
+                                          }
+                                          
+                                          private function updateIconsVisibility() : void
+                                          {
+                                             trait method QName(PrivateNamespace(null,"41"),"updateIconsVisibility")
+                                                dispid 0
+                                                method
+                                                   name null
+                                                   returns QName(PackageNamespace(""),"void")
+                                                   
+                                                   body
+                                                      maxstack 2
+                                                      localcount 2
+                                                      initscopedepth 13
+                                                      maxscopedepth 14
+                                                      
+                                                      code
+                                                         Constant export mode is not supported.
+                                                      end ; code
+                                                   end ; body
+                                                end ; method
+                                             }
+                                             
+                                             private function getTimeoutStr() : String
+                                             {
+                                                trait method QName(PrivateNamespace(null,"41"),"getTimeoutStr")
+                                                   dispid 0
+                                                   method
+                                                      name null
+                                                      returns QName(PackageNamespace(""),"String")
+                                                      
+                                                      body
+                                                         maxstack 3
+                                                         localcount 4
+                                                         initscopedepth 13
+                                                         maxscopedepth 14
+                                                         
+                                                         code
+                                                            Constant export mode is not supported.
+                                                         end ; code
+                                                      end ; body
+                                                   end ; method
+                                                }
+                                                
+                                                private function onUpdateColorsHandler(param1:VehicleMarkersManagerEvent) : void
+                                                {
+                                                   trait method QName(PrivateNamespace(null,"41"),"onUpdateColorsHandler")
+                                                      dispid 0
+                                                      method
+                                                         name null
+                                                         param QName(PackageNamespace("net.wg.gui.battle.views.vehicleMarkers.events"),"VehicleMarkersManagerEvent")
+                                                         returns QName(PackageNamespace(""),"void")
+                                                         
+                                                         body
+                                                            maxstack 1
+                                                            localcount 2
+                                                            initscopedepth 13
+                                                            maxscopedepth 14
+                                                            
+                                                            code
+                                                               Constant export mode is not supported.
+                                                            end ; code
+                                                         end ; body
+                                                      end ; method
+                                                   }
+                                                }
+                                             }

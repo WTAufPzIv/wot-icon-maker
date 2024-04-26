@@ -1,0 +1,187 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 3
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package
+{
+   public class DebugUtils
+   {
+      
+      private static const CPP_DO_LOG_METHOD_NAME:String = "WG.doLog";
+      
+      private static const SEVERITY_TRACE:Number = 65536;
+      
+      private static const SEVERITY_DEBUG:Number = 131072;
+      
+      private static const SEVERITY_WARNING:Number = 196608;
+      
+      private static const SEVERITY_ERROR:Number = 262144;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function DebugUtils()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public static function LOG_TRACE(... rest) : void
+      {
+         trait method QName(PackageNamespace(""),"LOG_TRACE")
+            flag FINAL
+            dispid 3
+            method
+               name null
+               flag NEED_REST
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 1
+                  localcount 2
+                  initscopedepth 3
+                  maxscopedepth 4
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public static function LOG_DEBUG(... rest) : void
+         {
+            trait method QName(PackageNamespace(""),"LOG_DEBUG")
+               flag FINAL
+               dispid 4
+               method
+                  name null
+                  flag NEED_REST
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 1
+                     localcount 2
+                     initscopedepth 3
+                     maxscopedepth 4
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public static function LOG_ERROR(... rest) : void
+            {
+               trait method QName(PackageNamespace(""),"LOG_ERROR")
+                  flag FINAL
+                  dispid 5
+                  method
+                     name null
+                     flag NEED_REST
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 3
+                        localcount 2
+                        initscopedepth 3
+                        maxscopedepth 4
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public static function LOG_WARNING(... rest) : void
+               {
+                  trait method QName(PackageNamespace(""),"LOG_WARNING")
+                     flag FINAL
+                     dispid 6
+                     method
+                        name null
+                        flag NEED_REST
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 3
+                           localcount 2
+                           initscopedepth 3
+                           maxscopedepth 4
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  private static function __doLog() : void
+                  {
+                     trait method QName(PrivateNamespace(null,"88"),"__doLog")
+                        flag FINAL
+                        dispid 7
+                        method
+                           name null
+                           flag NEED_ARGUMENTS
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 6
+                              localcount 2
+                              initscopedepth 3
+                              maxscopedepth 4
+                              
+                              code
+                                 Constant export mode is not supported.
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                  }
+               }

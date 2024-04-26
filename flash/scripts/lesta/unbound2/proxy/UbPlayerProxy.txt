@@ -1,0 +1,178 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 5
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package lesta.unbound2.proxy
+{
+   import lesta.unbound2.UBPopoverCallerWrapper;
+   import lesta.unbound2.UbBackgroundPainter;
+   import lesta.unbound2.proxy.base.UbProxy;
+   import lesta.unbound2.type_system.UbNumber;
+   
+   public class UbPlayerProxy extends UbProxy
+   {
+      
+      private static const clazz:Class;
+      
+      private static const popoverWrapperClazz:Class;
+      
+      private static const numberClazz:Class;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 5
+               maxscopedepth 6
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var p_addFile:Function;
+      
+      public var p_buildElement:Function;
+      
+      public var p_destroyElement:Function;
+      
+      public var p_registerAsClass:Function;
+      
+      public function UbPlayerProxy()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 6
+               maxscopedepth 7
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function addFile(param1:String) : void
+      {
+         trait method QName(PackageNamespace(""),"addFile")
+            dispid 0
+            method
+               name null
+               param QName(PackageNamespace(""),"String")
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 2
+                  localcount 2
+                  initscopedepth 6
+                  maxscopedepth 7
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function buildElement(param1:String, param2:Object = null, param3:Object = null) : UbElementProxy
+         {
+            trait method QName(PackageNamespace(""),"buildElement")
+               dispid 0
+               method
+                  name null
+                  flag HAS_OPTIONAL
+                  param QName(PackageNamespace(""),"String")
+                  param QName(PackageNamespace(""),"Object")
+                  param QName(PackageNamespace(""),"Object")
+                  optional Null()
+                  optional Null()
+                  returns QName(PackageNamespace("lesta.unbound2.proxy"),"UbElementProxy")
+                  
+                  body
+                     maxstack 4
+                     localcount 4
+                     initscopedepth 6
+                     maxscopedepth 7
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function destroyElement(param1:int) : void
+            {
+               trait method QName(PackageNamespace(""),"destroyElement")
+                  dispid 0
+                  method
+                     name null
+                     param QName(PackageNamespace(""),"int")
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 2
+                        localcount 2
+                        initscopedepth 6
+                        maxscopedepth 7
+                        
+                        code
+                           Constant export mode is not supported.
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function registerAsClass(param1:String, param2:String, param3:Array = null) : void
+               {
+                  trait method QName(PackageNamespace(""),"registerAsClass")
+                     dispid 0
+                     method
+                        name null
+                        flag HAS_OPTIONAL
+                        param QName(PackageNamespace(""),"String")
+                        param QName(PackageNamespace(""),"String")
+                        param QName(PackageNamespace(""),"Array")
+                        optional Null()
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 4
+                           localcount 4
+                           initscopedepth 6
+                           maxscopedepth 7
+                           
+                           code
+                              Constant export mode is not supported.
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+               }
+            }

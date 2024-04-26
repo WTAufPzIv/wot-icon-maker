@@ -1,0 +1,113 @@
+
+{
+   method
+      name null
+      returns null
+      
+      body
+         maxstack 2
+         localcount 1
+         initscopedepth 1
+         maxscopedepth 9
+         
+         code
+            Constant export mode is not supported.
+         end ; code
+      end ; body
+   end ; method
+}
+
+package net.wg.gui.battle.views.vehicleMarkers
+{
+   import flash.display.MovieClip;
+   import flash.display.Sprite;
+   import net.wg.infrastructure.interfaces.entity.IDisposable;
+   
+   public class TargetMarker extends MovieClip implements IDisposable
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 9
+               maxscopedepth 10
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var marker:Sprite;
+      
+      private var _disposed:Boolean = false;
+      
+      public function TargetMarker()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 10
+               maxscopedepth 11
+               
+               code
+                  Constant export mode is not supported.
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      final public function dispose() : void
+      {
+         trait method QName(PackageNamespace(""),"dispose")
+            flag FINAL
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 2
+                  localcount 1
+                  initscopedepth 10
+                  maxscopedepth 11
+                  
+                  code
+                     Constant export mode is not supported.
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function isDisposed() : Boolean
+         {
+            trait method QName(PackageNamespace(""),"isDisposed")
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace(""),"Boolean")
+                  
+                  body
+                     maxstack 1
+                     localcount 1
+                     initscopedepth 10
+                     maxscopedepth 11
+                     
+                     code
+                        Constant export mode is not supported.
+                     end ; code
+                  end ; body
+               end ; method
+            }
+         }
+      }
