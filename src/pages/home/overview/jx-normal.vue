@@ -90,14 +90,13 @@ function calculateFontSize(str: string, maxLength: number) {
     .right {
         position: absolute;
         width: 110px;
-        height: 40px;
+        height: 43px;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        overflow: hidden;
         left: 44px;
-        top: 4px;
+        top: 2px;
         white-space: nowrap;
         // background-color: red;
     }

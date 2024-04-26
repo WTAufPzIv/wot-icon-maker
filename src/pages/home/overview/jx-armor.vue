@@ -107,7 +107,7 @@ function calculateFontSize(str: string, maxLength: number) {
         white-space: nowrap;
         // background-color: red;
         .ext-data{
-            width: 110px;
+            width: 120px;
             margin-top: 2px;
             display: flex;
             flex-direction: row;
