@@ -1,7 +1,7 @@
 
 {
    method
-      name ""
+      name null
       returns null
       
       body
@@ -147,14 +147,14 @@ package net.wg.gui.battle.views.vehicleMarkers
       
       {
          method
-            name ""
+            name null
             returns null
             
             body
                maxstack 9
                localcount 1
-               initscopedepth 11
-               maxscopedepth 12
+               initscopedepth 10
+               maxscopedepth 11
                
                code
                   Constant export mode is not supported.
@@ -254,7 +254,7 @@ package net.wg.gui.battle.views.vehicleMarkers
       public function VehicleMarker()
       {
          method
-            name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/VehicleMarker"
+            name null
             returns null
             
             body
@@ -276,7 +276,7 @@ package net.wg.gui.battle.views.vehicleMarkers
             flag OVERRIDE
             dispid 0
             method
-               name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/protected/configUI"
+               name null
                returns QName(PackageNamespace(""),"void")
                
                body
@@ -298,7 +298,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                flag OVERRIDE
                dispid 0
                method
-                  name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/protected/draw"
+                  name null
                   returns QName(PackageNamespace(""),"void")
                   
                   body
@@ -320,7 +320,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                   flag OVERRIDE
                   dispid 0
                   method
-                     name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/protected/onDispose"
+                     name null
                      returns QName(PackageNamespace(""),"void")
                      
                      body
@@ -341,7 +341,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                   trait method QName(PackageNamespace(""),"activateHover")
                      dispid 0
                      method
-                        name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/activateHover"
+                        name null
                         param QName(PackageNamespace(""),"Boolean")
                         returns QName(PackageNamespace(""),"void")
                         
@@ -363,7 +363,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                      trait method QName(PackageNamespace(""),"changeObjectiveActionMarker")
                         dispid 0
                         method
-                           name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/changeObjectiveActionMarker"
+                           name null
                            param QName(PackageNamespace(""),"String")
                            returns QName(PackageNamespace(""),"void")
                            
@@ -385,7 +385,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                         trait method QName(PackageNamespace(""),"hideArtyMarker")
                            dispid 0
                            method
-                              name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/hideArtyMarker"
+                              name null
                               returns QName(PackageNamespace(""),"void")
                               
                               body
@@ -406,7 +406,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                            trait method QName(PackageNamespace(""),"hideStatusMarker")
                               dispid 0
                               method
-                                 name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/hideStatusMarker"
+                                 name null
                                  flag HAS_OPTIONAL
                                  param QName(PackageNamespace(""),"int")
                                  param QName(PackageNamespace(""),"int")
@@ -434,7 +434,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                               trait method QName(PackageNamespace(""),"isSpeaking")
                                  dispid 0
                                  method
-                                    name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/isSpeaking"
+                                    name null
                                     returns QName(PackageNamespace(""),"Boolean")
                                     
                                     body
@@ -455,7 +455,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                  trait method QName(PackageNamespace(""),"managerReadyHandler")
                                     dispid 0
                                     method
-                                       name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/managerReadyHandler"
+                                       name null
                                        returns QName(PackageNamespace(""),"void")
                                        
                                        body
@@ -476,7 +476,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                     trait method QName(PackageNamespace(""),"onVisibilityChanged")
                                        dispid 0
                                        method
-                                          name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/onVisibilityChanged"
+                                          name null
                                           param QName(PackageNamespace(""),"Boolean")
                                           returns QName(PackageNamespace(""),"void")
                                           
@@ -498,7 +498,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                        trait method QName(PackageNamespace(""),"setActiveState")
                                           dispid 0
                                           method
-                                             name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/setActiveState"
+                                             name null
                                              param QName(PackageNamespace(""),"int")
                                              returns QName(PackageNamespace(""),"void")
                                              
@@ -520,7 +520,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                           trait method QName(PackageNamespace(""),"setEntityName")
                                              dispid 0
                                              method
-                                                name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/setEntityName"
+                                                name null
                                                 param QName(PackageNamespace(""),"String")
                                                 returns QName(PackageNamespace(""),"void")
                                                 
@@ -542,7 +542,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                              trait method QName(PackageNamespace(""),"setHealth")
                                                 dispid 0
                                                 method
-                                                   name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/setHealth"
+                                                   name null
                                                    param QName(PackageNamespace(""),"int")
                                                    returns QName(PackageNamespace(""),"void")
                                                    
@@ -564,7 +564,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                 trait method QName(PackageNamespace(""),"setIsStickyAndOutOfScreen")
                                                    dispid 0
                                                    method
-                                                      name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/setIsStickyAndOutOfScreen"
+                                                      name null
                                                       param QName(PackageNamespace(""),"Boolean")
                                                       returns QName(PackageNamespace(""),"void")
                                                       
@@ -586,7 +586,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                    trait method QName(PackageNamespace(""),"setMarkerReplied")
                                                       dispid 0
                                                       method
-                                                         name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/setMarkerReplied"
+                                                         name null
                                                          param QName(PackageNamespace(""),"Boolean")
                                                          returns QName(PackageNamespace(""),"void")
                                                          
@@ -608,7 +608,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                       trait method QName(PackageNamespace(""),"setReplyCount")
                                                          dispid 0
                                                          method
-                                                            name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/setReplyCount"
+                                                            name null
                                                             param QName(PackageNamespace(""),"int")
                                                             returns QName(PackageNamespace(""),"void")
                                                             
@@ -630,7 +630,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                          trait method QName(PackageNamespace(""),"setSpeaking")
                                                             dispid 0
                                                             method
-                                                               name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/setSpeaking"
+                                                               name null
                                                                param QName(PackageNamespace(""),"Boolean")
                                                                returns QName(PackageNamespace(""),"void")
                                                                
@@ -652,7 +652,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                             trait method QName(PackageNamespace(""),"setStatusTimerSnapshot")
                                                                dispid 0
                                                                method
-                                                                  name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/setStatusTimerSnapshot"
+                                                                  name null
                                                                   param QName(PackageNamespace(""),"int")
                                                                   returns QName(PackageNamespace(""),"void")
                                                                   
@@ -674,7 +674,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                trait method QName(PackageNamespace(""),"setVehicleInfo")
                                                                   dispid 0
                                                                   method
-                                                                     name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/setVehicleInfo"
+                                                                     name null
                                                                      flag HAS_OPTIONAL
                                                                      param QName(PackageNamespace(""),"String")
                                                                      param QName(PackageNamespace(""),"String")
@@ -713,7 +713,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                   trait method QName(PackageNamespace(""),"restore")
                                                                      dispid 0
                                                                      method
-                                                                        name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/restore"
+                                                                        name null
                                                                         returns QName(PackageNamespace(""),"void")
                                                                         
                                                                         body
@@ -734,7 +734,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                      trait method QName(PackageNamespace(""),"settingsUpdate")
                                                                         dispid 0
                                                                         method
-                                                                           name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/settingsUpdate"
+                                                                           name null
                                                                            param QName(PackageNamespace(""),"int")
                                                                            returns QName(PackageNamespace(""),"void")
                                                                            
@@ -756,7 +756,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                         trait method QName(PackageNamespace(""),"showActionMarker")
                                                                            dispid 0
                                                                            method
-                                                                              name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/showActionMarker"
+                                                                              name null
                                                                               param QName(PackageNamespace(""),"String")
                                                                               returns QName(PackageNamespace(""),"void")
                                                                               
@@ -778,7 +778,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                            trait method QName(PackageNamespace(""),"showExInfo")
                                                                               dispid 0
                                                                               method
-                                                                                 name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/showExInfo"
+                                                                                 name null
                                                                                  returns QName(PackageNamespace(""),"void")
                                                                                  
                                                                                  body
@@ -799,7 +799,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                               trait method QName(PackageNamespace(""),"showStatusMarker")
                                                                                  dispid 0
                                                                                  method
-                                                                                    name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/showStatusMarker"
+                                                                                    name null
                                                                                     flag HAS_OPTIONAL
                                                                                     param QName(PackageNamespace(""),"int")
                                                                                     param QName(PackageNamespace(""),"int")
@@ -831,7 +831,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                  trait method QName(PackageNamespace(""),"stopActionMarker")
                                                                                     dispid 0
                                                                                     method
-                                                                                       name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/stopActionMarker"
+                                                                                       name null
                                                                                        returns QName(PackageNamespace(""),"void")
                                                                                        
                                                                                        body
@@ -852,7 +852,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                     trait method QName(PackageNamespace(""),"triggerClickAnimation")
                                                                                        dispid 0
                                                                                        method
-                                                                                          name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/triggerClickAnimation"
+                                                                                          name null
                                                                                           returns QName(PackageNamespace(""),"void")
                                                                                           
                                                                                           body
@@ -873,7 +873,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                        trait method QName(PackageNamespace(""),"update")
                                                                                           dispid 0
                                                                                           method
-                                                                                             name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/update"
+                                                                                             name null
                                                                                              returns QName(PackageNamespace(""),"void")
                                                                                              
                                                                                              body
@@ -894,7 +894,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                           trait method QName(PackageNamespace(""),"updateFlagBearerState")
                                                                                              dispid 0
                                                                                              method
-                                                                                                name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/updateFlagBearerState"
+                                                                                                name null
                                                                                                 param QName(PackageNamespace(""),"Boolean")
                                                                                                 returns QName(PackageNamespace(""),"void")
                                                                                                 
@@ -916,7 +916,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                              trait method QName(PackageNamespace(""),"updateHealth")
                                                                                                 dispid 0
                                                                                                 method
-                                                                                                   name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/updateHealth"
+                                                                                                   name null
                                                                                                    param QName(PackageNamespace(""),"int")
                                                                                                    param QName(PackageNamespace(""),"int")
                                                                                                    param QName(PackageNamespace(""),"String")
@@ -940,7 +940,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                 trait method QName(PackageNamespace(""),"updateState")
                                                                                                    dispid 0
                                                                                                    method
-                                                                                                      name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/updateState"
+                                                                                                      name null
                                                                                                       flag HAS_OPTIONAL
                                                                                                       param QName(PackageNamespace(""),"String")
                                                                                                       param QName(PackageNamespace(""),"Boolean")
@@ -968,7 +968,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                    trait method QName(PackageNamespace(""),"updateStatusEffectTimer")
                                                                                                       dispid 0
                                                                                                       method
-                                                                                                         name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/updateStatusEffectTimer"
+                                                                                                         name null
                                                                                                          flag HAS_OPTIONAL
                                                                                                          param QName(PackageNamespace(""),"int")
                                                                                                          param QName(PackageNamespace(""),"Number")
@@ -994,7 +994,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                       trait method QName(PackageNamespace(""),"updateTimer")
                                                                                                          dispid 0
                                                                                                          method
-                                                                                                            name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/updateTimer"
+                                                                                                            name null
                                                                                                             param QName(PackageNamespace(""),"String")
                                                                                                             returns QName(PackageNamespace(""),"void")
                                                                                                             
@@ -1016,7 +1016,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                          trait method QName(PackageNamespace(""),"insertSymbol")
                                                                                                             dispid 0
                                                                                                             method
-                                                                                                               name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/insertSymbol"
+                                                                                                               name null
                                                                                                                param QName(PackageNamespace(""),"String")
                                                                                                                param QName(PackageNamespace(""),"int")
                                                                                                                param QName(PackageNamespace(""),"int")
@@ -1037,10 +1037,10 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                          
                                                                                                          private function sortInsertedSymbols(param1:VehicleMarkerPart, param2:VehicleMarkerPart) : int
                                                                                                          {
-                                                                                                            trait method QName(PrivateNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"sortInsertedSymbols")
+                                                                                                            trait method QName(PrivateNamespace(null,"25"),"sortInsertedSymbols")
                                                                                                                dispid 0
                                                                                                                method
-                                                                                                                  name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/private/sortInsertedSymbols"
+                                                                                                                  name null
                                                                                                                   param QName(PackageNamespace("net.wg.gui.battle.views.vehicleMarkers.VO"),"VehicleMarkerPart")
                                                                                                                   param QName(PackageNamespace("net.wg.gui.battle.views.vehicleMarkers.VO"),"VehicleMarkerPart")
                                                                                                                   returns QName(PackageNamespace(""),"int")
@@ -1063,7 +1063,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                trait method QName(PackageNamespace(""),"callInsertedSymbolMethod")
                                                                                                                   dispid 0
                                                                                                                   method
-                                                                                                                     name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/callInsertedSymbolMethod"
+                                                                                                                     name null
                                                                                                                      flag NEED_REST
                                                                                                                      param QName(PackageNamespace(""),"String")
                                                                                                                      param QName(PackageNamespace(""),"String")
@@ -1087,7 +1087,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                   trait method QName(PackageNamespace(""),"removeSymbol")
                                                                                                                      dispid 0
                                                                                                                      method
-                                                                                                                        name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/removeSymbol"
+                                                                                                                        name null
                                                                                                                         param QName(PackageNamespace(""),"String")
                                                                                                                         returns QName(PackageNamespace(""),"void")
                                                                                                                         
@@ -1109,7 +1109,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                      trait method QName(ProtectedNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"initialDrawParts")
                                                                                                                         dispid 0
                                                                                                                         method
-                                                                                                                           name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/protected/initialDrawParts"
+                                                                                                                           name null
                                                                                                                            returns QName(PackageNamespace(""),"void")
                                                                                                                            
                                                                                                                            body
@@ -1130,7 +1130,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                         trait method QName(ProtectedNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"redrawParts")
                                                                                                                            dispid 0
                                                                                                                            method
-                                                                                                                              name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/protected/redrawParts"
+                                                                                                                              name null
                                                                                                                               returns QName(PackageNamespace(""),"void")
                                                                                                                               
                                                                                                                               body
@@ -1151,7 +1151,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                            trait method QName(ProtectedNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"onSpeakingUpdate")
                                                                                                                               dispid 0
                                                                                                                               method
-                                                                                                                                 name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/protected/onSpeakingUpdate"
+                                                                                                                                 name null
                                                                                                                                  returns QName(PackageNamespace(""),"void")
                                                                                                                                  
                                                                                                                                  body
@@ -1172,7 +1172,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                               trait method QName(ProtectedNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"updatePartsVisibility")
                                                                                                                                  dispid 0
                                                                                                                                  method
-                                                                                                                                    name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/protected/updatePartsVisibility"
+                                                                                                                                    name null
                                                                                                                                     returns TypeName(QName(PackageNamespace("__AS3__.vec"),"Vector")<QName(PackageNamespace(""),"Boolean")>)
                                                                                                                                     
                                                                                                                                     body
@@ -1193,12 +1193,12 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                  trait method QName(ProtectedNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"getIsPartVisible")
                                                                                                                                     dispid 0
                                                                                                                                     method
-                                                                                                                                       name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/protected/getIsPartVisible"
+                                                                                                                                       name null
                                                                                                                                        param QName(PackageNamespace(""),"String")
                                                                                                                                        returns QName(PackageNamespace(""),"Boolean")
                                                                                                                                        
                                                                                                                                        body
-                                                                                                                                          maxstack 3
+                                                                                                                                          maxstack 2
                                                                                                                                           localcount 4
                                                                                                                                           initscopedepth 11
                                                                                                                                           maxscopedepth 12
@@ -1215,7 +1215,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                     trait method QName(ProtectedNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"prepareParts")
                                                                                                                                        dispid 0
                                                                                                                                        method
-                                                                                                                                          name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/protected/prepareParts"
+                                                                                                                                          name null
                                                                                                                                           returns QName(PackageNamespace(""),"Array")
                                                                                                                                           
                                                                                                                                           body
@@ -1236,7 +1236,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                        trait method QName(ProtectedNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"prepareCrossOffsets")
                                                                                                                                           dispid 0
                                                                                                                                           method
-                                                                                                                                             name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/protected/prepareCrossOffsets"
+                                                                                                                                             name null
                                                                                                                                              returns QName(PackageNamespace(""),"Array")
                                                                                                                                              
                                                                                                                                              body
@@ -1257,7 +1257,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                           trait method QName(ProtectedNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"getStartY")
                                                                                                                                              dispid 0
                                                                                                                                              method
-                                                                                                                                                name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/protected/getStartY"
+                                                                                                                                                name null
                                                                                                                                                 returns QName(PackageNamespace(""),"int")
                                                                                                                                                 
                                                                                                                                                 body
@@ -1278,7 +1278,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                              trait method QName(ProtectedNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"prepareOffsets")
                                                                                                                                                 dispid 0
                                                                                                                                                 method
-                                                                                                                                                   name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/protected/prepareOffsets"
+                                                                                                                                                   name null
                                                                                                                                                    returns QName(PackageNamespace(""),"void")
                                                                                                                                                    
                                                                                                                                                    body
@@ -1299,7 +1299,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                 trait method QName(ProtectedNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"isEnemy")
                                                                                                                                                    dispid 0
                                                                                                                                                    method
-                                                                                                                                                      name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/protected/isEnemy"
+                                                                                                                                                      name null
                                                                                                                                                       returns QName(PackageNamespace(""),"Boolean")
                                                                                                                                                       
                                                                                                                                                       body
@@ -1320,7 +1320,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                    trait method QName(ProtectedNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"getHpBarOrLabelVisible")
                                                                                                                                                       dispid 0
                                                                                                                                                       method
-                                                                                                                                                         name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/protected/getHpBarOrLabelVisible"
+                                                                                                                                                         name null
                                                                                                                                                          returns QName(PackageNamespace(""),"Boolean")
                                                                                                                                                          
                                                                                                                                                          body
@@ -1341,7 +1341,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                       trait method QName(ProtectedNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"showHitLabelAnim")
                                                                                                                                                          dispid 0
                                                                                                                                                          method
-                                                                                                                                                            name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/protected/showHitLabelAnim"
+                                                                                                                                                            name null
                                                                                                                                                             param QName(PackageNamespace(""),"int")
                                                                                                                                                             param QName(PackageNamespace(""),"String")
                                                                                                                                                             returns QName(PackageNamespace(""),"void")
@@ -1361,10 +1361,10 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                       
                                                                                                                                                       private function layoutParts(param1:Vector.<Boolean>) : void
                                                                                                                                                       {
-                                                                                                                                                         trait method QName(PrivateNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"layoutParts")
+                                                                                                                                                         trait method QName(PrivateNamespace(null,"25"),"layoutParts")
                                                                                                                                                             dispid 0
                                                                                                                                                             method
-                                                                                                                                                               name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/private/layoutParts"
+                                                                                                                                                               name null
                                                                                                                                                                param TypeName(QName(PackageNamespace("__AS3__.vec"),"Vector")<QName(PackageNamespace(""),"Boolean")>)
                                                                                                                                                                returns QName(PackageNamespace(""),"void")
                                                                                                                                                                
@@ -1383,10 +1383,10 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                          
                                                                                                                                                          private function showAltActionMarker(param1:Boolean) : void
                                                                                                                                                          {
-                                                                                                                                                            trait method QName(PrivateNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"showAltActionMarker")
+                                                                                                                                                            trait method QName(PrivateNamespace(null,"25"),"showAltActionMarker")
                                                                                                                                                                dispid 0
                                                                                                                                                                method
-                                                                                                                                                                  name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/private/showAltActionMarker"
+                                                                                                                                                                  name null
                                                                                                                                                                   param QName(PackageNamespace(""),"Boolean")
                                                                                                                                                                   returns QName(PackageNamespace(""),"void")
                                                                                                                                                                   
@@ -1405,10 +1405,10 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                             
                                                                                                                                                             private function updateHitLayout() : void
                                                                                                                                                             {
-                                                                                                                                                               trait method QName(PrivateNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"updateHitLayout")
+                                                                                                                                                               trait method QName(PrivateNamespace(null,"25"),"updateHitLayout")
                                                                                                                                                                   dispid 0
                                                                                                                                                                   method
-                                                                                                                                                                     name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/private/updateHitLayout"
+                                                                                                                                                                     name null
                                                                                                                                                                      returns QName(PackageNamespace(""),"void")
                                                                                                                                                                      
                                                                                                                                                                      body
@@ -1426,10 +1426,10 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                
                                                                                                                                                                private function makeColorSchemeName() : void
                                                                                                                                                                {
-                                                                                                                                                                  trait method QName(PrivateNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"makeColorSchemeName")
+                                                                                                                                                                  trait method QName(PrivateNamespace(null,"25"),"makeColorSchemeName")
                                                                                                                                                                      dispid 0
                                                                                                                                                                      method
-                                                                                                                                                                        name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/private/makeColorSchemeName"
+                                                                                                                                                                        name null
                                                                                                                                                                         returns QName(PackageNamespace(""),"void")
                                                                                                                                                                         
                                                                                                                                                                         body
@@ -1447,10 +1447,10 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                   
                                                                                                                                                                   private function updateVehicleMarkerHover() : void
                                                                                                                                                                   {
-                                                                                                                                                                     trait method QName(PrivateNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"updateVehicleMarkerHover")
+                                                                                                                                                                     trait method QName(PrivateNamespace(null,"25"),"updateVehicleMarkerHover")
                                                                                                                                                                         dispid 0
                                                                                                                                                                         method
-                                                                                                                                                                           name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/private/updateVehicleMarkerHover"
+                                                                                                                                                                           name null
                                                                                                                                                                            returns QName(PackageNamespace(""),"void")
                                                                                                                                                                            
                                                                                                                                                                            body
@@ -1468,10 +1468,10 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                      
                                                                                                                                                                      private function updateMarkerSettings() : void
                                                                                                                                                                      {
-                                                                                                                                                                        trait method QName(PrivateNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"updateMarkerSettings")
+                                                                                                                                                                        trait method QName(PrivateNamespace(null,"25"),"updateMarkerSettings")
                                                                                                                                                                            dispid 0
                                                                                                                                                                            method
-                                                                                                                                                                              name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/private/updateMarkerSettings"
+                                                                                                                                                                              name null
                                                                                                                                                                               returns QName(PackageNamespace(""),"void")
                                                                                                                                                                               
                                                                                                                                                                               body
@@ -1489,10 +1489,10 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                         
                                                                                                                                                                         private function updateMarkerColor() : void
                                                                                                                                                                         {
-                                                                                                                                                                           trait method QName(PrivateNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"updateMarkerColor")
+                                                                                                                                                                           trait method QName(PrivateNamespace(null,"25"),"updateMarkerColor")
                                                                                                                                                                               dispid 0
                                                                                                                                                                               method
-                                                                                                                                                                                 name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/private/updateMarkerColor"
+                                                                                                                                                                                 name null
                                                                                                                                                                                  returns QName(PackageNamespace(""),"void")
                                                                                                                                                                                  
                                                                                                                                                                                  body
@@ -1510,10 +1510,10 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                            
                                                                                                                                                                            private function applyColor() : void
                                                                                                                                                                            {
-                                                                                                                                                                              trait method QName(PrivateNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"applyColor")
+                                                                                                                                                                              trait method QName(PrivateNamespace(null,"25"),"applyColor")
                                                                                                                                                                                  dispid 0
                                                                                                                                                                                  method
-                                                                                                                                                                                    name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/private/applyColor"
+                                                                                                                                                                                    name null
                                                                                                                                                                                     returns QName(PackageNamespace(""),"void")
                                                                                                                                                                                     
                                                                                                                                                                                     body
@@ -1531,10 +1531,10 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                               
                                                                                                                                                                               private function prepareLayout() : void
                                                                                                                                                                               {
-                                                                                                                                                                                 trait method QName(PrivateNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"prepareLayout")
+                                                                                                                                                                                 trait method QName(PrivateNamespace(null,"25"),"prepareLayout")
                                                                                                                                                                                     dispid 0
                                                                                                                                                                                     method
-                                                                                                                                                                                       name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/private/prepareLayout"
+                                                                                                                                                                                       name null
                                                                                                                                                                                        returns QName(PackageNamespace(""),"void")
                                                                                                                                                                                        
                                                                                                                                                                                        body
@@ -1552,10 +1552,10 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                                  
                                                                                                                                                                                  private function setMarkerState(param1:String) : void
                                                                                                                                                                                  {
-                                                                                                                                                                                    trait method QName(PrivateNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"setMarkerState")
+                                                                                                                                                                                    trait method QName(PrivateNamespace(null,"25"),"setMarkerState")
                                                                                                                                                                                        dispid 0
                                                                                                                                                                                        method
-                                                                                                                                                                                          name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/private/setMarkerState"
+                                                                                                                                                                                          name null
                                                                                                                                                                                           param QName(PackageNamespace(""),"String")
                                                                                                                                                                                           returns QName(PackageNamespace(""),"void")
                                                                                                                                                                                           
@@ -1574,10 +1574,10 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                                     
                                                                                                                                                                                     private function setDestroyedColorForHP() : void
                                                                                                                                                                                     {
-                                                                                                                                                                                       trait method QName(PrivateNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"setDestroyedColorForHP")
+                                                                                                                                                                                       trait method QName(PrivateNamespace(null,"25"),"setDestroyedColorForHP")
                                                                                                                                                                                           dispid 0
                                                                                                                                                                                           method
-                                                                                                                                                                                             name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/private/setDestroyedColorForHP"
+                                                                                                                                                                                             name null
                                                                                                                                                                                              returns QName(PackageNamespace(""),"void")
                                                                                                                                                                                              
                                                                                                                                                                                              body
@@ -1595,14 +1595,14 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                                        
                                                                                                                                                                                        private function setHealthText() : void
                                                                                                                                                                                        {
-                                                                                                                                                                                          trait method QName(PrivateNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"setHealthText")
+                                                                                                                                                                                          trait method QName(PrivateNamespace(null,"25"),"setHealthText")
                                                                                                                                                                                              dispid 0
                                                                                                                                                                                              method
-                                                                                                                                                                                                name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/private/setHealthText"
+                                                                                                                                                                                                name null
                                                                                                                                                                                                 returns QName(PackageNamespace(""),"void")
                                                                                                                                                                                                 
                                                                                                                                                                                                 body
-                                                                                                                                                                                                   maxstack 4
+                                                                                                                                                                                                   maxstack 3
                                                                                                                                                                                                    localcount 4
                                                                                                                                                                                                    initscopedepth 11
                                                                                                                                                                                                    maxscopedepth 12
@@ -1616,10 +1616,10 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                                           
                                                                                                                                                                                           private function setVehicleType() : void
                                                                                                                                                                                           {
-                                                                                                                                                                                             trait method QName(PrivateNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"setVehicleType")
+                                                                                                                                                                                             trait method QName(PrivateNamespace(null,"25"),"setVehicleType")
                                                                                                                                                                                                 dispid 0
                                                                                                                                                                                                 method
-                                                                                                                                                                                                   name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/private/setVehicleType"
+                                                                                                                                                                                                   name null
                                                                                                                                                                                                    returns QName(PackageNamespace(""),"void")
                                                                                                                                                                                                    
                                                                                                                                                                                                    body
@@ -1637,14 +1637,14 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                                              
                                                                                                                                                                                              private function updateIconColor() : void
                                                                                                                                                                                              {
-                                                                                                                                                                                                trait method QName(PrivateNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"updateIconColor")
+                                                                                                                                                                                                trait method QName(PrivateNamespace(null,"25"),"updateIconColor")
                                                                                                                                                                                                    dispid 0
                                                                                                                                                                                                    method
-                                                                                                                                                                                                      name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/private/updateIconColor"
+                                                                                                                                                                                                      name null
                                                                                                                                                                                                       returns QName(PackageNamespace(""),"void")
                                                                                                                                                                                                       
                                                                                                                                                                                                       body
-                                                                                                                                                                                                         maxstack 2
+                                                                                                                                                                                                         maxstack 3
                                                                                                                                                                                                          localcount 1
                                                                                                                                                                                                          initscopedepth 11
                                                                                                                                                                                                          maxscopedepth 12
@@ -1658,10 +1658,10 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                                                 
                                                                                                                                                                                                 private function setupSquadIcon() : void
                                                                                                                                                                                                 {
-                                                                                                                                                                                                   trait method QName(PrivateNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"setupSquadIcon")
+                                                                                                                                                                                                   trait method QName(PrivateNamespace(null,"25"),"setupSquadIcon")
                                                                                                                                                                                                       dispid 0
                                                                                                                                                                                                       method
-                                                                                                                                                                                                         name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/private/setupSquadIcon"
+                                                                                                                                                                                                         name null
                                                                                                                                                                                                          returns QName(PackageNamespace(""),"void")
                                                                                                                                                                                                          
                                                                                                                                                                                                          body
@@ -1679,10 +1679,10 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                                                    
                                                                                                                                                                                                    private function getHealthPercents() : int
                                                                                                                                                                                                    {
-                                                                                                                                                                                                      trait method QName(PrivateNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"getHealthPercents")
+                                                                                                                                                                                                      trait method QName(PrivateNamespace(null,"25"),"getHealthPercents")
                                                                                                                                                                                                          dispid 0
                                                                                                                                                                                                          method
-                                                                                                                                                                                                            name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/private/getHealthPercents"
+                                                                                                                                                                                                            name null
                                                                                                                                                                                                             returns QName(PackageNamespace(""),"int")
                                                                                                                                                                                                             
                                                                                                                                                                                                             body
@@ -1700,10 +1700,10 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                                                       
                                                                                                                                                                                                       private function setupVehicleIcon() : void
                                                                                                                                                                                                       {
-                                                                                                                                                                                                         trait method QName(PrivateNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"setupVehicleIcon")
+                                                                                                                                                                                                         trait method QName(PrivateNamespace(null,"25"),"setupVehicleIcon")
                                                                                                                                                                                                             dispid 0
                                                                                                                                                                                                             method
-                                                                                                                                                                                                               name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/private/setupVehicleIcon"
+                                                                                                                                                                                                               name null
                                                                                                                                                                                                                returns QName(PackageNamespace(""),"void")
                                                                                                                                                                                                                
                                                                                                                                                                                                                body
@@ -1721,10 +1721,10 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                                                          
                                                                                                                                                                                                          private function updateFlag() : void
                                                                                                                                                                                                          {
-                                                                                                                                                                                                            trait method QName(PrivateNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"updateFlag")
+                                                                                                                                                                                                            trait method QName(PrivateNamespace(null,"25"),"updateFlag")
                                                                                                                                                                                                                dispid 0
                                                                                                                                                                                                                method
-                                                                                                                                                                                                                  name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/private/updateFlag"
+                                                                                                                                                                                                                  name null
                                                                                                                                                                                                                   returns QName(PackageNamespace(""),"void")
                                                                                                                                                                                                                   
                                                                                                                                                                                                                   body
@@ -1742,15 +1742,15 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                                                             
                                                                                                                                                                                                             private function getDamageColor(param1:int) : String
                                                                                                                                                                                                             {
-                                                                                                                                                                                                               trait method QName(PrivateNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"getDamageColor")
+                                                                                                                                                                                                               trait method QName(PrivateNamespace(null,"25"),"getDamageColor")
                                                                                                                                                                                                                   dispid 0
                                                                                                                                                                                                                   method
-                                                                                                                                                                                                                     name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/private/getDamageColor"
+                                                                                                                                                                                                                     name null
                                                                                                                                                                                                                      param QName(PackageNamespace(""),"int")
                                                                                                                                                                                                                      returns QName(PackageNamespace(""),"String")
                                                                                                                                                                                                                      
                                                                                                                                                                                                                      body
-                                                                                                                                                                                                                        maxstack 3
+                                                                                                                                                                                                                        maxstack 2
                                                                                                                                                                                                                         localcount 3
                                                                                                                                                                                                                         initscopedepth 11
                                                                                                                                                                                                                         maxscopedepth 12
@@ -1767,7 +1767,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                                                                   trait getter QName(PackageNamespace(""),"markerSettings")
                                                                                                                                                                                                                      dispid 0
                                                                                                                                                                                                                      method
-                                                                                                                                                                                                                        name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/markerSettings/get"
+                                                                                                                                                                                                                        name null
                                                                                                                                                                                                                         returns QName(PackageNamespace(""),"Object")
                                                                                                                                                                                                                         
                                                                                                                                                                                                                         body
@@ -1788,7 +1788,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                                                                      trait setter QName(PackageNamespace(""),"markerSettings")
                                                                                                                                                                                                                         dispid 0
                                                                                                                                                                                                                         method
-                                                                                                                                                                                                                           name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/markerSettings/set"
+                                                                                                                                                                                                                           name null
                                                                                                                                                                                                                            param QName(PackageNamespace(""),"Object")
                                                                                                                                                                                                                            returns QName(PackageNamespace(""),"void")
                                                                                                                                                                                                                            
@@ -1810,7 +1810,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                                                                         trait getter QName(PackageNamespace(""),"isEnabledExInfo")
                                                                                                                                                                                                                            dispid 0
                                                                                                                                                                                                                            method
-                                                                                                                                                                                                                              name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/isEnabledExInfo/get"
+                                                                                                                                                                                                                              name null
                                                                                                                                                                                                                               returns QName(PackageNamespace(""),"Boolean")
                                                                                                                                                                                                                               
                                                                                                                                                                                                                               body
@@ -1831,7 +1831,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                                                                            trait getter QName(PackageNamespace(""),"exInfo")
                                                                                                                                                                                                                               dispid 0
                                                                                                                                                                                                                               method
-                                                                                                                                                                                                                                 name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/exInfo/get"
+                                                                                                                                                                                                                                 name null
                                                                                                                                                                                                                                  returns QName(PackageNamespace(""),"Boolean")
                                                                                                                                                                                                                                  
                                                                                                                                                                                                                                  body
@@ -1852,7 +1852,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                                                                               trait setter QName(PackageNamespace(""),"exInfo")
                                                                                                                                                                                                                                  dispid 0
                                                                                                                                                                                                                                  method
-                                                                                                                                                                                                                                    name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/exInfo/set"
+                                                                                                                                                                                                                                    name null
                                                                                                                                                                                                                                     param QName(PackageNamespace(""),"Boolean")
                                                                                                                                                                                                                                     returns QName(PackageNamespace(""),"void")
                                                                                                                                                                                                                                     
@@ -1874,7 +1874,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                                                                                  trait getter QName(PackageNamespace(""),"entityName")
                                                                                                                                                                                                                                     dispid 0
                                                                                                                                                                                                                                     method
-                                                                                                                                                                                                                                       name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/entityName/get"
+                                                                                                                                                                                                                                       name null
                                                                                                                                                                                                                                        returns QName(PackageNamespace(""),"String")
                                                                                                                                                                                                                                        
                                                                                                                                                                                                                                        body
@@ -1895,7 +1895,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                                                                                     trait setter QName(PackageNamespace(""),"entityName")
                                                                                                                                                                                                                                        dispid 0
                                                                                                                                                                                                                                        method
-                                                                                                                                                                                                                                          name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/entityName/set"
+                                                                                                                                                                                                                                          name null
                                                                                                                                                                                                                                           param QName(PackageNamespace(""),"String")
                                                                                                                                                                                                                                           returns QName(PackageNamespace(""),"void")
                                                                                                                                                                                                                                           
@@ -1917,7 +1917,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                                                                                        trait getter QName(PackageNamespace(""),"entityType")
                                                                                                                                                                                                                                           dispid 0
                                                                                                                                                                                                                                           method
-                                                                                                                                                                                                                                             name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/entityType/get"
+                                                                                                                                                                                                                                             name null
                                                                                                                                                                                                                                              returns QName(PackageNamespace(""),"String")
                                                                                                                                                                                                                                              
                                                                                                                                                                                                                                              body
@@ -1938,7 +1938,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                                                                                           trait setter QName(PackageNamespace(""),"entityType")
                                                                                                                                                                                                                                              dispid 0
                                                                                                                                                                                                                                              method
-                                                                                                                                                                                                                                                name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/entityType/set"
+                                                                                                                                                                                                                                                name null
                                                                                                                                                                                                                                                 param QName(PackageNamespace(""),"String")
                                                                                                                                                                                                                                                 returns QName(PackageNamespace(""),"void")
                                                                                                                                                                                                                                                 
@@ -1960,7 +1960,7 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                                                                                              trait getter QName(ProtectedNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"damageType")
                                                                                                                                                                                                                                                 dispid 0
                                                                                                                                                                                                                                                 method
-                                                                                                                                                                                                                                                   name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/protected/damageType/get"
+                                                                                                                                                                                                                                                   name null
                                                                                                                                                                                                                                                    returns QName(PackageNamespace(""),"String")
                                                                                                                                                                                                                                                    
                                                                                                                                                                                                                                                    body
@@ -1978,10 +1978,10 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                                                                                              
                                                                                                                                                                                                                                              private function get isObserver() : Boolean
                                                                                                                                                                                                                                              {
-                                                                                                                                                                                                                                                trait getter QName(PrivateNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"isObserver")
+                                                                                                                                                                                                                                                trait getter QName(PrivateNamespace(null,"25"),"isObserver")
                                                                                                                                                                                                                                                    dispid 0
                                                                                                                                                                                                                                                    method
-                                                                                                                                                                                                                                                      name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/private/isObserver/get"
+                                                                                                                                                                                                                                                      name null
                                                                                                                                                                                                                                                       returns QName(PackageNamespace(""),"Boolean")
                                                                                                                                                                                                                                                       
                                                                                                                                                                                                                                                       body
@@ -1999,10 +1999,10 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                                                                                                 
                                                                                                                                                                                                                                                 private function onShowExInfoHandler(param1:VehicleMarkersManagerEvent) : void
                                                                                                                                                                                                                                                 {
-                                                                                                                                                                                                                                                   trait method QName(PrivateNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"onShowExInfoHandler")
+                                                                                                                                                                                                                                                   trait method QName(PrivateNamespace(null,"25"),"onShowExInfoHandler")
                                                                                                                                                                                                                                                       dispid 0
                                                                                                                                                                                                                                                       method
-                                                                                                                                                                                                                                                         name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/private/onShowExInfoHandler"
+                                                                                                                                                                                                                                                         name null
                                                                                                                                                                                                                                                          param QName(PackageNamespace("net.wg.gui.battle.views.vehicleMarkers.events"),"VehicleMarkersManagerEvent")
                                                                                                                                                                                                                                                          returns QName(PackageNamespace(""),"void")
                                                                                                                                                                                                                                                          
@@ -2021,10 +2021,10 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                                                                                                    
                                                                                                                                                                                                                                                    private function onUpdateSettingsHandler(param1:VehicleMarkersManagerEvent) : void
                                                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                                                      trait method QName(PrivateNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"onUpdateSettingsHandler")
+                                                                                                                                                                                                                                                      trait method QName(PrivateNamespace(null,"25"),"onUpdateSettingsHandler")
                                                                                                                                                                                                                                                          dispid 0
                                                                                                                                                                                                                                                          method
-                                                                                                                                                                                                                                                            name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/private/onUpdateSettingsHandler"
+                                                                                                                                                                                                                                                            name null
                                                                                                                                                                                                                                                             param QName(PackageNamespace("net.wg.gui.battle.views.vehicleMarkers.events"),"VehicleMarkersManagerEvent")
                                                                                                                                                                                                                                                             returns QName(PackageNamespace(""),"void")
                                                                                                                                                                                                                                                             
@@ -2043,10 +2043,10 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                                                                                                       
                                                                                                                                                                                                                                                       private function onUpdateColorsHandler(param1:VehicleMarkersManagerEvent) : void
                                                                                                                                                                                                                                                       {
-                                                                                                                                                                                                                                                         trait method QName(PrivateNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"onUpdateColorsHandler")
+                                                                                                                                                                                                                                                         trait method QName(PrivateNamespace(null,"25"),"onUpdateColorsHandler")
                                                                                                                                                                                                                                                             dispid 0
                                                                                                                                                                                                                                                             method
-                                                                                                                                                                                                                                                               name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/private/onUpdateColorsHandler"
+                                                                                                                                                                                                                                                               name null
                                                                                                                                                                                                                                                                param QName(PackageNamespace("net.wg.gui.battle.views.vehicleMarkers.events"),"VehicleMarkersManagerEvent")
                                                                                                                                                                                                                                                                returns QName(PackageNamespace(""),"void")
                                                                                                                                                                                                                                                                
@@ -2065,10 +2065,10 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                                                                                                          
                                                                                                                                                                                                                                                          private function onSplashHideHandler(param1:Event) : void
                                                                                                                                                                                                                                                          {
-                                                                                                                                                                                                                                                            trait method QName(PrivateNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"onSplashHideHandler")
+                                                                                                                                                                                                                                                            trait method QName(PrivateNamespace(null,"25"),"onSplashHideHandler")
                                                                                                                                                                                                                                                                dispid 0
                                                                                                                                                                                                                                                                method
-                                                                                                                                                                                                                                                                  name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/private/onSplashHideHandler"
+                                                                                                                                                                                                                                                                  name null
                                                                                                                                                                                                                                                                   param QName(PackageNamespace("flash.events"),"Event")
                                                                                                                                                                                                                                                                   returns QName(PackageNamespace(""),"void")
                                                                                                                                                                                                                                                                   
@@ -2087,10 +2087,10 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                                                                                                             
                                                                                                                                                                                                                                                             private function onStatusAnimationHiddenCompleteHandler(param1:Event) : void
                                                                                                                                                                                                                                                             {
-                                                                                                                                                                                                                                                               trait method QName(PrivateNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"onStatusAnimationHiddenCompleteHandler")
+                                                                                                                                                                                                                                                               trait method QName(PrivateNamespace(null,"25"),"onStatusAnimationHiddenCompleteHandler")
                                                                                                                                                                                                                                                                   dispid 0
                                                                                                                                                                                                                                                                   method
-                                                                                                                                                                                                                                                                     name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/private/onStatusAnimationHiddenCompleteHandler"
+                                                                                                                                                                                                                                                                     name null
                                                                                                                                                                                                                                                                      param QName(PackageNamespace("flash.events"),"Event")
                                                                                                                                                                                                                                                                      returns QName(PackageNamespace(""),"void")
                                                                                                                                                                                                                                                                      
@@ -2109,10 +2109,10 @@ package net.wg.gui.battle.views.vehicleMarkers
                                                                                                                                                                                                                                                                
                                                                                                                                                                                                                                                                private function cleanupDynamicObject(param1:Object) : Object
                                                                                                                                                                                                                                                                {
-                                                                                                                                                                                                                                                                  trait method QName(PrivateNamespace("net.wg.gui.battle.views.vehicleMarkers:VehicleMarker"),"cleanupDynamicObject")
+                                                                                                                                                                                                                                                                  trait method QName(PrivateNamespace(null,"25"),"cleanupDynamicObject")
                                                                                                                                                                                                                                                                      dispid 0
                                                                                                                                                                                                                                                                      method
-                                                                                                                                                                                                                                                                        name "net.wg.gui.battle.views.vehicleMarkers:VehicleMarker/private/cleanupDynamicObject"
+                                                                                                                                                                                                                                                                        name null
                                                                                                                                                                                                                                                                         param QName(PackageNamespace(""),"Object")
                                                                                                                                                                                                                                                                         returns QName(PackageNamespace(""),"Object")
                                                                                                                                                                                                                                                                         
