@@ -12,6 +12,8 @@ dist
 dist-electron
 dist-ssr
 python/**/*.dds
+python/**/*.zip
+python/**/*.wotmod
 python/**/*.png
 python/**/*.xml
 *.local

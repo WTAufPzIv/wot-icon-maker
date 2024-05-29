@@ -146,6 +146,7 @@ const actions: ActionTree<IGameState, IRootState> = {
                             Class = ClassEnum['SPG'];
                         else
                             Class = '';
+                        const armorSelector = cur.hull.primaryArmor.split(' ')
                         tankItem[itemName] = {
                             tranksCode: (cur.shortUserString || cur.userString || '').split(':')[1],
                             transName: cur.namefortrans,
@@ -156,7 +157,10 @@ const actions: ActionTree<IGameState, IRootState> = {
                             shell1: cur.shell1,
                             shell2: cur.shell2 || '',
                             tankId: cur.tankId,
-                            tankIconId: `${cur.countryId}-${cur.tankId}`
+                            tankIconId: `${cur.countryId}-${cur.tankId}`,
+                            armor_2: Number(cur.hull.armor[armorSelector[0]]).toFixed(0),
+                            armor_3: Number(cur.hull.armor[armorSelector[1]]).toFixed(0),
+                            armor_4: Number(cur.hull.armor[armorSelector[2]]).toFixed(0),
                         }
                     }
                 })

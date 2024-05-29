@@ -15,9 +15,9 @@
             }"
         >{{ tank.transName }}</div>
         <div class="ext-data">
-            <span>{{ tank.armor_2 }}</span>
-            <span>{{ tank.armor_3 }}</span>
-            <span>{{ tank.armor_4 }}</span>
+            <span>{{ tank.visibility }}</span>
+            <span>{{ tank.shell1 }}</span>
+            <span>{{ tank.shell2 }}</span>
         </div>
     </div>
     </div>
@@ -112,7 +112,7 @@ function calculateFontSize(str: string, maxLength: number) {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            padding: 0 13px;
+            padding: 0 10px;
             font-size: 16px;
             // background-color: yellow;
         }

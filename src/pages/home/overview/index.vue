@@ -23,14 +23,19 @@
       </div>
       <div class="tank-wrapper">
         <div class="margin-box" v-for="tank in renderData" ref="itemRefs">
-          <jx-normal
+          <!-- <jx-normal
             :tank="tank"
             @click="handleOpen(tank)"
-          ></jx-normal>
-          <!-- <jx-armor
+          ></jx-normal> -->
+          <jx-armor
             :tank="tank"
             @click="handleOpen(tank)"
-          ></jx-armor> -->
+          ></jx-armor>
+          <!-- <JxInfo
+            :tank="tank"
+            v-for="tank in renderData"
+            @click="handleOpen(tank)"
+          ></JxInfo> -->
         </div>
       </div>
     </template>
@@ -80,16 +85,21 @@
       </a>
     </div>
     <div ref="itemRef" class="target">
-      <jx-normal
+      <!-- <jx-normal
         :tank="tank"
         v-for="tank in renderData"
         @click="handleOpen(tank)"
-      ></jx-normal>
-      <!-- <jx-armor
+      ></jx-normal> -->
+      <jx-armor
         :tank="tank"
         v-for="tank in renderData"
         @click="handleOpen(tank)"
-      ></jx-armor> -->
+      ></jx-armor>
+      <!-- <JxInfo
+        :tank="tank"
+        v-for="tank in renderData"
+        @click="handleOpen(tank)"
+      ></JxInfo> -->
     </div>
   </a-drawer>
 </template>
@@ -104,6 +114,7 @@ import VueJsonPretty from 'vue-json-pretty';
 import 'vue-json-pretty/lib/styles.css';
 import JxNormal from './jx-normal.vue';
 import JxArmor from './jx-armor.vue';
+import JxInfo from './jx-info.vue';
 import { toPng } from 'html-to-image';
 import { ipcMessageTool } from '@core/utils/game';
 
