@@ -1,7 +1,9 @@
-将游戏res的packages中的vehicleMarkerAtlas.dds和battleAtlas.dds以及两者的xml配置文件放到根目录
-将图标制作工具生成的output.dds以及他的xml文件也放到根目录
-直接运行
+- 将游戏原本的vehicleMarkerAtlas.dds和battleAtlas.dds以及两者的xml配置文件放到根目录
+- 将图标制作工具生成的output.dds以及他的xml文件也放到根目录（这个在你在工具里点击导出到python文件夹后就会生成）
+- 直接运行run.bat
+
 然后在vehicleMarkerAtlas和battleAtlas文件夹下就是处理好的png，直接拿去CCAtlas中合并就可以使用了
 
-CCAtlas合并完成后运行pack打包成mod文件夹
-battleAtlas 
+CCAtlas合并完成后运行pack会生成res文件夹
+
+自行将res文件夹打包为wotmod，就可以使用了
