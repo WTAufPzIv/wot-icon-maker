@@ -1,9 +1,19 @@
-# Vue 3 + TypeScript + Vite
+# 这是一个非常半成品的工具，需要具有前端开发知识（兼具资深电脑使用知识）才能使用，需要本地编译运行使用，没有发行版本——原因：作者精力有限 + 懒
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+# 使用方法
 
-## Recommended Setup
+1. npm i安装依赖
+2. npm run dev运行
+3. 添加游戏目录（如果游玩多个服务器，建议一次一次分开搞，避免后续自己把自己弄混了）
+4. 然后首页就会出现图标预览，自己手动找有哪些车的翻译缺失，然后点击图标，打开的抽屉左边有个“翻译字段”，点击复制，去到项目目录下trans文件夹下的json文件中添加翻译（wg和lesta是分开的，自己选择）
+   4.1 由于这块没有写完，因此上一步完成后，需要手动做以下操作：
+     a. 去到C:\Users\Administrator\AppData\Roaming\wot-icon-maker（就是你自己电脑的AppData，这个应该都知道吧），wot-icon-maker是软件的数据存放目录
+     b. 删除store.json和tanks.json
+     c. 回到步骤3,
+     d. 再次检查翻译是否已经补齐，如果补齐，进入步骤5，否则，重复步骤4
+5. 到项目中用vue编写自己想要的图标样式（可以参考已经有的巨响）
+6. tab切换到“全部”，点击导出（因为本工具的核心原理是用canvas画出dom元素，因此一定要切换到“全部”tab）
+7. 导出目录选择项目目录下的python文件夹
+8. 进入python文件夹，阅读里面的README，进入下一阶段的操作
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
-
-- Use [vue-tsc](https://github.com/vuejs/language-tools/tree/master/packages/tsc) for performing the same type checking from the command line, or for generating d.ts files for SFCs.
+《完》
