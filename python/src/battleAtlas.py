@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*- 
 import os
 from PIL import Image
 import xml.etree.ElementTree as ET

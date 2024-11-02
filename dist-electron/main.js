@@ -600,9 +600,6 @@ const createWindow = () => {
   });
   process.env.VITE_DEV_SERVER_URL && win.loadURL("http://localhost:3000") || win.loadFile("dist/index.html");
   ipc(win);
-  if (process.env.NODE_ENV === "development" || process.env.DEBUG_PROD === "true") {
-    win.webContents.openDevTools();
-  }
 };
 electron.app.whenReady().then(async () => {
   createWindow();
